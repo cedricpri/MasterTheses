@@ -1,0 +1,136 @@
+\documentclass[a4paper, 11pt]{report}
+\usepackage[top=2.5cm, bottom=1.7cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\usepackage{mathenv}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{caption}
+\usepackage[bottom]{footmisc}
+\usepackage{cancel}
+\usepackage{multirow}
+\usepackage[toc,page]{appendix}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+%Titlepage
+
+\pagenumbering{roman}
+\begin{titlepage}
+
+	\centering
+	\includegraphics[width=0.15\textwidth]{figs/image_UC.png}\par\vspace{1cm}
+	{\scshape\LARGE Facultad de Ciencias \par}
+	
+	\vspace{1.5cm}
+	
+	%English title
+	{\huge\bfseries English title}
+	
+	\vspace{0.6cm}
+		
+	%Spanish title
+	{\LARGE (Título en español) \par}
+	
+	\vspace{3cm}
+	{\scshape\Large Trabajo de fin de Máster \\ para acceder al \par}
+	\vspace{0.3cm}
+	{\scshape\Large \textbf{MÁSTER UNIVERSITARIO EN \\ CIENCIA DE DATOS} \par}
+	
+	\begin{flushright}
+	
+	\vspace{3cm}
+	{\Large Autor : Cédric PRIEËLS\par}
+	{\Large Director : Pablo MARTÍNEZ RUÍZ DEL ÁRBOL\\}
+	{\Large Co-director : \\}
+	\vspace{0.5cm}
+	{\Large Junio 2020\par}
+	\vfill
+	
+	\end{flushright}
+
+\end{titlepage}
+
+%Empty page
+
+\clearpage
+\thispagestyle{empty}
+\phantom{a}
+\vfill
+\newpage
+
+%Abstract and keywords
+
+\setcounter{page}{1}
+
+\section*{\huge{Abstract}}
+
+
+\begin{center}
+\textbf{Key words} :
+\end{center}
+
+\section*{\huge{Resumen}} 
+
+\begin{center}
+\textbf{Palabras claves} : 
+\end{center}
+
+\newpage
+
+%Thank you notes
+
+\section*{\huge{Agradecimientos}}
+
+
+\newpage
+
+%Table of contents
+
+\tableofcontents
+
+\thispagestyle{empty}
+\newpage
+
+%Here it starts!
+\pagenumbering{arabic}
+
+%Introduction
+
+\chapter{Introduction}
+
+
+\chapter{Theoretical introduction}
+
+
+\chapter{Conclusions}
+
+
+
+\begin{appendices}
+  
+  \chapter{Appendix1}
+  
+\end{appendices}
+
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\begin{thebibliography}{1}
+
+\end{thebibliography}
+
+\end{document}

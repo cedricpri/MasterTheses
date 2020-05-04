@@ -1,0 +1,7 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Theoretical introduction}{2}{chapter.2}
+\contentsline {chapter}{\numberline {3}Conclusions}{3}{chapter.3}
+\contentsline {chapter}{Appendices}{4}{section*.5}
+\contentsline {chapter}{\numberline {A}Appendix1}{5}{Appendix.1.A}
+\contentsline {chapter}{Bibliography}{5}{Appendix.1.A}
