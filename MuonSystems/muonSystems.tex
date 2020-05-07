@@ -21,9 +21,12 @@
 \usepackage{cancel}
 \usepackage{multirow}
 \usepackage[toc,page]{appendix}
+\usepackage{titlesec}
 
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0em}
+\titleformat{\chapter}[display]
+   {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{0pt}{\Huge}
 
 \begin{document}
 
@@ -39,7 +42,7 @@
 	\vspace{1.5cm}
 	
 	%English title
-	{\huge\bfseries English title}
+	{\huge\bfseries Muography as a non-destructive testing technique for industry problem solving}
 	
 	\vspace{0.6cm}
 		
@@ -115,15 +118,17 @@
 
 Nowadays, muon tomography is an active field of research since it is a non destructive method allowing to map the inside of large objects difficult and/or dangerous to access, without any contact or damage, and without even having physical access to them. To do so, this technique uses muons, elementary particles similar to electrons but with a much greater mass, which allows them to penetrate much deeper and probe matter in a more efficient way, since they suffer less from the bremsstrahlung radiation affecting all leptons. Such technology is relatively well-know and present several advantages over other techniques such as X-ray imaging since it is globally safe and clean and uses natural radiation, cosmic muons, while providing an excellent penetration in matter in order to study it.
 
-In this particular work, muon tomography will be applied to industry and used in order to probe several kinds of objects, such as pipes. This is the main objective of the company Muon systems, founded in Spain in 2015.
+In this particular work, muon tomography will be applied to industry and used in order to probe several kinds of objects, such as pipes. This is the main objective of the company Muon systems, founded in Spain in 2017 adn based in Bilbao.
 
 \chapter{Theoretical introduction}
 
-\section{Particle physics}
+The main particles used throughout this work, muons, will be briefly introduced in Section~\ref{sec:particlePhysics} of this Chapter. Muon are particles produced naturally by cosmic rays, introduced in Section~\ref{sec:cosmicRays} and, once produced, they obviously interact when traversing the atmosphere and matter in general in ways described in Section~\ref{sec:interactions} that actually need to be understood extremely well for the muon tomography process introduced in Section~\ref{sec:cosmicRays} to be useful and appliable to industry.
 
-Particle physics is the field which studies the matter surrounding us, along with the fundamental interactions between the particles. In this context, the Standard Model of particle physics \cite{SM} is nowadays the most accepted mathematical model used to describe the elementary particles and three of the 4 fundamental forces of nature (electromagnetic, weak and strong interactions, while the gravitational interaction is out of reach of this model). Even though quite simple in concept, it has been able to describe most of the phenomena observed in nature so far with an incredible level of precision, and has made a lot of predictions that have now been proven to be true, such as the discovery of the top quark \cite{topQuark} in 1995, the tau neutrino \cite{tauNeutrino} in 2001 and the Higgs boson itself \cite{HiggsDiscovery1, HiggsDiscovery2}, the last mising piece of the Standard Model, annouced at CERN in July 2012. 
+\section{Particle physics and muons} \label{sec:particlePhysics}
 
-According to this model, 12 different fermions (along with their 12 corresponding anti-particles) exist in nature, as shown in Figure~\ref{figure:SMFermions}, most of themactually being unstable. These fermions can be divided into two major and fundamentally different categories, the quarks and the leptons, containing each 6 particles and sensitive to different forces. Even though quite interesting, the quarks do not play a fundamantal role in the muon tomography detailed in this work, so only leptons from now on. In particular, leptons can be divided even more into three different generations of particles, and the muon, one particular lepton belonging to the second family, will be the main focus of this work.
+Particle physics is the field which studies the matter surrounding us, along with the fundamental interactions between the particles. In this context, the Standard Model of particle physics \cite{SM} is nowadays the most accepted mathematical model used to describe the elementary particles and three of the 4 fundamental forces of nature (electromagnetic, weak and strong interactions, while the gravitational interaction is out of reach of this model). Even though quite simple in concept, it has been able to describe most of the phenomena observed in nature so far with an incredible level of precision, and has made a lot of predictions that have now been proven to be true, such as the discovery of the top quark \cite{topQuark} in 1995, the tau neutrino \cite{tauNeutrino} in 2001 and the Higgs boson itself \cite{HiggsDiscovery1, HiggsDiscovery2}, the last missing piece of the Standard Model, annouced at CERN in July 2012. 
+
+According to this model, 12 different fermions (along with their 12 corresponding anti-particles) exist in nature, as shown in Figure~\ref{figure:SMFermions}, most of them being unstable. These fermions can be divided into two fundamentally different categories, the quarks and the leptons, containing each 6 particles and sensitive to different forces. Even though quite interesting, the quarks do not play a fundamantal role in the muon tomography detailed in this work, so only leptons will be considered from now on. In particular, leptons can be divided even more into three different generations of particles, and the muon, one particular lepton belonging to the second generation, will be the main focus of this work.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -133,28 +138,95 @@ According to this model, 12 different fermions (along with their 12 correspondin
 \end{center}
 \end{figure}
 
-Muons $\mu^{-}$ \cite{PDGMuons} are fundamental particles with a negative charge and quite similar in nature to electrons, even though their high mass (200 times larger than the electron), which implies that their are not stable particles. They actually have a relatively long lifetime of approximately 2.2$\mu$s, and typically decay into an electron while producing two neutrinos in the process. They also have a relatively small interaction cross-section with ordinary matter, even though they do appear with baryonic matter, mostyl due to their electric charge, as will be described in Section~\ref{sec:interactions}.
+Muons $\mu^{-}$ \cite{PDGMuons} are therefore fundamental particles having a negative charge and quite similar in nature to electrons, even though they have a quite high mass (200 times larger than the electron), which implies that their are not stable particles: they have a lifetime of approximately 2.2$\mu$s, and typically decay into an electron and a pair of neutrinos. However, this lifetime is actually quite long with respect to other fundamental particles and muons are on average able to travel more than 700 meters, allowing us to consider them to be stable particles in many processes, such as the one presented in this work. Muons also have a relatively small interaction cross-section with ordinary matter, even though they do interact with baryonic matter by several processes described in Section~\ref{sec:interactions}.
 
-\section{Cosmic rays}
+\section{Cosmic rays} \label{sec:cosmicRays}
 
-Being unstable, when produced, muons decay almost instantly into electrons. However, it is possible to observe them in nature, mainly thanks to cosmic rays, constant flux of particles (mostly protons and atomic nuclei) coming from supernovae explosions and AGN emissions and reaching the Earth every day. As they impact our atmosphere, these protons start a chain reactions, as shown in Figure~\ref{figure:cosmic}: first of all, several neutral and charged pions are produced, decaying into a pair of photons (and, later on, the electron and positron pairs) and muons, respectively.
+Being unstable by nature, once produced, muons decay almost instantly by a weak process into an electron and a pair of neutrinos. However, it is possible to observe them in nature, since they are continually produced, mainly thanks to cosmic rays \cite{cosmicPDG}, constant flux of high energy particles (mostly protons and atomic nuclei) coming mostly from supernovae explosions and AGN emissions and reaching the Earth every day. Indeed, as they impact our atmosphere, these particles start a chain reaction, as shown in Figure~\ref{figure:cosmic}: first of all, several neutral and charged pions are produced, decaying themselves into a pair of photons (and, later on, electron and positron pairs) and muons, respectively.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=11cm, height=6cm]{figs/cosmic.png}
-\caption{Typical chain of reaction induced by a highly energetic cosmic ray when reaching the Earth's atmosphere.}
+\caption{Typical chain of decays induced by highly energetic cosmic rays when reaching the Earth's atmosphere.}
 \label{figure:cosmic}
 \end{center}
 \end{figure}
 
-Even though the lifetime of muons is quite small, they do manage to reach the sea level thanks to the relatisvistic temporal distorsion induced by their high speed. Muons were actually discovered thanks to cosmic rays in 1936 \cite{muonDiscovery}.
+Muons are the most abundant charged particles produced by these processes actually reaching the sea level, as shown in Figure~\ref{figure:cosmicAbundance}. Even though they are unstable and have a limited lifetime, around 0.06\% of muons produced by such processes indeed do manage to reach the sea level thanks to the temporal distorsion induced by their high energy and relativistic speed. As a rule of thumb, one can expect to observe 10.000 muons per square meter and per minute at the sea level.
 
-\section{Muons interactions with matter} \label{sec:interactions}
-\section{Muon tomography}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=8cm, height=9cm]{figs/cosmicMuons.png}
+\caption{Abundance of particles observed at the sea level, due to cosmic rays \cite{cosmicPDG}.}
+\label{figure:cosmicAbundance}
+\end{center}
+\end{figure}
 
-These interesting properties can be used in practice.
+Muons were actually discovered thanks to cosmic rays in 1936 \cite{muonDiscovery}.
+
+\section{Muons interaction with matter} \label{sec:interactions}
+
+Muons typically interact with ordinary matter through two main processes: ionization and multiple scattering.
+
+\subsection{Ionization process}
+
+The most frequent interaction process of cosmic muons is through \textbf{ionization}, when the incident muon is giving some of its energy to the electrons of the absorber. This process is described by the Bethe-Bloch formula, shown in Equation~\ref{eq:BB}, and describing the average loss of energy over a distance $\frac{dE}{dx}$ of material, depending on several parameters, such as the charge number of incident particle $z$, the atomic mass and charge of absorber $A$ and $Z$, the relativistic factors $\beta$ and $\gamma$, the maximum possible energy transfer to an electron in a single collision $W_{\text{max}}$ and the mean excitation energy $I$.
+
+\begin{equation}
+\label{eq:BB}
+- \Bigl \langle \frac{dE}{dx} \Bigr \rangle = K z^2 \frac{Z}{A} \frac{1}{\beta^2} \left [\frac{1}{2} \ln \left (\frac{2 m_e c^2 \beta^2 \gamma^2 W_{\text{max}}}{I^2} - \beta^2 - \frac{\delta(\beta \gamma)}{2} \right ) \right ]
+\end{equation}
+
+This previous equation gives an accuracy of a few percent in the range $0.1 < \beta < 1000$ and we can easily see that the quantity of energy lost by in a muon when traversing any given medium actually depends on the energy of the incident muon, as shown in Figure~\ref{figure:BB}.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm, height=8cm]{figs/BB.png}
+\caption{Average energy lost a muon due to ionization depending on its momentum \cite{PDGMuons}.}
+\label{figure:BB}
+\end{center}
+\end{figure}
+
+In practical cases, most relativistic particles, such as muons coming from cosmic rays, have mean energy loss rates actually close to the minimum. They are usually called for this reason \textit{minimum ionizing particles} or MIPs.
+
+\subsection{Multiple scattering process}
+
+Muons also interact with matter through another process, called \textbf{multiple scattering}. Since muons have a negative electric charge, by getting close to the nuclei of the absorber, they are suffering from Coulomb scattering. Given the high number of nuclei in matter, this process is repeated many times, deflecting each time the muon by a small angle in a stochastic way, meaning that there is no way of calculating this deviation exactly, but only using probabilities and the so-called theory of Molière \cite{Moliere}, shown in Equation~\ref{eq:Moliere}, where $\theta_0$ is the expected angle of deviation shown in Figure~\ref{figure:Moliere}, $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction.
+
+\begin{equation}
+\label{eq:Moliere}
+\theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} z \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x z^2}{X_0 \beta^2} \right ) \right ]
+\end{equation}
+
+This formula is expected to be valid for distances up to $\sim 100 X_0$, giving an error smaller than 11\% \cite{PDGMuons}. Corrections do exist though in order to get slightly better results, but this theory is precise enough for our needs, given the experimental conditions considered in this work.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm, height=5.2cm]{figs/moliere.png}
+\caption{Schematic representation of the deviation induced by the multiple scaterring process of a muon \cite{PDGMuons}.}
+\label{figure:Moliere}
+\end{center}
+\end{figure}
+
+\section{Muon tomography} \label{sec:tomography}
+
+Given the Molière theory, it is obvious to see that, instead of \textit{calculating} the deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inversing the two relations we have just seen. Since this deviation depends on several parameters related to the absorber itself, such as its width and radiation length $X_0$, we can in this case actually infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, which takes advantage of the interaction of muons with matter to try and use them in practice.
+
+Muography is therefore a non-destructive imaging technique producing a projection image and a density map of the inside of an object by measuring a flux of muons. Such technique presents many different advantages over other imaging techniques such as X-rays, since it actually uses natural cosmic rays to make the measurements, being therefore completely safe, and since muons interact lightly with matter, meaning that they typically have high penetrating capabilities and can therefore probe even large and/or dense objects. Muography can in this sense be applied to many different fields: it has for example even been used in 1970 in order to try and find hidden cavities of pyramids in Egypt \cite{Egypt} and can also be used in vulcanology, to determine whether a pocket inside of a volcano is empty or full of lava, among many other examples.
+
+Such imaging techniques can be divided into two categories:
+\begin{itemize}
+\item \textbf{Absorption muography}. In this case, the observed muon flux in a given direction is compared to what is expected from cosmic rays, trying to determine the inner structure of the absorber as discrepancies between these two values. Only one detector is needed in this case, making this technique useful mostly to study large objects, even though the time to make a single measurement can be up to a few months in this case.
+\item \textbf{Scattering muography}. On the other hand, the multiple scattering of muons is used, by placing one detector on each side of the object being studied to determine the deviation of the flux of incoming muons. The denser the material put in between, the larger the observed deviation will be, as shown in Equation~\ref{eq:Moliere}. This technique is mostly used to study smaller objects, since it is able to make quick measurements.
+\end{itemize}
+
+In this particular work, scattering muography is being applied to industry in order to try and determine the degradation of the interior of industrial equipment, as we will now see.
 
 \chapter{Experimental setup}
+
+\section{Muon detectors}
+
+Minute 7 of video
 
 \chapter{Code development}
 
@@ -218,10 +290,24 @@ Physics with Photons Using the ATLAS Run 2 Data, Springer Theses, 2019
 \href{http://pdg.lbl.gov/2018/listings/rpp2018-list-muon.pdf}{
 "Muon", Particle Data Group, 2018}
 
+\bibitem{cosmicPDG}
+\href{http://pdg.lbl.gov/2017/reviews/rpp2017-rev-cosmic-rays.pdf}{
+"Cosmic rays", Particle Data Group, 2017}
+
 \bibitem{muonDiscovery}
 \href{http://web.ihep.su/dbserv/compas/src/neddermeyer37/eng.pdf}{S.H. Neddermeyer and C.D. Anderson,
 "Note on the Nature of Cosmic-Ray Particles", 
 Physical Review Vol. 51, 1936}
+
+\bibitem{Moliere}
+\href{https://journals.aps.org/pr/abstract/10.1103/PhysRev.89.1256}{H.A. Bethe,
+"Molière's Theory of Multiple Scattering", 
+Physical Review Vol. 89, 1953}
+
+\bibitem{Egypt}
+\href{https://ui.adsabs.harvard.edu/abs/1970Sci...167..832A/abstract}{L. Alvarez et all.,
+"Search for Hidden Chambers in the Pyramid", 
+Science, Volume 167, Issue 3919, 1970}
 
 \end{thebibliography}
 
