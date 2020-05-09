@@ -123,9 +123,9 @@ In this particular work, muon tomography will be applied to industry and used in
 This project is highly relevant in today's society because it allows to combine data science algorithms and high-performing statistical methods that have been developped in this context, putting them in practice in an actual industry.
 \color{red} INSIST ABOUT DATA SCIENCE RELEVANCE \color{black}
 
-\chapter{Muography}
+\chapter{Muons and muography}
 
-The main particles used throughout this work, muons, will be briefly introduced in Section~\ref{sec:particlePhysics} of this Chapter. Muon are particles produced naturally by cosmic rays, introduced in Section~\ref{sec:cosmicRays} and, once produced, they obviously interact when traversing the atmosphere and matter in general in ways described in Section~\ref{sec:interactions} that actually need to be understood extremely well for the muon tomography process introduced in Section~\ref{sec:cosmicRays} to be useful and appliable to industry.
+The main particles used throughout this work, muons, will be briefly introduced in Section~\ref{sec:particlePhysics} of this Chapter. Muon are particles produced naturally by cosmic rays, introduced in Section~\ref{sec:cosmicRays} and, once produced, they obviously interact when traversing the atmosphere and matter in general in ways described in Section~\ref{sec:interactions} that actually need to be understood extremely well for the muon tomography process introduced in Section~\ref{sec:tomography} to be useful and appliable to industry. Finally, the actual experimental setup used for this work will be explained in Section~\ref{sec:setup}.
 
 \section{Particle physics and muons} \label{sec:particlePhysics}
 
@@ -169,7 +169,7 @@ Muons were actually discovered thanks to cosmic rays in 1936 \cite{muonDiscovery
 
 \section{Muons interaction with matter} \label{sec:interactions}
 
-Muons typically interact with ordinary matter through two main processes: ionization and multiple scattering.
+Muons typically interact with ordinary matter through two main processes: ionization and multiple scattering, both resulting in different effects on the incident particle.
 
 \subsection{Ionization process}
 
@@ -206,35 +206,30 @@ This formula is expected to be valid for distances up to $\sim 100 X_0$, giving 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=12cm, height=5.2cm]{figs/moliere.png}
-\caption{Schematic representation of the deviation induced by the multiple scaterring process of a muon \cite{PDGMuons}.}
+\caption{Schematic representation of the deviation induced by an absorber to an incident muon because of the multiple scattering effect \cite{PDGMuons}.}
 \label{figure:Moliere}
 \end{center}
 \end{figure}
 
 \section{Muon tomography} \label{sec:tomography}
 
-Given the Molière theory, it is obvious to see that, instead of \textit{calculating} the deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inversing the two relations we have just seen. Since this deviation depends on several parameters related to the absorber itself, such as its width and radiation length $X_0$, we can in this case actually infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, which takes advantage of the interaction of muons with matter to try and use them in practice.
+Given Molière's theory, it is obvious to see that, instead of \textit{calculating} the deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inversing the two previous relations. Since this deviation depends on several parameters related to the absorber itself, such as its width and radiation length $X_0$, we can in this case actually infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, taking advantage of the interaction of muons with matter to use it in practice.
 
-Muography is therefore a non-destructive imaging technique producing a projection image and a density map of the inside of an object by measuring a flux of muons. Such technique presents many different advantages over other imaging techniques such as X-rays, since it actually uses natural cosmic rays to make the measurements, being therefore completely safe, and since muons interact lightly with matter, meaning that they typically have high penetrating capabilities and can therefore probe even large and/or dense objects. Muography can in this sense be applied to many different fields: it has for example even been used in 1970 in order to try and find hidden cavities of pyramids in Egypt \cite{Egypt} and can also be used in vulcanology, to determine whether a pocket inside of a volcano is empty or full of lava, among many other examples.
+Muography is therefore a non-destructive imaging technique producing a density map of the inside of an object by measuring a flux of muons. Such method presents many different advantages over other imaging techniques such as X-rays, since it actually uses natural cosmic rays to make the measurements, being therefore completely safe. Additionally, muons interact lightly with matter, meaning that they typically have high penetrating capabilities and can therefore probe even large and/or dense objects. Muography can in this sense be applied to many different fields: it has for example even been used in 1970 in order to try and find hidden cavities of pyramids in Egypt \cite{Egypt} and can also be used in vulcanology, to determine whether a pocket inside of a volcano is empty or full of lava, among many other practical applications.
 
 Such imaging techniques can be divided into two categories:
 \begin{itemize}
-\item \textbf{Absorption muography}. In this case, the observed muon flux in a given direction is compared to what is expected from cosmic rays, trying to determine the inner structure of the absorber as discrepancies between these two values. Only one detector is needed in this case, making this technique useful mostly to study large objects, even though the time to make a single measurement can be up to a few months in this case.
-\item \textbf{Scattering muography}. On the other hand, the multiple scattering of muons is used, by placing one detector on each side of the object being studied to determine the deviation of the flux of incoming muons. The denser the material put in between, the larger the observed deviation will be, as shown in Equation~\ref{eq:Moliere}. This technique is mostly used to study smaller objects, since it is able to make quick measurements.
+\item \textbf{Absorption muography}. In this case, the observed muon flux in a given direction is compared to what is expected from cosmic rays, trying to determine the inner structure of the absorber as discrepancies between these two values. Only one detector is needed in this case, making this technique useful mostly to study large objects, even though the time to make a single measurement can last up to a few months.
+\item \textbf{Scattering muography}. On the other hand, the multiple scattering of muons can be used, by placing one detector on each side of the object being studied to determine the deviation of the flux of incoming muons. The denser the material put in between, the larger the observed deviation will be, as shown in Equation~\ref{eq:Moliere}. This technique is mostly used to study smaller objects and is able to make quick measurements.
 \end{itemize}
 
 In this particular work, scattering muography is being applied to industry in order to try and determine the degradation of the interior of industrial equipment, as we will now see.
 
-\chapter{Experimental setup}
+\section{Experimental setup} \label{sec:setup}
 
-A dedicated setup has been developed over the past few years by Muon Systems in order to perform scattering muography. While muon detectors in general will first of all be introduced in Section~\ref{sec:muonDetectors}, our particular working setup will then be detailed in Section~\ref{sec:ourSetup}.
+\subsection{Muon detectors} \label{sec:muonDetectors}
 
-\section{Muon detectors} \label{sec:muonDetectors}
-
-If we want to work with cosmic muons, we need to be able to build some detectors able to spot them and give us back useful data, such as their energy and/or direction. Many different technologies exist nowadays in order to detect muons:
-
-\begin{itemize}
-\item \textbf{Multi-wire proportional chambers} or \textbf{drift tubes}. 
+If we want to work with cosmic muons, we need to be able to build some detectors able to spot them and give us back useful data, such as their energy and/or incident direction. Many different technologies exist nowadays in order to detect muons, even though in this particular case, the typical \textbf{multi-wire proportional chambers} have been used.
 
 Invented at CERN in 1968, these detectors use an array of high-voltage wires (playing the role of the anode), running through a chamber filled with gas and whose walls are typically grounded (the cathode), as shown in Figure~\ref{fig:wireChambers}. Such an experimental setup therefore creates an electric field inside of the chamber, that needs to be made as large and uniform as possible.
 
@@ -246,29 +241,59 @@ Invented at CERN in 1968, these detectors use an array of high-voltage wires (pl
 \end{center}
 \end{figure}
 
-When a muon, or any other charged particle crosses this chamber, it will ionize the gas of the chamber and leave small electric charges along its path and, because of the electric field, these charges will start to drift until reaching one of the wire. This drift wil induce an electric signal proportional to the ionisation effect in the different wires surrounding the particle path, and the combination of all the signals collected is able to give information regarding the actual path followed by the incoming particle.	
+When a charged particle such as a muon crosses this chamber, it will ionize the gas of the chamber and leave small electric charges along its path which will start to drift until reaching one of the wire. This drift induces an electric signal proportional to the ionisation effect in the different wires surrounding the particle path, and the combination of all the signals collected is able to give information regarding the actual path followed by the incoming particle.	
 
-\item \textbf{Scintillation detectors}. These detectors make use of scintillant materials that are able to absorb the energy of an incoming particle, emitting in return radiation under the form of light.
-\item \textbf{Silicion based detectors}.
+Several properties are extremely important when designing a detector:
+\begin{itemize}
+\item First of all, the \textbf{spatial resolution}, the precision by which we can tell the position of the muon, should be ideally as small as possible, depending on the actual problem faced.
+\item The \textbf{efficiency} is also an important parameter, since we want to be able to detect as many muons as possible, to make the measurement faster and more precise.
+\item Finally, we typically want the detector to be large enough to avoid any \textbf{acceptance} issues.
 \end{itemize}
 
-Several properties are extremely important when designing a detector. First of all, the \textbf{spatial resolution}, the precision by which we can tell the position of the muon, should be ideally as small as possible, depending on the actual problem faced. The \textbf{efficiency} is also an important parameter, since we want to be able to detect as many muons as possible, to make the measurement faster and more precise, and we want the detector to be large enough to avoid any \textbf{acceptance} issues.
+\subsection{Working setup} \label{sec:ourSetup}
 
-\section{Working setup} \label{sec:ourSetup}
+For this particular work, four muon chambers of 1 meter by 1 meter have been build using these principles, as shown in Figure~\ref{fig:setup}. As we can see, more than 200 wires connected to the high voltage and made out of gold and tungsten have been placed every 4mm in two different planes rotated by 90 degrees, to measure the $x$ and $y$ postion of cosmic muons. These chambers, filled while a mixture of Argon and CO$_2$, are then setup in pairs above and below the object being studied, in order to determine the position and the direction of the incoming and outgoing cosmic muon. This setup allows to measure with a good spatial resolution the deviation of muons, to determine as precisely as possible the properties of the object put in between both detectors.
 
-This work's actual setup uses two multiwire chambers. 
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{.59\textwidth}
+\includegraphics[width=9cm, height=6cm]{figs/muonChambers.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.39\textwidth}
+\includegraphics[width=6cm, height=6cm]{figs/muonChambersPhoto.png}
+\end{minipage} \hfill
+\caption{Actual working setup used for this work, with two multi-wires muon chambers of 1m$^2$ placed on each side of the object being studied.}
+\label{fig:wireChambers}
+\end{figure}
 
-\chapter{Code development}
+\subsection{Data flow} \label{sec:dataFlow}
+
+Once collected, the data needs to be pass through several differents in order to convert electric signals into files that can be processed, as shown on Figure~\ref{fig:dataFlow}. As we can see, the data follows a different path depending on its nature, if it has been collected by the detector or if we are considering Monte-Carlo simulations that will be described in details in the next Chapter. The stream of data is collected by a simple USB, and then sent to a DAQ/DQM system and to an unpacker, which takes into account the detector gemetry and translates into a physical position the information received from the DAQ, typically only telling that a certain wire has been activated.
+
+Both streams then join at the 1D histogram format level, gathering a collection of all the hits measured for every event. All these hits are then processed and reconstructed into two trajectories, one above and one below the object, using advanced techniques that will also be described in next Chapter. Finally, 4D segments are made available from this reconstruction process, having the position and direction information needed, from which the actual analysis can take place.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=8.5cm, height=6cm]{figs/dataFlow.png}
+\caption{Schematic representation of the detector data flow.}
+\label{fig:dataFlow}
+\end{center}
+\end{figure}
+
+
+\chapter{Parameters estimation}
+
+\chapter{The algorithm}
 
 \chapter{Results obtained}
 
 \chapter{Conclusions}
 
-\begin{appendices}
+%\begin{appendices}
   
-  \chapter{Appendix1}
+%\chapter{Appendix1}
   
-\end{appendices}
+%\end{appendices}
 
 \addcontentsline{toc}{chapter}{Bibliography}
 

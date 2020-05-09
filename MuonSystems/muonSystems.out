@@ -1,17 +1,17 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Muography}{}% 2
+\BOOKMARK [0][-]{chapter.2}{Muons and muography}{}% 2
 \BOOKMARK [1][-]{section.2.1}{Particle physics and muons}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{Cosmic rays}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Muons interaction with matter}{chapter.2}% 5
 \BOOKMARK [2][-]{subsection.2.3.1}{Ionization process}{section.2.3}% 6
 \BOOKMARK [2][-]{subsection.2.3.2}{Multiple scattering process}{section.2.3}% 7
 \BOOKMARK [1][-]{section.2.4}{Muon tomography}{chapter.2}% 8
-\BOOKMARK [0][-]{chapter.3}{Experimental setup}{}% 9
-\BOOKMARK [1][-]{section.3.1}{Muon detectors}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.2}{Working setup}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{Code development}{}% 12
-\BOOKMARK [0][-]{chapter.5}{Results obtained}{}% 13
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 14
-\BOOKMARK [0][-]{section*.8}{Appendices}{}% 15
-\BOOKMARK [0][-]{Appendix.1.A}{Appendix1}{}% 16
-\BOOKMARK [0][-]{Appendix.1.A}{Bibliography}{}% 17
+\BOOKMARK [1][-]{section.2.5}{Experimental setup}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.5.1}{Muon detectors}{section.2.5}% 10
+\BOOKMARK [2][-]{subsection.2.5.2}{Working setup}{section.2.5}% 11
+\BOOKMARK [2][-]{subsection.2.5.3}{Data flow}{section.2.5}% 12
+\BOOKMARK [0][-]{chapter.3}{Parameters estimation}{}% 13
+\BOOKMARK [0][-]{chapter.4}{The algorithm}{}% 14
+\BOOKMARK [0][-]{chapter.5}{Results obtained}{}% 15
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 16
+\BOOKMARK [0][-]{chapter.6}{Bibliography}{}% 17
