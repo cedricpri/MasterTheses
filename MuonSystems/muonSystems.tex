@@ -36,13 +36,13 @@
 \begin{titlepage}
 
 	\centering
-	\includegraphics[width=0.15\textwidth]{figs/image_UC.png}\par\vspace{1cm}
+	\includegraphics[width=0.15\textwidth]{figs/image_UC.png} \hspace{20pt} \includegraphics[width=0.15\textwidth]{figs/muonSystems.png} \par\vspace{1cm}
 	{\scshape\LARGE Facultad de Ciencias \\ Universidad de Cantabria \par}
 	
 	\vspace{1.5cm}
 	
 	%English title
-	{\huge\bfseries Muography as a non-destructive testing technique for industry problem solving}
+	{\huge\bfseries Statistical approach to muography as a non-destructive testing technique for \newline industry problem solving}
 	
 	\vspace{0.6cm}
 		
@@ -118,9 +118,12 @@
 
 Nowadays, muon tomography is an active field of research since it is a non destructive method allowing to map the inside of large objects difficult and/or dangerous to access, without any contact or damage, and without even having physical access to them. To do so, this technique uses muons, elementary particles similar to electrons but with a much greater mass, which allows them to penetrate much deeper and probe matter in a more efficient way, since they suffer less from the bremsstrahlung radiation affecting all leptons. Such technology is relatively well-know and present several advantages over other techniques such as X-ray imaging since it is globally safe and clean and uses natural radiation, cosmic muons, while providing an excellent penetration in matter in order to study it.
 
-In this particular work, muon tomography will be applied to industry and used in order to probe several kinds of objects, such as pipes. This is the main objective of the company Muon systems, founded in Spain in 2017 adn based in Bilbao.
+In this particular work, muon tomography will be applied to industry and used in order to probe several kinds of physical objects, such as pipes, to study their degradation in a non-destructive way. This is the main objective of the company Muon systems, founded in Spain in 2017 and based in Bilbao.
 
-\chapter{Theoretical introduction}
+This project is highly relevant in today's society because it allows to combine data science algorithms and high-performing statistical methods that have been developped in this context, putting them in practice in an actual industry.
+\color{red} INSIST ABOUT DATA SCIENCE RELEVANCE \color{black}
+
+\chapter{Muography}
 
 The main particles used throughout this work, muons, will be briefly introduced in Section~\ref{sec:particlePhysics} of this Chapter. Muon are particles produced naturally by cosmic rays, introduced in Section~\ref{sec:cosmicRays} and, once produced, they obviously interact when traversing the atmosphere and matter in general in ways described in Section~\ref{sec:interactions} that actually need to be understood extremely well for the muon tomography process introduced in Section~\ref{sec:cosmicRays} to be useful and appliable to industry.
 
@@ -224,9 +227,36 @@ In this particular work, scattering muography is being applied to industry in or
 
 \chapter{Experimental setup}
 
-\section{Muon detectors}
+A dedicated setup has been developed over the past few years by Muon Systems in order to perform scattering muography. While muon detectors in general will first of all be introduced in Section~\ref{sec:muonDetectors}, our particular working setup will then be detailed in Section~\ref{sec:ourSetup}.
 
-Minute 7 of video
+\section{Muon detectors} \label{sec:muonDetectors}
+
+If we want to work with cosmic muons, we need to be able to build some detectors able to spot them and give us back useful data, such as their energy and/or direction. Many different technologies exist nowadays in order to detect muons:
+
+\begin{itemize}
+\item \textbf{Multi-wire proportional chambers} or \textbf{drift tubes}. 
+
+Invented at CERN in 1968, these detectors use an array of high-voltage wires (playing the role of the anode), running through a chamber filled with gas and whose walls are typically grounded (the cathode), as shown in Figure~\ref{fig:wireChambers}. Such an experimental setup therefore creates an electric field inside of the chamber, that needs to be made as large and uniform as possible.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=7cm, height=5.2cm]{figs/wireChambers.png}
+\caption{Schematic representation of a wire chamber muon detector.}
+\label{fig:wireChambers}
+\end{center}
+\end{figure}
+
+When a muon, or any other charged particle crosses this chamber, it will ionize the gas of the chamber and leave small electric charges along its path and, because of the electric field, these charges will start to drift until reaching one of the wire. This drift wil induce an electric signal proportional to the ionisation effect in the different wires surrounding the particle path, and the combination of all the signals collected is able to give information regarding the actual path followed by the incoming particle.	
+
+\item \textbf{Scintillation detectors}. These detectors make use of scintillant materials that are able to absorb the energy of an incoming particle, emitting in return radiation under the form of light.
+\item \textbf{Silicion based detectors}.
+\end{itemize}
+
+Several properties are extremely important when designing a detector. First of all, the \textbf{spatial resolution}, the precision by which we can tell the position of the muon, should be ideally as small as possible, depending on the actual problem faced. The \textbf{efficiency} is also an important parameter, since we want to be able to detect as many muons as possible, to make the measurement faster and more precise, and we want the detector to be large enough to avoid any \textbf{acceptance} issues.
+
+\section{Working setup} \label{sec:ourSetup}
+
+This work's actual setup uses two multiwire chambers. 
 
 \chapter{Code development}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.11)  7 MAY 2020 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.11)  8 MAY 2020 11:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,11 +490,16 @@ LaTeX Info: Redefining \nameref on input line 31.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<figs/image_UC.png, id=67, 400.49625pt x 401.5pt>
+<figs/image_UC.png, id=71, 400.49625pt x 401.5pt>
 File: figs/image_UC.png Graphic file (type png)
 <use figs/image_UC.png>
 Package pdftex.def Info: figs/image_UC.png  used on input line 39.
 (pdftex.def)             Requested size: 72.55157pt x 72.73248pt.
+<figs/muonSystems.png, id=73, 200.75pt x 200.75pt>
+File: figs/muonSystems.png Graphic file (type png)
+<use figs/muonSystems.png>
+Package pdftex.def Info: figs/muonSystems.png  used on input line 39.
+(pdftex.def)             Requested size: 72.55157pt x 72.55174pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
@@ -502,9 +507,9 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figs/image_UC.png>]pdfTe
-X warning (ext4): destination with the same identifier (name{page.i}) has been 
-already used, duplicate ignored
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figs/image_UC.png> <./fi
+gs/muonSystems.png>]pdfTeX warning (ext4): destination with the same identifier
+ (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.77 \newpage
@@ -527,93 +532,98 @@ Chapter 1.
 
 ]
 Chapter 2.
-<figs/SMFermions.png, id=126, 328.3467pt x 269.0853pt>
+<figs/SMFermions.png, id=132, 328.3467pt x 269.0853pt>
 File: figs/SMFermions.png Graphic file (type png)
 <use figs/SMFermions.png>
-Package pdftex.def Info: figs/SMFermions.png  used on input line 135.
+Package pdftex.def Info: figs/SMFermions.png  used on input line 138.
 (pdftex.def)             Requested size: 227.62161pt x 170.71945pt.
 [2
 
 ]
-<figs/cosmic.png, id=147, 1927.2pt x 949.5475pt>
+<figs/cosmic.png, id=153, 1927.2pt x 949.5475pt>
 File: figs/cosmic.png Graphic file (type png)
 <use figs/cosmic.png>
-Package pdftex.def Info: figs/cosmic.png  used on input line 149.
+Package pdftex.def Info: figs/cosmic.png  used on input line 152.
 (pdftex.def)             Requested size: 312.97514pt x 170.70833pt.
-<figs/cosmicMuons.png, id=149, 645.41125pt x 780.9175pt>
+<figs/cosmicMuons.png, id=155, 645.41125pt x 780.9175pt>
 File: figs/cosmicMuons.png Graphic file (type png)
 <use figs/cosmicMuons.png>
-Package pdftex.def Info: figs/cosmicMuons.png  used on input line 159.
+Package pdftex.def Info: figs/cosmicMuons.png  used on input line 162.
 (pdftex.def)             Requested size: 227.62076pt x 256.07109pt.
  [3 <./figs/SMFermions.png (PNG copy)> <./figs/cosmic.png>]
-<figs/BB.png, id=165, 997.7275pt x 635.37375pt>
+<figs/BB.png, id=172, 997.7275pt x 635.37375pt>
 File: figs/BB.png Graphic file (type png)
 <use figs/BB.png>
-Package pdftex.def Info: figs/BB.png  used on input line 184.
+Package pdftex.def Info: figs/BB.png  used on input line 187.
 (pdftex.def)             Requested size: 341.43034pt x 227.61945pt.
  [4 <./figs/cosmicMuons.png>]
-<figs/moliere.png, id=185, 1140.26pt x 512.91624pt>
+<figs/moliere.png, id=191, 1140.26pt x 512.91624pt>
 File: figs/moliere.png Graphic file (type png)
 <use figs/moliere.png>
-Package pdftex.def Info: figs/moliere.png  used on input line 205.
+Package pdftex.def Info: figs/moliere.png  used on input line 208.
 (pdftex.def)             Requested size: 341.41948pt x 147.95143pt.
  [5 <./figs/BB.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 219.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 222.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 219.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 222.
  [6 <./figs/moliere.png>]
 Chapter 3.
+<figs/wireChambers.png, id=213, 532.99126pt x 426.59375pt>
+File: figs/wireChambers.png Graphic file (type png)
+<use figs/wireChambers.png>
+Package pdftex.def Info: figs/wireChambers.png  used on input line 243.
+(pdftex.def)             Requested size: 199.16368pt x 147.95612pt.
 [7
 
-]
+ <./figs/wireChambers.png>] [8]
 Chapter 4.
-[8
-
-]
-Chapter 5.
 [9
 
 ]
-Chapter 6.
+Chapter 5.
 [10
 
-] [11
+]
+Chapter 6.
+[11
+
+] [12
 
 
 ]
 Appendix A.
-[12
+[13
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 314.
- [13
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
+ [14
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 314.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 344.
  (./muonSystems.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 314.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 314.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 344.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 344.
 Package rerunfilecheck Info: File `muonSystems.out' has not changed.
-(rerunfilecheck)             Checksum: 6A0AFB7E05E404501526FD24A5A74A23;933.
+(rerunfilecheck)             Checksum: 41368D2D0F4950A743A6D316EFC59D22;978.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 314.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
  ) 
 Here is how much of TeX's memory you used:
- 8768 strings out of 494880
- 129543 string characters out of 6179601
- 234641 words of memory out of 5000000
- 11922 multiletter control sequences out of 15000+600000
+ 8784 strings out of 494880
+ 129863 string characters out of 6179601
+ 234812 words of memory out of 5000000
+ 11934 multiletter control sequences out of 15000+600000
  11331 words of font info for 40 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 36i,7n,43p,969b,385s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,7n,43p,969b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -626,10 +636,10 @@ c/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on muonSystems.pdf (18 pages, 606547 bytes).
+Output written on muonSystems.pdf (19 pages, 646584 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 261 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 159 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 330 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 
