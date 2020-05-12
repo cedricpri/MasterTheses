@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.11)  9 MAY 2020 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.1.11)  12 MAY 2020 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -494,12 +494,12 @@ LaTeX Info: Redefining \nameref on input line 31.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<figs/image_UC.png, id=71, 400.49625pt x 401.5pt>
+<figs/image_UC.png, id=87, 400.49625pt x 401.5pt>
 File: figs/image_UC.png Graphic file (type png)
 <use figs/image_UC.png>
 Package pdftex.def Info: figs/image_UC.png  used on input line 39.
 (pdftex.def)             Requested size: 72.55157pt x 72.73248pt.
-<figs/muonSystems.png, id=73, 200.75pt x 200.75pt>
+<figs/muonSystems.png, id=89, 200.75pt x 200.75pt>
 File: figs/muonSystems.png Graphic file (type png)
 <use figs/muonSystems.png>
 Package pdftex.def Info: figs/muonSystems.png  used on input line 39.
@@ -524,19 +524,19 @@ l.77 \newpage
 <to be read again> 
                    \relax 
 l.96 \newpage
-              [1] [2] (./muonSystems.toc)
+              [1] [2] (./muonSystems.toc [3
+
+])
 \tf@toc=\write4
 \openout4 = `muonSystems.toc'.
 
- [3
-
-]
+ [4]
 Chapter 1.
 [1
 
 ]
 Chapter 2.
-<figs/SMFermions.png, id=133, 328.3467pt x 269.0853pt>
+<figs/SMFermions.png, id=158, 328.3467pt x 269.0853pt>
 File: figs/SMFermions.png Graphic file (type png)
 <use figs/SMFermions.png>
 Package pdftex.def Info: figs/SMFermions.png  used on input line 138.
@@ -544,24 +544,24 @@ Package pdftex.def Info: figs/SMFermions.png  used on input line 138.
 [2
 
 ]
-<figs/cosmic.png, id=154, 1927.2pt x 949.5475pt>
+<figs/cosmic.png, id=179, 1927.2pt x 949.5475pt>
 File: figs/cosmic.png Graphic file (type png)
 <use figs/cosmic.png>
 Package pdftex.def Info: figs/cosmic.png  used on input line 152.
 (pdftex.def)             Requested size: 312.97514pt x 170.70833pt.
-<figs/cosmicMuons.png, id=156, 645.41125pt x 780.9175pt>
+<figs/cosmicMuons.png, id=181, 645.41125pt x 780.9175pt>
 File: figs/cosmicMuons.png Graphic file (type png)
 <use figs/cosmicMuons.png>
 Package pdftex.def Info: figs/cosmicMuons.png  used on input line 162.
 (pdftex.def)             Requested size: 227.62076pt x 256.07109pt.
  [3 <./figs/SMFermions.png (PNG copy)> <./figs/cosmic.png>]
-<figs/BB.png, id=173, 997.7275pt x 635.37375pt>
+<figs/BB.png, id=197, 997.7275pt x 635.37375pt>
 File: figs/BB.png Graphic file (type png)
 <use figs/BB.png>
 Package pdftex.def Info: figs/BB.png  used on input line 187.
 (pdftex.def)             Requested size: 341.43034pt x 227.61945pt.
  [4 <./figs/cosmicMuons.png>]
-<figs/moliere.png, id=192, 1140.26pt x 512.91624pt>
+<figs/moliere.png, id=216, 1140.26pt x 512.91624pt>
 File: figs/moliere.png Graphic file (type png)
 <use figs/moliere.png>
 Package pdftex.def Info: figs/moliere.png  used on input line 208.
@@ -576,7 +576,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 222.
  [6 <./figs/moliere.png>]
-<figs/wireChambers.png, id=212, 532.99126pt x 426.59375pt>
+<figs/wireChambers.png, id=236, 532.99126pt x 426.59375pt>
 File: figs/wireChambers.png Graphic file (type png)
 <use figs/wireChambers.png>
 Package pdftex.def Info: figs/wireChambers.png  used on input line 238.
@@ -585,18 +585,18 @@ Package pdftex.def Info: figs/wireChambers.png  used on input line 238.
 
 LaTeX Warning: Reference `fig:setup' on page 7 undefined on input line 255.
 
-<figs/muonChambers.png, id=213, 986.68625pt x 597.23125pt>
+<figs/muonChambers.png, id=237, 986.68625pt x 597.23125pt>
 File: figs/muonChambers.png Graphic file (type png)
 <use figs/muonChambers.png>
 Package pdftex.def Info: figs/muonChambers.png  used on input line 260.
 (pdftex.def)             Requested size: 256.0807pt x 170.71388pt.
-<figs/muonChambersPhoto.png, id=214, 576.1525pt x 642.4pt>
+<figs/muonChambersPhoto.png, id=238, 576.1525pt x 642.4pt>
 File: figs/muonChambersPhoto.png Graphic file (type png)
 <use figs/muonChambersPhoto.png>
 Package pdftex.def Info: figs/muonChambersPhoto.png  used on input line 263.
 (pdftex.def)             Requested size: 170.71956pt x 170.7155pt.
 [7 <./figs/wireChambers.png>]
-<figs/dataFlow.png, id=224, 987.69pt x 658.46pt>
+<figs/dataFlow.png, id=249, 987.69pt x 658.46pt>
 File: figs/dataFlow.png Graphic file (type png)
 <use figs/dataFlow.png>
 Package pdftex.def Info: figs/dataFlow.png  used on input line 277.
@@ -604,31 +604,42 @@ Package pdftex.def Info: figs/dataFlow.png  used on input line 277.
  [8 <./figs/muonChambers.png> <./figs/muonChambersPhoto.png> <./figs/dataFlow.p
 ng>]
 Chapter 3.
+<figs/PDF.png, id=262, 261.97874pt x 139.52126pt>
+File: figs/PDF.png Graphic file (type png)
+<use figs/PDF.png>
+Package pdftex.def Info: figs/PDF.png  used on input line 293.
+(pdftex.def)             Requested size: 213.40086pt x 108.12358pt.
 [9
 
-]
+ <./figs/PDF.png>]
+<figs/pdfs.png, id=276, 1105.12875pt x 702.625pt>
+File: figs/pdfs.png Graphic file (type png)
+<use figs/pdfs.png>
+Package pdftex.def Info: figs/pdfs.png  used on input line 312.
+(pdftex.def)             Requested size: 341.42284pt x 199.16736pt.
+ [10 <./figs/pdfs.png>] [11]
 Chapter 4.
-[10
-
-]
-Chapter 5.
-[11
-
-]
-Chapter 6.
 [12
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 369.
- [13
+Chapter 5.
+[13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 369.
+Chapter 6.
+[14
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 414.
+ [15
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 414.
  (./muonSystems.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 369.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 369.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 414.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 414.
 Package rerunfilecheck Info: File `muonSystems.out' has not changed.
-(rerunfilecheck)             Checksum: 82264F3FEF761ED8B55434E6AD3EE850;1032.
+(rerunfilecheck)             Checksum: 420125730A4AEEB4027DD08942D20ABE;1307.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -639,32 +650,35 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 369.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 414.
  ) 
 Here is how much of TeX's memory you used:
- 8803 strings out of 494880
- 130314 string characters out of 6179601
- 235146 words of memory out of 5000000
- 11949 multiletter control sequences out of 15000+600000
+ 8834 strings out of 494880
+ 130708 string characters out of 6179601
+ 235689 words of memory out of 5000000
+ 11968 multiletter control sequences out of 15000+600000
  11032 words of font info for 39 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 36i,8n,43p,969b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,8n,43p,969b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on muonSystems.pdf (18 pages, 1374321 bytes).
+ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on muonSystems.pdf (21 pages, 1443054 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 192 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 234 words of extra memory for PDF output out of 10000 (max. 10000000)
 

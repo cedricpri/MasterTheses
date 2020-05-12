@@ -280,8 +280,53 @@ Both streams then join at the 1D histogram format level, gathering a collection 
 \end{center}
 \end{figure}
 
+\chapter{Statistical parameters}
 
-\chapter{Parameters estimation}
+The general objective of this work is to find a way to determine the geometry of an eventual object placed between the two muon detectors by measuring the deviation affecting incident cosmic muons, a typical non-deterministic process which therefore needs to be adressed using advanced statistical parameters now described, such as probability density functions (Section~\ref{sec:PDF}), Monte-Carlo simulations (Section~\ref{sec:MC}), likelihoods (Section~\ref{sec:Likelihood}) and kernel density functions (Section~\ref{sec:KDF}).
+
+\section{Probability density functions} \label{sec:PDF}
+
+The probability density functions, or PDFs, are statistical expressions defining probability distributions, representing the likelihood of any given outcome. They are typically represented as curves in the two dimentional space (x,y), as shown in Figure~\ref{fig:PDF}, in which the total area below the curve in an interval is equal to the probability of a discrete random variable occurring. 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=7.5cm, height=3.8cm]{figs/PDF.png}
+\caption{Schematic representation of a random PDF.}
+\label{fig:PDF}
+\end{center}
+\end{figure}
+
+Gaussian distributions are in this sense probability density functions having a particular expression defined in Equation~\ref{eq:gauss}, where $\sigma$ is the so-called \textbf{standard deviation} of the distribution, representing its width: a low $\sigma$ indicates that the values of the distribution tend to be close to its mean value $\mu$, while a high $\sigma$ indicates that the values are spread out over a wider range.
+
+\begin{equation}
+\label{eq:gauss}
+f(x) = \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{1}{2} \left (\frac{x - \mu}{\sigma} \right )^2}
+\end{equation}
+
+These definitions are important because we already know that the multiple scattering process which affect the incident cosmic muons is a typical stochastic process: this means that two muons having similar kinematics can leave the detector with very different output angles, whose actual distribution can be approximated by a gaussian function for small deviation angles (at larger angles, the distribution is behaving like Rutherford scattering, with slightly larger tails). 
+
+The standard deviation of such deviation angles distribution is actually highly dependant on the geometrical parameters $r_i$ of the eventual object put between the two detectors, as we saw in Equation ~\ref{eq:Moliere}. Indeed, the mean deviation observed is expected to be dependant on the number of radiation lengths crossed, much higher when a muon crosses denser objects, such as a pipe, as shown in Figure~\ref{fig:deviation}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=12cm, height=7cm]{figs/pdfs.png}
+\caption{Schematic representation of the deviation expected for an incoming muon and PDFs associated without (on the left) and with (on the right) an object placed between the detectors.}
+\label{fig:deviation}
+\end{figure}
+
+\section{Monte-Carlo simulations} \label{sec:MC}
+
+Monte-Carlo simulations are algorithms developped in order to compute approximate numerical values to stochastical problems using random processes and advanced probabilistic techniques. In this particular case, such computation methods apply extremely well since, by being a stochastical process, the actual probability density function associated to a given geometry cannot be computed analytically (if we were able to do it, a simple gradiant descent method would be enough to solve this problem). The only way available to estimate it is by using thousands of Monte-Carlo simulated toys, simulating thousands of different angles of incidence for different geometries.
+
+At the end of the day, the main objective of this process is to be able to estimate the probability of observing a certain deviation given the input trajectory of the muon, $P$(deviation$|$input) in simulation and a given object geometry. Then, the process will be reversed using actual data in order to try and obtain the geometry of the object from the actual measurement of the input and output muon trajectories, using a likelihood minimization method.
+
+\section{Likelihood} \label{sec:Likelihood}
+
+So far, we have been able to generate thousands of different Monte-Carlo experiments with different conditions (mainly, different input angles and object geometries), and we now want to find a way to reverse this process to estimate the geometry of the object from a given measurement. This is here the likelihood becomes useful, being defined as a function that measures the goodness of a fit with respect to a sample of data, for several unknown parameters of a mathematical model.
+
+In this work, the geometry of the object placed between the detectors will be defined from a set of parameters $r_i$. For a particular object, since all the different experiments are assumed to be independent (and they actually are, since there is no correlation between the properties of two incoming muons), the total likelihood will then be given as the product of the probabilities for actually observing the measured deviation for an incoming muon, for each muon.
+
+\section{Kernel density functions} \label{sec:KDF}
 
 \chapter{The algorithm}
 

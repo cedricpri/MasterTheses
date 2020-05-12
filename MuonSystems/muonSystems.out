@@ -10,8 +10,12 @@
 \BOOKMARK [2][-]{subsection.2.5.1}{Muon detectors}{section.2.5}% 10
 \BOOKMARK [2][-]{subsection.2.5.2}{Working setup}{section.2.5}% 11
 \BOOKMARK [2][-]{subsection.2.5.3}{Data flow}{section.2.5}% 12
-\BOOKMARK [0][-]{chapter.3}{Parameters estimation}{}% 13
-\BOOKMARK [0][-]{chapter.4}{The algorithm}{}% 14
-\BOOKMARK [0][-]{chapter.5}{Results obtained}{}% 15
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 16
-\BOOKMARK [0][-]{chapter.6}{Bibliography}{}% 17
+\BOOKMARK [0][-]{chapter.3}{Statistical parameters}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Probability density functions}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Monte-Carlo simulations}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Likelihood}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Kernel density functions}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{The algorithm}{}% 18
+\BOOKMARK [0][-]{chapter.5}{Results obtained}{}% 19
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 20
+\BOOKMARK [0][-]{chapter.6}{Bibliography}{}% 21
