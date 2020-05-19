@@ -13,9 +13,10 @@
 \BOOKMARK [0][-]{chapter.3}{Statistical parameters}{}% 13
 \BOOKMARK [1][-]{section.3.1}{Probability density functions}{chapter.3}% 14
 \BOOKMARK [1][-]{section.3.2}{Monte-Carlo simulations}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.3}{Likelihood}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{p-values}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.4}{Kernel density functions}{chapter.3}% 17
-\BOOKMARK [0][-]{chapter.4}{The algorithm}{}% 18
-\BOOKMARK [0][-]{chapter.5}{Results obtained}{}% 19
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 20
-\BOOKMARK [0][-]{chapter.6}{Bibliography}{}% 21
+\BOOKMARK [1][-]{section.3.5}{Likelihood}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{The algorithm}{}% 19
+\BOOKMARK [0][-]{chapter.5}{Results obtained}{}% 20
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 21
+\BOOKMARK [0][-]{chapter.6}{Bibliography}{}% 22

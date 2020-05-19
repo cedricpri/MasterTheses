@@ -1,5 +1,5 @@
 \documentclass[a4paper, 11pt]{report}
-\usepackage[top=2.5cm, bottom=1.7cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{url}
@@ -22,6 +22,7 @@
 \usepackage{multirow}
 \usepackage[toc,page]{appendix}
 \usepackage{titlesec}
+\usepackage{bm}
 
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0em}
@@ -252,7 +253,9 @@ Several properties are extremely important when designing a detector:
 
 \subsection{Working setup} \label{sec:ourSetup}
 
-For this particular work, four muon chambers of 1 meter by 1 meter have been build using these principles, as shown in Figure~\ref{fig:setup}. As we can see, more than 200 wires connected to the high voltage and made out of gold and tungsten have been placed every 4mm in two different planes rotated by 90 degrees, to measure the $x$ and $y$ postion of cosmic muons. These chambers, filled while a mixture of Argon and CO$_2$, are then setup in pairs above and below the object being studied, in order to determine the position and the direction of the incoming and outgoing cosmic muon. This setup allows to measure with a good spatial resolution the deviation of muons, to determine as precisely as possible the properties of the object put in between both detectors.
+For this particular work, four muon chambers of 1 meter by 1 meter have been build using these principles, as shown in Figure~\ref{fig:setup}. As we can see, more than 200 wires connected to the high voltage and made out of gold and tungsten have been placed every 4mm in two different planes rotated by 90 degrees, to measure the $x$ and $y$ postion of cosmic muons. 
+
+These chambers, filled while a mixture of Argon and CO$_2$, are then setup in pairs above and below the object being studied, in order to determine the position and the direction of the incoming and outgoing cosmic muon. This setup allows to measure with a good spatial resolution the deviation of muons, to determine as precisely as possible the properties of the object put in between both detectors.
 
 \begin{figure}[htbp]
 \centering
@@ -263,7 +266,7 @@ For this particular work, four muon chambers of 1 meter by 1 meter have been bui
 \includegraphics[width=6cm, height=6cm]{figs/muonChambersPhoto.png}
 \end{minipage} \hfill
 \caption{Actual working setup used for this work, with two multi-wires muon chambers of 1m$^2$ placed on each side of the object being studied.}
-\label{fig:wireChambers}
+\label{fig:setup}
 \end{figure}
 
 \subsection{Data flow} \label{sec:dataFlow}
@@ -280,18 +283,44 @@ Both streams then join at the 1D histogram format level, gathering a collection 
 \end{center}
 \end{figure}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \chapter{Statistical parameters}
 
-The general objective of this work is to find a way to determine the geometry of an eventual object placed between the two muon detectors by measuring the deviation affecting incident cosmic muons, a typical non-deterministic process which therefore needs to be adressed using advanced statistical parameters now described, such as probability density functions (Section~\ref{sec:PDF}), Monte-Carlo simulations (Section~\ref{sec:MC}), likelihoods (Section~\ref{sec:Likelihood}) and kernel density functions (Section~\ref{sec:KDF}).
+The general objective of this work is to find a way to determine the geometry of an eventual object placed between the two muon detectors by measuring the deviation affecting incident cosmic muons, a typical non-deterministic process which therefore needs to be adressed using advanced statistical parameters ans methods, such as probability and kernal density functions (Sections~\ref{sec:PDF} and~\ref{sec:KDF}), Monte-Carlo simulations (Section~\ref{sec:MC}), p-values (Section~\ref{sec:pValues}) and likelihood function (Section~\ref{sec:Likelihood}).
 
 \section{Probability density functions} \label{sec:PDF}
 
-The probability density functions, or PDFs, are statistical expressions defining probability distributions, representing the likelihood of any given outcome. They are typically represented as curves in the two dimentional space (x,y), as shown in Figure~\ref{fig:PDF}, in which the total area below the curve in an interval is equal to the probability of a discrete random variable occurring. 
+The probability density functions, or PDFs, are statistical expressions defining probability distributions representing the likelihood of any given outcome. They are typically represented as curves in the two dimentional space (x, y), as shown in Figure~\ref{fig:PDF}, in which the total area below the curve in an interval is equal to the probability of a discrete random variable occurring. 
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=7.5cm, height=3.8cm]{figs/PDF.png}
-\caption{Schematic representation of a random PDF.}
+\includegraphics[width=12cm, height=5.4cm]{figs/PDF.png}
+\caption{Schematic representation of a random PDF \cite{PDF}.}
 \label{fig:PDF}
 \end{center}
 \end{figure}
@@ -303,9 +332,9 @@ Gaussian distributions are in this sense probability density functions having a 
 f(x) = \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{1}{2} \left (\frac{x - \mu}{\sigma} \right )^2}
 \end{equation}
 
-These definitions are important because we already know that the multiple scattering process which affect the incident cosmic muons is a typical stochastic process: this means that two muons having similar kinematics can leave the detector with very different output angles, whose actual distribution can be approximated by a gaussian function for small deviation angles (at larger angles, the distribution is behaving like Rutherford scattering, with slightly larger tails). 
+These definitions are important because we already know that the multiple scattering process which affects the incident cosmic muons is a stochastic process: this means that two muons having similar kinematics can leave the detector with very different output directions and positions, whose actual distribution can be approximated by a gaussian function for small deviation angles (at larger angles, the distribution is behaving like Rutherford scattering, with slightly larger tails). 
 
-The standard deviation of such deviation angles distribution is actually highly dependant on the geometrical parameters $r_i$ of the eventual object put between the two detectors, as we saw in Equation ~\ref{eq:Moliere}. Indeed, the mean deviation observed is expected to be dependant on the number of radiation lengths crossed, much higher when a muon crosses denser objects, such as a pipe, as shown in Figure~\ref{fig:deviation}.
+The standard deviation of the distribution of such output paraemeters is actually highly dependant on the geometrical parameters $\theta_i$ of the eventual object put between the two detectors, as we saw in Equation ~\ref{eq:Moliere}. Indeed, the mean deviation observed is expected to depend on the number of radiation lengths crossed, typically much higher when a muon crosses denser objects, such as a steel pipe, as shown in Figure~\ref{fig:deviation}. This means that in first approximation, the tichker the object investigated is, the higher the expected deviation will be and this simple observation will actually be used as the driving process of the statistical study performed in this work.
 
 \begin{figure}[htbp]
 \centering
@@ -316,19 +345,131 @@ The standard deviation of such deviation angles distribution is actually highly 
 
 \section{Monte-Carlo simulations} \label{sec:MC}
 
-Monte-Carlo simulations are algorithms developped in order to compute approximate numerical values to stochastical problems using random processes and advanced probabilistic techniques. In this particular case, such computation methods apply extremely well since, by being a stochastical process, the actual probability density function associated to a given geometry cannot be computed analytically (if we were able to do it, a simple gradiant descent method would be enough to solve this problem). The only way available to estimate it is by using thousands of Monte-Carlo simulated toys, simulating thousands of different angles of incidence for different geometries.
+Monte-Carlo simulations are algorithms developped in order to compute approximate numerical values to stochastical problems using random processes and advanced probabilistic techniques. In this particular case, such computation methods apply extremely well since, by being a stochastical process, the actual probability density function associated to a given geometry cannot be computed analytically (and if we were able to do it, a simple gradiant descent method would be enough to solve this problem and find the optimal parameters $\theta_i$ of the object). 
 
-At the end of the day, the main objective of this process is to be able to estimate the probability of observing a certain deviation given the input trajectory of the muon, $P$(deviation$|$input) in simulation and a given object geometry. Then, the process will be reversed using actual data in order to try and obtain the geometry of the object from the actual measurement of the input and output muon trajectories, using a likelihood minimization method.
+The only way available to actually estimate these parameters is by using thousands of Monte-Carlo simulated toys, simulating thousands of different incident muons for different geometries. The principle is simple: for each incident muon measured, a large number $N$ of Monte-Carlo simulations will be performed, propagating the muon using an algorithm described in Chapter~\ref{chapter:algorithm} until reaching the lower detector. Repeating this experiment over and over again always gives different results, giving us the opportunity to build the expected PDF for a given object geometry and for the incident muon that has been measured and that will be used later on.
 
-\section{Likelihood} \label{sec:Likelihood}
+At the end of the day, the main objective of this process is to be able to estimate the probability of observing a certain deviation given an object geometry and the input trajectory of the muon, $P$(deviation$|$input) in simulation. Then, this process will be reversed using actual data in order to try and obtain the geometry of the object from the actual measurement of the input and output muon trajectories and positions, using a likelihood minimization method.
 
-So far, we have been able to generate thousands of different Monte-Carlo experiments with different conditions (mainly, different input angles and object geometries), and we now want to find a way to reverse this process to estimate the geometry of the object from a given measurement. This is here the likelihood becomes useful, being defined as a function that measures the goodness of a fit with respect to a sample of data, for several unknown parameters of a mathematical model.
+\section{p-values} \label{sec:pValues}
 
-In this work, the geometry of the object placed between the detectors will be defined from a set of parameters $r_i$. For a particular object, since all the different experiments are assumed to be independent (and they actually are, since there is no correlation between the properties of two incoming muons), the total likelihood will then be given as the product of the probabilities for actually observing the measured deviation for an incoming muon, for each muon.
+So far, we developed a technique allowing us to reconstruct the expected probability density function for a given incident muon using Monte-Carlo techniques. However, we still need a way to estimate the goodness of the actual measurement with this simulated PDF: this is where the so-called \textbf{p-values} enter, a key ingredient for this work since they allow to relate the two main parts of the problem: the simulations performed and the actual data collected.
+
+Probability values, or p-values, are based on the concept of \textbf{null hypothesis $H_0$}, a general statement or default position telling that there is no actual relationship between two measured phenomena and assumed to be true until an evidence indicates otherwise. This hypothesis is then typically opposed to the \textbf{alternative hypothesis $H$}, usually more interesting by being the interesting hypothesis of the experiment being performed. The main goal is to compare the data with both hypotheses: if the data is consistent with $H_0$, then the null hypothesis can simply not be rejected. However, we can reject $H_0$ (and therefore accept $H$, its exact opposite) if the data collected is significantly unlikely to have occurred if the null hypothesis were to be true, according to a \textbf{confidence level} previously defined.
+
+From these definitions, a p-value is then defined as the probability for a variable to be observed equal or more extreme (lower or higher, depending on the cases) than the actual value $x$ observed under the null hypothesis. This definition, can be represented in a schematic way in Figure~\ref{fig:pvalue}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=13cm, height=7cm]{figs/pvalue.png}
+\caption{Schematic representation of the statistical concept of p-value.}
+\label{fig:pvalue}
+\end{figure}
+
+In general, a smaller the p-value tells us that the hypothesis under consideration may not adequately explain the observation, leading to a higher statistical significance. At the end of the day, the null hypothesis is rejected if the p-value obtained is smaller than a previously defined, arbitrary and fixed threshold $\alpha$, the \textbf{level of significance} of the experiment. This parameter can take a large range of values, typically ranging from 0.05 to 0.001.
+
+In this work, the p-value will then allow us to compare a single data measurement with the probability density functions obtained from Monte-Carlo and quantify the probability that such muon was actually observed for a given object geometry. This value will then be feeded to a likelihood function, as explained in Section~\ref{sec:Likelihood}.
 
 \section{Kernel density functions} \label{sec:KDF}
 
-\chapter{The algorithm}
+In statistics, the kernel density estimation is a method allowing to estimate the density probability of a random variable. The objective of this method is to make inferrence regarding the data in order to try and smooth the probability density function obtained experimentally, as shown in Figure~\ref{fig:KGR}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=13cm, height=7cm]{figs/GPR.png}
+\caption{Academic example of a gaussian regression applied to a noisy and finite set of data points.}
+\label{fig:KGR}
+\end{figure}
+
+Mathematically, the objective is then to build a continous function $\hat{f}_h(x)$ defined in Equation~\ref{eq:KDF} from a finite set of data samples $\bm x$, distributed along an unknown density function $f$, and where $K$ is the so-called \textbf{kernel} and $h$ is the \textbf{bandwidth} or \textbf{smoothing parameter} of the estimation.
+
+\begin{equation}
+\label{eq:KDF}
+\hat{f}_h(x) = \frac{1}{nh} \sum_{i=1}^{n} K \left (\frac{x-x_i}{h} \right )
+\end{equation}
+
+In the previous equation the kernel $K$ is a non-negative function defined depending on the problem, as the "building block" of the final function that needs to be estimated: indeed, as we can see, the function $\hat{f}_h(x)$ will be given as a simple sum of kernels. In most of the problems, including this work, a standard gaussian kernel is used, taking the shape shown in Equation~\ref{eq:kernel}.
+
+\begin{equation}
+\label{eq:kernel}
+K(x) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2} x^2}
+\end{equation}
+
+In this particular case, this method allows us to construct continous functions and recover for the eventual low statistics and possibles holes in the bi-dimentional histograms for the position and direction of the muons obtained in $x$ and $y$, following the method that will be described in Chapter~\ref{chapter:algorithm}.
+
+\section{Likelihood} \label{sec:Likelihood}
+
+So far, we have been able to generate thousands of different Monte-Carlo experiments for a given muon and for a given object geometry, but we still need to find a way to reverse this process to estimate the geometry of the object from a given measurement. 
+
+This is where the likelihood becomes useful, defined as a function that measures the goodness of a fit with respect to a sample of data, for several unknown parameters of a mathematical model. In general, this function can be defined in Equation~\ref{eq:likelihood}, where $\bm \theta = $\{$\theta_1, ..., \theta_i$\} are the parameters of the model and $x$ is the actual measurement of a random variable $X$ following a density function $f$.
+
+\begin{equation}
+\label{eq:likelihood}
+\mathcal{L}(\bm \theta | x) = f_{\bm \theta}(x) = P(X = x | \bm \theta)
+\end{equation}
+
+It is important to note at this point that the likelihood is a function of the parameters $\bm \theta$ but not a probability density function itself. Additionally, it should in general not be confused with the probability $p(\bm \theta | x)$ since it is equal to the probability of observing a given outcome $x$ when the true values of the parameters are $\bm \theta$: this means that the likelihood is equal to a probability density over the outcome $x$, not over the parameters $\bm \theta$.
+
+To understand this concept better, the simple example of an unfair coin toss can be considered, where the fairness of the coin is the parameter of the model, represented by the probability of obtaining head $p_H$ and taking values between 0 and 1 (for a regular coin, $p_H = 0.5$). The likelihood is then defined from a given observation, such as obtaining two heads in a row $HHT$ in the following way:
+
+\begin{equation}
+\label{eq:likelihoodEx}
+\mathcal{L}(p_H | HHT) = P(HHT | p_H) = P(H | p_H) \cdot P(H | p_H) \cdot P(T | (1-p_H))
+\end{equation}
+
+For each value of $p_H$, the value of the likelihood can then be computed and ultimately plotted, as shown in Figure~\ref{fig:likelihoodEx}, showing a minimum value for a particular value of $p_H$.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=7cm, height=6cm]{figs/likelihood.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=7cm, height=6cm]{figs/loglikelihood.png}
+\end{minipage} \hfill
+\caption{Likelihood (on the left) and log-likelihood (on the right) obtained for our particular example of the fairness of a coin given the observation $HHT$.}
+\label{fig:likelihoodEx}
+\end{figure}
+
+The likelihood is in this sense interesting because it can be described as a hypersurface whose peak gives the optimal set of parameters maximizing the probability of drawing the actual sample measured. Often, the \textbf{log-likelihood} $l(\bm \theta | x) = -2 \log(\mathcal{L}(\bm \theta | x))$ is actually used instead, being a bit more convenient to deal with the special part concavity plays in the maximization process. Given the properties of the logarithm, maximizing the likelihood is equivalent to minimizing this particular log-likelihood.
+
+Another important property of the likelihood that will be used extensively and already assumed in the previous example is the fact that, for two independant measurements, the likelihood of both measurements is equal to the product of both likelihoods independantly computed for each event.
+
+In this work, a likelihood function will be obtained as the product of the thousands of muons collected, but for a fixed geometry of the object. A minimization method will then be performed in order to try and minimize the value obtained by trying out different parameters $\bm \theta$, until finding the optimal set of parameters able to describe best the object put in between the detectors.
+
+
+
+
+
+
+
+
+
+
+
+
+%In this work, measurements of cosmic muons are taken for a relatively long period of time to accumulate statistics. Each event recorded is independent from the previous one by nature, and our goal is to estimate from the ingredients previously defined the actual geometry of the object placed between the detectors, defined from a set of parameters $\bm \theta$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{The algorithm} \label{chapter:algorithm}
+
+Muons described by 6 parameters.
 
 \chapter{Results obtained}
 
@@ -408,6 +549,9 @@ Physical Review Vol. 89, 1953}
 \href{https://ui.adsabs.harvard.edu/abs/1970Sci...167..832A/abstract}{L. Alvarez et all.,
 "Search for Hidden Chambers in the Pyramid", 
 Science, Volume 167, Issue 3919, 1970}
+
+\bibitem{PDF}
+\href{https://www.math24.net/probability-density-function/}{Math24, "Probability Density Function", as seen in May 2020}
 
 \end{thebibliography}
 
