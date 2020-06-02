@@ -18,6 +18,10 @@
 \contentsline {section}{\numberline {3.4}Kernel density functions}{12}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Likelihood}{13}{section.3.5}%
 \contentsline {chapter}{\numberline {4}The algorithm}{15}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Results obtained}{16}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Conclusions}{17}{chapter.6}%
-\contentsline {chapter}{Bibliography}{17}{chapter.6}%
+\contentsline {section}{\numberline {4.1}PipeReconstructor}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Generator}{18}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Results obtained}{19}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Incident muons distribution}{19}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Tests performed}{19}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusions}{20}{chapter.6}%
+\contentsline {chapter}{Bibliography}{20}{chapter.6}%
