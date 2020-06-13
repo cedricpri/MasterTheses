@@ -475,7 +475,7 @@ The algorithm we developped to solve this particular problem has been written in
 \item Define the geometry of the problem (the detector, and the volume under investigation are therefore defined using the smallest possible set of parameters at this stage);
 \item Compute the different intersection points of an incident cosmic muons with our geometry;
 \item Propagate the muons through the different medium of interaction encountered along their path;
-\item Calculate the likelihood of a given measurement;
+\item Calculate the likelihood of a given measurement for a given volume;
 \item Finally, probe different volumes and perform a descent method in order to minimize the likelihood encountered and find the optimal volume to solve our problem given the measurements collected. 
 \end{itemize}
 This class is complemented with the \textbf{Generator} (Section~\ref{sec:Generator}), a small class allowing us to generate muons simulating our actual experiment, using some of the functions of the PipeReconstructor.
@@ -485,9 +485,9 @@ This class is complemented with the \textbf{Generator} (Section~\ref{sec:Generat
 The PipeReconstructor is a set of classes, allowing us to define different kind of objects:
 
 \begin{itemize}
-\item First of all, a muon is defined from the \textbf{MuonState} class and from 7 parameters: 3 parameters ($x$, $y$, $z$) representing the position of the momentum vector of a muon, 3 additional parameters ($v_x$, $v_y$, $v_z$) representing its three-dimensional direction and the actual value of its momentum. The measurement performed at the top detector will be labelled with the index 1 ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$) while the measurement performed by the lower detector will take the index 2.
-\item \textbf{Surfaces} and \textbf{Volumes}, virtual classes allowing us to define general surfaces (their spatial position and their geometrical center) and volumes, defined as vectors of several surfaces: a general volume is in this sense defined by its position and global density. Defining such virtual classes is extremely important since it would allow us to consider different geometries, not just a pipe put in between the two detectors. The constant $z$ position of both the lower and upper detectors is also defined at this stage.
-\item \textbf{Cylinders} and \textbf{Pipes}, particular subclasses of the virtual classes previously defined in order to define the geometry of this particular problem. A pipe is in this sense defined as a set of two cylinders and from 7 different parameters: its central position ($x$, $y$, $z$), along with its density, the radii $r$ and $R$ of both cylinders and its length along the y-axis $L$, as shown in Figure~\ref{fig:cylinder}.
+\item First of all, a muon is defined from the \textbf{MuonState} class and from 7 parameters: 3 parameters ($x$, $y$, $z$) representing the position of the muon, 3 additional parameters ($v_x$, $v_y$, $v_z$) representing its three-dimensional direction and the actual value of its momentum. The measurement performed at the top detector will be labelled with the index 1 ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$) while the measurement performed by the lower detector will take the index 2.
+\item \textbf{Surfaces} and \textbf{Volumes}, virtual classes allowing us to define general surfaces (their spatial position and their geometrical center) and volumes, defined as vectors of several surfaces: a general volume is in this sense defined by its surfaces, central position and global density. Defining such virtual classes is extremely important since it would allow us to consider different geometries, not just a pipe put in between the two detectors. The constant $z$ position of both the lower and upper detectors (-37 and 37 cm, respectively) is also defined at this stage.
+\item \textbf{Cylinders} and \textbf{Pipes}, particular subclasses of the virtual classes previously defined in order to define the geometry of this particular problem. A pipe is in this sense defined as a set of two cylinders and from 7 different parameters: its central position ($x$, $y$, $z$), along with its density, the radii $r$ and $R$ of both cylinders and its length along the y-axis $L$, as shown in Figure~\ref{fig:cylinder}. For simplicity, the pipes considered in this work are therefore considered to have a constant density.
 
 \begin{figure}[htbp]
 \centering
@@ -505,7 +505,7 @@ One method computing the exact cut point between a muonState and a Cylinder has 
 (x - X)^2 + (z - Z)^2 = R^2
 \end{equation}
 
-From this, computing the interesection between such cylinder and a general MuonState ($x_0$, $y_0$, $z_0$, $v_{x}$, $v_{y}$, $v_{z}$, $p$) is trivial, since such MuonState can be represented by a straight line: 
+From this, computing the interesection between such cylinder and a general MuonState ($x_0$, $y_0$, $z_0$, $v_{x}$, $v_{y}$, $v_{z}$, $p$) is trivial, since a MuonState can be represented by a straight line: 
 
 \begin{equation}
 \label{eq:line}
@@ -516,7 +516,7 @@ z = z_0 + \lambda v_z
 \end{dcases}
 \end{equation}
 
-By putting this into the euqation of the cylinder, we get the following expression:
+By putting this into the equation of the cylinder, we get the following expression:
 
 \begin{equation}
 \label{eq:together}
@@ -526,7 +526,7 @@ By putting this into the euqation of the cylinder, we get the following expressi
 %\end{dcases}
 \end{equation}
 
-Once both the squared values applied, we get an equation having the shape $Ax^2 + Bx + C = 0$, where both cutting points will be given by $x^{+/-} = \frac{-B \pm \sqrt{B^2 - 4 AC}}{2A}$:
+Once both the squared values applied, we get an equation having the shape $Ax^2 + Bx + C = 0$, where both cutting points will be given therefore by $x^{+/-} = \frac{-B \pm \sqrt{B^2 - 4 AC}}{2A}$:
 
 \begin{equation}
 \label{eq:line}
@@ -542,7 +542,7 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 \item A \textbf{Propagator} is then defined as the object allowing us to propagate a MuonState through a general Volume. The way it works is quite simple: 
 
 \begin{itemize}
-\item First of all, the distance between the MuonState and all the surfaces of the object considered is computed and the first intersection point is kept.
+\item First of all, the distance between the initial MuonState and all the surfaces of the object considered is computed and the first intersection point is kept.
 \item The muon is then propagated in a distance corresponding to 90\% of the total distance to this first cut point by taking into account the multiple scattering effect, and a new MuonState is therefore obtained. We cannot propagate the muon 100\% of the distance immediately to avoid effects related to the actual shape of the Cylinder and due to the fact that the Equation~\ref{eq:Moliere} is only valid in case of normal incidence between the MuonState and the Cylinder, which is typically not verified, as shown in Figure~\ref{fig:normal}.
 
 \begin{figure}[htbp]
@@ -554,29 +554,38 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 \label{fig:normal}
 \end{figure}
 
-\item This propagation process is then repeated 6 times in total, until reaching a position extremely close to the volume that is being studied.
-\item This whole proces is repeated for all the different surfaces encountered by the muon (up to four times in total), and one final time until reaching the bottom detector. At this point, the MuonState is kept as the second measurement ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$).
+\item This propagation process is then repeated 6 times in total, until reaching a position extremely close to the volume that is being studied. The muon is then manually propagated along a distance of around 0.1 mm in order to force its crossing with respect to the first surface, so that the propagation can be repeated for the next surface.
+\item This whole proces is repeated for all the different surfaces encountered by the muon (up to four times in total for our particular geometry), and one final time until reaching the bottom detector. At this point, the MuonState is kept as the second measurement ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) that will be compared with the simulation using statistical methods.
+\item Eventual muons which not cross both the upper and lower detector are of course rejected and simply not considered when computing the value of the likelihood.
 \end{itemize}
 
-\item The \textbf{Likelihood} object can then be calculated. This class reads a Monte-Carlo generated file (explanations regarding this process will be given in Section~\ref{sec:Generator}) and, for each generated event, computes the $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ parameters defined between the outgoing muon and the prolongation of the incoming muon vector and representing the actual deviation applied to the muon, as shown in Figure~\ref{fig:parameters}.
+\item The \textbf{Likelihood} object itself can then be calculated. This class reads a Monte-Carlo generated file (actual explanations regarding this generation process will be given in Section~\ref{sec:Generator}) and is able to perform several calculations for each generated event ($n_{\text{gen}} \sim 100 000$): 
+\begin{itemize}
+\item First of all, three MuonStates are computed: the so-called \textit{IncomingMuon} and \textit{OutgoingMuon}, directly read as the measurement at the upper and lower detectors, from the Monte-Carlo simulation, and the \textit{IncomingMuonLinearDown}, defined as the prolongation along a straight line of the \textit{IncomingMuon}.
+\item Each \textit{IncomingMuon} is then propagated along the geometry using the method previously defined, defining a fourth so-called \textit{IncomingMuonDown} MuonState. The $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ parameters shown in Figure~\ref{fig:parameters} and representing the actual deviation suffered by the muon can then be obtained.
 
 \begin{figure}[htbp]
 \centering
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=6.5cm, height=6cm]{figs/parameters.png}
+\includegraphics[width=7cm, height=6cm]{figs/parameters.png}
 \end{minipage}\hfill
 \caption{Typical example of two incident muons not respecting the normal incidence required by the Moliere equation for the multiple scattering of muons.}
 \label{fig:parameters}
-\end{figure}
+\end{figure}At this stage, all the ingredients needed to compute a p-value are available.
 
-This process is repeated over and over again (1000 times in total), since we known that the multiple scattering is a stochastic process. Each time the process is executed, different deviations values are therefore obtained, each kept in a vector. A p-value for the actual measurement is then computed by using the vectors previously defined and representing an histogram of all the possible deviation values. The p-values computed along the x and y-axis then enter the global likelihood value that is used for the minimization process.
+\item This propagation process is repeated over and over again ($n_{\text{prop}} \sim 100$ times in total) since we known that the multiple scattering is a stochastic process. Each time the propagation method is called for the same incident muon, different deviations values are therefore obtained, each kept in a vector, which can be represented in an histogram and smoothen using kernel density functions, as explained in Section~\ref{sec:KDF}. 
+\item At this stage, all the ingredients needed to compute a p-value are available. A p-value for each \textit{IncomingMuon} is then computed by using the vectors previously defined and representing an histogram of all the possible deviation values, and by comparing the actual measurement \textit{OutgoingMuon} for such distributions. The p-values computed along the x and y-axis then enter the global likelihood value that is used for the minimization process.
+\end{itemize}
 
-\item \color{red} Talk about the minimization process once implemented. \color{black}
+\item So far, we described a method allowing to compute the likelihood of observing a given measuremen by using Monte-Carlo simulations for a given volume, but one last important step is still missing. 
+\color{red} Talk about the minimization process once implemented. \color{black}
 \end{itemize}
 
 \section{Generator} \label{sec:Generator}
 
-As we have just seen, the computation of the p-values required for the likelihood takes as input a file of Monte-Carlo generated events, which has been previously produced thanks to this \textbf{Generator}. The Generator is in this sense able to take as input one rootfile containing the Monte-Carlo generation of incoming cosmic muons and its main goal is then to read the input parameters of such muons and to propagate using the previously defined functions, to generate a dsitribution of the expected output.
+As we have just seen, the computation of the p-values required for the likelihood takes as input a file of Monte-Carlo generated events, which has been previously produced thanks to this \textbf{Generator}. This class takes as input one rootfile containing the Monte-Carlo generation of incoming cosmic muons previously produced by the company using CRY \cite{CRY}, a dedicated generator for cosmic muons. To simplify the current problem, the goal is then to simply read the input parameters of such muons, such as the position of their impact with the upper detector, and to propagate them using the previously defined functions, to generate a distribution of the expected output.
+
+The way this algorithm works is quite simple: a general volume matching the one that needs to be studied (in this case, a general Pipe localted in the center (0, 0, 0) of the detector, having an inner radius of 18.2 cm, an outter radius of 20 cm is then defined and a lenght of 50 cm) is first of all defined. Then, for each event we want to generate ($n_{\text{gen}} \sim 100 000$), a loop is performed: in each iteration of this loop, the incident muon is propagated throughout the geometry and histograms for the same parameters $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ are obtained.
 
 \color{red} Talk about MC truth and measurement. \color{black}
 
@@ -667,6 +676,9 @@ Science, Volume 167, Issue 3919, 1970}
 
 \bibitem{PDF}
 \href{https://www.math24.net/probability-density-function/}{Math24, "Probability Density Function", as seen in May 2020}
+
+\bibitem{CRY}
+\href{https://arxiv.org/pdf/0811.0187.pdf}{M. Holmann et all, "GEANT4 Simulation of a Cosmic Ray Muon Tomography System with Micro-Pattern Gas Detectors for the Detection of High-Z Materials", as seen in June 2020}
 
 \end{thebibliography}
 

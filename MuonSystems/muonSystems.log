@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.17)  2 JUN 2020 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.17)  13 JUN 2020 20:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -712,28 +712,29 @@ File: figs/normal.png Graphic file (type png)
 <use figs/normal.png>
 Package pdftex.def Info: figs/normal.png  used on input line 551.
 (pdftex.def)             Requested size: 199.16542pt x 170.71028pt.
-<figs/parameters.png, id=381, 558.085pt x 558.085pt>
+ [17 <./figs/normal.png>]
+<figs/parameters.png, id=387, 712.6625pt x 592.2125pt>
 File: figs/parameters.png Graphic file (type png)
 <use figs/parameters.png>
-Package pdftex.def Info: figs/parameters.png  used on input line 566.
-(pdftex.def)             Requested size: 184.94354pt x 170.71384pt.
- [17 <./figs/normal.png>] [18 <./figs/parameters.png>]
+Package pdftex.def Info: figs/parameters.png  used on input line 570.
+(pdftex.def)             Requested size: 199.16353pt x 170.71611pt.
+ [18 <./figs/parameters.png>] [19]
 Chapter 5.
-[19
-
-]
-Chapter 6.
 [20
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 673.
- [21
+Chapter 6.
+[21
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 673.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
+ [22
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
  (./muonSystems.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 673.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 673.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 685.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 685.
 Package rerunfilecheck Info: File `muonSystems.out' has not changed.
 (rerunfilecheck)             Checksum: 6BFB5C6FD2AB5EA5F4F06A712F3C6194;1618.
 
@@ -743,16 +744,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 673.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 685.
  ) 
 Here is how much of TeX's memory you used:
- 9931 strings out of 481239
- 151552 string characters out of 5920377
- 445047 words of memory out of 5000000
- 24897 multiletter control sequences out of 15000+600000
+ 9934 strings out of 481239
+ 151572 string characters out of 5920377
+ 445073 words of memory out of 5000000
+ 24898 multiletter control sequences out of 15000+600000
  542533 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,43p,969b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,43p,969b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -772,10 +773,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 1095.pfb>
-Output written on muonSystems.pdf (27 pages, 1708456 bytes).
+Output written on muonSystems.pdf (28 pages, 1722799 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
- 94 named destinations out of 1000 (max. 500000)
+ 524 PDF objects out of 1000 (max. 8388607)
+ 427 compressed objects within 5 object streams
+ 96 named destinations out of 1000 (max. 500000)
  309 words of extra memory for PDF output out of 10000 (max. 10000000)
 
