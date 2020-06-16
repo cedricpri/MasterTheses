@@ -61,9 +61,9 @@
 	\vspace{3cm}
 	{\Large Autor : Cédric PRIEËLS\par}
 	{\Large Director : Pablo MARTÍNEZ RUIZ DEL ÁRBOL\\}
-	{\Large Co-director : \\}
+	{\Large Co-director : CARLOS DÍEZ\\}
 	\vspace{0.5cm}
-	{\Large Junio 2020\par}
+	{\Large Julio 2020\par}
 	\vfill
 	
 	\end{flushright}
@@ -84,9 +84,12 @@
 
 \section*{\huge{Abstract}}
 
+In this work, cosmic muons have been used to perform a muography experiment, a non-destructive method allowing us to study the internal properties of several physical objects with various geometries. Such study is extremely useful in the industry, in order for example to study the degradation of pipes, and finds many application in our daily lives.
+
+In particular, a new C++ framework has been developped in order to study the results of such muography experiments and study their results from a statistical point of view, to find the optimal geometrical parameters of different objects placed between two muon detectors.
 
 \begin{center}
-\textbf{Key words} :
+\textbf{Key words} : cosmic muons, muography, geometry, likelihood
 \end{center}
 
 \section*{\huge{Resumen}} 
@@ -99,8 +102,17 @@
 
 %Thank you notes
 
-\section*{\huge{Agradecimientos}}
+\section*{\huge{Acknowledgments}}
 
+I would like to mainly thank Pablo for his outstanding work as the director of this work over the past few months. He has been incredibly helpful and present all along the way, teaching me the basic of muography and helping and guiding me when needed. I know it has not always been easy but I am very grateful for the time he spent with me, and I am more than happy with the final result and glad I decided to choose this particular subject.
+
+Thank you to Muon Systems and its CEO Carlos Díez in particular, the co-director of this work, for allowing me be a part of their experiment during a few months and allowing me to get a privileged access to actual data collected. Having the opportunity to work in collaboration with a real industry has been an extremely interesting experience that will for sure help me a lot in the future. I obviously wish to the company all the best since the technology developped definitely show a lot of potential.
+
+I would also like to thank all the other students involved in this Master degree, in particular to Pedro and Nicolò which have been extremly helpful as well. Many thanks to Lara for organizing this degree in the best way possible given the special circonstances which happened this year and for setting up everything allowing me to follow the classes remotely during the first semester.
+
+Finally, many thanks to my parents and family in general for being there whenever I need it and for supporting my decision to come and study in Spain 6 years ago. It has been a great experience that tought me a lot and that I will for sure never forget.  
+
+%\section*{\huge{Note on my personal work}}
 
 \newpage
 
@@ -118,12 +130,13 @@
 
 \chapter{Introduction}
 
-Nowadays, muon tomography is an active field of research since it is a non destructive method allowing to map the inside of large objects difficult and/or dangerous to access, without any contact or damage, and without even having physical access to them. To do so, this technique uses muons, elementary particles similar to electrons but with a much greater mass, which allows them to penetrate much deeper and probe matter in a more efficient way, since they suffer less from the bremsstrahlung radiation affecting all leptons. Such technology is relatively well-know and present several advantages over other techniques such as X-ray imaging since it is globally safe and clean and uses natural radiation, cosmic muons, while providing an excellent penetration in matter in order to study it.
+Nowadays, muon tomography is an active field of research since it is a non destructive method allowing to map the inside of large objects difficult and/or dangerous to access, without any contact or damage, and without even having physical access to them. To do so, this technique uses muons, elementary particles similar to electrons but with a much greater mass, which allows them to penetrate much deeper and probe matter in a more efficient way, since they suffer less from the bremsstrahlung radiation affecting all leptons. Such technology is relatively well-know and presents several advantages over other techniques such as X-ray imaging since it is globally safe and clean and uses natural radiation, cosmic muons, while providing an excellent penetration in matter in order to study it.
 
-In this particular work, muon tomography will be applied to industry and used in order to probe several kinds of physical objects, such as pipes, to study their degradation in a non-destructive way. This is the main objective of the company Muon systems, founded in Spain in 2017 and based in Bilbao.
+In this particular work, muon tomography will be applied to industry and used in order to probe several kinds of physical objects, such as pipes, to study their degradation without damaging them. This is the main objective of the company called Muon systems, founded in 2017 and based in Bilbao.
 
-This project is highly relevant in today's society because it allows to combine data science algorithms and high-performing statistical methods that have been developped in this context, putting them in practice in an actual industry.
-\color{red} INSIST ABOUT DATA SCIENCE RELEVANCE \color{black}
+This company already built powerful muon detectors allowing to perform such experiment and developped over the years a powerful framework allowing to study the degradation of pipes using convolutional neural networks, but this method is limited in the sense that training such networks is computing intensive and time consuming, and therefore does not allow to study several properties of such pipes at once. In this work, an alternative method based on a statistical analysis of the problem is presented, allowing a greater generalization of the previous method to other object geometries and to a higher dimension parameters phase space.
+
+This project is highly relevant in today's society because it allows to combine data science algorithms and high-performing statistical methods that have been developped in this context to solver this particular muography problem, putting them in practice in an actual industry.
 
 \chapter{Muons and muography}
 
@@ -196,11 +209,11 @@ In practical cases, most relativistic particles, such as muons coming from cosmi
 
 \subsection{Multiple scattering process}
 
-Muons also interact with matter through another process, called \textbf{multiple scattering}. Since muons have a negative electric charge, by getting close to the nuclei of the absorber, they are suffering from Coulomb scattering. Given the high number of nuclei in matter, this process is repeated many times, deflecting each time the muon by a small angle in a stochastic way, meaning that there is no way of calculating this deviation exactly, but only using probabilities and the so-called theory of Molière \cite{Moliere}, shown in Equation~\ref{eq:Moliere}, where $\theta_0$ is the expected angle of deviation shown in Figure~\ref{figure:Moliere}, $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction.
+Muons also interact with matter through another process, called \textbf{multiple scattering}. Since muons have a negative electric charge, by getting close to the nuclei of the absorber, they are suffering from Coulomb scattering. Given the high number of nuclei in matter, this process is repeated many times, deflecting each time the muon by a small angle in a stochastic way, meaning that there is no way of calculating this deviation exactly, but only using probabilities and the so-called theory of Molière \cite{Moliere}, shown in Equation~\ref{eq:Moliere}, where $\theta_0$ is the expected angle of deviation shown in Figure~\ref{figure:Moliere}, $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction and $z = 1$ for a muon.
 
 \begin{equation}
 \label{eq:Moliere}
-\theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} z \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x z^2}{X_0 \beta^2} \right ) \right ]
+\theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} z \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x z^2}{X_0} \right ) \right ]
 \end{equation}
 
 This formula is expected to be valid for distances up to $\sim 100 X_0$, giving an error smaller than 11\% \cite{PDGMuons}. Corrections do exist though in order to get slightly better results, but this theory is precise enough for our needs, given the experimental conditions considered in this work.
@@ -585,7 +598,7 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 
 As we have just seen, the computation of the p-values required for the likelihood takes as input a file of Monte-Carlo generated events, which has been previously produced thanks to this \textbf{Generator}. This class takes as input one rootfile containing the Monte-Carlo generation of incoming cosmic muons previously produced by the company using CRY \cite{CRY}, a dedicated generator for cosmic muons. To simplify the current problem, the goal is then to simply read the input parameters of such muons, such as the position of their impact with the upper detector, and to propagate them using the previously defined functions, to generate a distribution of the expected output.
 
-The way this algorithm works is quite simple: a general volume matching the one that needs to be studied (in this case, a general Pipe localted in the center (0, 0, 0) of the detector, having an inner radius of 18.2 cm, an outter radius of 20 cm is then defined and a lenght of 50 cm) is first of all defined. Then, for each event we want to generate ($n_{\text{gen}} \sim 100 000$), a loop is performed: in each iteration of this loop, the incident muon is propagated throughout the geometry and histograms for the same parameters $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ are obtained.
+The way this algorithm works is quite simple: a general volume matching the one that needs to be studied (in this case, a general Pipe localted in the center (0, 0, 0) of the detector, having an inner radius of 18.2 cm, an outter radius of 20 cm and a length of 50 cm) is first of all defined. Then, for each event we want to generate ($n_{\text{gen}} \sim 100 000$), a loop is performed: in each iteration of this loop, the incident muon is propagated throughout the geometry, histograms for the same parameters $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ are obtained and, more importantly, measurements in the lower detector are artificially generated to test our framework without having to consider detector effects for now.
 
 \color{red} Talk about MC truth and measurement. \color{black}
 

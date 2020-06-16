@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.17)  13 JUN 2020 20:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.17)  16 JUN 2020 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -580,8 +580,8 @@ l.79 \newpage
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.98 \newpage
-              [1] [2] (./muonSystems.toc [3
+l.101 \newpage
+               [1] [2] (./muonSystems.toc [3
 
 ])
 \tf@toc=\write4
@@ -596,7 +596,7 @@ Chapter 2.
 <figs/SMFermions.png, id=184, 328.3467pt x 269.0853pt>
 File: figs/SMFermions.png Graphic file (type png)
 <use figs/SMFermions.png>
-Package pdftex.def Info: figs/SMFermions.png  used on input line 140.
+Package pdftex.def Info: figs/SMFermions.png  used on input line 153.
 (pdftex.def)             Requested size: 227.62161pt x 170.71945pt.
 [2
 
@@ -604,46 +604,46 @@ Package pdftex.def Info: figs/SMFermions.png  used on input line 140.
 <figs/cosmic.png, id=204, 1927.2pt x 949.5475pt>
 File: figs/cosmic.png Graphic file (type png)
 <use figs/cosmic.png>
-Package pdftex.def Info: figs/cosmic.png  used on input line 154.
+Package pdftex.def Info: figs/cosmic.png  used on input line 167.
 (pdftex.def)             Requested size: 312.97514pt x 170.70833pt.
 <figs/cosmicMuons.png, id=206, 645.41125pt x 780.9175pt>
 File: figs/cosmicMuons.png Graphic file (type png)
 <use figs/cosmicMuons.png>
-Package pdftex.def Info: figs/cosmicMuons.png  used on input line 164.
+Package pdftex.def Info: figs/cosmicMuons.png  used on input line 177.
 (pdftex.def)             Requested size: 227.62076pt x 256.07109pt.
  [3 <./figs/SMFermions.png (PNG copy)> <./figs/cosmic.png>]
 <figs/BB.png, id=222, 997.7275pt x 635.37375pt>
 File: figs/BB.png Graphic file (type png)
 <use figs/BB.png>
-Package pdftex.def Info: figs/BB.png  used on input line 189.
+Package pdftex.def Info: figs/BB.png  used on input line 202.
 (pdftex.def)             Requested size: 341.43034pt x 227.61945pt.
  [4 <./figs/cosmicMuons.png>]
 <figs/moliere.png, id=241, 1140.26pt x 512.91624pt>
 File: figs/moliere.png Graphic file (type png)
 <use figs/moliere.png>
-Package pdftex.def Info: figs/moliere.png  used on input line 210.
+Package pdftex.def Info: figs/moliere.png  used on input line 223.
 (pdftex.def)             Requested size: 341.41948pt x 147.95143pt.
  [5 <./figs/BB.png>] [6 <./figs/moliere.png>]
 <figs/wireChambers.png, id=262, 532.99126pt x 426.59375pt>
 File: figs/wireChambers.png Graphic file (type png)
 <use figs/wireChambers.png>
-Package pdftex.def Info: figs/wireChambers.png  used on input line 240.
+Package pdftex.def Info: figs/wireChambers.png  used on input line 253.
 (pdftex.def)             Requested size: 199.16368pt x 147.95612pt.
 <figs/muonChambers.png, id=264, 986.68625pt x 597.23125pt>
 File: figs/muonChambers.png Graphic file (type png)
 <use figs/muonChambers.png>
-Package pdftex.def Info: figs/muonChambers.png  used on input line 264.
+Package pdftex.def Info: figs/muonChambers.png  used on input line 277.
 (pdftex.def)             Requested size: 256.0807pt x 170.71388pt.
 <figs/muonChambersPhoto.png, id=265, 576.1525pt x 642.4pt>
 File: figs/muonChambersPhoto.png Graphic file (type png)
 <use figs/muonChambersPhoto.png>
-Package pdftex.def Info: figs/muonChambersPhoto.png  used on input line 267.
+Package pdftex.def Info: figs/muonChambersPhoto.png  used on input line 280.
 (pdftex.def)             Requested size: 170.71956pt x 170.7155pt.
  [7 <./figs/wireChambers.png>]
 <figs/dataFlow.png, id=275, 987.69pt x 658.46pt>
 File: figs/dataFlow.png Graphic file (type png)
 <use figs/dataFlow.png>
-Package pdftex.def Info: figs/dataFlow.png  used on input line 281.
+Package pdftex.def Info: figs/dataFlow.png  used on input line 294.
 (pdftex.def)             Requested size: 241.84299pt x 170.71329pt.
  [8 <./figs/muonChambers.png> <./figs/muonChambersPhoto.png> <./figs/dataFlow.p
 ng>]
@@ -651,7 +651,7 @@ Chapter 3.
 <figs/PDF.png, id=290, 1816.7875pt x 872.25874pt>
 File: figs/PDF.png Graphic file (type png)
 <use figs/PDF.png>
-Package pdftex.def Info: figs/PDF.png  used on input line 323.
+Package pdftex.def Info: figs/PDF.png  used on input line 336.
 (pdftex.def)             Requested size: 341.42303pt x 153.64578pt.
 [9
 
@@ -659,37 +659,37 @@ Package pdftex.def Info: figs/PDF.png  used on input line 323.
 <figs/pdfs.png, id=307, 1105.12875pt x 702.625pt>
 File: figs/pdfs.png Graphic file (type png)
 <use figs/pdfs.png>
-Package pdftex.def Info: figs/pdfs.png  used on input line 342.
+Package pdftex.def Info: figs/pdfs.png  used on input line 355.
 (pdftex.def)             Requested size: 341.42284pt x 199.16736pt.
  [10 <./figs/pdfs.png>]
 <figs/pvalue.png, id=316, 1081.03876pt x 608.2725pt>
 File: figs/pvalue.png Graphic file (type png)
 <use figs/pvalue.png>
-Package pdftex.def Info: figs/pvalue.png  used on input line 365.
+Package pdftex.def Info: figs/pvalue.png  used on input line 378.
 (pdftex.def)             Requested size: 369.87415pt x 199.16197pt.
  [11 <./figs/pvalue.png>]
 <figs/GPR.png, id=326, 752.8125pt x 384.43625pt>
 File: figs/GPR.png Graphic file (type png)
 <use figs/GPR.png>
-Package pdftex.def Info: figs/GPR.png  used on input line 380.
+Package pdftex.def Info: figs/GPR.png  used on input line 393.
 (pdftex.def)             Requested size: 369.8922pt x 199.17474pt.
  [12 <./figs/GPR.png>]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-05.
+18.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 405.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 418.
 <figs/likelihood.png, id=341, 410.53375pt x 403.5075pt>
 File: figs/likelihood.png Graphic file (type png)
 <use figs/likelihood.png>
-Package pdftex.def Info: figs/likelihood.png  used on input line 426.
+Package pdftex.def Info: figs/likelihood.png  used on input line 439.
 (pdftex.def)             Requested size: 199.16501pt x 170.71571pt.
 <figs/loglikelihood.png, id=342, 421.575pt x 397.485pt>
 File: figs/loglikelihood.png Graphic file (type png)
 <use figs/loglikelihood.png>
-Package pdftex.def Info: figs/loglikelihood.png  used on input line 429.
+Package pdftex.def Info: figs/loglikelihood.png  used on input line 442.
 (pdftex.def)             Requested size: 199.1695pt x 170.72113pt.
  [13 <./figs/likelihood.png> <./figs/loglikelihood.png>] [14]
 Chapter 4.
@@ -699,10 +699,10 @@ Chapter 4.
 <figs/cylinder.png, id=365, 936.49875pt x 679.53876pt>
 File: figs/cylinder.png Graphic file (type png)
 <use figs/cylinder.png>
-Package pdftex.def Info: figs/cylinder.png  used on input line 495.
+Package pdftex.def Info: figs/cylinder.png  used on input line 508.
 (pdftex.def)             Requested size: 241.8406pt x 170.71378pt.
 
-Overfull \hbox (4.82649pt too wide) in paragraph at lines 495--496
+Overfull \hbox (4.82649pt too wide) in paragraph at lines 508--509
 [][] 
  []
 
@@ -710,13 +710,13 @@ Overfull \hbox (4.82649pt too wide) in paragraph at lines 495--496
 <figs/normal.png, id=378, 593.21625pt x 531.9875pt>
 File: figs/normal.png Graphic file (type png)
 <use figs/normal.png>
-Package pdftex.def Info: figs/normal.png  used on input line 551.
+Package pdftex.def Info: figs/normal.png  used on input line 564.
 (pdftex.def)             Requested size: 199.16542pt x 170.71028pt.
  [17 <./figs/normal.png>]
 <figs/parameters.png, id=387, 712.6625pt x 592.2125pt>
 File: figs/parameters.png Graphic file (type png)
 <use figs/parameters.png>
-Package pdftex.def Info: figs/parameters.png  used on input line 570.
+Package pdftex.def Info: figs/parameters.png  used on input line 583.
 (pdftex.def)             Requested size: 199.16353pt x 170.71611pt.
  [18 <./figs/parameters.png>] [19]
 Chapter 5.
@@ -727,14 +727,14 @@ Chapter 6.
 [21
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 698.
  [22
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 698.
  (./muonSystems.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 685.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 685.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 698.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 698.
 Package rerunfilecheck Info: File `muonSystems.out' has not changed.
 (rerunfilecheck)             Checksum: 6BFB5C6FD2AB5EA5F4F06A712F3C6194;1618.
 
@@ -744,16 +744,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 685.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 698.
  ) 
 Here is how much of TeX's memory you used:
- 9934 strings out of 481239
- 151572 string characters out of 5920377
+ 9935 strings out of 481239
+ 151580 string characters out of 5920377
  445073 words of memory out of 5000000
- 24898 multiletter control sequences out of 15000+600000
+ 24899 multiletter control sequences out of 15000+600000
  542533 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,43p,969b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,10n,43p,969b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -773,7 +773,7 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
 type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 1095.pfb>
-Output written on muonSystems.pdf (28 pages, 1722799 bytes).
+Output written on muonSystems.pdf (28 pages, 1725448 bytes).
 PDF statistics:
  524 PDF objects out of 1000 (max. 8388607)
  427 compressed objects within 5 object streams
