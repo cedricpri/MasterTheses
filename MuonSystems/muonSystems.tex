@@ -24,6 +24,7 @@
 \usepackage{titlesec}
 \usepackage{bm}
 \usepackage{mathtools}
+\usepackage{subfigure}
 
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0em}
@@ -600,15 +601,139 @@ As we have just seen, the computation of the p-values required for the likelihoo
 
 The way this algorithm works is quite simple: a general volume matching the one that needs to be studied (in this case, a general Pipe localted in the center (0, 0, 0) of the detector, having an inner radius of 18.2 cm, an outter radius of 20 cm and a length of 50 cm) is first of all defined. Then, for each event we want to generate ($n_{\text{gen}} \sim 100 000$), a loop is performed: in each iteration of this loop, the incident muon is propagated throughout the geometry, histograms for the same parameters $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ are obtained and, more importantly, measurements in the lower detector are artificially generated to test our framework without having to consider detector effects for now.
 
-\color{red} Talk about MC truth and measurement. \color{black}
+\color{red} Talk about MC truth and measurement? \color{black}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter{Results obtained}
 
-\section{Incident muons distribution}
+Now that the experimental setup and main statistical parameters used have been fully described and that the algorithm developped for this particular exercise has been introduced, we can present the first results obtained. This chapter is divided into several sections: first of all, we are going to mention the different validation steps performed to make sure that this algorithm's results can be trusted (Section~\ref{sec:validation}), and the incident distributions of observed muons will be studied (Section~\ref{sec:incident}). Then, more general results will be presented.
+
+\section{Generator validation} \label{sec:validation}
+
+The validation step consists in comparing the results previously obtained with Geant 4, with a complete and realistic description of the interaction between the cosmic muons and the detectors, and the ones obtained with our Generator, assuming a perfect detector. This step is actually extremely important, as it allowed us to find several bugs in the code. In this context, several files have been generated using both generators and different pipe geometries, allowing us to perform several different checks. In each case, the objective was to obtain the output MuonState ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) after propagating the initial MuonState throughout a geomtry defined.
+
+\begin{itemize}
+\item First, for a given pipe having a geometry ($r = 17.2$cm, $R = 20$cm, $L = 50$cm) and located in (0, 0, 0), thousands of muons have been generated using Geant 4 and our Generator. The output distributions in X and Y have then been obtained in this case in Figure~\ref{fig:genComp}.
+
+\begin{figure}[htbp]
+\centering
+\subfigure[Muon position at the bottom detector after propagation]
+ {
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/px2-17p2vs17p2.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/py2-17p2vs17p2.png}
+\end{minipage} \hfill
+}
+\subfigure[Muon direction at the bottom detector after propagation]
+ {
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/pvx2-17p2vs17p2.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/pvy2-17p2vs17p2.png}
+\end{minipage} \hfill
+}
+\subfigure[Muon deviation at the bottom detector after propagation]
+ {
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/pvx2-pvx1-17p2vs17p2.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/pvy2-pvy1-17p2vs17p2.png}
+\end{minipage} \hfill
+}
+\caption{Output position (at the top), direction (at the center) and actual deviation (at the bottom, mesured as $v_{x2} - v_{x1}$) measured on the bottom detector using the Geant 4 (in blue) simulation process and our Generator (in red), in $x$ (on the left) and $y$ (on the right).}
+\label{fig:genComp}
+\end{figure}
+
+\item Then, two different geometries can be considered for the propagation, using our Generator, as shown in Figure~\ref{fig:gemComp}, for one pipe the same geometry as before and another one much thinner, having a geometry ($r = 18.8$cm, $R = 20$cm, $L = 50$cm).
+
+\begin{figure}[htbp]
+\centering
+\subfigure[Muon position at the bottom detector after propagation]
+ {
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/px2-Generator-17p2vs18p8.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/py2-Generator-17p2vs18p8.png}
+\end{minipage} \hfill
+}
+\subfigure[Muon direction at the bottom detector after propagation]
+ {
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/pvx2-Generator-17p2vs18p8.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/pvy2-Generator-17p2vs18p8.png}
+\end{minipage} \hfill
+}
+\subfigure[Muon deviation at the bottom detector after propagation]
+ {
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/pvx2-pvx1-Generator-17p2vs18p8.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/pvy2-pvy1-Generator-17p2vs18p8.png}
+\end{minipage} \hfill
+}
+\caption{Output position (at the top), direction (at the center) and actual deviation (at the bottom, mesured as $v_{x2} - v_{x1}$) measured on the bottom detector using the Geant 4 (in blue) simulation process and our Generator (in red), in $x$ (on the left) and $y$ (on the right).}
+\label{fig:gemComp}
+\end{figure}
+
+As we can see, in this case, the geometry has little to no impact on the absolute value of the position and direction of the muonState after propagation, but we do observe a deviation in both $x$ and $y$. The study of this deviation will be the starting of the determination of an unknown geometry placed between the detectors.
+
+\end{itemize}
+
+\section{Incident muons distribution} \label{sec:incident}
 
 Prove the cossquare law.
-
-\section{Tests performed}
 
 \chapter{Conclusions}
 
