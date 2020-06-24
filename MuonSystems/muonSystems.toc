@@ -6,22 +6,23 @@
 \contentsline {section}{\numberline {2.3}Muons interaction with matter}{4}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Ionization process}{4}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Multiple scattering process}{5}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Muon tomography}{5}{section.2.4}
-\contentsline {section}{\numberline {2.5}Experimental setup}{6}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Muon detectors}{6}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Working setup}{7}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.4}Muon tomography}{6}{section.2.4}
+\contentsline {section}{\numberline {2.5}Experimental setup}{7}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Muon detectors}{7}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Working setup}{8}{subsection.2.5.2}
 \contentsline {subsection}{\numberline {2.5.3}Data flow}{8}{subsection.2.5.3}
-\contentsline {chapter}{\numberline {3}Statistical parameters}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Probability density functions}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Monte-Carlo simulations}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}p-values}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Kernel density functions}{12}{section.3.4}
-\contentsline {section}{\numberline {3.5}Likelihood}{13}{section.3.5}
-\contentsline {chapter}{\numberline {4}The algorithm}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}PipeReconstructor}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Generator}{18}{section.4.2}
-\contentsline {chapter}{\numberline {5}Results obtained}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Generator validation}{20}{section.5.1}
-\contentsline {section}{\numberline {5.2}Incident muons distribution}{20}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}
-\contentsline {chapter}{Bibliography}{23}{chapter.6}
+\contentsline {chapter}{\numberline {3}Statistical parameters}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Probability density functions}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Monte-Carlo simulations}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}p-values}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Kernel density functions}{13}{section.3.4}
+\contentsline {section}{\numberline {3.5}Likelihood}{14}{section.3.5}
+\contentsline {chapter}{\numberline {4}The algorithm}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}PipeReconstructor}{16}{section.4.1}
+\contentsline {section}{\numberline {4.2}Generator}{19}{section.4.2}
+\contentsline {chapter}{\numberline {5}Results obtained}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Generator validation}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Cosmis muons properties}{21}{section.5.2}
+\contentsline {section}{\numberline {5.3}General results}{23}{section.5.3}
+\contentsline {chapter}{\numberline {6}Conclusions}{25}{chapter.6}
+\contentsline {chapter}{Bibliography}{25}{chapter.6}

@@ -25,6 +25,7 @@
 \usepackage{bm}
 \usepackage{mathtools}
 \usepackage{subfigure}
+\usepackage{cases}
 
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0em}
@@ -171,7 +172,7 @@ Being unstable by nature, once produced, muons decay almost instantly by a weak 
 \end{center}
 \end{figure}
 
-Muons are the most abundant charged particles produced by these processes actually reaching the sea level, as shown in Figure~\ref{figure:cosmicAbundance}. Even though they are unstable and have a limited lifetime, around 0.06\% of muons produced by such processes indeed do manage to reach the sea level thanks to the temporal distorsion induced by their high energy and relativistic speed. As a rule of thumb, one can expect to observe 10.000 muons per square meter and per minute at the sea level.
+Muons are the most abundant charged particles produced by these processes actually reaching the sea level, as shown in Figure~\ref{figure:cosmicAbundance}. Even though they are unstable and have a limited lifetime, around 0.06\% of muons produced by such processes indeed do manage to reach the sea level thanks to the temporal distorsion induced by their high energy and relativistic speed. As a rule of thumb, one can expect to observe 10.000 muons per square meter and per minute at the sea level. Muons were actually discovered thanks to cosmic rays in 1936 \cite{muonDiscovery}.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -181,7 +182,7 @@ Muons are the most abundant charged particles produced by these processes actual
 \end{center}
 \end{figure}
 
-Muons were actually discovered thanks to cosmic rays in 1936 \cite{muonDiscovery}.
+With this work, millions of cosmic muons will be generated in order to simulate an actual experiment. This will allow us to check several of the well-known properties of such cosmic muons in Section~\ref{sec:incident}, such as their distribution angle, following a $\cos^2$ law, and their exponentially falling energy spectrum.
 
 \section{Muons interaction with matter} \label{sec:interactions}
 
@@ -189,49 +190,51 @@ Muons typically interact with ordinary matter through two main processes: ioniza
 
 \subsection{Ionization process}
 
-The most frequent interaction process of cosmic muons is through \textbf{ionization}, when the incident muon is giving some of its energy to the electrons of the absorber. This process is described by the Bethe-Bloch formula, shown in Equation~\ref{eq:BB}, and describing the average loss of energy over a distance $\frac{dE}{dx}$ of material, depending on several parameters, such as the charge number of incident particle $z$, the atomic mass and charge of absorber $A$ and $Z$, the relativistic factors $\beta$ and $\gamma$, the maximum possible energy transfer to an electron in a single collision $W_{\text{max}}$ and the mean excitation energy $I$.
+First of all, cosmic muons can interact with matter through \textbf{ionization}, when the incident muon gives some of its energy to the electrons of the absorber. This process is well described by the famous Bethe-Bloch formula shown in Equation~\ref{eq:BB} \cite{PDGMuons}, relating the average loss of energy over a distance $\frac{dE}{dx}$ (typically referred to as the \textbf{mass stopping power}) of material with several parameters, such as the charge number of incident particle $z$ (for cosmic muons, $z = 1$), the atomic mass and charge of absorber $A$ and $Z$, the relativistic factors $\beta$ and $\gamma$, the maximum possible energy transfer to an electron in a single collision $W_{\text{max}}$ and the mean excitation energy $I$.
 
 \begin{equation}
 \label{eq:BB}
 - \Bigl \langle \frac{dE}{dx} \Bigr \rangle = K z^2 \frac{Z}{A} \frac{1}{\beta^2} \left [\frac{1}{2} \ln \left (\frac{2 m_e c^2 \beta^2 \gamma^2 W_{\text{max}}}{I^2} - \beta^2 - \frac{\delta(\beta \gamma)}{2} \right ) \right ]
 \end{equation}
 
-This previous equation gives an accuracy of a few percent in the range $0.1 < \beta < 1000$ and we can easily see that the quantity of energy lost by in a muon when traversing any given medium actually depends on the energy of the incident muon, as shown in Figure~\ref{figure:BB}.
+This previous equation gives an accuracy of a few percent in the range $0.1 < \beta < 1000$ and we can easily see that the quantity of energy lost by in a muon when traversing any given medium actually depends on the energy of the incident muon, as shown in Figure~\ref{figure:BB}. In practice, this means that cosmic muons, having a mean energy of a few GeV, have mean energy loss rates actually close to the minimum: they are usually called for this reason \textit{minimum ionizing particles} or MIPs. Energy losses of muons due to this ionization process are for this reason quite small and difficult to detect, so this interaction process will not be considered in this work.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=12cm, height=8cm]{figs/BB.png}
-\caption{Average energy lost a muon due to ionization depending on its momentum \cite{PDGMuons}.}
+\caption{Mass stopping power of copper energy lost by a muon in copper due to the ionization process with respect to its momentum \cite{PDGMuons}.}
 \label{figure:BB}
 \end{center}
 \end{figure}
 
-In practical cases, most relativistic particles, such as muons coming from cosmic rays, have mean energy loss rates actually close to the minimum. They are usually called for this reason \textit{minimum ionizing particles} or MIPs.
-
 \subsection{Multiple scattering process}
 
-Muons also interact with matter through another process, called \textbf{multiple scattering}. Since muons have a negative electric charge, by getting close to the nuclei of the absorber, they are suffering from Coulomb scattering. Given the high number of nuclei in matter, this process is repeated many times, deflecting each time the muon by a small angle in a stochastic way, meaning that there is no way of calculating this deviation exactly, but only using probabilities and the so-called theory of Molière \cite{Moliere}, shown in Equation~\ref{eq:Moliere}, where $\theta_0$ is the expected angle of deviation shown in Figure~\ref{figure:Moliere}, $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction and $z = 1$ for a muon.
+Muons also interact with matter through another process, called \textbf{multiple scattering}. Since muons have a negative electric charge, by getting close to the nuclei of the absorber, they are suffering from Coulomb scattering. Given the high number of nuclei in matter, this process is repeated many times, deflecting each time the muon by a small angle in a stochastic way, meaning that there is no way of calculating this deviation exactly, but only using probabilities and the so-called theory of Molière \cite{Moliere}.
+
+According to this theory, the central 98\% of the projected angular distribution due to Coulomb scattering can de described with a Gaussian function, whose width is given by the $\theta_0$ parameter shown in Equation~\ref{eq:Moliere} \cite{PDGScat}, where $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction. The second term of the relation is actually typically neglected, being much smaller and therefore having a small impact on the final results obtained.
 
 \begin{equation}
 \label{eq:Moliere}
-\theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} z \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x z^2}{X_0} \right ) \right ]
+\theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x}{X_0 \beta^2} \right ) \right ]
 \end{equation}
 
-This formula is expected to be valid for distances up to $\sim 100 X_0$, giving an error smaller than 11\% \cite{PDGMuons}. Corrections do exist though in order to get slightly better results, but this theory is precise enough for our needs, given the experimental conditions considered in this work.
+This formula is expected to be valid for distances up to $\sim 100 X_0$, giving an error smaller than 11\%. Corrections do exist though in order to get slightly better results, especially in the tails of the distribution, but this theory is precise enough for our needs, given the small deviation angles we expect to observe given the experimental conditions considered.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=12cm, height=5.2cm]{figs/moliere.png}
-\caption{Schematic representation of the deviation induced by an absorber to an incident muon because of the multiple scattering effect \cite{PDGMuons}.}
+\caption{Schematic representation of the deviation induced by an absorber to an incident muon because of the multiple scattering effect \cite{PDGScat}.}
 \label{figure:Moliere}
 \end{center}
 \end{figure}
 
+Even though this deviation angle is the most important parameter when considering the multiple scattering, other parameters can be important as well, as shown in Figure~\ref{figure:Moliere}, such as the value of $y_\text{plane}$, corresponding to the deviation observed with respect to the initial expected position. All these additional parameters are typically highly correlated to the deviation angle previously defined but cannot be easily described with this simple theory and not relevant to this work anyway, since the deviation angle will be the main parameters studied with the muon tomography method used.
+
 \section{Muon tomography} \label{sec:tomography}
 
-Given Molière's theory, it is obvious to see that, instead of \textit{calculating} the deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inversing the two previous relations. Since this deviation depends on several parameters related to the absorber itself, such as its width and radiation length $X_0$, we can in this case actually infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, taking advantage of the interaction of muons with matter to use it in practice.
+Given Molière's theory, it is obvious to see that, instead of \textit{calculating} the expected deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inversing the two previous relations. Since this deviation depends on several parameters related to the absorber itself, such as its width and radiation length $X_0$, we can then infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, taking advantage of the interaction of muons with matter to use it in practice.
 
-Muography is therefore a non-destructive imaging technique producing a density map of the inside of an object by measuring a flux of muons. Such method presents many different advantages over other imaging techniques such as X-rays, since it actually uses natural cosmic rays to make the measurements, being therefore completely safe. Additionally, muons interact lightly with matter, meaning that they typically have high penetrating capabilities and can therefore probe even large and/or dense objects. Muography can in this sense be applied to many different fields: it has for example even been used in 1970 in order to try and find hidden cavities of pyramids in Egypt \cite{Egypt} and can also be used in vulcanology, to determine whether a pocket inside of a volcano is empty or full of lava, among many other practical applications.
+Muography is therefore a non-destructive imaging technique producing a density map of the inside of an object by measuring a flux of muons. Such method presents many different advantages over other imaging techniques such as X-rays, since it usually uses natural cosmic rays to make the measurements, being therefore completely safe. Additionally, muons interact lightly with matter, meaning that they typically have high penetrating capabilities and can therefore probe even large and/or dense objects. Muography can in this sense be applied to many different fields: it has for example even been used in 1970 in order to try and find hidden cavities of pyramids in Egypt \cite{Egypt} and can also be used in vulcanology, to determine whether a pocket inside of a volcano is empty or full of lava, among many other practical applications.
 
 Such imaging techniques can be divided into two categories:
 \begin{itemize}
@@ -245,7 +248,7 @@ In this particular work, scattering muography is being applied to industry in or
 
 \subsection{Muon detectors} \label{sec:muonDetectors}
 
-If we want to work with cosmic muons, we need to be able to build some detectors able to spot them and give us back useful data, such as their energy and/or incident direction. Many different technologies exist nowadays in order to detect muons, even though in this particular case, the typical \textbf{multi-wire proportional chambers} have been used.
+If we want to work with cosmic muons, we need to be able to build some detectors able to spot them and give us back useful data, such as their energy and/or direction of propagation. Many different technologies exist nowadays in order to detect muons but in this particular case, the typical \textbf{multi-wire proportional chambers} have been used.
 
 Invented at CERN in 1968, these detectors use an array of high-voltage wires (playing the role of the anode), running through a chamber filled with gas and whose walls are typically grounded (the cathode), as shown in Figure~\ref{fig:wireChambers}. Such an experimental setup therefore creates an electric field inside of the chamber, that needs to be made as large and uniform as possible.
 
@@ -268,7 +271,7 @@ Several properties are extremely important when designing a detector:
 
 \subsection{Working setup} \label{sec:ourSetup}
 
-For this particular work, four muon chambers of 1 meter by 1 meter have been build using these principles, as shown in Figure~\ref{fig:setup}. As we can see, more than 200 wires connected to the high voltage and made out of gold and tungsten have been placed every 4mm in two different planes rotated by 90 degrees, to measure the $x$ and $y$ postion of cosmic muons. 
+For this particular work, four muon chambers of 1 meter by 1 meter have been build using these principles, as shown in Figure~\ref{fig:setup}. As we can see, more than 200 wires connected to the high voltage and made out of gold and tungsten have been placed every 4 mm in two different planes rotated by 90 degrees, to measure the $x$ and $y$ position of cosmic muons. 
 
 These chambers, filled while a mixture of Argon and CO$_2$, are then setup in pairs above and below the object being studied, in order to determine the position and the direction of the incoming and outgoing cosmic muon. This setup allows to measure with a good spatial resolution the deviation of muons, to determine as precisely as possible the properties of the object put in between both detectors.
 
@@ -500,7 +503,7 @@ The PipeReconstructor is a set of classes, allowing us to define different kind 
 
 \begin{itemize}
 \item First of all, a muon is defined from the \textbf{MuonState} class and from 7 parameters: 3 parameters ($x$, $y$, $z$) representing the position of the muon, 3 additional parameters ($v_x$, $v_y$, $v_z$) representing its three-dimensional direction and the actual value of its momentum. The measurement performed at the top detector will be labelled with the index 1 ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$) while the measurement performed by the lower detector will take the index 2.
-\item \textbf{Surfaces} and \textbf{Volumes}, virtual classes allowing us to define general surfaces (their spatial position and their geometrical center) and volumes, defined as vectors of several surfaces: a general volume is in this sense defined by its surfaces, central position and global density. Defining such virtual classes is extremely important since it would allow us to consider different geometries, not just a pipe put in between the two detectors. The constant $z$ position of both the lower and upper detectors (-37 and 37 cm, respectively) is also defined at this stage.
+\item \textbf{Surfaces} and \textbf{Volumes}, virtual classes allowing us to define general surfaces (their spatial position and their geometrical center) and volumes, defined as vectors of several surfaces: a general volume is in this sense defined by its surfaces, central position and global density. Defining such virtual classes is extremely important since it would allow us to consider different geometries, not just a pipe put in between the two detectors. The constant size ($1 m^2$) and $z$ position of both the lower and upper detectors (-37 and 37 cm, respectively) is also defined at this stage.
 \item \textbf{Cylinders} and \textbf{Pipes}, particular subclasses of the virtual classes previously defined in order to define the geometry of this particular problem. A pipe is in this sense defined as a set of two cylinders and from 7 different parameters: its central position ($x$, $y$, $z$), along with its density, the radii $r$ and $R$ of both cylinders and its length along the y-axis $L$, as shown in Figure~\ref{fig:cylinder}. For simplicity, the pipes considered in this work are therefore considered to have a constant density.
 
 \begin{figure}[htbp]
@@ -519,7 +522,7 @@ One method computing the exact cut point between a muonState and a Cylinder has 
 (x - X)^2 + (z - Z)^2 = R^2
 \end{equation}
 
-From this, computing the interesection between such cylinder and a general MuonState ($x_0$, $y_0$, $z_0$, $v_{x}$, $v_{y}$, $v_{z}$, $p$) is trivial, since a MuonState can be represented by a straight line: 
+From this, computing the intersection between such cylinder and a general MuonState ($x_0$, $y_0$, $z_0$, $v_{x}$, $v_{y}$, $v_{z}$, $p$) is trivial, since a MuonState can be represented by a straight line: 
 
 \begin{equation}
 \label{eq:line}
@@ -530,7 +533,7 @@ z = z_0 + \lambda v_z
 \end{dcases}
 \end{equation}
 
-By putting this into the equation of the cylinder, we get the following expression:
+By putting this into the equation of the cylinder, we get the following expressions:
 
 \begin{equation}
 \label{eq:together}
@@ -551,31 +554,31 @@ C = X^2 + Z^2 + z_0^2 - 2 z_0 Z + x_0^2 \left (\frac{v_z}{v_x} \right )^2 + x_0 
 \end{dcases}
 \end{equation}
 
-Finally, methods allowing us to determine whether a muon state is inside or outside of the pipe have also been written, taking into account the particular geometry of such objects in order to determine the medium in which the muon is propagating and therefore use the correct density in all the calculations performed. 
+Finally, methods allowing us to determine whether a muon state is inside or outside of the pipe have also been written, taking into account the particular geometry of such objects in order to determine the medium in which the muon is propagating and therefore use the correct density value in all the calculations performed. 
 
 \item A \textbf{Propagator} is then defined as the object allowing us to propagate a MuonState through a general Volume. The way it works is quite simple: 
 
 \begin{itemize}
 \item First of all, the distance between the initial MuonState and all the surfaces of the object considered is computed and the first intersection point is kept.
-\item The muon is then propagated in a distance corresponding to 90\% of the total distance to this first cut point by taking into account the multiple scattering effect, and a new MuonState is therefore obtained. We cannot propagate the muon 100\% of the distance immediately to avoid effects related to the actual shape of the Cylinder and due to the fact that the Equation~\ref{eq:Moliere} is only valid in case of normal incidence between the MuonState and the Cylinder, which is typically not verified, as shown in Figure~\ref{fig:normal}.
+\item The muon is then propagated in a distance corresponding to 90\% of the total distance to this first cut point by taking into account the multiple scattering effect and the Molière theory, and a new MuonState is therefore obtained. We cannot propagate the muon 100\% of the distance immediately to avoid effects related to the actual shape of the Cylinder and due to the fact that the Equation~\ref{eq:Moliere} is only valid in case of normal incidence between the MuonState and the Cylinder, which is typically not verified, as shown in Figure~\ref{fig:normal}.
 
 \begin{figure}[htbp]
 \centering
 \begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=7cm, height=6cm]{figs/normal.png}
 \end{minipage}\hfill
-\caption{Typical example of two incident muons not respecting the normal incidence required by the Moliere equation for the multiple scattering of muons.}
+\caption{Typical example of two incident muons not respecting the normal incidence required by the Molière equation for the multiple scattering of muons.}
 \label{fig:normal}
 \end{figure}
 
-\item This propagation process is then repeated 6 times in total, until reaching a position extremely close to the volume that is being studied. The muon is then manually propagated along a distance of around 0.1 mm in order to force its crossing with respect to the first surface, so that the propagation can be repeated for the next surface.
+\item This propagation process is then several times, until reaching a position extremely close to the volume that is being studied (our tolerance parameter has been fixed to $0.1$ mm). The muon is then manually propagated along its direction of propagation along a distance of 0.1 mm in order to force its crossing with respect to the first surface, so that the propagation can be repeated for the next surface.
 \item This whole proces is repeated for all the different surfaces encountered by the muon (up to four times in total for our particular geometry), and one final time until reaching the bottom detector. At this point, the MuonState is kept as the second measurement ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) that will be compared with the simulation using statistical methods.
-\item Eventual muons which not cross both the upper and lower detector are of course rejected and simply not considered when computing the value of the likelihood.
+\item Eventual muons out of the acceptance of any of the detectors are of course rejected at this stage and simply not considered when computing the value of the likelihood.
 \end{itemize}
 
-\item The \textbf{Likelihood} object itself can then be calculated. This class reads a Monte-Carlo generated file (actual explanations regarding this generation process will be given in Section~\ref{sec:Generator}) and is able to perform several calculations for each generated event ($n_{\text{gen}} \sim 100 000$): 
+\item The \textbf{Likelihood} object itself can then be calculated. This class reads a Monte-Carlo generated file (actual explanations regarding this generation process will be given in Section~\ref{sec:Generator}) and is able to perform several calculations for each generated event ($n_{\text{gen}} \sim 100.000$): 
 \begin{itemize}
-\item First of all, three MuonStates are computed: the so-called \textit{IncomingMuon} and \textit{OutgoingMuon}, directly read as the measurement at the upper and lower detectors, from the Monte-Carlo simulation, and the \textit{IncomingMuonLinearDown}, defined as the prolongation along a straight line of the \textit{IncomingMuon}.
+\item First of all, three MuonStates are computed: the so-called \textit{IncomingMuon} and \textit{OutgoingMuon}, directly read as the measurement at the upper and lower detectors from the Monte-Carlo simulation, and the \textit{IncomingMuonLinearDown}, defined as the prolongation along a straight line of the \textit{IncomingMuon}.
 \item Each \textit{IncomingMuon} is then propagated along the geometry using the method previously defined, defining a fourth so-called \textit{IncomingMuonDown} MuonState. The $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ parameters shown in Figure~\ref{fig:parameters} and representing the actual deviation suffered by the muon can then be obtained.
 
 \begin{figure}[htbp]
@@ -585,13 +588,13 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 \end{minipage}\hfill
 \caption{Typical example of two incident muons not respecting the normal incidence required by the Moliere equation for the multiple scattering of muons.}
 \label{fig:parameters}
-\end{figure}At this stage, all the ingredients needed to compute a p-value are available.
+\end{figure}
 
 \item This propagation process is repeated over and over again ($n_{\text{prop}} \sim 100$ times in total) since we known that the multiple scattering is a stochastic process. Each time the propagation method is called for the same incident muon, different deviations values are therefore obtained, each kept in a vector, which can be represented in an histogram and smoothen using kernel density functions, as explained in Section~\ref{sec:KDF}. 
 \item At this stage, all the ingredients needed to compute a p-value are available. A p-value for each \textit{IncomingMuon} is then computed by using the vectors previously defined and representing an histogram of all the possible deviation values, and by comparing the actual measurement \textit{OutgoingMuon} for such distributions. The p-values computed along the x and y-axis then enter the global likelihood value that is used for the minimization process.
 \end{itemize}
 
-\item So far, we described a method allowing to compute the likelihood of observing a given measuremen by using Monte-Carlo simulations for a given volume, but one last important step is still missing. 
+\item So far, we described a method allowing to compute the likelihood of observing a given measuremen by using Monte-Carlo simulations for a given volume, but one last important step is still missing: we need to find a way to find the optimal volume for a given mesurement, the main objective of this process. 
 \color{red} Talk about the minimization process once implemented. \color{black}
 \end{itemize}
 
@@ -599,11 +602,11 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 
 As we have just seen, the computation of the p-values required for the likelihood takes as input a file of Monte-Carlo generated events, which has been previously produced thanks to this \textbf{Generator}. This class takes as input one rootfile containing the Monte-Carlo generation of incoming cosmic muons previously produced by the company using CRY \cite{CRY}, a dedicated generator for cosmic muons. To simplify the current problem, the goal is then to simply read the input parameters of such muons, such as the position of their impact with the upper detector, and to propagate them using the previously defined functions, to generate a distribution of the expected output.
 
-The way this algorithm works is quite simple: a general volume matching the one that needs to be studied (in this case, a general Pipe localted in the center (0, 0, 0) of the detector, having an inner radius of 18.2 cm, an outter radius of 20 cm and a length of 50 cm) is first of all defined. Then, for each event we want to generate ($n_{\text{gen}} \sim 100 000$), a loop is performed: in each iteration of this loop, the incident muon is propagated throughout the geometry, histograms for the same parameters $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ are obtained and, more importantly, measurements in the lower detector are artificially generated to test our framework without having to consider detector effects for now.
+The way this algorithm works is quite simple: a general volume matching the one that needs to be studied (in this case, a general Pipe located in the center (0, 0, 0) of the detector, having an inner radius variable, an outter radius of 20 cm and a length of 50 cm) is first of all defined. Then, for each event we want to generate ($n_{\text{gen}} \sim 100.000$), a loop is performed: in each iteration of this loop, the incident muon is propagated throughout the geometry, histograms for the parameters $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ are obtained and, more importantly, measurements in the lower detector are artificially generated to test our framework without having to consider detector effects for now.
 
-\color{red} Talk about MC truth and measurement? \color{black}
+One last important notion to introduce at this point is the difference between the actual measurement and the Monte-Carlo truth value, that can both be computed by the generator. The existence of both variables is related to the fact that the detector is made out of 200 discrete wires, each separated by a distance of 4 mm, meaning that the actual position measured is typically a discrete number. However, when considering simulation files, both the real and the measured position can be obtained and kept in different MuonStates labelled as ($px_i$, $py_i$, $pz_i$, $pv_{xi}$, $pv_{yi}$, $pv_{zi}$, $p_i$) and ($mx_i$, $my_i$, $mz_i$, $mv_{xi}$, $mv_{yi}$, $mv_{zi}$, $m_i$) respectively, even though the second MuonState will be used by default for the rest of this work, allowing for a direct comparison between simulation and data.
 
-
+\color{red} Add plot to show the difference? \color{black}
 
 
 
@@ -650,14 +653,23 @@ The way this algorithm works is quite simple: a general volume matching the one 
 
 \chapter{Results obtained}
 
-Now that the experimental setup and main statistical parameters used have been fully described and that the algorithm developped for this particular exercise has been introduced, we can present the first results obtained. This chapter is divided into several sections: first of all, we are going to mention the different validation steps performed to make sure that this algorithm's results can be trusted (Section~\ref{sec:validation}), and the incident distributions of observed muons will be studied (Section~\ref{sec:incident}). Then, more general results will be presented.
+Now that the experimental setup and main statistical parameters used have been fully described and that the algorithm developped for this particular exercise has been introduced, we can present the results obtained. This chapter is divided into several sections: first of all, we are going to mention the different validation steps performed to make sure that this algorithm's results can be trusted in Section~\ref{sec:validation}, and several properties of cosmic muons will be checked in Section~\ref{sec:incident}. Then, more general results will be presented in Section~\ref{sec:general}.
 
 \section{Generator validation} \label{sec:validation}
 
-The validation step consists in comparing the results previously obtained with Geant 4, with a complete and realistic description of the interaction between the cosmic muons and the detectors, and the ones obtained with our Generator, assuming a perfect detector. This step is actually extremely important, as it allowed us to find several bugs in the code. In this context, several files have been generated using both generators and different pipe geometries, allowing us to perform several different checks. In each case, the objective was to obtain the output MuonState ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) after propagating the initial MuonState throughout a geomtry defined.
+The validation step consists in comparing the results previously obtained with Geant 4, a a toolkit for the simulation of the passage of particles through matter \cite{Geant4}, with a complete and realistic description of the interaction between the cosmic muons and the detectors, and the ones obtained with our Generator, assuming a perfect detector.
 
-\begin{itemize}
-\item First, for a given pipe having a geometry ($r = 17.2$cm, $R = 20$cm, $L = 50$cm) and located in (0, 0, 0), thousands of muons have been generated using Geant 4 and our Generator. The output distributions in X and Y have then been obtained in this case in Figure~\ref{fig:genComp}.
+This step is actually extremely important, as it allowed us to find several bugs in the code. In this context, several files have been generated using both generators and different pipe geometries, allowing us to perform several different checks. In each case, the objective was to obtain the output MuonState ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) after propagating the initial MuonState throughout a given geometry.
+
+For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and located in (0, 0, 0), thousands of muons have then been generated using Geant 4 and our Generator. The output distributions (the positions $x$ and $y$ and directions $v_x$ and $v_y$ after propagation, along with the deviation angles $\Delta \theta_x$ and $\Delta \theta_y$ defined in Equation~\ref{eq:deviation}) have then been obtained in this case in Figure~\ref{fig:genComp}.
+
+\begin{equation}
+\label{eq:deviation}
+\begin{dcases}
+\Delta \theta_x = \arctan \left ({\frac{v_{x2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{x1}}{v_{z1}}} \right ) \\
+\Delta \theta_y = \arctan \left ({\frac{v_{y2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{y1}}{v_{z1}}} \right )
+\end{dcases}
+\end{equation}
 
 \begin{figure}[htbp]
 \centering
@@ -679,20 +691,27 @@ The validation step consists in comparing the results previously obtained with G
 \includegraphics[width=8cm, height=6cm]{figs/pvy2-17p2vs17p2.png}
 \end{minipage} \hfill
 }
-\subfigure[Muon deviation at the bottom detector after propagation]
+\subfigure[Muon angular deviation at the bottom detector after propagation]
  {
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/pvx2-pvx1-17p2vs17p2.png}
+\includegraphics[width=8cm, height=6cm]{figs/Atanpx-17p2vs17p2.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/pvy2-pvy1-17p2vs17p2.png}
+\includegraphics[width=8cm, height=6cm]{figs/Atanpy-17p2vs17p2.png}
 \end{minipage} \hfill
 }
-\caption{Output position (at the top), direction (at the center) and actual deviation (at the bottom, mesured as $v_{x2} - v_{x1}$) measured on the bottom detector using the Geant 4 (in blue) simulation process and our Generator (in red), in $x$ (on the left) and $y$ (on the right).}
+\caption{Output measured position (on the top), direction (on the center) and actual $\Delta \theta$ deviation (on the bottom) measured on the bottom detector using the Geant 4 (in blue) simulation process and our Generator (in red), in $x$ (on the left) and $y$ (on the right).}
 \label{fig:genComp}
 \end{figure}
 
-\item Then, two different geometries can be considered for the propagation, using our Generator, as shown in Figure~\ref{fig:gemComp}, for one pipe the same geometry as before and another one much thinner, having a geometry ($r = 18.8$cm, $R = 20$cm, $L = 50$cm).
+\section{Cosmis muons properties} \label{sec:incident}
+
+Prove the cossquare law.
+\color{red} Add plot to show the input energy of cosmic muons? \color{black}
+
+\section{General results} \label{sec:general}
+
+First of all, two different geometries can be considered for the propagation, usin our Generator, as shown in Figure~\ref{fig:gemComp}, for one pipe the same geometry as used for the validation process ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and another one much thinner, having a geometry ($r = 18.8$ cm, $R = 20$ cm, $L = 50$ cm).
 
 \begin{figure}[htbp]
 \centering
@@ -714,28 +733,24 @@ The validation step consists in comparing the results previously obtained with G
 \includegraphics[width=8cm, height=6cm]{figs/pvy2-Generator-17p2vs18p8.png}
 \end{minipage} \hfill
 }
-\subfigure[Muon deviation at the bottom detector after propagation]
+\subfigure[Muon angular deviation at the bottom detector after propagation]
  {
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/pvx2-pvx1-Generator-17p2vs18p8.png}
+\includegraphics[width=8cm, height=6cm]{figs/Atanpx-Generator-17p2vs18p8.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/pvy2-pvy1-Generator-17p2vs18p8.png}
+\includegraphics[width=8cm, height=6cm]{figs/Atanpy-Generator-17p2vs18p8.png}
 \end{minipage} \hfill
 }
-\caption{Output position (at the top), direction (at the center) and actual deviation (at the bottom, mesured as $v_{x2} - v_{x1}$) measured on the bottom detector using the Geant 4 (in blue) simulation process and our Generator (in red), in $x$ (on the left) and $y$ (on the right).}
+\caption{Output measured position (on the top), direction (on the center) and actual $\Delta \theta$ deviation (on the bottom) measured on the bottom detector using our Generator and two different pipe geometries ($r = 17.2$ cm, in blue and $r = 18.8$ cm, in red), in $x$ (on the left) and $y$ (on the right).}
 \label{fig:gemComp}
 \end{figure}
 
 As we can see, in this case, the geometry has little to no impact on the absolute value of the position and direction of the muonState after propagation, but we do observe a deviation in both $x$ and $y$. The study of this deviation will be the starting of the determination of an unknown geometry placed between the detectors.
 
-\end{itemize}
-
-\section{Incident muons distribution} \label{sec:incident}
-
-Prove the cossquare law.
-
 \chapter{Conclusions}
+
+Improvements: consider ionization as well
 
 %\begin{appendices}
   
@@ -802,6 +817,10 @@ Physics with Photons Using the ATLAS Run 2 Data, Springer Theses, 2019
 "Note on the Nature of Cosmic-Ray Particles", 
 Physical Review Vol. 51, 1936}
 
+\bibitem{PDGScat}
+\href{http://pdg.lbl.gov/2019/reviews/rpp2019-rev-passage-particles-matter.pdf}{
+"Passage of Particles Through Matter", Particle Data Group, 2019}
+
 \bibitem{Moliere}
 \href{https://journals.aps.org/pr/abstract/10.1103/PhysRev.89.1256}{H.A. Bethe,
 "Molière's Theory of Multiple Scattering", 
@@ -817,6 +836,9 @@ Science, Volume 167, Issue 3919, 1970}
 
 \bibitem{CRY}
 \href{https://arxiv.org/pdf/0811.0187.pdf}{M. Holmann et all, "GEANT4 Simulation of a Cosmic Ray Muon Tomography System with Micro-Pattern Gas Detectors for the Detection of High-Z Materials", as seen in June 2020}
+
+\bibitem{Geant4}
+\href{https://www.sciencedirect.com/science/article/pii/S0168900203013688}{S. Agostinelli et all, "Geant4?a simulation toolkit", Nuclear Instruments and Methods in Physics Research Section A, vol. 506, issue 3, pages 250-303}
 
 \end{thebibliography}
 

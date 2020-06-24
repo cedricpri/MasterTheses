@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  22 JUN 2020 19:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  24 JUN 2020 20:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,23 +448,30 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@top=\skip67
 \subfig@bottom=\skip68
 )
-No file muonSystems.aux.
+(/usr/share/texlive/texmf-dist/tex/latex/cases/cases.sty
+Package: cases 2002/05/02 ver 2.5 
+) (./muonSystems.aux
+
+LaTeX Warning: Label `eq:line' multiply defined.
+
+)
 \openout1 = `muonSystems.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -530,7 +537,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 34.
+Package hyperref Info: Link coloring ON on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -540,29 +547,31 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 34.
-LaTeX Info: Redefining \pageref on input line 34.
-LaTeX Info: Redefining \nameref on input line 34.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
+
+(./muonSystems.out) (./muonSystems.out)
 \@outlinefile=\write3
 \openout3 = `muonSystems.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<figs/image_UC.png, id=4, 400.49625pt x 401.5pt>
+<figs/image_UC.png, id=111, 400.49625pt x 401.5pt>
 File: figs/image_UC.png Graphic file (type png)
 <use figs/image_UC.png>
-Package pdftex.def Info: figs/image_UC.png  used on input line 42.
+Package pdftex.def Info: figs/image_UC.png  used on input line 43.
 (pdftex.def)             Requested size: 72.55157pt x 72.73248pt.
-<figs/muonSystems.png, id=6, 200.75pt x 200.75pt>
+<figs/muonSystems.png, id=113, 200.75pt x 200.75pt>
 File: figs/muonSystems.png Graphic file (type png)
 <use figs/muonSystems.png>
-Package pdftex.def Info: figs/muonSystems.png  used on input line 42.
+Package pdftex.def Info: figs/muonSystems.png  used on input line 43.
 (pdftex.def)             Requested size: 72.55157pt x 72.55174pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 58.
+(Font)              using `OT1/cmr/bx/n' instead on input line 59.
 
 [1
 
@@ -571,506 +580,261 @@ gs/muonSystems.png>]pdfTeX warning (ext4): destination with the same identifier
  (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.80 \newpage
+l.81 \newpage
               [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.102 \newpage
-               [1] [2]
+l.103 \newpage
+               [1] [2] (./muonSystems.toc [3
+
+])
 \tf@toc=\write4
 \openout4 = `muonSystems.toc'.
 
- [3
-
-]
+ [4]
 Chapter 1.
 [1
 
 ]
 Chapter 2.
-
-LaTeX Warning: Reference `sec:particlePhysics' on page 2 undefined on input lin
-e 144.
-
-
-LaTeX Warning: Reference `sec:cosmicRays' on page 2 undefined on input line 144
-.
-
-
-LaTeX Warning: Reference `sec:interactions' on page 2 undefined on input line 1
-44.
-
-
-LaTeX Warning: Reference `sec:tomography' on page 2 undefined on input line 144
-.
-
-
-LaTeX Warning: Reference `sec:setup' on page 2 undefined on input line 144.
-
-
-LaTeX Warning: Citation `SM' on page 2 undefined on input line 148.
-
-
-LaTeX Warning: Citation `topQuark' on page 2 undefined on input line 148.
-
-
-LaTeX Warning: Citation `tauNeutrino' on page 2 undefined on input line 148.
-
-
-LaTeX Warning: Citation `HiggsDiscovery1' on page 2 undefined on input line 148
-.
-
-
-LaTeX Warning: Citation `HiggsDiscovery2' on page 2 undefined on input line 148
-.
-
-
-LaTeX Warning: Reference `figure:SMFermions' on page 2 undefined on input line 
-150.
-
-<figs/SMFermions.png, id=39, 328.3467pt x 269.0853pt>
+<figs/SMFermions.png, id=189, 328.3467pt x 269.0853pt>
 File: figs/SMFermions.png Graphic file (type png)
 <use figs/SMFermions.png>
-Package pdftex.def Info: figs/SMFermions.png  used on input line 154.
+Package pdftex.def Info: figs/SMFermions.png  used on input line 155.
 (pdftex.def)             Requested size: 227.62161pt x 170.71945pt.
-
-LaTeX Warning: Citation `SMFermions' on page 2 undefined on input line 155.
-
-
-LaTeX Warning: Citation `SMFermions' on page 2 undefined on input line 155.
-
-
-LaTeX Warning: Citation `PDGMuons' on page 2 undefined on input line 160.
-
-
-LaTeX Warning: Reference `sec:interactions' on page 2 undefined on input line 1
-60.
-
-
-LaTeX Warning: Citation `cosmicPDG' on page 2 undefined on input line 164.
-
-
-LaTeX Warning: Reference `figure:cosmic' on page 2 undefined on input line 164.
-
-
 [2
 
 ]
-<figs/cosmic.png, id=50, 1927.2pt x 949.5475pt>
+<figs/cosmic.png, id=209, 1927.2pt x 949.5475pt>
 File: figs/cosmic.png Graphic file (type png)
 <use figs/cosmic.png>
-Package pdftex.def Info: figs/cosmic.png  used on input line 168.
+Package pdftex.def Info: figs/cosmic.png  used on input line 169.
 (pdftex.def)             Requested size: 312.97514pt x 170.70833pt.
-
-
-LaTeX Warning: Reference `figure:cosmicAbundance' on page 3 undefined on input 
-line 174.
-
-<figs/cosmicMuons.png, id=51, 645.41125pt x 780.9175pt>
+<figs/cosmicMuons.png, id=212, 645.41125pt x 780.9175pt>
 File: figs/cosmicMuons.png Graphic file (type png)
 <use figs/cosmicMuons.png>
-Package pdftex.def Info: figs/cosmicMuons.png  used on input line 178.
+Package pdftex.def Info: figs/cosmicMuons.png  used on input line 179.
 (pdftex.def)             Requested size: 227.62076pt x 256.07109pt.
-
-LaTeX Warning: Citation `cosmicPDG' on page 3 undefined on input line 179.
-
-
-LaTeX Warning: Citation `cosmicPDG' on page 3 undefined on input line 179.
-
-
-LaTeX Warning: Citation `muonDiscovery' on page 3 undefined on input line 184.
-
-[3 <./figs/SMFermions.png (PNG copy)> <./figs/cosmic.png>]
-
-LaTeX Warning: Reference `eq:BB' on page 4 undefined on input line 192.
-
-
-LaTeX Warning: Reference `figure:BB' on page 4 undefined on input line 199.
-
-<figs/BB.png, id=60, 997.7275pt x 635.37375pt>
+ [3 <./figs/SMFermions.png (PNG copy)> <./figs/cosmic.png>] [4 <./figs/cosmicMu
+ons.png>]
+<figs/BB.png, id=240, 997.7275pt x 635.37375pt>
 File: figs/BB.png Graphic file (type png)
 <use figs/BB.png>
-Package pdftex.def Info: figs/BB.png  used on input line 203.
+Package pdftex.def Info: figs/BB.png  used on input line 204.
 (pdftex.def)             Requested size: 341.43034pt x 227.61945pt.
-
-LaTeX Warning: Citation `PDGMuons' on page 4 undefined on input line 204.
-
-
-LaTeX Warning: Citation `PDGMuons' on page 4 undefined on input line 204.
-
-
-LaTeX Warning: Citation `Moliere' on page 4 undefined on input line 213.
-
-
-LaTeX Warning: Reference `eq:Moliere' on page 4 undefined on input line 213.
-
-
-LaTeX Warning: Reference `figure:Moliere' on page 4 undefined on input line 213
-.
-
-[4 <./figs/cosmicMuons.png>]
-
-LaTeX Warning: Citation `PDGMuons' on page 5 undefined on input line 220.
-
-<figs/moliere.png, id=75, 1140.26pt x 512.91624pt>
+<figs/moliere.png, id=246, 1140.26pt x 512.91624pt>
 File: figs/moliere.png Graphic file (type png)
 <use figs/moliere.png>
-Package pdftex.def Info: figs/moliere.png  used on input line 224.
+Package pdftex.def Info: figs/moliere.png  used on input line 225.
 (pdftex.def)             Requested size: 341.41948pt x 147.95143pt.
-
-LaTeX Warning: Citation `PDGMuons' on page 5 undefined on input line 225.
-
-
-LaTeX Warning: Citation `PDGMuons' on page 5 undefined on input line 225.
+ [5 <./figs/BB.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 241.
 
 
-LaTeX Warning: Citation `Egypt' on page 5 undefined on input line 234.
-
-[5 <./figs/BB.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 238.
-
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 238.
-
-
-LaTeX Warning: Reference `eq:Moliere' on page 6 undefined on input line 239.
-
-[6 <./figs/moliere.png>]
-
-LaTeX Warning: Reference `fig:wireChambers' on page 7 undefined on input line 2
-50.
-
-<figs/wireChambers.png, id=92, 532.99126pt x 426.59375pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 241.
+ [6 <./figs/moliere.png>]
+<figs/wireChambers.png, id=269, 532.99126pt x 426.59375pt>
 File: figs/wireChambers.png Graphic file (type png)
 <use figs/wireChambers.png>
-Package pdftex.def Info: figs/wireChambers.png  used on input line 254.
+Package pdftex.def Info: figs/wireChambers.png  used on input line 257.
 (pdftex.def)             Requested size: 199.16368pt x 147.95612pt.
-
-LaTeX Warning: Reference `fig:setup' on page 7 undefined on input line 271.
-
-<figs/muonChambers.png, id=93, 986.68625pt x 597.23125pt>
+ [7 <./figs/wireChambers.png>]
+<figs/muonChambers.png, id=278, 986.68625pt x 597.23125pt>
 File: figs/muonChambers.png Graphic file (type png)
 <use figs/muonChambers.png>
-Package pdftex.def Info: figs/muonChambers.png  used on input line 278.
+Package pdftex.def Info: figs/muonChambers.png  used on input line 281.
 (pdftex.def)             Requested size: 256.0807pt x 170.71388pt.
-<figs/muonChambersPhoto.png, id=94, 576.1525pt x 642.4pt>
+<figs/muonChambersPhoto.png, id=279, 576.1525pt x 642.4pt>
 File: figs/muonChambersPhoto.png Graphic file (type png)
 <use figs/muonChambersPhoto.png>
-Package pdftex.def Info: figs/muonChambersPhoto.png  used on input line 281.
+Package pdftex.def Info: figs/muonChambersPhoto.png  used on input line 284.
 (pdftex.def)             Requested size: 170.71956pt x 170.7155pt.
-
-LaTeX Warning: Reference `fig:dataFlow' on page 7 undefined on input line 289.
-
-[7 <./figs/wireChambers.png>]
-<figs/dataFlow.png, id=103, 987.69pt x 658.46pt>
+<figs/dataFlow.png, id=281, 987.69pt x 658.46pt>
 File: figs/dataFlow.png Graphic file (type png)
 <use figs/dataFlow.png>
-Package pdftex.def Info: figs/dataFlow.png  used on input line 295.
+Package pdftex.def Info: figs/dataFlow.png  used on input line 298.
 (pdftex.def)             Requested size: 241.84299pt x 170.71329pt.
- [8 <./figs/muonChambers.png> <./figs/muonChambersPhoto.png> <./figs/dataFlow.p
-ng>]
+ [8 <./figs/muonChambers.png> <./figs/muonChambersPhoto.png>] [9 <./figs/dataFl
+ow.png>]
 Chapter 3.
-
-LaTeX Warning: Reference `sec:PDF' on page 9 undefined on input line 329.
-
-
-LaTeX Warning: Reference `sec:KDF' on page 9 undefined on input line 329.
-
-
-LaTeX Warning: Reference `sec:MC' on page 9 undefined on input line 329.
-
-
-LaTeX Warning: Reference `sec:pValues' on page 9 undefined on input line 329.
-
-
-LaTeX Warning: Reference `sec:Likelihood' on page 9 undefined on input line 329
-.
-
-
-LaTeX Warning: Reference `fig:PDF' on page 9 undefined on input line 333.
-
-<figs/PDF.png, id=114, 1816.7875pt x 872.25874pt>
+<figs/PDF.png, id=301, 1816.7875pt x 872.25874pt>
 File: figs/PDF.png Graphic file (type png)
 <use figs/PDF.png>
-Package pdftex.def Info: figs/PDF.png  used on input line 337.
+Package pdftex.def Info: figs/PDF.png  used on input line 340.
 (pdftex.def)             Requested size: 341.42303pt x 153.64578pt.
-
-LaTeX Warning: Citation `PDF' on page 9 undefined on input line 338.
-
-
-LaTeX Warning: Citation `PDF' on page 9 undefined on input line 338.
-
-
-LaTeX Warning: Reference `eq:gauss' on page 9 undefined on input line 343.
-
-[9
+[10
 
  <./figs/PDF.png>]
-
-LaTeX Warning: Reference `eq:Moliere' on page 10 undefined on input line 352.
-
-
-LaTeX Warning: Reference `fig:deviation' on page 10 undefined on input line 352
-.
-
-<figs/pdfs.png, id=127, 1105.12875pt x 702.625pt>
+<figs/pdfs.png, id=318, 1105.12875pt x 702.625pt>
 File: figs/pdfs.png Graphic file (type png)
 <use figs/pdfs.png>
-Package pdftex.def Info: figs/pdfs.png  used on input line 356.
+Package pdftex.def Info: figs/pdfs.png  used on input line 359.
 (pdftex.def)             Requested size: 341.42284pt x 199.16736pt.
-
-LaTeX Warning: Reference `chapter:algorithm' on page 10 undefined on input line
- 365.
-
-[10 <./figs/pdfs.png>]
-
-LaTeX Warning: Reference `fig:pvalue' on page 11 undefined on input line 375.
-
-<figs/pvalue.png, id=135, 1081.03876pt x 608.2725pt>
+ [11 <./figs/pdfs.png>]
+<figs/pvalue.png, id=328, 1081.03876pt x 608.2725pt>
 File: figs/pvalue.png Graphic file (type png)
 <use figs/pvalue.png>
-Package pdftex.def Info: figs/pvalue.png  used on input line 379.
+Package pdftex.def Info: figs/pvalue.png  used on input line 382.
 (pdftex.def)             Requested size: 369.87415pt x 199.16197pt.
-
-LaTeX Warning: Reference `sec:Likelihood' on page 11 undefined on input line 38
-6.
-
-[11 <./figs/pvalue.png>]
-
-LaTeX Warning: Reference `fig:KGR' on page 12 undefined on input line 390.
-
-<figs/GPR.png, id=143, 752.8125pt x 384.43625pt>
+ [12 <./figs/pvalue.png>]
+<figs/GPR.png, id=337, 752.8125pt x 384.43625pt>
 File: figs/GPR.png Graphic file (type png)
 <use figs/GPR.png>
-Package pdftex.def Info: figs/GPR.png  used on input line 394.
+Package pdftex.def Info: figs/GPR.png  used on input line 397.
 (pdftex.def)             Requested size: 369.8922pt x 199.17474pt.
-
-LaTeX Warning: Reference `eq:KDF' on page 12 undefined on input line 399.
-
-
-LaTeX Warning: Reference `eq:kernel' on page 12 undefined on input line 406.
-
-
-LaTeX Warning: Reference `chapter:algorithm' on page 12 undefined on input line
- 413.
-
-[12 <./figs/GPR.png>]
-
-LaTeX Warning: Reference `eq:likelihood' on page 13 undefined on input line 419
-.
-
-
-LaTeX Warning: Reference `fig:likelihoodEx' on page 13 undefined on input line 
-435.
-
-<figs/likelihood.png, id=155, 410.53375pt x 403.5075pt>
+ [13 <./figs/GPR.png>]
+<figs/likelihood.png, id=353, 410.53375pt x 403.5075pt>
 File: figs/likelihood.png Graphic file (type png)
 <use figs/likelihood.png>
-Package pdftex.def Info: figs/likelihood.png  used on input line 440.
+Package pdftex.def Info: figs/likelihood.png  used on input line 443.
 (pdftex.def)             Requested size: 199.16501pt x 170.71571pt.
-<figs/loglikelihood.png, id=156, 421.575pt x 397.485pt>
+<figs/loglikelihood.png, id=354, 421.575pt x 397.485pt>
 File: figs/loglikelihood.png Graphic file (type png)
 <use figs/loglikelihood.png>
-Package pdftex.def Info: figs/loglikelihood.png  used on input line 443.
+Package pdftex.def Info: figs/loglikelihood.png  used on input line 446.
 (pdftex.def)             Requested size: 199.1695pt x 170.72113pt.
-[13 <./figs/likelihood.png> <./figs/loglikelihood.png>] [14]
+ [14 <./figs/likelihood.png> <./figs/loglikelihood.png>] [15]
 Chapter 4.
-
-LaTeX Warning: Reference `sec:PipeReconstructor' on page 15 undefined on input 
-line 487.
-
-
-LaTeX Warning: Reference `sec:Generator' on page 15 undefined on input line 495
-.
-
-
-LaTeX Warning: Reference `fig:cylinder' on page 15 undefined on input line 504.
-
-
-[15
+[16
 
 ]
-<figs/cylinder.png, id=179, 936.49875pt x 679.53876pt>
+<figs/cylinder.png, id=376, 936.49875pt x 679.53876pt>
 File: figs/cylinder.png Graphic file (type png)
 <use figs/cylinder.png>
-Package pdftex.def Info: figs/cylinder.png  used on input line 509.
+Package pdftex.def Info: figs/cylinder.png  used on input line 512.
 (pdftex.def)             Requested size: 241.8406pt x 170.71378pt.
 
-Overfull \hbox (4.82649pt too wide) in paragraph at lines 509--510
+Overfull \hbox (4.82649pt too wide) in paragraph at lines 512--513
 [][] 
  []
 
-[16 <./figs/cylinder.png>]
-
-LaTeX Warning: Reference `eq:Moliere' on page 17 undefined on input line 560.
-
-
-LaTeX Warning: Reference `fig:normal' on page 17 undefined on input line 560.
-
-<figs/normal.png, id=190, 593.21625pt x 531.9875pt>
+[17 <./figs/cylinder.png>]
+<figs/normal.png, id=389, 593.21625pt x 531.9875pt>
 File: figs/normal.png Graphic file (type png)
 <use figs/normal.png>
-Package pdftex.def Info: figs/normal.png  used on input line 565.
+Package pdftex.def Info: figs/normal.png  used on input line 568.
 (pdftex.def)             Requested size: 199.16542pt x 170.71028pt.
-
-LaTeX Warning: Reference `sec:Generator' on page 17 undefined on input line 576
-.
-
-
-LaTeX Warning: Reference `fig:parameters' on page 17 undefined on input line 57
-9.
-
-[17 <./figs/normal.png>]
-<figs/parameters.png, id=197, 712.6625pt x 592.2125pt>
+ [18 <./figs/normal.png>]
+<figs/parameters.png, id=398, 795.97375pt x 696.6025pt>
 File: figs/parameters.png Graphic file (type png)
 <use figs/parameters.png>
-Package pdftex.def Info: figs/parameters.png  used on input line 584.
-(pdftex.def)             Requested size: 199.16353pt x 170.71611pt.
-
-
-LaTeX Warning: Reference `sec:KDF' on page 18 undefined on input line 590.
-
-
-LaTeX Warning: Citation `CRY' on page 18 undefined on input line 600.
-
-[18 <./figs/parameters.png>] [19]
+Package pdftex.def Info: figs/parameters.png  used on input line 587.
+(pdftex.def)             Requested size: 199.16298pt x 170.71693pt.
+ [19 <./figs/parameters.png>] [20]
 Chapter 5.
-
-LaTeX Warning: Reference `sec:validation' on page 20 undefined on input line 65
-3.
-
-
-LaTeX Warning: Reference `sec:incident' on page 20 undefined on input line 653.
-
-
-
-LaTeX Warning: Reference `fig:genComp' on page 20 undefined on input line 660.
-
-<figs/px2-17p2vs17p2.png, id=209, 698.61pt x 473.77pt>
+<figs/px2-17p2vs17p2.png, id=418, 698.61pt x 473.77pt>
 File: figs/px2-17p2vs17p2.png Graphic file (type png)
 <use figs/px2-17p2vs17p2.png>
-Package pdftex.def Info: figs/px2-17p2vs17p2.png  used on input line 672.
+Package pdftex.def Info: figs/px2-17p2vs17p2.png  used on input line 684.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/py2-17p2vs17p2.png, id=210, 698.61pt x 473.77pt>
+<figs/py2-17p2vs17p2.png, id=419, 698.61pt x 473.77pt>
 File: figs/py2-17p2vs17p2.png Graphic file (type png)
 <use figs/py2-17p2vs17p2.png>
-Package pdftex.def Info: figs/py2-17p2vs17p2.png  used on input line 672.
+Package pdftex.def Info: figs/py2-17p2vs17p2.png  used on input line 684.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvx2-17p2vs17p2.png, id=211, 698.61pt x 473.77pt>
+<figs/pvx2-17p2vs17p2.png, id=420, 698.61pt x 473.77pt>
 File: figs/pvx2-17p2vs17p2.png Graphic file (type png)
 <use figs/pvx2-17p2vs17p2.png>
-Package pdftex.def Info: figs/pvx2-17p2vs17p2.png  used on input line 681.
+Package pdftex.def Info: figs/pvx2-17p2vs17p2.png  used on input line 693.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvy2-17p2vs17p2.png, id=212, 698.61pt x 473.77pt>
+<figs/pvy2-17p2vs17p2.png, id=421, 698.61pt x 473.77pt>
 File: figs/pvy2-17p2vs17p2.png Graphic file (type png)
 <use figs/pvy2-17p2vs17p2.png>
-Package pdftex.def Info: figs/pvy2-17p2vs17p2.png  used on input line 681.
+Package pdftex.def Info: figs/pvy2-17p2vs17p2.png  used on input line 693.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvx2-pvx1-17p2vs17p2.png, id=213, 698.61pt x 473.77pt>
-File: figs/pvx2-pvx1-17p2vs17p2.png Graphic file (type png)
-<use figs/pvx2-pvx1-17p2vs17p2.png>
-Package pdftex.def Info: figs/pvx2-pvx1-17p2vs17p2.png  used on input line 690.
-
+<figs/Atanpx-17p2vs17p2.png, id=422, 698.61pt x 473.77pt>
+File: figs/Atanpx-17p2vs17p2.png Graphic file (type png)
+<use figs/Atanpx-17p2vs17p2.png>
+Package pdftex.def Info: figs/Atanpx-17p2vs17p2.png  used on input line 702.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvy2-pvy1-17p2vs17p2.png, id=214, 698.61pt x 473.77pt>
-File: figs/pvy2-pvy1-17p2vs17p2.png Graphic file (type png)
-<use figs/pvy2-pvy1-17p2vs17p2.png>
-Package pdftex.def Info: figs/pvy2-pvy1-17p2vs17p2.png  used on input line 690.
-
+<figs/Atanpy-17p2vs17p2.png, id=423, 698.61pt x 473.77pt>
+File: figs/Atanpy-17p2vs17p2.png Graphic file (type png)
+<use figs/Atanpy-17p2vs17p2.png>
+Package pdftex.def Info: figs/Atanpy-17p2vs17p2.png  used on input line 702.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
+[21
 
-LaTeX Warning: Reference `fig:gemComp' on page 20 undefined on input line 695.
-
-<figs/px2-Generator-17p2vs18p8.png, id=215, 698.61pt x 473.77pt>
+] [22 <./figs/px2-17p2vs17p2.png> <./figs/py2-17p2vs17p2.png> <./figs/pvx2-17p2
+vs17p2.png> <./figs/pvy2-17p2vs17p2.png> <./figs/Atanpx-17p2vs17p2.png> <./figs
+/Atanpy-17p2vs17p2.png>]
+<figs/px2-Generator-17p2vs18p8.png, id=440, 698.61pt x 473.77pt>
 File: figs/px2-Generator-17p2vs18p8.png Graphic file (type png)
 <use figs/px2-Generator-17p2vs18p8.png>
 Package pdftex.def Info: figs/px2-Generator-17p2vs18p8.png  used on input line 
-707.
+726.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/py2-Generator-17p2vs18p8.png, id=216, 698.61pt x 473.77pt>
+<figs/py2-Generator-17p2vs18p8.png, id=441, 698.61pt x 473.77pt>
 File: figs/py2-Generator-17p2vs18p8.png Graphic file (type png)
 <use figs/py2-Generator-17p2vs18p8.png>
 Package pdftex.def Info: figs/py2-Generator-17p2vs18p8.png  used on input line 
-707.
+726.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvx2-Generator-17p2vs18p8.png, id=217, 698.61pt x 473.77pt>
+<figs/pvx2-Generator-17p2vs18p8.png, id=442, 698.61pt x 473.77pt>
 File: figs/pvx2-Generator-17p2vs18p8.png Graphic file (type png)
 <use figs/pvx2-Generator-17p2vs18p8.png>
 Package pdftex.def Info: figs/pvx2-Generator-17p2vs18p8.png  used on input line
- 716.
+ 735.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvy2-Generator-17p2vs18p8.png, id=218, 698.61pt x 473.77pt>
+<figs/pvy2-Generator-17p2vs18p8.png, id=443, 698.61pt x 473.77pt>
 File: figs/pvy2-Generator-17p2vs18p8.png Graphic file (type png)
 <use figs/pvy2-Generator-17p2vs18p8.png>
 Package pdftex.def Info: figs/pvy2-Generator-17p2vs18p8.png  used on input line
- 716.
+ 735.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvx2-pvx1-Generator-17p2vs18p8.png, id=219, 698.61pt x 473.77pt>
-File: figs/pvx2-pvx1-Generator-17p2vs18p8.png Graphic file (type png)
-<use figs/pvx2-pvx1-Generator-17p2vs18p8.png>
-Package pdftex.def Info: figs/pvx2-pvx1-Generator-17p2vs18p8.png  used on input
- line 725.
+<figs/Atanpx-Generator-17p2vs18p8.png, id=444, 698.61pt x 473.77pt>
+File: figs/Atanpx-Generator-17p2vs18p8.png Graphic file (type png)
+<use figs/Atanpx-Generator-17p2vs18p8.png>
+Package pdftex.def Info: figs/Atanpx-Generator-17p2vs18p8.png  used on input li
+ne 744.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvy2-pvy1-Generator-17p2vs18p8.png, id=220, 698.61pt x 473.77pt>
-File: figs/pvy2-pvy1-Generator-17p2vs18p8.png Graphic file (type png)
-<use figs/pvy2-pvy1-Generator-17p2vs18p8.png>
-Package pdftex.def Info: figs/pvy2-pvy1-Generator-17p2vs18p8.png  used on input
- line 725.
+<figs/Atanpy-Generator-17p2vs18p8.png, id=445, 698.61pt x 473.77pt>
+File: figs/Atanpy-Generator-17p2vs18p8.png Graphic file (type png)
+<use figs/Atanpy-Generator-17p2vs18p8.png>
+Package pdftex.def Info: figs/Atanpy-Generator-17p2vs18p8.png  used on input li
+ne 744.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-[20
-
-] [21 <./figs/px2-17p2vs17p2.png> <./figs/py2-17p2vs17p2.png> <./figs/pvx2-17p2
-vs17p2.png> <./figs/pvy2-17p2vs17p2.png> <./figs/pvx2-pvx1-17p2vs17p2.png> <./f
-igs/pvy2-pvy1-17p2vs17p2.png>] [22 <./figs/px2-Generator-17p2vs18p8.png> <./fig
-s/py2-Generator-17p2vs18p8.png> <./figs/pvx2-Generator-17p2vs18p8.png> <./figs/
-pvy2-Generator-17p2vs18p8.png> <./figs/pvx2-pvx1-Generator-17p2vs18p8.png> <./f
-igs/pvy2-pvy1-Generator-17p2vs18p8.png>]
+ [23] [24 <./figs/px2-Generator-17p2vs18p8.png> <./figs/py2-Generator-17p2vs18p
+8.png> <./figs/pvx2-Generator-17p2vs18p8.png> <./figs/pvy2-Generator-17p2vs18p8
+.png> <./figs/Atanpx-Generator-17p2vs18p8.png> <./figs/Atanpy-Generator-17p2vs1
+8p8.png>]
 Chapter 6.
-[23
+[25
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 823.
- [24
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 845.
+ [26
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 823.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 845.
  (./muonSystems.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 823.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 823.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 845.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 845.
+Package rerunfilecheck Info: File `muonSystems.out' has not changed.
+(rerunfilecheck)             Checksum: 604A010E681AC021D65199A7554E1B51;1681.
 
-
-Package rerunfilecheck Warning: File `muonSystems.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `muonSystems.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  2BF944EBF336B56A0736EAC933B84B64;1623.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 823.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 845.
  ) 
 Here is how much of TeX's memory you used:
- 9729 strings out of 494880
- 146372 string characters out of 6179601
- 250686 words of memory out of 5000000
- 12786 multiletter control sequences out of 15000+600000
+ 9793 strings out of 494880
+ 147242 string characters out of 6179601
+ 254970 words of memory out of 5000000
+ 12832 multiletter control sequences out of 15000+600000
  13793 words of font info for 48 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 36i,10n,40p,969b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,43p,969b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -1089,10 +853,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on muonSystems.pdf (29 pages, 1852568 bytes).
+Output written on muonSystems.pdf (32 pages, 1854484 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
- 105 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 583 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 377 words of extra memory for PDF output out of 10000 (max. 10000000)
 
