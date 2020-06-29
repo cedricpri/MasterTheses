@@ -661,10 +661,18 @@ The validation step consists in comparing the results previously obtained with G
 
 This step is actually extremely important, as it allowed us to find several bugs in the code. In this context, several files have been generated using both generators and different pipe geometries, allowing us to perform several different checks. In each case, the objective was to obtain the output MuonState ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) after propagating the initial MuonState throughout a given geometry.
 
-For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and located in (0, 0, 0), thousands of muons have then been generated using Geant 4 and our Generator. The output distributions (the positions $x$ and $y$ and directions $v_x$ and $v_y$ after propagation, along with the deviation angles $\Delta \theta_x$ and $\Delta \theta_y$ defined in Equation~\ref{eq:deviation}) have then been obtained in this case in Figure~\ref{fig:genComp}.
+For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and located in (0, 0, 0), thousands of muons have then been generated using Geant 4 and our Generator. The output distributions (the positions $x$ and $y$ and directions $v_x$ and $v_y$ after propagation, along with the deviations in position $\Delta$X and $\Delta$Y, defined in Equation\ref{eq:deviationPos} where $d$ is the vertical distance between the two detectors, and the deviation angles $\Delta \theta_x$ and $\Delta \theta_y$, defined in Equation~\ref{eq:deviationDir}) have then been obtained in this case in Figure~\ref{fig:genComp}. All these plots have been normalized to unity in order to account for the eventual different number of events generated in both cases.
 
 \begin{equation}
-\label{eq:deviation}
+\label{eq:deviationPos}
+\begin{dcases}
+\Delta \text{X} = x_2 + d (v_{x2} - x_1)  \\
+\Delta \text{Y} = y_2 + d (v_{y2} - y_1)
+\end{dcases}
+\end{equation}
+
+\begin{equation}
+\label{eq:deviationDir}
 \begin{dcases}
 \Delta \theta_x = \arctan \left ({\frac{v_{x2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{x1}}{v_{z1}}} \right ) \\
 \Delta \theta_y = \arctan \left ({\frac{v_{y2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{y1}}{v_{z1}}} \right )
@@ -673,34 +681,34 @@ For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and
 
 \begin{figure}[htbp]
 \centering
-\subfigure[Muon position at the bottom detector after propagation]
+\subfigure[Muon position (on the left) and direction (on the right) along the x-axis at the bottom detector after propagation]
  {
 \begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=8cm, height=6cm]{figs/px2-17p2vs17p2.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/py2-17p2vs17p2.png}
-\end{minipage} \hfill
-}
-\subfigure[Muon direction at the bottom detector after propagation]
- {
-\begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=8cm, height=6cm]{figs/pvx2-17p2vs17p2.png}
-\end{minipage}\hfill
-\begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/pvy2-17p2vs17p2.png}
 \end{minipage} \hfill
 }
-\subfigure[Muon angular deviation at the bottom detector after propagation]
+\subfigure[Muon $\Delta$X (on the left) and $\Delta$Y (on the right) as measured after propagation]
  {
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/Atanpx-17p2vs17p2.png}
+\includegraphics[width=8cm, height=6cm]{figs/deltaX-17p2vs17p2.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/Atanpy-17p2vs17p2.png}
+\includegraphics[width=8cm, height=6cm]{figs/deltaY-17p2vs17p2.png}
 \end{minipage} \hfill
 }
-\caption{Output measured position (on the top), direction (on the center) and actual $\Delta \theta$ deviation (on the bottom) measured on the bottom detector using the Geant 4 (in blue) simulation process and our Generator (in red), in $x$ (on the left) and $y$ (on the right).}
+\subfigure[Muon $\Delta \theta_x$ (on the left) and $\Delta \theta_y$ (on the right) as measured after propagation]
+ {
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/deltaThetaX-17p2vs17p2.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=8cm, height=6cm]{figs/deltaThetaY-17p2vs17p2.png}
+\end{minipage} \hfill
+}
+\caption{Normalized variables measured on the bottom detector using the Geant4 (in blue) simulation process and our custom Generator (in red).}
 \label{fig:genComp}
 \end{figure}
 
@@ -711,42 +719,39 @@ Prove the cossquare law.
 
 \section{General results} \label{sec:general}
 
-First of all, two different geometries can be considered for the propagation, usin our Generator, as shown in Figure~\ref{fig:gemComp}, for one pipe the same geometry as used for the validation process ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and another one much thinner, having a geometry ($r = 18.8$ cm, $R = 20$ cm, $L = 50$ cm).
+\subsection{Pipe geometries impact}
+
+Now that we know we can trust the results obtained from the Generator and that general properties of cosmic muons have been derived, we can start comparing the $\Delta$X, $\Delta$Y, $\Delta \theta_x$ and $\Delta \theta_y$ distributions obtained for different geometries. This is done in Figure~\ref{fig:gemComp}, considering pipes with a constant length $L = 50$ cm and outer radius of $R = 20$ cm, while the inner radius changes from $r = 17.2$ to $18.8$ cm.
 
 \begin{figure}[htbp]
 \centering
-\subfigure[Muon position at the bottom detector after propagation]
+\subfigure[Muon $\Delta$X (on the left) and $\Delta$Y (on the right) as measured after propagation]
  {
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/px2-Generator-17p2vs18p8.png}
+\includegraphics[width=8cm, height=6cm]{figs/deltaX.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/py2-Generator-17p2vs18p8.png}
+\includegraphics[width=8cm, height=6cm]{figs/deltaY.png}
 \end{minipage} \hfill
 }
-\subfigure[Muon direction at the bottom detector after propagation]
+\subfigure[Muon $\Delta \theta_x$ (on the left) and $\Delta \theta_y$ (on the right) as measured after propagation]
  {
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/pvx2-Generator-17p2vs18p8.png}
+\includegraphics[width=8cm, height=6cm]{figs/deltaThetaX.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/pvy2-Generator-17p2vs18p8.png}
+\includegraphics[width=8cm, height=6cm]{figs/deltaThetaY.png}
 \end{minipage} \hfill
 }
-\subfigure[Muon angular deviation at the bottom detector after propagation]
- {
-\begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/Atanpx-Generator-17p2vs18p8.png}
-\end{minipage}\hfill
-\begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=8cm, height=6cm]{figs/Atanpy-Generator-17p2vs18p8.png}
-\end{minipage} \hfill
-}
-\caption{Output measured position (on the top), direction (on the center) and actual $\Delta \theta$ deviation (on the bottom) measured on the bottom detector using our Generator and two different pipe geometries ($r = 17.2$ cm, in blue and $r = 18.8$ cm, in red), in $x$ (on the left) and $y$ (on the right).}
+\caption{Normalized deviation variables generated using different pipe geometries.}
 \label{fig:gemComp}
 \end{figure}
 
-As we can see, in this case, the geometry has little to no impact on the absolute value of the position and direction of the muonState after propagation, but we do observe a deviation in both $x$ and $y$. The study of this deviation will be the starting of the determination of an unknown geometry placed between the detectors.
+As we can see, in this case, and as expected, the geometry has a little impact on the deviation observed in the position and direction, along both the $x$ and $y$ axes. The study of this deviation will be the starting point of the determination of an unknown geometry placed between the detectors.
+
+\subsection{Kernel density functions}
+
+\subsection{Likelihoods}
 
 \chapter{Conclusions}
 
