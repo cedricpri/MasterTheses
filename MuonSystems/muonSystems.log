@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  29 JUN 2020 18:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  30 JUN 2020 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -558,12 +558,12 @@ LaTeX Info: Redefining \nameref on input line 35.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<figs/image_UC.png, id=115, 400.49625pt x 401.5pt>
+<figs/image_UC.png, id=123, 400.49625pt x 401.5pt>
 File: figs/image_UC.png Graphic file (type png)
 <use figs/image_UC.png>
 Package pdftex.def Info: figs/image_UC.png  used on input line 43.
 (pdftex.def)             Requested size: 72.55157pt x 72.73248pt.
-<figs/muonSystems.png, id=117, 200.75pt x 200.75pt>
+<figs/muonSystems.png, id=125, 200.75pt x 200.75pt>
 File: figs/muonSystems.png Graphic file (type png)
 <use figs/muonSystems.png>
 Package pdftex.def Info: figs/muonSystems.png  used on input line 43.
@@ -600,7 +600,7 @@ Chapter 1.
 
 ]
 Chapter 2.
-<figs/SMFermions.png, id=194, 328.3467pt x 269.0853pt>
+<figs/SMFermions.png, id=204, 328.3467pt x 269.0853pt>
 File: figs/SMFermions.png Graphic file (type png)
 <use figs/SMFermions.png>
 Package pdftex.def Info: figs/SMFermions.png  used on input line 155.
@@ -608,24 +608,24 @@ Package pdftex.def Info: figs/SMFermions.png  used on input line 155.
 [2
 
 ]
-<figs/cosmic.png, id=214, 1927.2pt x 949.5475pt>
+<figs/cosmic.png, id=224, 1927.2pt x 949.5475pt>
 File: figs/cosmic.png Graphic file (type png)
 <use figs/cosmic.png>
 Package pdftex.def Info: figs/cosmic.png  used on input line 169.
 (pdftex.def)             Requested size: 312.97514pt x 170.70833pt.
-<figs/cosmicMuons.png, id=217, 645.41125pt x 780.9175pt>
+<figs/cosmicMuons.png, id=227, 645.41125pt x 780.9175pt>
 File: figs/cosmicMuons.png Graphic file (type png)
 <use figs/cosmicMuons.png>
 Package pdftex.def Info: figs/cosmicMuons.png  used on input line 179.
 (pdftex.def)             Requested size: 227.62076pt x 256.07109pt.
  [3 <./figs/SMFermions.png (PNG copy)> <./figs/cosmic.png>] [4 <./figs/cosmicMu
 ons.png>]
-<figs/BB.png, id=245, 997.7275pt x 635.37375pt>
+<figs/BB.png, id=255, 997.7275pt x 635.37375pt>
 File: figs/BB.png Graphic file (type png)
 <use figs/BB.png>
 Package pdftex.def Info: figs/BB.png  used on input line 204.
 (pdftex.def)             Requested size: 341.43034pt x 227.61945pt.
-<figs/moliere.png, id=251, 1140.26pt x 512.91624pt>
+<figs/moliere.png, id=261, 1140.26pt x 512.91624pt>
 File: figs/moliere.png Graphic file (type png)
 <use figs/moliere.png>
 Package pdftex.def Info: figs/moliere.png  used on input line 225.
@@ -640,23 +640,23 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 241.
  [6 <./figs/moliere.png>]
-<figs/wireChambers.png, id=274, 532.99126pt x 426.59375pt>
+<figs/wireChambers.png, id=284, 532.99126pt x 426.59375pt>
 File: figs/wireChambers.png Graphic file (type png)
 <use figs/wireChambers.png>
 Package pdftex.def Info: figs/wireChambers.png  used on input line 257.
 (pdftex.def)             Requested size: 199.16368pt x 147.95612pt.
  [7 <./figs/wireChambers.png>]
-<figs/muonChambers.png, id=283, 986.68625pt x 597.23125pt>
+<figs/muonChambers.png, id=293, 986.68625pt x 597.23125pt>
 File: figs/muonChambers.png Graphic file (type png)
 <use figs/muonChambers.png>
 Package pdftex.def Info: figs/muonChambers.png  used on input line 281.
 (pdftex.def)             Requested size: 256.0807pt x 170.71388pt.
-<figs/muonChambersPhoto.png, id=284, 576.1525pt x 642.4pt>
+<figs/muonChambersPhoto.png, id=294, 576.1525pt x 642.4pt>
 File: figs/muonChambersPhoto.png Graphic file (type png)
 <use figs/muonChambersPhoto.png>
 Package pdftex.def Info: figs/muonChambersPhoto.png  used on input line 284.
 (pdftex.def)             Requested size: 170.71956pt x 170.7155pt.
-<figs/dataFlow.png, id=286, 987.69pt x 658.46pt>
+<figs/dataFlow.png, id=296, 987.69pt x 658.46pt>
 File: figs/dataFlow.png Graphic file (type png)
 <use figs/dataFlow.png>
 Package pdftex.def Info: figs/dataFlow.png  used on input line 298.
@@ -664,7 +664,7 @@ Package pdftex.def Info: figs/dataFlow.png  used on input line 298.
  [8 <./figs/muonChambers.png> <./figs/muonChambersPhoto.png>] [9 <./figs/dataFl
 ow.png>]
 Chapter 3.
-<figs/PDF.png, id=306, 1816.7875pt x 872.25874pt>
+<figs/PDF.png, id=316, 1816.7875pt x 872.25874pt>
 File: figs/PDF.png Graphic file (type png)
 <use figs/PDF.png>
 Package pdftex.def Info: figs/PDF.png  used on input line 340.
@@ -672,119 +672,120 @@ Package pdftex.def Info: figs/PDF.png  used on input line 340.
 [10
 
  <./figs/PDF.png>]
-<figs/pdfs.png, id=324, 1105.12875pt x 702.625pt>
+<figs/pdfs.png, id=334, 1105.12875pt x 702.625pt>
 File: figs/pdfs.png Graphic file (type png)
 <use figs/pdfs.png>
 Package pdftex.def Info: figs/pdfs.png  used on input line 359.
 (pdftex.def)             Requested size: 341.42284pt x 199.16736pt.
  [11 <./figs/pdfs.png>]
-<figs/pvalue.png, id=333, 1081.03876pt x 608.2725pt>
+<figs/pvalue.png, id=343, 1081.03876pt x 608.2725pt>
 File: figs/pvalue.png Graphic file (type png)
 <use figs/pvalue.png>
 Package pdftex.def Info: figs/pvalue.png  used on input line 382.
 (pdftex.def)             Requested size: 369.87415pt x 199.16197pt.
  [12 <./figs/pvalue.png>]
-<figs/GPR.png, id=342, 752.8125pt x 384.43625pt>
-File: figs/GPR.png Graphic file (type png)
-<use figs/GPR.png>
-Package pdftex.def Info: figs/GPR.png  used on input line 397.
-(pdftex.def)             Requested size: 369.8922pt x 199.17474pt.
- [13 <./figs/GPR.png>]
-<figs/likelihood.png, id=358, 410.53375pt x 403.5075pt>
+<figs/kernels.png, id=356, 622.325pt x 471.7625pt>
+File: figs/kernels.png Graphic file (type png)
+<use figs/kernels.png>
+Package pdftex.def Info: figs/kernels.png  used on input line 418.
+(pdftex.def)             Requested size: 369.88438pt x 284.52817pt.
+ [13]
+[14 <./figs/kernels.png>]
+<figs/likelihood.png, id=379, 410.53375pt x 403.5075pt>
 File: figs/likelihood.png Graphic file (type png)
 <use figs/likelihood.png>
-Package pdftex.def Info: figs/likelihood.png  used on input line 443.
+Package pdftex.def Info: figs/likelihood.png  used on input line 450.
 (pdftex.def)             Requested size: 199.16501pt x 170.71571pt.
-<figs/loglikelihood.png, id=359, 421.575pt x 397.485pt>
+<figs/loglikelihood.png, id=380, 421.575pt x 397.485pt>
 File: figs/loglikelihood.png Graphic file (type png)
 <use figs/loglikelihood.png>
-Package pdftex.def Info: figs/loglikelihood.png  used on input line 446.
+Package pdftex.def Info: figs/loglikelihood.png  used on input line 453.
 (pdftex.def)             Requested size: 199.1695pt x 170.72113pt.
- [14 <./figs/likelihood.png> <./figs/loglikelihood.png>] [15]
+ [15 <./figs/likelihood.png> <./figs/loglikelihood.png>]
 Chapter 4.
 [16
 
 ]
-<figs/cylinder.png, id=381, 936.49875pt x 679.53876pt>
+<figs/cylinder.png, id=396, 936.49875pt x 679.53876pt>
 File: figs/cylinder.png Graphic file (type png)
 <use figs/cylinder.png>
-Package pdftex.def Info: figs/cylinder.png  used on input line 512.
+Package pdftex.def Info: figs/cylinder.png  used on input line 519.
 (pdftex.def)             Requested size: 241.8406pt x 170.71378pt.
 
-Overfull \hbox (4.82649pt too wide) in paragraph at lines 512--513
+Overfull \hbox (4.82649pt too wide) in paragraph at lines 519--520
 [][] 
  []
 
 [17 <./figs/cylinder.png>]
-<figs/normal.png, id=394, 593.21625pt x 531.9875pt>
+<figs/normal.png, id=409, 593.21625pt x 531.9875pt>
 File: figs/normal.png Graphic file (type png)
 <use figs/normal.png>
-Package pdftex.def Info: figs/normal.png  used on input line 568.
+Package pdftex.def Info: figs/normal.png  used on input line 575.
 (pdftex.def)             Requested size: 199.16542pt x 170.71028pt.
  [18 <./figs/normal.png>]
-<figs/parameters.png, id=403, 795.97375pt x 696.6025pt>
+<figs/parameters.png, id=418, 795.97375pt x 696.6025pt>
 File: figs/parameters.png Graphic file (type png)
 <use figs/parameters.png>
-Package pdftex.def Info: figs/parameters.png  used on input line 587.
+Package pdftex.def Info: figs/parameters.png  used on input line 594.
 (pdftex.def)             Requested size: 199.16298pt x 170.71693pt.
  [19 <./figs/parameters.png>] [20]
 Chapter 5.
-<figs/px2-17p2vs17p2.png, id=424, 698.61pt x 473.77pt>
+<figs/px2-17p2vs17p2.png, id=439, 698.61pt x 473.77pt>
 File: figs/px2-17p2vs17p2.png Graphic file (type png)
 <use figs/px2-17p2vs17p2.png>
-Package pdftex.def Info: figs/px2-17p2vs17p2.png  used on input line 692.
+Package pdftex.def Info: figs/px2-17p2vs17p2.png  used on input line 699.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvx2-17p2vs17p2.png, id=425, 698.61pt x 473.77pt>
+<figs/pvx2-17p2vs17p2.png, id=440, 698.61pt x 473.77pt>
 File: figs/pvx2-17p2vs17p2.png Graphic file (type png)
 <use figs/pvx2-17p2vs17p2.png>
-Package pdftex.def Info: figs/pvx2-17p2vs17p2.png  used on input line 692.
+Package pdftex.def Info: figs/pvx2-17p2vs17p2.png  used on input line 699.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaX-17p2vs17p2.png, id=426, 698.61pt x 473.77pt>
+<figs/deltaX-17p2vs17p2.png, id=441, 698.61pt x 473.77pt>
 File: figs/deltaX-17p2vs17p2.png Graphic file (type png)
 <use figs/deltaX-17p2vs17p2.png>
-Package pdftex.def Info: figs/deltaX-17p2vs17p2.png  used on input line 701.
+Package pdftex.def Info: figs/deltaX-17p2vs17p2.png  used on input line 708.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaY-17p2vs17p2.png, id=427, 698.61pt x 473.77pt>
+<figs/deltaY-17p2vs17p2.png, id=442, 698.61pt x 473.77pt>
 File: figs/deltaY-17p2vs17p2.png Graphic file (type png)
 <use figs/deltaY-17p2vs17p2.png>
-Package pdftex.def Info: figs/deltaY-17p2vs17p2.png  used on input line 701.
+Package pdftex.def Info: figs/deltaY-17p2vs17p2.png  used on input line 708.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaThetaX-17p2vs17p2.png, id=428, 698.61pt x 473.77pt>
+<figs/deltaThetaX-17p2vs17p2.png, id=443, 698.61pt x 473.77pt>
 File: figs/deltaThetaX-17p2vs17p2.png Graphic file (type png)
 <use figs/deltaThetaX-17p2vs17p2.png>
 Package pdftex.def Info: figs/deltaThetaX-17p2vs17p2.png  used on input line 71
-0.
+7.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaThetaY-17p2vs17p2.png, id=429, 698.61pt x 473.77pt>
+<figs/deltaThetaY-17p2vs17p2.png, id=444, 698.61pt x 473.77pt>
 File: figs/deltaThetaY-17p2vs17p2.png Graphic file (type png)
 <use figs/deltaThetaY-17p2vs17p2.png>
 Package pdftex.def Info: figs/deltaThetaY-17p2vs17p2.png  used on input line 71
-0.
+7.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
 [21
 
 ] [22 <./figs/px2-17p2vs17p2.png> <./figs/pvx2-17p2vs17p2.png> <./figs/deltaX-1
 7p2vs17p2.png> <./figs/deltaY-17p2vs17p2.png> <./figs/deltaThetaX-17p2vs17p2.pn
 g> <./figs/deltaThetaY-17p2vs17p2.png>]
-<figs/deltaX.png, id=448, 698.61pt x 473.77pt>
+<figs/deltaX.png, id=464, 698.61pt x 473.77pt>
 File: figs/deltaX.png Graphic file (type png)
 <use figs/deltaX.png>
-Package pdftex.def Info: figs/deltaX.png  used on input line 736.
+Package pdftex.def Info: figs/deltaX.png  used on input line 743.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaY.png, id=449, 698.61pt x 473.77pt>
+<figs/deltaY.png, id=465, 698.61pt x 473.77pt>
 File: figs/deltaY.png Graphic file (type png)
 <use figs/deltaY.png>
-Package pdftex.def Info: figs/deltaY.png  used on input line 736.
+Package pdftex.def Info: figs/deltaY.png  used on input line 743.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaThetaX.png, id=450, 698.61pt x 473.77pt>
+<figs/deltaThetaX.png, id=466, 698.61pt x 473.77pt>
 File: figs/deltaThetaX.png Graphic file (type png)
 <use figs/deltaThetaX.png>
-Package pdftex.def Info: figs/deltaThetaX.png  used on input line 745.
+Package pdftex.def Info: figs/deltaThetaX.png  used on input line 752.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaThetaY.png, id=451, 698.61pt x 473.77pt>
+<figs/deltaThetaY.png, id=467, 698.61pt x 473.77pt>
 File: figs/deltaThetaY.png Graphic file (type png)
 <use figs/deltaThetaY.png>
-Package pdftex.def Info: figs/deltaThetaY.png  used on input line 745.
+Package pdftex.def Info: figs/deltaThetaY.png  used on input line 752.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
  [23 <./figs/deltaX.png> <./figs/deltaY.png> <./figs/deltaThetaX.png> <./figs/d
 eltaThetaY.png>] [24]
@@ -792,36 +793,30 @@ Chapter 6.
 [25
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 850.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 863.
  [26
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 850.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 863.
  (./muonSystems.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 850.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 850.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 863.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 863.
+Package rerunfilecheck Info: File `muonSystems.out' has not changed.
+(rerunfilecheck)             Checksum: 92F039D7E8620E89888EE4F534C77E9E;1902.
 
-
-Package rerunfilecheck Warning: File `muonSystems.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `muonSystems.out':
-(rerunfilecheck)             Before: C3443E9E4A4E1E332DEDB7AA5A387EFA;1757
-(rerunfilecheck)             After:  4DD3902A943A8EDAFC2CCA1D6B9484A0;1900.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 850.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 863.
  ) 
 Here is how much of TeX's memory you used:
- 9807 strings out of 494880
- 146883 string characters out of 6179601
- 255676 words of memory out of 5000000
- 12836 multiletter control sequences out of 15000+600000
+ 9813 strings out of 494880
+ 146983 string characters out of 6179601
+ 255782 words of memory out of 5000000
+ 12840 multiletter control sequences out of 15000+600000
  16695 words of font info for 58 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  36i,11n,43p,969b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -844,10 +839,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb>
-Output written on muonSystems.pdf (32 pages, 1864424 bytes).
+Output written on muonSystems.pdf (32 pages, 1854014 bytes).
 PDF statistics:
- 594 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
- 375 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 500 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 391 words of extra memory for PDF output out of 10000 (max. 10000000)
 

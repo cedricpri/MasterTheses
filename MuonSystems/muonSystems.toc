@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {3.1}Probability density functions}{10}{section.3.1}
 \contentsline {section}{\numberline {3.2}Monte-Carlo simulations}{11}{section.3.2}
 \contentsline {section}{\numberline {3.3}p-values}{12}{section.3.3}
-\contentsline {section}{\numberline {3.4}Kernel density functions}{13}{section.3.4}
+\contentsline {section}{\numberline {3.4}Kernel density estimations}{13}{section.3.4}
 \contentsline {section}{\numberline {3.5}Likelihood}{14}{section.3.5}
 \contentsline {chapter}{\numberline {4}The algorithm}{16}{chapter.4}
 \contentsline {section}{\numberline {4.1}PipeReconstructor}{16}{section.4.1}

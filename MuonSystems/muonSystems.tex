@@ -388,32 +388,39 @@ In general, a smaller the p-value tells us that the hypothesis under considerati
 
 In this work, the p-value will then allow us to compare a single data measurement with the probability density functions obtained from Monte-Carlo and quantify the probability that such muon was actually observed for a given object geometry. This value will then be feeded to a likelihood function, as explained in Section~\ref{sec:Likelihood}.
 
-\section{Kernel density functions} \label{sec:KDF}
+\section{Kernel density estimations} \label{sec:KDF}
 
-In statistics, the kernel density estimation is a method allowing to estimate the density probability of a random variable. The objective of this method is to make inferrence regarding the data in order to try and smooth the probability density function obtained experimentally, as shown in Figure~\ref{fig:KGR}.
+In statistics, the kernel density estimation is a method allowing to estimate the shape of the density probability $f$, the PDF defined in Section~\ref{sec:PDF}, of a random variable $\bm x$, from $N$ observations drawn from this unknown function PDF. The usual way to proceed is to place each observation made in an histogram, where the density in each point $x$ can be therefore estimated as the proportion of observations close to $x$. However, this method depends strongly on the binning used and the function obtained by this process is non-continuous by definition. The \textbf{kernel method} has been developped in this context, to try and solve the non-continuity of the PDF obtained, by simply using various continuous functions instead of bins. 
 
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=13cm, height=7cm]{figs/GPR.png}
-\caption{Academic example of a gaussian regression applied to a noisy and finite set of data points.}
-\label{fig:KGR}
-\end{figure}
-
-Mathematically, the objective is then to build a continous function $\hat{f}_h(x)$ defined in Equation~\ref{eq:KDF} from a finite set of data samples $\bm x$, distributed along an unknown density function $f$, and where $K$ is the so-called \textbf{kernel} and $h$ is the \textbf{bandwidth} or \textbf{smoothing parameter} of the estimation.
+Mathematically, we can define a function called the \textbf{density estimator} of $f$, $\hat{f}_h(x)$, defined as a sum of such general functions $K$ over the number of observations drawn, as shown in Equation~\ref{eq:KDF}.
 
 \begin{equation}
 \label{eq:KDF}
-\hat{f}_h(x) = \frac{1}{nh} \sum_{i=1}^{n} K \left (\frac{x-x_i}{h} \right )
+\hat{f}_h(x) = \frac{1}{Nh} \sum_{i=1}^{N} K \left (\frac{x-x_i}{h} \right )
 \end{equation}
 
-In the previous equation the kernel $K$ is a non-negative function defined depending on the problem, as the "building block" of the final function that needs to be estimated: indeed, as we can see, the function $\hat{f}_h(x)$ will be given as a simple sum of kernels. In most of the problems, including this work, a standard gaussian kernel is used, taking the shape shown in Equation~\ref{eq:kernel}.
+In this last equation, two parameters that need to be defined by hand before using this method are actually extremely important:
+\begin{itemize}
+\item First, the \textbf{kernel} $K$, is a non-negative window function defined depending on the problem, as the "building block" of the final function that needs to be estimated: indeed, as we can see, the function $\hat{f}_h(x)$ will be given as a simple sum of these kernels. In most of the problems, including this work, a standard gaussian kernel is used, taking the particular shape shown in Equation~\ref{eq:kernel}.
 
 \begin{equation}
 \label{eq:kernel}
 K(x) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2} x^2}
 \end{equation}
 
-In this particular case, this method allows us to construct continous functions and recover for the eventual low statistics and possibles holes in the bi-dimentional histograms for the position and direction of the muons obtained in $x$ and $y$, following the method that will be described in Chapter~\ref{chapter:algorithm}.
+\item The \textbf{bandwidth} $h$ is another interesting parameter, affecting the final smoothness of the resulting curve. The optimal selection of such parameter is not obvious at all \cite{bandwidth} but, as a rule of thumb, it can be shown that for gaussian kernels of standard deviation $\sigma$, it should be approximately equal to $1.06$ $\sigma N^{-1/5}$ in order to minimize the mean integrated square error obtained. 
+\end{itemize}
+
+A comparison of the different methods so far and different possible is shown in Figure~\ref{fig:KGR}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=13cm, height=10cm]{figs/kernels.png}
+\caption{Comparison of the histogram and the kernel density estimations methods for different kernels in order to estimate a PDF \cite{scikit}.}
+\label{fig:KGR}
+\end{figure}
+
+In summary, this method is used in order to model the distribution of an arbitrary input dataset as a superposition of Gaussian kernels, one for each data point, each contributing 1/N to the total integral of the PDF. This method allows us to construct continous functions and recover for the eventual low statistics and possibles holes in the bi-dimentional histograms for the position and direction of the muons obtained in $x$ and $y$, following the method that will be described in Chapter~\ref{chapter:algorithm}.
 
 \section{Likelihood} \label{sec:Likelihood}
 
@@ -590,7 +597,7 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 \label{fig:parameters}
 \end{figure}
 
-\item This propagation process is repeated over and over again ($n_{\text{prop}} \sim 100$ times in total) since we known that the multiple scattering is a stochastic process. Each time the propagation method is called for the same incident muon, different deviations values are therefore obtained, each kept in a vector, which can be represented in an histogram and smoothen using kernel density functions, as explained in Section~\ref{sec:KDF}. 
+\item This propagation process is repeated over and over again ($n_{\text{prop}} \sim 100$ times in total) since we known that the multiple scattering is a stochastic process. Each time the propagation method is called for the same incident muon, different deviations values are therefore obtained, each kept in a vector, which can be represented in an histogram and smoothen using the RooFit package and kernel density functions, as explained in Section~\ref{sec:KDF}. 
 \item At this stage, all the ingredients needed to compute a p-value are available. A p-value for each \textit{IncomingMuon} is then computed by using the vectors previously defined and representing an histogram of all the possible deviation values, and by comparing the actual measurement \textit{OutgoingMuon} for such distributions. The p-values computed along the x and y-axis then enter the global likelihood value that is used for the minimization process.
 \end{itemize}
 
@@ -747,7 +754,7 @@ Now that we know we can trust the results obtained from the Generator and that g
 \label{fig:gemComp}
 \end{figure}
 
-As we can see, in this case, and as expected, the geometry has a little impact on the deviation observed in the position and direction, along both the $x$ and $y$ axes. The study of this deviation will be the starting point of the determination of an unknown geometry placed between the detectors.
+As we can see, in this case, and as expected, the geometry has a little impact on the deviation observed in the position and direction, along both the $x$ and $y$ axes. We can however observe slightly larger tails for the pipes having a larger width, as expected. The study of this small differences between the geometries will be the starting point of the determination of the properties of an unknown pipe placed between the detectors.
 
 \subsection{Kernel density functions}
 
@@ -838,6 +845,12 @@ Science, Volume 167, Issue 3919, 1970}
 
 \bibitem{PDF}
 \href{https://www.math24.net/probability-density-function/}{Math24, "Probability Density Function", as seen in May 2020}
+
+\bibitem{bandwidth}
+\href{https://www.hindawi.com/journals/jps/2015/242683/}{S. Chen, "Optimal Bandwidth Selection for Kernel Density Functionals Estimation", Journal of Probability and Statitics vol. 2015 art. 242683, as seen in June 2020}
+
+\bibitem{scikit}
+\href{https://scikit-learn.org/stable/auto_examples/neighbors/plot_kde_1d.html}{Scikit-learn: Machine Learning in {P}ython, "Simple 1D Kernel Density Estimation", as seen in June 2020}
 
 \bibitem{CRY}
 \href{https://arxiv.org/pdf/0811.0187.pdf}{M. Holmann et all, "GEANT4 Simulation of a Cosmic Ray Muon Tomography System with Micro-Pattern Gas Detectors for the Detection of High-Z Materials", as seen in June 2020}
