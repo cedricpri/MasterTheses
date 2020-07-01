@@ -583,22 +583,28 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 \item Eventual muons out of the acceptance of any of the detectors are of course rejected at this stage and simply not considered when computing the value of the likelihood.
 \end{itemize}
 
-\item The \textbf{Likelihood} object itself can then be calculated. This class reads a Monte-Carlo generated file (actual explanations regarding this generation process will be given in Section~\ref{sec:Generator}) and is able to perform several calculations for each generated event ($n_{\text{gen}} \sim 100.000$): 
+\item The \textbf{Likelihood} object itself can then be calculated. This class takes as input a pipe geometry and a file containing a set of measurements (either obtained from Monte-Carlo or actually measured by the detectors) and its main objective is to estimate how likely it is that we obtained exactly these measurements for the geometry given. In order to reach this goal, several calculations are performed for each event found in the input file ($n_{\text{gen}} \sim 100.000$): 
 \begin{itemize}
-\item First of all, three MuonStates are computed: the so-called \textit{IncomingMuon} and \textit{OutgoingMuon}, directly read as the measurement at the upper and lower detectors from the Monte-Carlo simulation, and the \textit{IncomingMuonLinearDown}, defined as the prolongation along a straight line of the \textit{IncomingMuon}.
-\item Each \textit{IncomingMuon} is then propagated along the geometry using the method previously defined, defining a fourth so-called \textit{IncomingMuonDown} MuonState. The $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ parameters shown in Figure~\ref{fig:parameters} and representing the actual deviation suffered by the muon can then be obtained.
+\item First of all, three MuonStates are computed: the so-called \textit{IncomingMuon} and \textit{OutgoingMuon}, directly read as the measurement at the upper and lower detectors from the input file, and the \textit{IncomingMuonLinearDown}, defined as the prolongation along a straight line of the \textit{IncomingMuon}. Each \textit{IncomingMuon} is then propagated along the geometry using our Propagator, defining a fourth \textit{IncomingMuonDown} MuonState, as shown in Figure~\ref{fig:parameters}.
 
 \begin{figure}[htbp]
 \centering
 \begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=7cm, height=6cm]{figs/parameters.png}
 \end{minipage}\hfill
-\caption{Typical example of two incident muons not respecting the normal incidence required by the Moliere equation for the multiple scattering of muons.}
+\caption{Schematical representation of the 4 four muonStates and main parameters used for the computation of the likelihood.}
 \label{fig:parameters}
 \end{figure}
 
-\item This propagation process is repeated over and over again ($n_{\text{prop}} \sim 100$ times in total) since we known that the multiple scattering is a stochastic process. Each time the propagation method is called for the same incident muon, different deviations values are therefore obtained, each kept in a vector, which can be represented in an histogram and smoothen using the RooFit package and kernel density functions, as explained in Section~\ref{sec:KDF}. 
-\item At this stage, all the ingredients needed to compute a p-value are available. A p-value for each \textit{IncomingMuon} is then computed by using the vectors previously defined and representing an histogram of all the possible deviation values, and by comparing the actual measurement \textit{OutgoingMuon} for such distributions. The p-values computed along the x and y-axis then enter the global likelihood value that is used for the minimization process.
+\item From these muonStates, the $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ parameters can easily be computed as the difference between the position and angle measured between the \textit{IncomingMuonDown} and \textit{IncomingMuonLinearDown} muonStates. Such parameters are important and will be used a lot in this work since they represent the actual deviation suffered by the muon.
+\item This propagation process is repeated over and over again ($n_{\text{prop}} \sim 100$ times in total) since we known that the multiple scattering is a stochastic process. Each time the propagation method is called for the same incident muon, different deviations parameters are therefore obtained, each kept in a vector, which can be represented in an histogram and smoothen using the RooFit package and kernel density functions, as explained in Section~\ref{sec:KDF}. 
+\item At this stage, all the ingredients needed to compute a p-value are available. A p-value for each \textit{IncomingMuon} is then computed by using the vectors previously defined and representing an histogram of all the possible deviation values, and by comparing the actual measurement \textit{OutgoingMuon} for such distributions.
+\item Two p-values, one along each of the $x$ and $y$ axes, are then obtained for each of the $N$ events found in the input file. The total value returned by this function can then simply be computed from Equation~\ref{eq:totallikelihood}.
+
+\begin{equation}
+\label{eq:totallikelihood}
+\mathcal{L} = \sum_{i = 1}^N -2.0 \cdot \log(\text{pvalue}_{x, i}) \cdot \log(\text{pvalue}_{y, i})
+\end{equation}
 \end{itemize}
 
 \item So far, we described a method allowing to compute the likelihood of observing a given measuremen by using Monte-Carlo simulations for a given volume, but one last important step is still missing: we need to find a way to find the optimal volume for a given mesurement, the main objective of this process. 
@@ -670,22 +676,6 @@ This step is actually extremely important, as it allowed us to find several bugs
 
 For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and located in (0, 0, 0), thousands of muons have then been generated using Geant 4 and our Generator. The output distributions (the positions $x$ and $y$ and directions $v_x$ and $v_y$ after propagation, along with the deviations in position $\Delta$X and $\Delta$Y, defined in Equation\ref{eq:deviationPos} where $d$ is the vertical distance between the two detectors, and the deviation angles $\Delta \theta_x$ and $\Delta \theta_y$, defined in Equation~\ref{eq:deviationDir}) have then been obtained in this case in Figure~\ref{fig:genComp}. All these plots have been normalized to unity in order to account for the eventual different number of events generated in both cases.
 
-\begin{equation}
-\label{eq:deviationPos}
-\begin{dcases}
-\Delta \text{X} = x_2 + d (v_{x2} - x_1)  \\
-\Delta \text{Y} = y_2 + d (v_{y2} - y_1)
-\end{dcases}
-\end{equation}
-
-\begin{equation}
-\label{eq:deviationDir}
-\begin{dcases}
-\Delta \theta_x = \arctan \left ({\frac{v_{x2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{x1}}{v_{z1}}} \right ) \\
-\Delta \theta_y = \arctan \left ({\frac{v_{y2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{y1}}{v_{z1}}} \right )
-\end{dcases}
-\end{equation}
-
 \begin{figure}[htbp]
 \centering
 \subfigure[Muon position (on the left) and direction (on the right) along the x-axis at the bottom detector after propagation]
@@ -721,8 +711,26 @@ For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and
 
 \section{Cosmis muons properties} \label{sec:incident}
 
-Prove the cossquare law.
-\color{red} Add plot to show the input energy of cosmic muons? \color{black}
+One of the most famous properties of cosmic muons is their regular angular distribution $T_\theta$, given by Equation~\ref{eq:cossquare}, where $I_0$ and $n$ are parameters depeding on several factors, such as the altitude and latitude of the place where the measurement is performed.
+
+\begin{equation}
+\label{eq:cossquare}
+I_\theta = I_0 \cos^n \theta \propto cos^n \theta
+\end{equation}
+
+At our latitude, we can approximately estimate that $n \simeq 2$ and this is something we can easily check with our experimental setup, given the fact that the upper detector is able to give us such angular distribution. Another important property of cosmic muons is their relatively well known energy spectrum, that we can also represent here, in order to check for the validity of the cosmic muons generated with CRY. The results obtained in both cases are shown in Figure~\ref{fig:prop}.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=7cm, height=6cm]{figs/placeholder.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=7cm, height=6cm]{figs/placeholder.png}
+\end{minipage}\hfill
+\caption{Study of the angular (on the left) and energy (on the right) distributions of cosmic muons generated by CRY and used throughout this work.}
+\label{fig:prop}
+\end{figure}
 
 \section{General results} \label{sec:general}
 
@@ -760,9 +768,50 @@ As we can see, in this case, and as expected, the geometry has a little impact o
 
 \subsection{Likelihoods}
 
+The goal is now to estimate the value of the total likelihood obtained for different pipe geometries, characterized by different inner radii, ranging from 17.2 to 18.8cm, by steps of 0.2cm. The first step has then been to generate 9 Monte-Carlo files with 100.000 events each, using our Generator, corresponding to these 9 possible geometries. 
+
+The idea is then to compute the value of the likelihood obtained for each geometry by comparing an actual measurement obtained by our propagator with these generated files, in order to estimate the p-value in each case and, at the end of the day, try to figure out which pipe geometry is more likely to give rise to such measurements. The results obtained are shown in Figure~\ref{fig:likelihoods}, where we expect to see a minimum for the actual geometry used, represented by the vertical red line in each case.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood17p2.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood17p4.png}
+\end{minipage} \hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood17p6.png}
+\end{minipage} \hfill \vspace{10pt}
+
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood17p8.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood18p0.png}
+\end{minipage} \hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood18p2.png}
+\end{minipage} \hfill \vspace{10pt}
+
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood18p4.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood18p6.png}
+\end{minipage} \hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood18p8.png}
+\end{minipage} \hfill
+\caption{Likelihoods values obtained for different pipe geometries, ranging from 17.2 (on the top left) to 18.8cm of inner radius (on the bottom right).}
+\label{fig:likelihoods}
+\end{figure}
+
+\subsection{Minimization process}
+
 \chapter{Conclusions}
 
-Improvements: consider ionization as well
+Improvements: consider ionization as well, detectors effect, additional parameters
 
 %\begin{appendices}
   
