@@ -86,12 +86,14 @@
 
 \section*{\huge{Abstract}}
 
-In this work, cosmic muons have been used to perform a muography experiment, a non-destructive method allowing us to study the internal properties of several physical objects with various geometries. Such study is extremely useful in the industry, in order for example to study the degradation of pipes, and finds many application in our daily lives.
+In this work, cosmic muons have been used to perform a muography experiment, a safe and non-destructive method allowing us to study the internal properties of physical objects with various geometries. Such study is extremely useful in the industry, in order for example to study the degradation of pipes, and finds many application in our daily lives. The main goal of this work was then to find a way to estimate the thickness of steel pipes by studying the deviation undergone by cosmic muons crossing such geometry, using data science and advanced statistical considerations.
 
-In particular, a new C++ framework has been developed in order to study the results of such muography experiments and study their results from a statistical point of view, to find the optimal geometrical parameters of different objects placed between two muon detectors.
+In this context, a new C++/ROOT framework has been developed in order to i) recreate the geometry associated to this particular problem, ii) study the results of such muography experiments from a statistical point of view and iii) define a coherent way to estimate the optimal geometrical parameters of different objects placed between two muon detectors using the general properties of muons, data science and statistical methods.
+
+In particular, once defined and fully tested, this framework allowed us to determine the thickness of such steel pipes with a precision of the order of the millimeter.
 
 \begin{center}
-\textbf{Key words} : cosmic muons, muography, geometry, likelihood
+\textbf{Key words} : cosmic muons, muography, statistics, geometry, scattering, likelihood
 \end{center}
 
 \section*{\huge{Resumen}} 
@@ -106,11 +108,11 @@ In particular, a new C++ framework has been developed in order to study the resu
 
 \section*{\huge{Acknowledgments}}
 
-I would like to mainly thank Pablo for his outstanding work as the director of this work over the past few months. He has been incredibly helpful and present all along the way, teaching me the basic of muography and helping and guiding me when needed. I know it has not always been easy but I am very grateful for the time he spent with me, and I am more than happy with the final result and glad I decided to choose this particular subject.
+I would like to mainly thank Pablo for his outstanding work as the director of this project over the past few months. He has been incredibly helpful and present all along the way, teaching me the basic of muography, helping and guiding me when needed. I know it has not always been easy but I am very grateful for the time he spent with me, and I am more than happy with the final result and glad I decided to choose this particular subject.
 
-Thank you to Muon Systems and its CEO Carlos D\'iez in particular, the co-director of this work, for allowing me be a part of their experiment during a few months and allowing me to get a privileged access to actual data collected. Having the opportunity to work in collaboration with a real industry has been an extremely interesting experience that will for sure help me a lot in the future. I obviously wish to the company all the best since the technology developed definitely show a lot of potential.
+Thank you to Muon Systems and its CEO Carlos D\'iez in particular, the co-director of this work, for allowing me be a part of their experiment during a few months, granting me a privileged access to actual data simulated and collected. Having the opportunity to work in collaboration with a real industry has been an extremely interesting experience that will for sure help me a lot in the future. I obviously wish to the company all the best for the future since the technology they developed is extremely interesting and definitely shows a lot of potential.
 
-I would also like to thank all the other students involved in this Master degree, in particular to Pedro and Nicol\`o which have been extremely helpful as well. Many thanks to Lara for organizing this degree in the best way possible given the special circumstances which happened this year and for setting up everything allowing me to follow the classes remotely during the first semester.
+I would also like to thank all the other students involved in this Master degree, in particular Pedro and Nicol\`o, which have both been extremely helpful as well. Many thanks to Lara for organizing this degree in the best way possible given the special circumstances which happened this year and for setting up everything allowing me to follow the classes remotely during the first semester.
 
 Finally, many thanks to my parents and family in general for being there whenever I need it and for supporting my decision to come and study in Spain 6 years ago. It has been a great experience that taught me a lot and that I will for sure never forget.  
 
@@ -132,17 +134,42 @@ Finally, many thanks to my parents and family in general for being there wheneve
 
 \chapter{Introduction}
 
-Nowadays, muon tomography is an active field of research since it is a non destructive method allowing to map the inside of large objects difficult and/or dangerous to access, without any contact or damage, and without even having physical access to them. To do so, this technique uses muons, elementary particles similar to electrons but with a much greater mass, which allows them to penetrate much deeper and probe matter in a more efficient way, since they suffer less from the bremsstrahlung radiation affecting all leptons. Such technology is relatively well-know and presents several advantages over other techniques such as X-ray imaging since it is globally safe and clean and uses natural radiation, cosmic muons, while providing an excellent penetration in matter in order to study it.
+Nowadays, muon tomography is an active field of research since it is a non destructive method allowing to map the inside of large objects difficult and/or dangerous to access, without any contact or damage, and without even having physical access to them. To do so, this technique uses cosmic muons, elementary particles similar to electrons but with a much greater mass, which allows them to penetrate much deeper and probe matter in a more efficient way, since they suffer less from the bremsstrahlung radiation affecting all leptons. Such technology is relatively well-know and presents several advantages over other techniques such as X-ray imaging since it is globally safe, clean since it uses natural radiation, cosmic muons, while providing an excellent penetration in matter in order to study it.
 
-In this particular work, muon tomography will be applied to industry and used in order to probe several kinds of physical objects, such as pipes, to study their degradation without damaging them. This is the main objective of the company called Muon systems, founded in 2017 and based in Bilbao.
+In this particular work, muon tomography will be applied to the industry and used in order to probe several kinds of physical objects, such as pipes, to determine their inner properties and study their degradation without damaging them. This is the main objective of the company called Muon systems, founded in 2017 and based in Bilbao.
 
-This company already built powerful muon detectors allowing to perform such experiment and developed over the years a powerful framework allowing to study the degradation of pipes using convolutional neural networks, but this method is limited in the sense that training such networks is computing intensive and time consuming, and therefore does not allow to study several properties of such pipes at once. In this work, an alternative method based on a statistical analysis of the problem is presented, allowing a greater generalization of the previous method to other object geometries and to a higher dimension parameters phase space.
+This company already built powerful muon detectors allowing to perform such experiment and developed over the years a powerful framework allowing to study the degradation of pipes using convolutional neural networks, but this method is limited in the sense that training such networks is computing intensive and time consuming, and therefore does not allow to study several properties of such pipes at once. In this work, an alternative method based on a statistical analysis of the problem is presented, allowing for a greater generalization of the previous method to other object geometries and to a higher dimension parameters phase space.
 
-This project is highly relevant in today's society because it allows to combine data science algorithms and high-performing statistical methods that have been developed in this context to solver this particular muography problem, putting them in practice in an actual industry.
+This project is highly relevant in today's society because it allows to combine data science algorithms and high-performing statistical methods that have been developed in this context to solve this particular muography problem, putting such methods in practice in an actual industry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter{Muons and muography}
 
-The main particles used throughout this work, muons, will be briefly introduced in Section~\ref{sec:particlePhysics} of this Chapter. Muon are particles produced naturally by cosmic rays, introduced in Section~\ref{sec:cosmicRays} and, once produced, they obviously interact when traversing the atmosphere and matter in general in ways described in Section~\ref{sec:interactions} that actually need to be understood extremely well for the muon tomography process introduced in Section~\ref{sec:tomography} to be useful and applicable to industry. Finally, the actual experimental setup used for this work will be explained in Section~\ref{sec:setup}.
+The main particles used throughout this work, muons, will be briefly introduced in Section~\ref{sec:particlePhysics} of this Chapter. Muons are particles produced naturally by cosmic rays, introduced in Section~\ref{sec:cosmicRays} and, once produced, they obviously interact when crossing the atmosphere and matter in general in ways described in Section~\ref{sec:interactions} that actually need to be understood extremely well for the muon tomography process introduced in Section~\ref{sec:tomography} to be useful and applicable to industry. Finally, the actual experimental setup used for this work will be described in Section~\ref{sec:setup}.
 
 \section{Particle physics and muons} \label{sec:particlePhysics}
 
@@ -152,37 +179,37 @@ According to this model, 12 different fermions (along with their 12 correspondin
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=8cm, height=6cm]{figs/SMFermions.png}
+\includegraphics[width=10cm, height=8.2cm]{figs/SMFermions.png}
 \caption{Representation of the 12 fermions of the Standard Model \cite{SMFermions} along with the main force carriers and the Higgs boson, discovered in 2012 and completing this model.}
 \label{figure:SMFermions}
 \end{center}
 \end{figure}
 
-Muons $\mu^{-}$ \cite{PDGMuons} are therefore fundamental particles having a negative charge and quite similar in nature to electrons, even though they have a quite high mass (200 times larger than the electron), which implies that their are not stable particles: they have a lifetime of approximately 2.2$\mu$s, and typically decay into an electron and a pair of neutrinos. However, this lifetime is actually quite long with respect to other fundamental particles and muons are on average able to travel more than 700 meters, allowing us to consider them to be stable particles in many processes, such as the one presented in this work. Muons also have a relatively small interaction cross-section with ordinary matter, even though they do interact with baryonic matter by several processes described in Section~\ref{sec:interactions}.
+Muons $\mu^{-}$ \cite{PDGMuons} are therefore fundamental particles having a negative charge and quite similar in nature to electrons, even though they have a higher mass (200 times larger than the electron), which implies that they are not stable particles: they have a lifetime of approximately 2.2$\mu$s, and typically decay into an electron and a pair of neutrinos. However, this lifetime is actually quite long with respect to other fundamental particles and muons are on average able to travel more than 700 meters, allowing us to consider them to be stable particles in many processes, such as the one presented in this work. Muons also have a relatively small interaction cross-section with ordinary matter, even though they do interact with baryonic matter by several processes described in Section~\ref{sec:interactions}.
 
 \section{Cosmic rays} \label{sec:cosmicRays}
 
-Being unstable by nature, once produced, muons decay almost instantly by a weak process into an electron and a pair of neutrinos. However, it is possible to observe them in nature, since they are continually produced, mainly thanks to cosmic rays \cite{cosmicPDG}, constant flux of high energy particles (mostly protons and atomic nuclei) coming mostly from supernovae explosions and AGN emissions and reaching the Earth every day. Indeed, as they impact our atmosphere, these particles start a chain reaction, as shown in Figure~\ref{figure:cosmic}: first of all, several neutral and charged pions are produced, decaying themselves into a pair of photons (and, later on, electron and positron pairs) and muons, respectively.
+Being unstable by nature, once produced, muons decay almost instantly by a weak process into an electron and a pair of neutrinos. However, it is possible to observe them in nature, since they are continually produced, mainly thanks to cosmic rays \cite{cosmicPDG}, a constant flux of high energy particles (mostly protons and atomic nuclei) coming mostly from supernovae explosions and AGN emissions and reaching the Earth every day. Indeed, as they impact our atmosphere, these particles start a chain reaction, as shown in Figure~\ref{figure:cosmic}: first of all, several neutral and charged pions are produced, decaying themselves into a pair of photons (and, later on, electron and positron pairs) and muons, respectively.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=11cm, height=6cm]{figs/cosmic.png}
-\caption{Typical chain of decays induced by highly energetic cosmic rays when reaching the Earth's atmosphere.}
+\caption{Typical chain of decays induced by highly energetic cosmic rays when reaching the Earth's atmosphere and colliding with an atmosphere molecule.}
 \label{figure:cosmic}
 \end{center}
 \end{figure}
 
-Muons are the most abundant charged particles produced by these processes actually reaching the sea level, as shown in Figure~\ref{figure:cosmicAbundance}. Even though they are unstable and have a limited lifetime, around 0.06\% of muons produced by such processes indeed do manage to reach the sea level thanks to the temporal distorsion induced by their high energy and relativistic speed. As a rule of thumb, one can expect to observe 10.000 muons per square meter and per minute at the sea level. Muons were actually discovered thanks to cosmic rays in 1936 \cite{muonDiscovery}.
+Muons are the most abundant charged particles produced by these processes actually reaching the sea level, as shown in Figure~\ref{figure:cosmicAbundance}. Even though they are unstable and have a limited lifetime, around 0.06\% of muons produced by such processes do manage to reach the sea level thanks to the temporal distortion induced by their high energy and relativistic speed. As a rule of thumb, one can expect to observe 10.000 muons per square meter and per minute at the sea level. Muons were actually discovered thanks to cosmic rays in 1936 \cite{muonDiscovery}.
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=8cm, height=9cm]{figs/cosmicMuons.png}
-\caption{Abundance of particles observed at the sea level, due to cosmic rays \cite{cosmicPDG}.}
+\includegraphics[width=8.5cm, height=9cm]{figs/cosmicMuons.png}
+\caption{Abundance of particles due to cosmic rays and observed at the sea level \cite{cosmicPDG}.}
 \label{figure:cosmicAbundance}
 \end{center}
 \end{figure}
 
-With this work, millions of cosmic muons have been generated in order to simulate an actual experiment.
+The existence of these cosmic rays is critical for this work, since they play the role of the source able to give us the muons we need in order to perform our tomography experiment.
 
 \section{Muons interaction with matter} \label{sec:interactions}
 
@@ -197,12 +224,12 @@ First of all, cosmic muons can interact with matter through \textbf{ionization},
 - \Bigl \langle \frac{dE}{dx} \Bigr \rangle = K z^2 \frac{Z}{A} \frac{1}{\beta^2} \left [\frac{1}{2} \ln \left (\frac{2 m_e c^2 \beta^2 \gamma^2 W_{\text{max}}}{I^2} - \beta^2 - \frac{\delta(\beta \gamma)}{2} \right ) \right ]
 \end{equation}
 
-This previous equation gives an accuracy of a few percent in the range $0.1 < \beta < 1000$ and we can easily see that the quantity of energy lost by in a muon when traversing any given medium actually depends on the energy of the incident muon, as shown in Figure~\ref{figure:BB}. In practice, this means that cosmic muons, having a mean energy of a few GeV, have mean energy loss rates actually close to the minimum: they are usually called for this reason \textit{minimum ionizing particles} or MIPs. Energy losses of muons due to this ionization process are for this reason quite small and difficult to detect, so this interaction process will not be considered in this work.
+This previous equation gives an accuracy of a few percent in the range $0.1 < \beta = \frac{v}{c} < 1000$ and we can easily see that the quantity of energy lost by a muon when crossing any given medium actually depends on the energy of the incident muon, as shown in Figure~\ref{figure:BB}. In practice, this means that cosmic muons, having a mean energy of a few GeV, have mean energy loss rates actually close to the minimum: they are usually called for this reason \textit{minimum ionizing particles} or MIPs. Energy losses of muons due to this ionization process are for this reason quite small and difficult to detect, so this interaction process will not be considered in this work.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=12cm, height=8cm]{figs/BB.png}
-\caption{Mass stopping power of copper energy lost by a muon in copper due to the ionization process with respect to its momentum \cite{PDGMuons}.}
+\caption{Mass stopping power of copper, or energy lost by a muon in copper due to the ionization process, with respect to its momentum \cite{PDGMuons}.}
 \label{figure:BB}
 \end{center}
 \end{figure}
@@ -211,18 +238,18 @@ This previous equation gives an accuracy of a few percent in the range $0.1 < \b
 
 Muons also interact with matter through another process, called \textbf{multiple scattering}. Since muons have a negative electric charge, by getting close to the nuclei of the absorber, they are suffering from Coulomb scattering. Given the high number of nuclei in matter, this process is repeated many times, deflecting each time the muon by a small angle in a stochastic way, meaning that there is no way of calculating this deviation exactly, but only using probabilities and the so-called theory of Moli\`ere \cite{Moliere}.
 
-According to this theory, the central 98\% of the projected angular distribution due to Coulomb scattering can be described with a Gaussian function, whose width is given by the $\theta_0$ parameter shown in Equation~\ref{eq:Moliere} \cite{PDGScat}, where $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction. The second term of the relation is actually typically neglected, being much smaller and therefore having a small impact on the final results obtained.
+According to this theory, the central 98\% of the projected angular distribution due to Coulomb scattering can be described with a Gaussian function, whose width is given by the $\theta_0$ parameter shown in Equation~\ref{eq:Moliere} \cite{PDGScat}, where $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction. Such dependence on both these parameters has several physical consequences: a muon with a higher momentum (larger $\beta$) will be statistically less deflected, while a muon crossing a medium more dense will be statistically more deflected.
 
 \begin{equation}
 \label{eq:Moliere}
 \theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x}{X_0 \beta^2} \right ) \right ]
 \end{equation}
 
-This formula is expected to be valid for distances up to $\sim 100 X_0$, giving an error smaller than 11\%. Corrections do exist though in order to get slightly better results, especially in the tails of the distribution, but this theory is precise enough for our needs, given the small deviation angles we expect to observe given the experimental conditions considered.
+This formula, whose second term is actually typically neglected, being much smaller and therefore having a small impact on the final results obtained, is expected to be valid for distances up to $\sim 100 X_0$, giving an error smaller than 11\%. Corrections do exist though in order to get slightly better results, especially in the tails of the distribution, but this theory is precise enough for our needs, given the small deviation angles we expect to observe for the experimental conditions considered.
 
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=12cm, height=5.2cm]{figs/moliere.png}
+\includegraphics[width=12.5cm, height=5.8cm]{figs/moliere.png}
 \caption{Schematic representation of the deviation induced by an absorber to an incident muon because of the multiple scattering effect \cite{PDGScat}.}
 \label{figure:Moliere}
 \end{center}
@@ -232,13 +259,13 @@ Even though this deviation angle is the most important parameter when considerin
 
 \section{Muon tomography} \label{sec:tomography}
 
-Given Moli\`ere's theory, it is obvious to see that, instead of \textit{calculating} the expected deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inverting the two previous relations. Since this deviation depends on several parameters related to the absorber itself, such as its width and radiation length $X_0$, we can then infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, taking advantage of the interaction of muons with matter to use it in practice.
+Given Moli\`ere's theory, it is obvious to see that, instead of \textit{calculating} the expected deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inverting the two previous relations. Since this deviation depends on several parameters related to the absorber itself, such as its thickness and radiation length $X_0$, we can then infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, taking advantage of the interaction of muons with matter to use it in practice.
 
-Muography is therefore a non-destructive imaging technique producing a density map of the inside of an object by measuring a flux of muons. Such method presents many different advantages over other imaging techniques such as X-rays, since it usually uses natural cosmic rays to make the measurements, being therefore completely safe. Additionally, muons interact lightly with matter, meaning that they typically have high penetrating capabilities and can therefore probe even large and/or dense objects. Muography can in this sense be applied to many different fields: it has for example even been used in 1970 in order to try and find hidden cavities of pyramids in Egypt \cite{Egypt} and can also be used in vulcanology, to determine whether a pocket inside of a volcano is empty or full of lava, among many other practical applications.
-
+Muography is therefore a non-destructive imaging technique producing a density map of the inside of an object by measuring a flux of muons. Such method presents many different advantages over other imaging techniques such as X-rays, since it usually uses natural cosmic rays to make the measurements, being therefore completely safe. Additionally, muons interact lightly with matter, meaning that they typically have high penetrating capabilities and can therefore probe even large and/or dense objects. Muography can in this sense be applied to many different fields: it has for example even been used in 1970 in order to try and find hidden cavities of pyramids in Egypt \cite{Egypt} and can also be used to characterize nuclear waste and is even often used in vulcanology, to determine whether a pocket inside of a volcano is empty or full of lava, among many other practical applications.
+\newpage
 Such imaging techniques can be divided into two categories:
 \begin{itemize}
-\item \textbf{Absorption muography}. In this case, the observed muon flux in a given direction is compared to what is expected from cosmic rays, trying to determine the inner structure of the absorber as discrepancies between these two values. Only one detector is needed in this case, making this technique useful mostly to study large objects, even though the time to make a single measurement can last up to a few months.
+\item \textbf{Absorption muography}. In this case, the observed muon flux in a given direction is compared to what is expected to be seen from cosmic rays, trying to interpret the discrepancies between these two values in order to determine the inner structure of the absorber. Only one detector is needed in this case, therefore reducing the cost and making this technique useful mostly to study large objects, such as Egyptian pyramids or volcanoes, even though the low energy loss rates of relativistic cosmic muons imply that such measurements typically take really long, lasting sometimes up to a few months, .
 \item \textbf{Scattering muography}. On the other hand, the multiple scattering of muons can be used, by placing one detector on each side of the object being studied to determine the deviation of the flux of incoming muons. The denser the material put in between, the larger the observed deviation will be, as shown in Equation~\ref{eq:Moliere}. This technique is mostly used to study smaller objects and is able to make quick measurements.
 \end{itemize}
 
@@ -506,12 +533,19 @@ This class is complemented with the \textbf{Generator} (Section~\ref{sec:Generat
 
 \section{PipeReconstructor} \label{sec:PipeReconstructor}
 
-The PipeReconstructor is a set of classes, allowing us to define different kind of objects:
+The PipeReconstructor is a set of classes, allowing us to define different kind of physical and statistical objects essential to solve the original problem.
 
-\begin{itemize}
-\item First of all, a muon is defined from the \textbf{MuonState} class and from 7 parameters: 3 parameters ($x$, $y$, $z$) representing the position of the muon, 3 additional parameters ($v_x$, $v_y$, $v_z$) representing its three-dimensional direction and the actual value of its momentum. The measurement performed at the top detector will be labelled with the index 1 ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$) while the measurement performed by the lower detector will take the index 2.
-\item \textbf{Surfaces} and \textbf{Volumes}, virtual classes allowing us to define general surfaces (their spatial position and their geometrical center) and volumes, defined as vectors of several surfaces: a general volume is in this sense defined by its surfaces, central position and global density. Defining such virtual classes is extremely important since it would allow us to consider different geometries, not just a pipe put in between the two detectors. The constant size ($1 m^2$) and $z$ position of both the lower and upper detectors (-37 and 37 cm, respectively) is also defined at this stage.
-\item \textbf{Cylinders} and \textbf{Pipes}, particular subclasses of the virtual classes previously defined in order to define the geometry of this particular problem. A pipe is in this sense defined as a set of two cylinders and from 7 different parameters: its central position ($x$, $y$, $z$), along with its density, the radii $r$ and $R$ of both cylinders and its length along the y-axis $L$, as shown in Figure~\ref{fig:cylinder}. For simplicity, the pipes considered in this work are therefore considered to have a constant density.
+\subsection{MuonState}
+
+First of all, a muon is defined from the \textbf{MuonState} class and from 7 parameters: 3 parameters ($x$, $y$, $z$) representing the position of the muon, 3 additional parameters ($v_x$, $v_y$, $v_z$) representing its three-dimensional direction and the actual value of its momentum. The measurement performed at the top detector will be labelled with the index 1 ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$) while the measurement performed by the lower detector will take the index 2.
+
+\subsection{Surfaces and volumes}
+
+\textbf{Surfaces} and \textbf{Volumes}, virtual classes allowing us to define general surfaces (their spatial position and their geometrical center) and volumes, defined as vectors of several surfaces: a general volume is in this sense defined by its surfaces, central position and global density. Defining such virtual classes is extremely important since it would allow us to consider different geometries, not just a pipe put in between the two detectors. The constant size ($1 m^2$) and $z$ position of both the lower and upper detectors (-37 and 37 cm, respectively) is also defined at this stage.
+
+\subsection{Cylinders and pipes}
+
+\textbf{Cylinders} and \textbf{Pipes}, particular subclasses of the virtual classes previously defined in order to define the geometry of this particular problem. A pipe is in this sense defined as a set of two cylinders and from 7 different parameters: its central position ($x$, $y$, $z$), along with its density, the radii $r$ and $R$ of both cylinders and its length along the y-axis $L$, as shown in Figure~\ref{fig:cylinder}. For simplicity, the pipes considered in this work are therefore considered to have a constant density.
 
 \begin{figure}[htbp]
 \centering
@@ -563,7 +597,9 @@ C = X^2 + Z^2 + z_0^2 - 2 z_0 Z + x_0^2 \left (\frac{v_z}{v_x} \right )^2 + x_0 
 
 Finally, methods allowing us to determine whether a muon state is inside or outside of the pipe have also been written, taking into account the particular geometry of such objects in order to determine the medium in which the muon is propagating and therefore use the correct density value in all the calculations performed. 
 
-\item A \textbf{Propagator} is then defined as the object allowing us to propagate a MuonState through a general Volume. The way it works is quite simple: 
+\subsection{Propagator}
+
+A \textbf{Propagator} is then defined as the object allowing us to propagate a MuonState through a general Volume. The way it works is quite simple: 
 
 \begin{itemize}
 \item First of all, the distance between the initial MuonState and all the surfaces of the object considered is computed and the first intersection point is kept.
@@ -583,7 +619,9 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 \item Eventual muons out of the acceptance of any of the detectors are of course rejected at this stage and simply not considered when computing the value of the likelihood.
 \end{itemize}
 
-\item The \textbf{Likelihood} object itself can then be calculated. This class takes as input a pipe geometry and a file containing a set of measurements (either obtained from Monte-Carlo or actually measured by the detectors) and its main objective is to estimate how likely it is that we obtained exactly these measurements for the geometry given. 
+\subsection{Likelihood}
+
+The \textbf{Likelihood} object itself can then be calculated. This class takes as input a pipe geometry and a file containing a set of measurements (either obtained from Monte-Carlo or actually measured by the detectors) and its main objective is to estimate how likely it is that we obtained exactly these measurements for the geometry given. 
 
 To reach this goal, several calculations are performed for each event found in the input file: 
 \begin{itemize}
@@ -608,7 +646,6 @@ To reach this goal, several calculations are performed for each event found in t
 \label{eq:totallikelihood}
 \mathcal{L} = \sum_{i = 1}^N -2.0 \cdot \log(\text{pvalue}_{x, i}) \cdot \log(\text{pvalue}_{y, i})
 \end{equation}
-\end{itemize}
 
 %Given the relative complexity of the different computation steps performed in this class, the steps previously defined can be summarized in the following pseudocode.
 
@@ -827,33 +864,33 @@ The idea is then to compute the value of the likelihood obtained for each of the
 \begin{figure}[htbp]
 \centering
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood17p2.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood17p4.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage} \hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood17p6.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage} \hfill \vspace{10pt}
 
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood17p8.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood18p0.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage} \hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood18p2.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage} \hfill \vspace{10pt}
 
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood18p4.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood18p6.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage} \hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/likelihood18p8.png}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
 \end{minipage} \hfill
 \caption{Likelihoods values obtained for different pipe geometries, ranging from 17.2 (on the top left) to 18.8cm of inner radius (on the bottom right), obtained for 100 iterations.}
 \label{fig:likelihoods}
@@ -862,7 +899,7 @@ The idea is then to compute the value of the likelihood obtained for each of the
 \begin{figure}[htbp]
 \centering
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\includegraphics[width=6cm, height=5cm]{figs/likelihood17p2.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.32\textwidth}
 \includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
@@ -903,7 +940,7 @@ As we can see in these results, the minimum of the likelihood curve is not alway
 
 In conclusion, this work was designed with one simple objective in mind: using the muon tomography technique in order to determine the inner properties of a general geometry (usually considered here to be a pipe made out of two cylinders, even though the code has been developed to be able to simply add more complex geometries in the future), using statistical methods to analyze the results obtained.
 
-The principle of this statistical approach presented here is quite simple: in order to study the inner properties of a steel pipe, we can put a detector above the pipe, measuring the initial position and directions of cosmic muons, and another detector below the volume considered, to compute the actual deviation suffered by the cosmic muons when traversing the gap between the two detectors. Since this deviation in position and angle is expected to be larger when traversing the steel pipe than the air, given the difference in density of these two medium, we expected to be able to estimate the actual width of the pipe crossed from such measurements. 
+The principle of this statistical approach presented here is quite simple: in order to study the inner properties of a steel pipe, we can put a detector above the pipe, measuring the initial position and directions of cosmic muons, and another detector below the volume considered, to compute the actual deviation suffered by the cosmic muons when crossing the gap between the two detectors. Since this deviation in position and angle is expected to be larger when crossing the steel pipe than the air, given the difference in density of these two medium, we expected to be able to estimate the actual width of the pipe crossed from such measurements. 
 
 By developing our framework, able to generate Monte-Carlo simulations of such cosmic muons and to propagate them across our geometry using the Moli\`ere's theory of multiple scattering, and by implementing advanced statistical methods to solve this problem, we managed to estimate the actual width of such steel pipes with a precision of the order of 2 millimeters, therefore solving the problem which was originally presented. These results have been obtained after comparing our Generator with Geant4, in order to cross-check the results presentend throughout this work.
 
