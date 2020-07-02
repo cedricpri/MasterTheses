@@ -51,19 +51,19 @@
 	\vspace{0.6cm}
 		
 	%Spanish title
-	{\LARGE (Título en español) \par}
+	{\LARGE (T\'itulo en espa\~nol) \par}
 	
 	\vspace{3cm}
-	{\scshape\Large Trabajo de fin de Máster \\ para acceder al \par}
+	{\scshape\Large Trabajo de fin de M\'aster \\ para acceder al \par}
 	\vspace{0.3cm}
-	{\scshape\Large \textbf{MÁSTER UNIVERSITARIO EN \\ CIENCIA DE DATOS} \par}
+	{\scshape\Large \textbf{M\'ASTER UNIVERSITARIO EN \\ CIENCIA DE DATOS} \par}
 	
 	\begin{flushright}
 	
 	\vspace{3cm}
-	{\Large Autor : Cédric PRIEËLS\par}
-	{\Large Director : Pablo MARTÍNEZ RUIZ DEL ÁRBOL\\}
-	{\Large Co-director : CARLOS DÍEZ\\}
+	{\Large Autor : C\'edric PRIE\"ELS\par}
+	{\Large Director : Pablo MART\'INEZ RUIZ DEL \'ARBOL\\}
+	{\Large Co-director : CARLOS D\'IEZ\\}
 	\vspace{0.5cm}
 	{\Large Julio 2020\par}
 	\vfill
@@ -88,7 +88,7 @@
 
 In this work, cosmic muons have been used to perform a muography experiment, a non-destructive method allowing us to study the internal properties of several physical objects with various geometries. Such study is extremely useful in the industry, in order for example to study the degradation of pipes, and finds many application in our daily lives.
 
-In particular, a new C++ framework has been developped in order to study the results of such muography experiments and study their results from a statistical point of view, to find the optimal geometrical parameters of different objects placed between two muon detectors.
+In particular, a new C++ framework has been developed in order to study the results of such muography experiments and study their results from a statistical point of view, to find the optimal geometrical parameters of different objects placed between two muon detectors.
 
 \begin{center}
 \textbf{Key words} : cosmic muons, muography, geometry, likelihood
@@ -108,11 +108,11 @@ In particular, a new C++ framework has been developped in order to study the res
 
 I would like to mainly thank Pablo for his outstanding work as the director of this work over the past few months. He has been incredibly helpful and present all along the way, teaching me the basic of muography and helping and guiding me when needed. I know it has not always been easy but I am very grateful for the time he spent with me, and I am more than happy with the final result and glad I decided to choose this particular subject.
 
-Thank you to Muon Systems and its CEO Carlos Díez in particular, the co-director of this work, for allowing me be a part of their experiment during a few months and allowing me to get a privileged access to actual data collected. Having the opportunity to work in collaboration with a real industry has been an extremely interesting experience that will for sure help me a lot in the future. I obviously wish to the company all the best since the technology developped definitely show a lot of potential.
+Thank you to Muon Systems and its CEO Carlos D\'iez in particular, the co-director of this work, for allowing me be a part of their experiment during a few months and allowing me to get a privileged access to actual data collected. Having the opportunity to work in collaboration with a real industry has been an extremely interesting experience that will for sure help me a lot in the future. I obviously wish to the company all the best since the technology developed definitely show a lot of potential.
 
-I would also like to thank all the other students involved in this Master degree, in particular to Pedro and Nicolò which have been extremly helpful as well. Many thanks to Lara for organizing this degree in the best way possible given the special circonstances which happened this year and for setting up everything allowing me to follow the classes remotely during the first semester.
+I would also like to thank all the other students involved in this Master degree, in particular to Pedro and Nicol\`o which have been extremely helpful as well. Many thanks to Lara for organizing this degree in the best way possible given the special circumstances which happened this year and for setting up everything allowing me to follow the classes remotely during the first semester.
 
-Finally, many thanks to my parents and family in general for being there whenever I need it and for supporting my decision to come and study in Spain 6 years ago. It has been a great experience that tought me a lot and that I will for sure never forget.  
+Finally, many thanks to my parents and family in general for being there whenever I need it and for supporting my decision to come and study in Spain 6 years ago. It has been a great experience that taught me a lot and that I will for sure never forget.  
 
 %\section*{\huge{Note on my personal work}}
 
@@ -136,19 +136,19 @@ Nowadays, muon tomography is an active field of research since it is a non destr
 
 In this particular work, muon tomography will be applied to industry and used in order to probe several kinds of physical objects, such as pipes, to study their degradation without damaging them. This is the main objective of the company called Muon systems, founded in 2017 and based in Bilbao.
 
-This company already built powerful muon detectors allowing to perform such experiment and developped over the years a powerful framework allowing to study the degradation of pipes using convolutional neural networks, but this method is limited in the sense that training such networks is computing intensive and time consuming, and therefore does not allow to study several properties of such pipes at once. In this work, an alternative method based on a statistical analysis of the problem is presented, allowing a greater generalization of the previous method to other object geometries and to a higher dimension parameters phase space.
+This company already built powerful muon detectors allowing to perform such experiment and developed over the years a powerful framework allowing to study the degradation of pipes using convolutional neural networks, but this method is limited in the sense that training such networks is computing intensive and time consuming, and therefore does not allow to study several properties of such pipes at once. In this work, an alternative method based on a statistical analysis of the problem is presented, allowing a greater generalization of the previous method to other object geometries and to a higher dimension parameters phase space.
 
-This project is highly relevant in today's society because it allows to combine data science algorithms and high-performing statistical methods that have been developped in this context to solver this particular muography problem, putting them in practice in an actual industry.
+This project is highly relevant in today's society because it allows to combine data science algorithms and high-performing statistical methods that have been developed in this context to solver this particular muography problem, putting them in practice in an actual industry.
 
 \chapter{Muons and muography}
 
-The main particles used throughout this work, muons, will be briefly introduced in Section~\ref{sec:particlePhysics} of this Chapter. Muon are particles produced naturally by cosmic rays, introduced in Section~\ref{sec:cosmicRays} and, once produced, they obviously interact when traversing the atmosphere and matter in general in ways described in Section~\ref{sec:interactions} that actually need to be understood extremely well for the muon tomography process introduced in Section~\ref{sec:tomography} to be useful and appliable to industry. Finally, the actual experimental setup used for this work will be explained in Section~\ref{sec:setup}.
+The main particles used throughout this work, muons, will be briefly introduced in Section~\ref{sec:particlePhysics} of this Chapter. Muon are particles produced naturally by cosmic rays, introduced in Section~\ref{sec:cosmicRays} and, once produced, they obviously interact when traversing the atmosphere and matter in general in ways described in Section~\ref{sec:interactions} that actually need to be understood extremely well for the muon tomography process introduced in Section~\ref{sec:tomography} to be useful and applicable to industry. Finally, the actual experimental setup used for this work will be explained in Section~\ref{sec:setup}.
 
 \section{Particle physics and muons} \label{sec:particlePhysics}
 
-Particle physics is the field which studies the matter surrounding us, along with the fundamental interactions between the particles. In this context, the Standard Model of particle physics \cite{SM} is nowadays the most accepted mathematical model used to describe the elementary particles and three of the 4 fundamental forces of nature (electromagnetic, weak and strong interactions, while the gravitational interaction is out of reach of this model). Even though quite simple in concept, it has been able to describe most of the phenomena observed in nature so far with an incredible level of precision, and has made a lot of predictions that have now been proven to be true, such as the discovery of the top quark \cite{topQuark} in 1995, the tau neutrino \cite{tauNeutrino} in 2001 and the Higgs boson itself \cite{HiggsDiscovery1, HiggsDiscovery2}, the last missing piece of the Standard Model, annouced at CERN in July 2012. 
+Particle physics is the field which studies the matter surrounding us, along with the fundamental interactions between the particles. In this context, the Standard Model of particle physics \cite{SM} is nowadays the most accepted mathematical model used to describe the elementary particles and three of the 4 fundamental forces of nature (electromagnetic, weak and strong interactions, while the gravitational interaction is out of reach of this model). Even though quite simple in concept, it has been able to describe most of the phenomena observed in nature so far with an incredible level of precision, and has made a lot of predictions that have now been proven to be true, such as the discovery of the top quark \cite{topQuark} in 1995, the tau neutrino \cite{tauNeutrino} in 2001 and the Higgs boson itself \cite{HiggsDiscovery1, HiggsDiscovery2}, the last missing piece of the Standard Model, announced at CERN in July 2012. 
 
-According to this model, 12 different fermions (along with their 12 corresponding anti-particles) exist in nature, as shown in Figure~\ref{figure:SMFermions}, most of them being unstable. These fermions can be divided into two fundamentally different categories, the quarks and the leptons, containing each 6 particles and sensitive to different forces. Even though quite interesting, the quarks do not play a fundamantal role in the muon tomography detailed in this work, so only leptons will be considered from now on. In particular, leptons can be divided even more into three different generations of particles, and the muon, one particular lepton belonging to the second generation, will be the main focus of this work.
+According to this model, 12 different fermions (along with their 12 corresponding anti-particles) exist in nature, as shown in Figure~\ref{figure:SMFermions}, most of them being unstable. These fermions can be divided into two fundamentally different categories, the quarks and the leptons, containing each 6 particles and sensitive to different forces. Even though quite interesting, the quarks do not play a fundamental role in the muon tomography detailed in this work, so only leptons will be considered from now on. In particular, leptons can be divided even more into three different generations of particles, and the muon, one particular lepton belonging to the second generation, will be the main focus of this work.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -182,7 +182,7 @@ Muons are the most abundant charged particles produced by these processes actual
 \end{center}
 \end{figure}
 
-With this work, millions of cosmic muons will be generated in order to simulate an actual experiment. This will allow us to check several of the well-known properties of such cosmic muons in Section~\ref{sec:incident}, such as their distribution angle, following a $\cos^2$ law, and their exponentially falling energy spectrum.
+With this work, millions of cosmic muons have been generated in order to simulate an actual experiment.
 
 \section{Muons interaction with matter} \label{sec:interactions}
 
@@ -209,9 +209,9 @@ This previous equation gives an accuracy of a few percent in the range $0.1 < \b
 
 \subsection{Multiple scattering process}
 
-Muons also interact with matter through another process, called \textbf{multiple scattering}. Since muons have a negative electric charge, by getting close to the nuclei of the absorber, they are suffering from Coulomb scattering. Given the high number of nuclei in matter, this process is repeated many times, deflecting each time the muon by a small angle in a stochastic way, meaning that there is no way of calculating this deviation exactly, but only using probabilities and the so-called theory of Molière \cite{Moliere}.
+Muons also interact with matter through another process, called \textbf{multiple scattering}. Since muons have a negative electric charge, by getting close to the nuclei of the absorber, they are suffering from Coulomb scattering. Given the high number of nuclei in matter, this process is repeated many times, deflecting each time the muon by a small angle in a stochastic way, meaning that there is no way of calculating this deviation exactly, but only using probabilities and the so-called theory of Moli\`ere \cite{Moliere}.
 
-According to this theory, the central 98\% of the projected angular distribution due to Coulomb scattering can de described with a Gaussian function, whose width is given by the $\theta_0$ parameter shown in Equation~\ref{eq:Moliere} \cite{PDGScat}, where $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction. The second term of the relation is actually typically neglected, being much smaller and therefore having a small impact on the final results obtained.
+According to this theory, the central 98\% of the projected angular distribution due to Coulomb scattering can be described with a Gaussian function, whose width is given by the $\theta_0$ parameter shown in Equation~\ref{eq:Moliere} \cite{PDGScat}, where $p$ is the momentum of the incident particle and $X_0$ is the radiation length, defined as the characteristic amount of matter traversed by the incident particle for a particular interaction. The second term of the relation is actually typically neglected, being much smaller and therefore having a small impact on the final results obtained.
 
 \begin{equation}
 \label{eq:Moliere}
@@ -232,7 +232,7 @@ Even though this deviation angle is the most important parameter when considerin
 
 \section{Muon tomography} \label{sec:tomography}
 
-Given Molière's theory, it is obvious to see that, instead of \textit{calculating} the expected deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inversing the two previous relations. Since this deviation depends on several parameters related to the absorber itself, such as its width and radiation length $X_0$, we can then infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, taking advantage of the interaction of muons with matter to use it in practice.
+Given Moli\`ere's theory, it is obvious to see that, instead of \textit{calculating} the expected deviation of a muon crossing a given material, we can instead try and \textit{measure} it, by inverting the two previous relations. Since this deviation depends on several parameters related to the absorber itself, such as its width and radiation length $X_0$, we can then infer such parameters experimentally and determine the properties of the medium crossed by cosmic muons. This is the so-called muon tomography, or \textbf{muography}, taking advantage of the interaction of muons with matter to use it in practice.
 
 Muography is therefore a non-destructive imaging technique producing a density map of the inside of an object by measuring a flux of muons. Such method presents many different advantages over other imaging techniques such as X-rays, since it usually uses natural cosmic rays to make the measurements, being therefore completely safe. Additionally, muons interact lightly with matter, meaning that they typically have high penetrating capabilities and can therefore probe even large and/or dense objects. Muography can in this sense be applied to many different fields: it has for example even been used in 1970 in order to try and find hidden cavities of pyramids in Egypt \cite{Egypt} and can also be used in vulcanology, to determine whether a pocket inside of a volcano is empty or full of lava, among many other practical applications.
 
@@ -289,7 +289,7 @@ These chambers, filled while a mixture of Argon and CO$_2$, are then setup in pa
 
 \subsection{Data flow} \label{sec:dataFlow}
 
-Once collected, the data needs to be pass through several differents in order to convert electric signals into files that can be processed, as shown on Figure~\ref{fig:dataFlow}. As we can see, the data follows a different path depending on its nature, if it has been collected by the detector or if we are considering Monte-Carlo simulations that will be described in details in the next Chapter. The stream of data is collected by a simple USB, and then sent to a DAQ/DQM system and to an unpacker, which takes into account the detector gemetry and translates into a physical position the information received from the DAQ, typically only telling that a certain wire has been activated.
+Once collected, the data needs to be pass through several different layers in order to convert electric signals into files that can be processed, as shown on Figure~\ref{fig:dataFlow}. As we can see, the data follows a different path depending on its nature, if it has been collected by the detector or if we are considering Monte-Carlo simulations that will be described in details in the next Chapter. The stream of data is collected by a simple USB, and then sent to a DAQ/DQM system and to an unpacker, which takes into account the detector geometry and translates into a physical position the information received from the DAQ, typically only telling that a certain wire has been activated.
 
 Both streams then join at the 1D histogram format level, gathering a collection of all the hits measured for every event. All these hits are then processed and reconstructed into two trajectories, one above and one below the object, using advanced techniques that will also be described in next Chapter. Finally, 4D segments are made available from this reconstruction process, having the position and direction information needed, from which the actual analysis can take place.
 
@@ -329,11 +329,11 @@ Both streams then join at the 1D histogram format level, gathering a collection 
 
 \chapter{Statistical parameters}
 
-The general objective of this work is to find a way to determine the geometry of an eventual object placed between the two muon detectors by measuring the deviation affecting incident cosmic muons, a typical non-deterministic process which therefore needs to be adressed using advanced statistical parameters ans methods, such as probability and kernal density functions (Sections~\ref{sec:PDF} and~\ref{sec:KDF}), Monte-Carlo simulations (Section~\ref{sec:MC}), p-values (Section~\ref{sec:pValues}) and likelihood function (Section~\ref{sec:Likelihood}).
+The general objective of this work is to find a way to determine the geometry of an eventual object placed between the two muon detectors by measuring the deviation affecting incident cosmic muons, a typical non-deterministic process which therefore needs to be addressed using advanced statistical parameters ans methods, such as probability and kernel density functions (Sections~\ref{sec:PDF} and~\ref{sec:KDF}), Monte-Carlo simulations (Section~\ref{sec:MC}), p-values (Section~\ref{sec:pValues}) and likelihood function (Section~\ref{sec:Likelihood}).
 
 \section{Probability density functions} \label{sec:PDF}
 
-The probability density functions, or PDFs, are statistical expressions defining probability distributions representing the likelihood of any given outcome. They are typically represented as curves in the two dimentional space (x, y), as shown in Figure~\ref{fig:PDF}, in which the total area below the curve in an interval is equal to the probability of a discrete random variable occurring. 
+The probability density functions, or PDFs, are statistical expressions defining probability distributions representing the likelihood of any given outcome. They are typically represented as curves in the two dimensional space (x, y), as shown in Figure~\ref{fig:PDF}, in which the total area below the curve in an interval is equal to the probability of a discrete random variable occurring. 
 
 \begin{figure}[htbp]
 \begin{center}
@@ -350,9 +350,9 @@ Gaussian distributions are in this sense probability density functions having a 
 f(x) = \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{1}{2} \left (\frac{x - \mu}{\sigma} \right )^2}
 \end{equation}
 
-These definitions are important because we already know that the multiple scattering process which affects the incident cosmic muons is a stochastic process: this means that two muons having similar kinematics can leave the detector with very different output directions and positions, whose actual distribution can be approximated by a gaussian function for small deviation angles (at larger angles, the distribution is behaving like Rutherford scattering, with slightly larger tails). 
+These definitions are important because we already know that the multiple scattering process which affects the incident cosmic muons is a stochastic process: this means that two muons having similar kinematics can leave the detector with very different output directions and positions, whose actual distribution can be approximated by a Gaussian function for small deviation angles (at larger angles, the distribution is behaving like Rutherford scattering, with slightly larger tails). 
 
-The standard deviation of the distribution of such output paraemeters is actually highly dependant on the geometrical parameters $\theta_i$ of the eventual object put between the two detectors, as we saw in Equation ~\ref{eq:Moliere}. Indeed, the mean deviation observed is expected to depend on the number of radiation lengths crossed, typically much higher when a muon crosses denser objects, such as a steel pipe, as shown in Figure~\ref{fig:deviation}. This means that in first approximation, the tichker the object investigated is, the higher the expected deviation will be and this simple observation will actually be used as the driving process of the statistical study performed in this work.
+The standard deviation of the distribution of such output parameters is actually highly dependant on the geometrical parameters $\theta_i$ of the eventual object put between the two detectors, as we saw in Equation ~\ref{eq:Moliere}. Indeed, the mean deviation observed is expected to depend on the number of radiation lengths crossed, typically much higher when a muon crosses denser objects, such as a steel pipe, as shown in Figure~\ref{fig:deviation}. This means that in first approximation, the thicker the object investigated is, the higher the expected deviation will be and this simple observation will actually be used as the driving process of the statistical study performed in this work.
 
 \begin{figure}[htbp]
 \centering
@@ -363,7 +363,7 @@ The standard deviation of the distribution of such output paraemeters is actuall
 
 \section{Monte-Carlo simulations} \label{sec:MC}
 
-Monte-Carlo simulations are algorithms developped in order to compute approximate numerical values to stochastical problems using random processes and advanced probabilistic techniques. In this particular case, such computation methods apply extremely well since, by being a stochastical process, the actual probability density function associated to a given geometry cannot be computed analytically (and if we were able to do it, a simple gradiant descent method would be enough to solve this problem and find the optimal parameters $\theta_i$ of the object). 
+Monte-Carlo simulations are algorithms developed in order to compute approximate numerical values to stochastic problems using random processes and advanced probabilistic techniques. In this particular case, such computation methods apply extremely well since, by being a stochastic process, the actual probability density function associated to a given geometry cannot be computed analytically (and if we were able to do it, a simple gradient descent method would be enough to solve this problem and find the optimal parameters $\theta_i$ of the object). 
 
 The only way available to actually estimate these parameters is by using thousands of Monte-Carlo simulated toys, simulating thousands of different incident muons for different geometries. The principle is simple: for each incident muon measured, a large number $N$ of Monte-Carlo simulations will be performed, propagating the muon using an algorithm described in Chapter~\ref{chapter:algorithm} until reaching the lower detector. Repeating this experiment over and over again always gives different results, giving us the opportunity to build the expected PDF for a given object geometry and for the incident muon that has been measured and that will be used later on.
 
@@ -386,11 +386,11 @@ From these definitions, a p-value is then defined as the probability for a varia
 
 In general, a smaller the p-value tells us that the hypothesis under consideration may not adequately explain the observation, leading to a higher statistical significance. At the end of the day, the null hypothesis is rejected if the p-value obtained is smaller than a previously defined, arbitrary and fixed threshold $\alpha$, the \textbf{level of significance} of the experiment. This parameter can take a large range of values, typically ranging from 0.05 to 0.001.
 
-In this work, the p-value will then allow us to compare a single data measurement with the probability density functions obtained from Monte-Carlo and quantify the probability that such muon was actually observed for a given object geometry. This value will then be feeded to a likelihood function, as explained in Section~\ref{sec:Likelihood}.
+In this work, the p-value will then allow us to compare a single data measurement with the probability density functions obtained from Monte-Carlo and quantify the probability that such muon was actually observed for a given object geometry. This value will then be fed to a likelihood function, as explained in Section~\ref{sec:Likelihood}.
 
 \section{Kernel density estimations} \label{sec:KDF}
 
-In statistics, the kernel density estimation is a method allowing to estimate the shape of the density probability $f$, the PDF defined in Section~\ref{sec:PDF}, of a random variable $\bm x$, from $N$ observations drawn from this unknown function PDF. The usual way to proceed is to place each observation made in an histogram, where the density in each point $x$ can be therefore estimated as the proportion of observations close to $x$. However, this method depends strongly on the binning used and the function obtained by this process is non-continuous by definition. The \textbf{kernel method} has been developped in this context, to try and solve the non-continuity of the PDF obtained, by simply using various continuous functions instead of bins. 
+In statistics, the kernel density estimation is a method allowing to estimate the shape of the density probability $f$, the PDF defined in Section~\ref{sec:PDF}, of a random variable $\bm x$, from $N$ observations drawn from this unknown function PDF. The usual way to proceed is to place each observation made in an histogram, where the density in each point $x$ can be therefore estimated as the proportion of observations close to $x$. However, this method depends strongly on the binning used and the function obtained by this process is non-continuous by definition. The \textbf{kernel method} has been developed in this context, to try and solve the non-continuity of the PDF obtained, by simply using various continuous functions instead of bins. 
 
 Mathematically, we can define a function called the \textbf{density estimator} of $f$, $\hat{f}_h(x)$, defined as a sum of such general functions $K$ over the number of observations drawn, as shown in Equation~\ref{eq:KDF}.
 
@@ -408,7 +408,7 @@ In this last equation, two parameters that need to be defined by hand before usi
 K(x) = \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2} x^2}
 \end{equation}
 
-\item The \textbf{bandwidth} $h$ is another interesting parameter, affecting the final smoothness of the resulting curve. The optimal selection of such parameter is not obvious at all \cite{bandwidth} but, as a rule of thumb, it can be shown that for gaussian kernels of standard deviation $\sigma$, it should be approximately equal to $1.06$ $\sigma N^{-1/5}$ in order to minimize the mean integrated square error obtained. 
+\item The \textbf{bandwidth} $h$ is another interesting parameter, affecting the final smoothness of the resulting curve. The optimal selection of such parameter is not obvious at all \cite{bandwidth} but, as a rule of thumb, it can be shown that for Gaussian kernels of standard deviation $\sigma$, it should be approximately equal to $1.06$ $\sigma N^{-1/5}$ in order to minimize the mean integrated square error obtained. 
 \end{itemize}
 
 A comparison of the different methods so far and different possible is shown in Figure~\ref{fig:KGR}.
@@ -420,7 +420,7 @@ A comparison of the different methods so far and different possible is shown in 
 \label{fig:KGR}
 \end{figure}
 
-In summary, this method is used in order to model the distribution of an arbitrary input dataset as a superposition of Gaussian kernels, one for each data point, each contributing 1/N to the total integral of the PDF. This method allows us to construct continous functions and recover for the eventual low statistics and possibles holes in the bi-dimentional histograms for the position and direction of the muons obtained in $x$ and $y$, following the method that will be described in Chapter~\ref{chapter:algorithm}.
+In summary, this method is used in order to model the distribution of an arbitrary input dataset as a superposition of Gaussian kernels, one for each data point, each contributing 1/N to the total integral of the PDF. This method allows us to construct continuous functions and recover for the eventual low statistics and possibles holes in the bi-dimensional histograms for the position and direction of the muons obtained in $x$ and $y$, following the method that will be described in Chapter~\ref{chapter:algorithm}.
 
 \section{Likelihood} \label{sec:Likelihood}
 
@@ -458,7 +458,7 @@ For each value of $p_H$, the value of the likelihood can then be computed and ul
 
 The likelihood is in this sense interesting because it can be described as a hypersurface whose peak gives the optimal set of parameters maximizing the probability of drawing the actual sample measured. Often, the \textbf{log-likelihood} $l(\bm \theta | x) = -2 \log(\mathcal{L}(\bm \theta | x))$ is actually used instead, being a bit more convenient to deal with the special part concavity plays in the maximization process. Given the properties of the logarithm, maximizing the likelihood is equivalent to minimizing this particular log-likelihood.
 
-Another important property of the likelihood that will be used extensively and already assumed in the previous example is the fact that, for two independant measurements, the likelihood of both measurements is equal to the product of both likelihoods independantly computed for each event.
+Another important property of the likelihood that will be used extensively and already assumed in the previous example is the fact that, for two in dependant measurements, the likelihood of both measurements is equal to the product of both likelihoods independently computed for each event.
 
 In this work, a likelihood function will be obtained as the product of the thousands of muons collected, but for a fixed geometry of the object. A minimization method will then be performed in order to try and minimize the value obtained by trying out different parameters $\bm \theta$, until finding the optimal set of parameters able to describe best the object put in between the detectors.
 
@@ -494,7 +494,7 @@ In this work, a likelihood function will be obtained as the product of the thous
 
 \chapter{The algorithm} \label{chapter:algorithm}
 
-The algorithm we developped to solve this particular problem has been written in C++ and can be divided in two categories. First of all, we have the so-called \textbf{PipeReconstructor} (Section~\ref{sec:PipeReconstructor}), a set of classes able to perform several tasks:
+The algorithm we developed to solve this particular problem has been written in C++ and can be divided in two categories. First of all, we have the so-called \textbf{PipeReconstructor} (Section~\ref{sec:PipeReconstructor}), a set of classes able to perform several tasks:
 \begin{itemize}
 \item Define the geometry of the problem (the detector, and the volume under investigation are therefore defined using the smallest possible set of parameters at this stage);
 \item Compute the different intersection points of an incident cosmic muons with our geometry;
@@ -553,7 +553,7 @@ By putting this into the equation of the cylinder, we get the following expressi
 Once both the squared values applied, we get an equation having the shape $Ax^2 + Bx + C = 0$, where both cutting points will be given therefore by $x^{+/-} = \frac{-B \pm \sqrt{B^2 - 4 AC}}{2A}$:
 
 \begin{equation}
-\label{eq:line}
+\label{eq:lines}
 \begin{dcases}
 A = \left (1 + \left (\frac{v_z}{v_x} \right )^2 \right ) \\
 B = -2X - 2 x_0 \left (\frac{v_z}{v_x} \right )^2 + (2 z_0 - 2) \left (\frac{v_z}{v_x} \right ) \\
@@ -567,23 +567,25 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 
 \begin{itemize}
 \item First of all, the distance between the initial MuonState and all the surfaces of the object considered is computed and the first intersection point is kept.
-\item The muon is then propagated in a distance corresponding to 90\% of the total distance to this first cut point by taking into account the multiple scattering effect and the Molière theory, and a new MuonState is therefore obtained. We cannot propagate the muon 100\% of the distance immediately to avoid effects related to the actual shape of the Cylinder and due to the fact that the Equation~\ref{eq:Moliere} is only valid in case of normal incidence between the MuonState and the Cylinder, which is typically not verified, as shown in Figure~\ref{fig:normal}.
+\item The muon is then propagated in a distance corresponding to 90\% of the total distance to this first cut point by taking into account the multiple scattering effect and the Moli\`ere theory, and a new MuonState is therefore obtained. We cannot propagate the muon 100\% of the distance immediately to avoid effects related to the actual shape of the Cylinder and due to the fact that the Equation~\ref{eq:Moliere} is only valid in case of normal incidence between the MuonState and the Cylinder, which is typically not verified, as shown in Figure~\ref{fig:normal}.
 
 \begin{figure}[htbp]
 \centering
 \begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=7cm, height=6cm]{figs/normal.png}
 \end{minipage}\hfill
-\caption{Typical example of two incident muons not respecting the normal incidence required by the Molière equation for the multiple scattering of muons.}
+\caption{Typical example of two incident muons not respecting the normal incidence required by the Moli\`ere equation for the multiple scattering of muons.}
 \label{fig:normal}
 \end{figure}
 
 \item This propagation process is then several times, until reaching a position extremely close to the volume that is being studied (our tolerance parameter has been fixed to $0.1$ mm). The muon is then manually propagated along its direction of propagation along a distance of 0.1 mm in order to force its crossing with respect to the first surface, so that the propagation can be repeated for the next surface.
-\item This whole proces is repeated for all the different surfaces encountered by the muon (up to four times in total for our particular geometry), and one final time until reaching the bottom detector. At this point, the MuonState is kept as the second measurement ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) that will be compared with the simulation using statistical methods.
+\item This whole process is repeated for all the different surfaces encountered by the muon (up to four times in total for our particular geometry), and one final time until reaching the bottom detector. At this point, the MuonState is kept as the second measurement ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) that will be compared with the simulation using statistical methods.
 \item Eventual muons out of the acceptance of any of the detectors are of course rejected at this stage and simply not considered when computing the value of the likelihood.
 \end{itemize}
 
-\item The \textbf{Likelihood} object itself can then be calculated. This class takes as input a pipe geometry and a file containing a set of measurements (either obtained from Monte-Carlo or actually measured by the detectors) and its main objective is to estimate how likely it is that we obtained exactly these measurements for the geometry given. In order to reach this goal, several calculations are performed for each event found in the input file ($n_{\text{gen}} \sim 100.000$): 
+\item The \textbf{Likelihood} object itself can then be calculated. This class takes as input a pipe geometry and a file containing a set of measurements (either obtained from Monte-Carlo or actually measured by the detectors) and its main objective is to estimate how likely it is that we obtained exactly these measurements for the geometry given. 
+
+To reach this goal, several calculations are performed for each event found in the input file: 
 \begin{itemize}
 \item First of all, three MuonStates are computed: the so-called \textit{IncomingMuon} and \textit{OutgoingMuon}, directly read as the measurement at the upper and lower detectors from the input file, and the \textit{IncomingMuonLinearDown}, defined as the prolongation along a straight line of the \textit{IncomingMuon}. Each \textit{IncomingMuon} is then propagated along the geometry using our Propagator, defining a fourth \textit{IncomingMuonDown} MuonState, as shown in Figure~\ref{fig:parameters}.
 
@@ -592,13 +594,14 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 \begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=7cm, height=6cm]{figs/parameters.png}
 \end{minipage}\hfill
-\caption{Schematical representation of the 4 four muonStates and main parameters used for the computation of the likelihood.}
+\caption{Schematic representation of the 4 four muonStates and main parameters used for the computation of the likelihood.}
 \label{fig:parameters}
 \end{figure}
 
-\item From these muonStates, the $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ parameters can easily be computed as the difference between the position and angle measured between the \textit{IncomingMuonDown} and \textit{IncomingMuonLinearDown} muonStates. Such parameters are important and will be used a lot in this work since they represent the actual deviation suffered by the muon.
-\item This propagation process is repeated over and over again ($n_{\text{prop}} \sim 100$ times in total) since we known that the multiple scattering is a stochastic process. Each time the propagation method is called for the same incident muon, different deviations parameters are therefore obtained, each kept in a vector, which can be represented in an histogram and smoothen using the RooFit package and kernel density functions, as explained in Section~\ref{sec:KDF}. 
-\item At this stage, all the ingredients needed to compute a p-value are available. A p-value for each \textit{IncomingMuon} is then computed by using the vectors previously defined and representing an histogram of all the possible deviation values, and by comparing the actual measurement \textit{OutgoingMuon} for such distributions.
+\item From these muonStates, the $\Delta$x, $\Delta \theta_x$, $\Delta$y and $\Delta \theta_y$ parameters can easily be computed as the difference between the positions and angles measured between the \textit{IncomingMuonDown} and \textit{IncomingMuonLinearDown} muonStates. Such parameters are important and will be used a lot in this work since they represent the actual deviation suffered by the muon.
+\item This propagation process is repeated multiple times ($n_{\text{prop}} \sim 100-500$ times in total) since we known that the multiple scattering is a stochastic process. In each iteration of the loop, two bi-dimensional histograms ($\Delta$x vs $\Delta \theta_x$ and $\Delta$y vs $\Delta \theta_y$) are then filled with the actual values of the deviation parameters previously obtained.
+\item Keeping in mind that this process needs to be repeated for every single event found in the input file, and given the relatively high number of iterations needed to get statistically meaningful results for each event, the kernel density estimation method introduced in Section~\ref{sec:KDF} becomes really helpful at this point. Indeed, this method allows us to keep the number of iterations (and therefore the computing time) to a minimum, while still obtaining smooth enough results to compute p-values in a reliable way.
+\item At this stage, all the ingredients needed to compute a p-value are available. A p-value for each \textit{IncomingMuon} is then computed by using the bi-dimensional histograms previously defined and representing all the possible deviation values for a single event, and by comparing the actual measurement \textit{OutgoingMuon} to such distributions.
 \item Two p-values, one along each of the $x$ and $y$ axes, are then obtained for each of the $N$ events found in the input file. The total value returned by this function can then simply be computed from Equation~\ref{eq:totallikelihood}.
 
 \begin{equation}
@@ -607,8 +610,22 @@ Finally, methods allowing us to determine whether a muon state is inside or outs
 \end{equation}
 \end{itemize}
 
-\item So far, we described a method allowing to compute the likelihood of observing a given measuremen by using Monte-Carlo simulations for a given volume, but one last important step is still missing: we need to find a way to find the optimal volume for a given mesurement, the main objective of this process. 
-\color{red} Talk about the minimization process once implemented. \color{black}
+%Given the relative complexity of the different computation steps performed in this class, the steps previously defined can be summarized in the following pseudocode.
+
+%\begin{verbatim}
+%for each event in input file
+
+%    IncomingMuon = top position and direction MuonState
+%    OutgoingMuon = bottom position and direction MuonState
+%    IncomingMuonLinearDown = linear propagation of IncomingMuon to bottom detector
+    
+%    for each iteration
+%        IncomingMuonDown = IncomingMuon propagated to bottom detector
+%        measX = IncomingMuonDown.getX() - IncomingMuonLinearDown.getX()
+%\end{verbatim}
+
+%\item So far, we described a method allowing to compute the likelihood of observing a given measurement by using Monte-Carlo simulations for a given volume, but one last important step is still missing: we need to find a way to find the optimal volume for a given measurement, the main objective of this process. 
+%\color{red} Talk about the minimization process once implemented. \color{black}
 \end{itemize}
 
 \section{Generator} \label{sec:Generator}
@@ -617,9 +634,7 @@ As we have just seen, the computation of the p-values required for the likelihoo
 
 The way this algorithm works is quite simple: a general volume matching the one that needs to be studied (in this case, a general Pipe located in the center (0, 0, 0) of the detector, having an inner radius variable, an outter radius of 20 cm and a length of 50 cm) is first of all defined. Then, for each event we want to generate ($n_{\text{gen}} \sim 100.000$), a loop is performed: in each iteration of this loop, the incident muon is propagated throughout the geometry, histograms for the parameters $\Delta x$, $\Delta \theta_x$, $\Delta y$ and $\Delta \theta_y$ are obtained and, more importantly, measurements in the lower detector are artificially generated to test our framework without having to consider detector effects for now.
 
-One last important notion to introduce at this point is the difference between the actual measurement and the Monte-Carlo truth value, that can both be computed by the generator. The existence of both variables is related to the fact that the detector is made out of 200 discrete wires, each separated by a distance of 4 mm, meaning that the actual position measured is typically a discrete number. However, when considering simulation files, both the real and the measured position can be obtained and kept in different MuonStates labelled as ($px_i$, $py_i$, $pz_i$, $pv_{xi}$, $pv_{yi}$, $pv_{zi}$, $p_i$) and ($mx_i$, $my_i$, $mz_i$, $mv_{xi}$, $mv_{yi}$, $mv_{zi}$, $m_i$) respectively, even though the second MuonState will be used by default for the rest of this work, allowing for a direct comparison between simulation and data.
-
-\color{red} Add plot to show the difference? \color{black}
+One last important notion to introduce at this point is the difference between the actual measurement and the Monte-Carlo truth value, that can both be computed by the generator. The existence of both variables is related to the fact that the detector is made out of 200 discrete wires, each separated by a distance of 4 mm, meaning that the actual position measured is typically a discrete number. However, when considering simulation files, both the real and the measured position can be obtained and kept in different MuonStates labelled as ($px_i$, $py_i$, $pz_i$, $pv_{xi}$, $pv_{yi}$, $pv_{zi}$, $p_i$) and ($mx_i$, $my_i$, $mz_i$, $mv_{xi}$, $mv_{yi}$, $mv_{zi}$, $m_i$) respectively. Depending on whether we are working with Monte-Carlo simulations or data, one or the other MuonState will then be chosen.
 
 
 
@@ -666,15 +681,31 @@ One last important notion to introduce at this point is the difference between t
 
 \chapter{Results obtained}
 
-Now that the experimental setup and main statistical parameters used have been fully described and that the algorithm developped for this particular exercise has been introduced, we can present the results obtained. This chapter is divided into several sections: first of all, we are going to mention the different validation steps performed to make sure that this algorithm's results can be trusted in Section~\ref{sec:validation}, and several properties of cosmic muons will be checked in Section~\ref{sec:incident}. Then, more general results will be presented in Section~\ref{sec:general}.
+Now that the experimental setup and main statistical parameters used have been fully described and that the algorithm developed for this particular exercise has been introduced, we can present the results obtained. This chapter is divided into several sections: first of all, we are going to mention the different validation steps performed to make sure that this algorithm's results can be trusted in Section~\ref{sec:validation}. Then, more general results obtained for different pipe geometries will be presented in Section~\ref{sec:general}, along with the final likelihood results of this work.
 
 \section{Generator validation} \label{sec:validation}
 
-The validation step consists in comparing the results previously obtained with Geant 4, a a toolkit for the simulation of the passage of particles through matter \cite{Geant4}, with a complete and realistic description of the interaction between the cosmic muons and the detectors, and the ones obtained with our Generator, assuming a perfect detector.
+The validation step consists in comparing the results previously obtained with Geant4, a a toolkit for the simulation of the passage of particles through matter \cite{Geant4}, with a complete and realistic description of the interaction between the cosmic muons and the detectors, and the ones obtained with our Generator, assuming a perfect detector.
 
 This step is actually extremely important, as it allowed us to find several bugs in the code. In this context, several files have been generated using both generators and different pipe geometries, allowing us to perform several different checks. In each case, the objective was to obtain the output MuonState ($x_2$, $y_2$, $z_2$, $v_{x2}$, $v_{y2}$, $v_{z2}$, $p_2$) after propagating the initial MuonState throughout a given geometry.
 
-For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and located in (0, 0, 0), thousands of muons have then been generated using Geant 4 and our Generator. The output distributions (the positions $x$ and $y$ and directions $v_x$ and $v_y$ after propagation, along with the deviations in position $\Delta$X and $\Delta$Y, defined in Equation\ref{eq:deviationPos} where $d$ is the vertical distance between the two detectors, and the deviation angles $\Delta \theta_x$ and $\Delta \theta_y$, defined in Equation~\ref{eq:deviationDir}) have then been obtained in this case in Figure~\ref{fig:genComp}. All these plots have been normalized to unity in order to account for the eventual different number of events generated in both cases.
+For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and located in (0, 0, 0), thousands of muons have then been generated using Geant4 and our Generator. The output distributions (the positions $x$ and $y$ and directions $v_x$ and $v_y$ after propagation, along with the deviations in position $\Delta$x and $\Delta$y, defined in Equation\ref{eq:deviationPos} where $d$ is the vertical distance between the two detectors, and the deviation angles $\Delta \theta_x$ and $\Delta \theta_y$, defined in Equation~\ref{eq:deviationDir}) have then been obtained in this case in Figure~\ref{fig:genComp}. All these plots have been normalized to unity in order to account for the eventual different number of events generated in both cases.
+
+\begin{equation}
+\label{eq:deviationPos}
+\begin{dcases}
+\Delta \text{x} = x_2 + d (v_{x2} - x_1)  \\
+\Delta \text{y} = y_2 + d (v_{y2} - y_1)
+\end{dcases}
+\end{equation}
+
+\begin{equation}
+\label{eq:deviationDir}
+\begin{dcases}
+\Delta \theta_x = \arctan \left ({\frac{v_{x2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{x1}}{v_{z1}}} \right ) \\
+\Delta \theta_y = \arctan \left ({\frac{v_{y2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{y1}}{v_{z1}}} \right )
+\end{dcases}
+\end{equation}
 
 \begin{figure}[htbp]
 \centering
@@ -687,7 +718,7 @@ For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and
 \includegraphics[width=8cm, height=6cm]{figs/pvx2-17p2vs17p2.png}
 \end{minipage} \hfill
 }
-\subfigure[Muon $\Delta$X (on the left) and $\Delta$Y (on the right) as measured after propagation]
+\subfigure[Muon $\Delta$x (on the left) and $\Delta$y (on the right) as measured after propagation]
  {
 \begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=8cm, height=6cm]{figs/deltaX-17p2vs17p2.png}
@@ -709,38 +740,40 @@ For a given pipe having a geometry ($r = 17.2$ cm, $R = 20$ cm, $L = 50$ cm) and
 \label{fig:genComp}
 \end{figure}
 
-\section{Cosmis muons properties} \label{sec:incident}
+%\section{Cosmic muons properties} \label{sec:incident}
 
-One of the most famous properties of cosmic muons is their regular angular distribution $T_\theta$, given by Equation~\ref{eq:cossquare}, where $I_0$ and $n$ are parameters depeding on several factors, such as the altitude and latitude of the place where the measurement is performed.
+%One of the most famous properties of cosmic muons is their regular angular distribution $T_\theta$, given by Equation~\ref{eq:cossquare}, where $p_0$ and $p_1$ are parameters depending on several factors, such as the altitude and latitude of the place where the measurement is performed.
 
-\begin{equation}
-\label{eq:cossquare}
-I_\theta = I_0 \cos^n \theta \propto cos^n \theta
-\end{equation}
+%\begin{equation}
+%\label{eq:cossquare}
+%I_\theta = p_0 \cos^{p_1} \theta \propto cos^{p_1} \theta
+%\end{equation}
 
-At our latitude, we can approximately estimate that $n \simeq 2$ and this is something we can easily check with our experimental setup, given the fact that the upper detector is able to give us such angular distribution. Another important property of cosmic muons is their relatively well known energy spectrum, that we can also represent here, in order to check for the validity of the cosmic muons generated with CRY. The results obtained in both cases are shown in Figure~\ref{fig:prop}.
+%At our latitude, we can approximately estimate that $p_1 \simeq 2$ and this is something we can easily check with our experimental setup, given the fact that the upper detector is able to give us such angular distribution from a simple fit. Another important property of cosmic muons is their relatively well known vertical energy spectrum, following a power law $p_0 E^{-p_1}$ \cite{properties}, that we can also represent here, in order to check for the validity of the cosmic muons generated with CRY. The results obtained in both cases are shown in Figure~\ref{fig:prop}.
 
-\begin{figure}[htbp]
-\centering
-\begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=7cm, height=6cm]{figs/placeholder.png}
-\end{minipage}\hfill
-\begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=7cm, height=6cm]{figs/placeholder.png}
-\end{minipage}\hfill
-\caption{Study of the angular (on the left) and energy (on the right) distributions of cosmic muons generated by CRY and used throughout this work.}
-\label{fig:prop}
-\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\begin{minipage}[b]{.49\textwidth}
+%\includegraphics[width=8cm, height=6cm]{figs/placeholder.png}
+%\end{minipage}\hfill
+%\begin{minipage}[b]{.49\textwidth}
+%\includegraphics[width=8cm, height=6cm]{figs/incidentEnergy.png}
+%\end{minipage}\hfill
+%caption{Study of the angular (on the left) and energy (on the right) distributions of cosmic muons generated by CRY and used throughout this work.}
+%\label{fig:prop}
+%\end{figure}
 
 \section{General results} \label{sec:general}
 
 \subsection{Pipe geometries impact}
 
-Now that we know we can trust the results obtained from the Generator and that general properties of cosmic muons have been derived, we can start comparing the $\Delta$X, $\Delta$Y, $\Delta \theta_x$ and $\Delta \theta_y$ distributions obtained for different geometries. This is done in Figure~\ref{fig:gemComp}, considering pipes with a constant length $L = 50$ cm and outer radius of $R = 20$ cm, while the inner radius changes from $r = 17.2$ to $18.8$ cm.
+Now that we know we can trust the results obtained from the Generator, the next step has then been to generate 9 Monte-Carlo files with 100.000 events each, using our Generator, corresponding to 9 possible pipe geometries characterized by a constant length $L = 50$cm, an outer radius of $R = 20$cm and different inner radii $r$, ranging from 17.2 to 18.8cm, by steps of 0.2cm. Each file was generated with 100.000 events, taking a few minutes per geometry considered.
+
+We can then start comparing the $\Delta$x, $\Delta$y, $\Delta \theta_x$ and $\Delta \theta_y$ distributions obtained for these different geometries, as shown in Figure~\ref{fig:gemComp}.
 
 \begin{figure}[htbp]
 \centering
-\subfigure[Muon $\Delta$X (on the left) and $\Delta$Y (on the right) as measured after propagation]
+\subfigure[Muon $\Delta$x (on the left) and $\Delta$y (on the right) as measured after propagation]
  {
 \begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=8cm, height=6cm]{figs/deltaX.png}
@@ -762,15 +795,34 @@ Now that we know we can trust the results obtained from the Generator and that g
 \label{fig:gemComp}
 \end{figure}
 
-As we can see, in this case, and as expected, the geometry has a little impact on the deviation observed in the position and direction, along both the $x$ and $y$ axes. We can however observe slightly larger tails for the pipes having a larger width, as expected. The study of this small differences between the geometries will be the starting point of the determination of the properties of an unknown pipe placed between the detectors.
+As we can see, the geometry actually has only a little impact on the deviation observed in the position and direction, along both the $x$ and $y$ axes. We can however observe slightly larger tails for the pipes having a larger inner width, as expected. The study of these small differences between the different geometries will be the starting point of the determination of the properties of an unknown pipe placed between the two detectors using our Likelihood class.
 
 \subsection{Kernel density functions}
 
+As explained previously, we generated 100.000 events for each geometry with our Generator and, for every single event, a likelihood needs to be computed, which involves running another loop of at least several hundreds of iterations. In each iteration, the value of the deviation in position and angle between the MuonState obtained with our Propagator and the one defined as the linearly propagated MuonState to the bottom detector is computed, filling in this process two bi-dimensional histograms ($\Delta$x vs $\Delta \theta_x$ and $\Delta$y vs $\Delta \theta_y$) for each input event.
+
+More precise results are expected to be obtained by increasing this number of iterations, but so does the computing time, so in order to keep the code running time manageable, we decided to use the kernel density estimation method described in Section~\ref{sec:KDF}. Both the original and the smoothen histograms obtained for a single event can be found in Figure~\ref{fig:KDFresults}.
+
+\begin{figure}[htbp]
+\begin{center}
+\subfigure[($\Delta$x vs $\Delta \theta_x$) histogram along the x-axis, with (on the right) and without (on the left) smoothening applied.]
+ {
+\includegraphics[width=16cm, height=7.6cm]{figs/placeholder.png}
+}
+\subfigure[($\Delta$y vs $\Delta \theta_y$) histogram along the y-axis, with (on the right) and without (on the left) smoothening applied.]
+ {
+ \includegraphics[width=16cm, height=7.6cm]{figs/plot_kernel.png}
+ }
+\caption{Original and smoothen bi-dimensional histograms along the x and y axes, obtained for a single event generated with the Generator class.}
+\label{fig:KDFresults}
+\end{center}
+\end{figure}
+
 \subsection{Likelihoods}
 
-The goal is now to estimate the value of the total likelihood obtained for different pipe geometries, characterized by different inner radii, ranging from 17.2 to 18.8cm, by steps of 0.2cm. The first step has then been to generate 9 Monte-Carlo files with 100.000 events each, using our Generator, corresponding to these 9 possible geometries. 
+The goal is now to estimate the value of the total likelihood obtained for different pipe geometries, characterized by different inner radii, ranging from 17.2 to 18.8cm, by steps of 0.2cm.
 
-The idea is then to compute the value of the likelihood obtained for each geometry by comparing an actual measurement obtained by our propagator with these generated files, in order to estimate the p-value in each case and, at the end of the day, try to figure out which pipe geometry is more likely to give rise to such measurements. The results obtained are shown in Figure~\ref{fig:likelihoods}, where we expect to see a minimum for the actual geometry used, represented by the vertical red line in each case.
+The idea is then to compute the value of the likelihood obtained for each of these geometries by comparing an actual measurement obtained with our Propagator with these generated files one by one, in order to estimate the p-value in each case and minimize the likelihood obtained in each case to, at the end of the day, try to figure out which pipe geometry is more likely to give rise to such measurements. The results obtained are shown in Figures~\ref{fig:likelihoods} and~\ref{fig:likelihoods2} for 100 and 500 iterations used for the computation of the likelihood value, and where we expect to see a minimum for the actual geometry used, represented by the vertical red line in each case.
 
 \begin{figure}[htbp]
 \centering
@@ -803,15 +855,68 @@ The idea is then to compute the value of the likelihood obtained for each geomet
 \begin{minipage}[b]{.32\textwidth}
 \includegraphics[width=6cm, height=5cm]{figs/likelihood18p8.png}
 \end{minipage} \hfill
-\caption{Likelihoods values obtained for different pipe geometries, ranging from 17.2 (on the top left) to 18.8cm of inner radius (on the bottom right).}
+\caption{Likelihoods values obtained for different pipe geometries, ranging from 17.2 (on the top left) to 18.8cm of inner radius (on the bottom right), obtained for 100 iterations.}
 \label{fig:likelihoods}
 \end{figure}
 
-\subsection{Minimization process}
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage} \hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage} \hfill \vspace{10pt}
+
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage} \hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage} \hfill \vspace{10pt}
+
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage} \hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=5cm]{figs/placeholder.png}
+\end{minipage} \hfill
+\caption{Likelihoods values obtained for different pipe geometries, ranging from 17.2 (on the top left) to 18.8cm of inner radius (on the bottom right), obtained for 500 iterations.}
+\label{fig:likelihoods2}
+\end{figure}
+
+As we can see in these results, the minimum of the likelihood curve is not always exactly at the place where it should be. However, and this is especially true for larger pipes, we do manage to reach in most of the cases a precision of the order of the step chosen, equal to 0.2cm. This means that using the algorithm developed here, we are capable of determining the actual inner width of a pipe using cosmic muon and without destructing this pipe, the initial objective of this work, with a precision of the order of a few millimeters.
+
+%\subsection{Minimization process}
+%\section{Unknown file?}
 
 \chapter{Conclusions}
 
-Improvements: consider ionization as well, detectors effect, additional parameters
+In conclusion, this work was designed with one simple objective in mind: using the muon tomography technique in order to determine the inner properties of a general geometry (usually considered here to be a pipe made out of two cylinders, even though the code has been developed to be able to simply add more complex geometries in the future), using statistical methods to analyze the results obtained.
+
+The principle of this statistical approach presented here is quite simple: in order to study the inner properties of a steel pipe, we can put a detector above the pipe, measuring the initial position and directions of cosmic muons, and another detector below the volume considered, to compute the actual deviation suffered by the cosmic muons when traversing the gap between the two detectors. Since this deviation in position and angle is expected to be larger when traversing the steel pipe than the air, given the difference in density of these two medium, we expected to be able to estimate the actual width of the pipe crossed from such measurements. 
+
+By developing our framework, able to generate Monte-Carlo simulations of such cosmic muons and to propagate them across our geometry using the Moli\`ere's theory of multiple scattering, and by implementing advanced statistical methods to solve this problem, we managed to estimate the actual width of such steel pipes with a precision of the order of 2 millimeters, therefore solving the problem which was originally presented. These results have been obtained after comparing our Generator with Geant4, in order to cross-check the results presentend throughout this work.
+
+\section{Suggested improvements}
+
+Of course, this work is only a first approach to this particular problem, and many different improvements could be added in the future in order to improve and/or generalize the results obtained:
+
+\begin{itemize}
+    \item First of all, as previously stated, this work was focused on a typical approach related to steel pipes typically used in the industry in general. The framework is ready to include additional and more exotic geometries, to study them as well, even though this has not been done in this particular work. Even pipes could be quite easily studied in greater details using this framework, by for example considering additional parameters to characterize them, such as a possible dependence of the width of the pipe with respect to the position. Being able to find weak spots in particular locations in the pipe itself would be something of great value for the industry.
+    \item Another interesting idea might be to consider ionization as well. In this work, we did not consider the loss of energy suffered by a muon when crossing the volume studied since it is expected to be quite low, but such information could help us increase the precision of the measurements performed.
+    \item In this work, we did not consider detector effects even though by interacting with the incident cosmic muons, they have an effect on them, even though this effect is supposed to be quite small. Simulating in a precise way this interaction could also improve the precision of the mehod.
+    \item Finally, we have been quite limited in this work by the computing power available. Given the fact that the determination of the likelihood required us to do complex calculations, we had to limit as much as possible several parameters, such as the number of iterations performed to compute the likelihood. Increasing this parameter is expected to give better results, but also increase the computing time. Running the code on more powerful machines is therefore also expected to give better results.
+\end{itemize}
 
 %\begin{appendices}
   
@@ -884,7 +989,7 @@ Physical Review Vol. 51, 1936}
 
 \bibitem{Moliere}
 \href{https://journals.aps.org/pr/abstract/10.1103/PhysRev.89.1256}{H.A. Bethe,
-"Molière's Theory of Multiple Scattering", 
+"Moli\`ere's Theory of Multiple Scattering", 
 Physical Review Vol. 89, 1953}
 
 \bibitem{Egypt}
@@ -905,7 +1010,10 @@ Science, Volume 167, Issue 3919, 1970}
 \href{https://arxiv.org/pdf/0811.0187.pdf}{M. Holmann et all, "GEANT4 Simulation of a Cosmic Ray Muon Tomography System with Micro-Pattern Gas Detectors for the Detection of High-Z Materials", as seen in June 2020}
 
 \bibitem{Geant4}
-\href{https://www.sciencedirect.com/science/article/pii/S0168900203013688}{S. Agostinelli et all, "Geant4?a simulation toolkit", Nuclear Instruments and Methods in Physics Research Section A, vol. 506, issue 3, pages 250-303}
+\href{https://www.sciencedirect.com/science/article/pii/S0168900203013688}{S. Agostinelli et all, "Geant4: a simulation toolkit", Nuclear Instruments and Methods in Physics Research Section A, vol. 506, issue 3, pages 250-303}
+
+\bibitem{properties}
+\href{https://arxiv.org/abs/1606.06907}{P. Shukla and S. Sankrith, "Energy and angular distributions of atmospheric muons at the Earth", High Energy Physics phenomenology [arXiv:1606.06907], as seen in July 2020}
 
 \end{thebibliography}
 

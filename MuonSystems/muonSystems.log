@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  1 JUL 2020 12:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  2 JUL 2020 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -450,11 +450,7 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cases/cases.sty
 Package: cases 2002/05/02 ver 2.5 
-) (./muonSystems.aux
-
-LaTeX Warning: Label `eq:line' multiply defined.
-
-)
+) (./muonSystems.aux)
 \openout1 = `muonSystems.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -558,12 +554,12 @@ LaTeX Info: Redefining \nameref on input line 35.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-<figs/image_UC.png, id=127, 400.49625pt x 401.5pt>
+<figs/image_UC.png, id=123, 400.49625pt x 401.5pt>
 File: figs/image_UC.png Graphic file (type png)
 <use figs/image_UC.png>
 Package pdftex.def Info: figs/image_UC.png  used on input line 43.
 (pdftex.def)             Requested size: 72.55157pt x 72.73248pt.
-<figs/muonSystems.png, id=129, 200.75pt x 200.75pt>
+<figs/muonSystems.png, id=125, 200.75pt x 200.75pt>
 File: figs/muonSystems.png Graphic file (type png)
 <use figs/muonSystems.png>
 Package pdftex.def Info: figs/muonSystems.png  used on input line 43.
@@ -600,7 +596,7 @@ Chapter 1.
 
 ]
 Chapter 2.
-<figs/SMFermions.png, id=209, 328.3467pt x 269.0853pt>
+<figs/SMFermions.png, id=204, 328.3467pt x 269.0853pt>
 File: figs/SMFermions.png Graphic file (type png)
 <use figs/SMFermions.png>
 Package pdftex.def Info: figs/SMFermions.png  used on input line 155.
@@ -608,24 +604,24 @@ Package pdftex.def Info: figs/SMFermions.png  used on input line 155.
 [2
 
 ]
-<figs/cosmic.png, id=229, 1927.2pt x 949.5475pt>
+<figs/cosmic.png, id=224, 1927.2pt x 949.5475pt>
 File: figs/cosmic.png Graphic file (type png)
 <use figs/cosmic.png>
 Package pdftex.def Info: figs/cosmic.png  used on input line 169.
 (pdftex.def)             Requested size: 312.97514pt x 170.70833pt.
-<figs/cosmicMuons.png, id=232, 645.41125pt x 780.9175pt>
+<figs/cosmicMuons.png, id=227, 645.41125pt x 780.9175pt>
 File: figs/cosmicMuons.png Graphic file (type png)
 <use figs/cosmicMuons.png>
 Package pdftex.def Info: figs/cosmicMuons.png  used on input line 179.
 (pdftex.def)             Requested size: 227.62076pt x 256.07109pt.
  [3 <./figs/SMFermions.png (PNG copy)> <./figs/cosmic.png>] [4 <./figs/cosmicMu
 ons.png>]
-<figs/BB.png, id=260, 997.7275pt x 635.37375pt>
+<figs/BB.png, id=254, 997.7275pt x 635.37375pt>
 File: figs/BB.png Graphic file (type png)
 <use figs/BB.png>
 Package pdftex.def Info: figs/BB.png  used on input line 204.
 (pdftex.def)             Requested size: 341.43034pt x 227.61945pt.
-<figs/moliere.png, id=266, 1140.26pt x 512.91624pt>
+<figs/moliere.png, id=260, 1140.26pt x 512.91624pt>
 File: figs/moliere.png Graphic file (type png)
 <use figs/moliere.png>
 Package pdftex.def Info: figs/moliere.png  used on input line 225.
@@ -640,23 +636,23 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 241.
  [6 <./figs/moliere.png>]
-<figs/wireChambers.png, id=289, 532.99126pt x 426.59375pt>
+<figs/wireChambers.png, id=283, 532.99126pt x 426.59375pt>
 File: figs/wireChambers.png Graphic file (type png)
 <use figs/wireChambers.png>
 Package pdftex.def Info: figs/wireChambers.png  used on input line 257.
 (pdftex.def)             Requested size: 199.16368pt x 147.95612pt.
  [7 <./figs/wireChambers.png>]
-<figs/muonChambers.png, id=298, 986.68625pt x 597.23125pt>
+<figs/muonChambers.png, id=292, 986.68625pt x 597.23125pt>
 File: figs/muonChambers.png Graphic file (type png)
 <use figs/muonChambers.png>
 Package pdftex.def Info: figs/muonChambers.png  used on input line 281.
 (pdftex.def)             Requested size: 256.0807pt x 170.71388pt.
-<figs/muonChambersPhoto.png, id=299, 576.1525pt x 642.4pt>
+<figs/muonChambersPhoto.png, id=293, 576.1525pt x 642.4pt>
 File: figs/muonChambersPhoto.png Graphic file (type png)
 <use figs/muonChambersPhoto.png>
 Package pdftex.def Info: figs/muonChambersPhoto.png  used on input line 284.
 (pdftex.def)             Requested size: 170.71956pt x 170.7155pt.
-<figs/dataFlow.png, id=301, 987.69pt x 658.46pt>
+<figs/dataFlow.png, id=295, 987.69pt x 658.46pt>
 File: figs/dataFlow.png Graphic file (type png)
 <use figs/dataFlow.png>
 Package pdftex.def Info: figs/dataFlow.png  used on input line 298.
@@ -664,7 +660,7 @@ Package pdftex.def Info: figs/dataFlow.png  used on input line 298.
  [8 <./figs/muonChambers.png> <./figs/muonChambersPhoto.png>] [9 <./figs/dataFl
 ow.png>]
 Chapter 3.
-<figs/PDF.png, id=321, 1816.7875pt x 872.25874pt>
+<figs/PDF.png, id=315, 1816.7875pt x 872.25874pt>
 File: figs/PDF.png Graphic file (type png)
 <use figs/PDF.png>
 Package pdftex.def Info: figs/PDF.png  used on input line 340.
@@ -672,31 +668,31 @@ Package pdftex.def Info: figs/PDF.png  used on input line 340.
 [10
 
  <./figs/PDF.png>]
-<figs/pdfs.png, id=339, 1105.12875pt x 702.625pt>
+<figs/pdfs.png, id=333, 1105.12875pt x 702.625pt>
 File: figs/pdfs.png Graphic file (type png)
 <use figs/pdfs.png>
 Package pdftex.def Info: figs/pdfs.png  used on input line 359.
 (pdftex.def)             Requested size: 341.42284pt x 199.16736pt.
  [11 <./figs/pdfs.png>]
-<figs/pvalue.png, id=348, 1081.03876pt x 608.2725pt>
+<figs/pvalue.png, id=342, 1081.03876pt x 608.2725pt>
 File: figs/pvalue.png Graphic file (type png)
 <use figs/pvalue.png>
 Package pdftex.def Info: figs/pvalue.png  used on input line 382.
 (pdftex.def)             Requested size: 369.87415pt x 199.16197pt.
  [12 <./figs/pvalue.png>]
-<figs/kernels.png, id=361, 622.325pt x 471.7625pt>
+<figs/kernels.png, id=355, 622.325pt x 471.7625pt>
 File: figs/kernels.png Graphic file (type png)
 <use figs/kernels.png>
 Package pdftex.def Info: figs/kernels.png  used on input line 418.
 (pdftex.def)             Requested size: 369.88438pt x 284.52817pt.
  [13]
 [14 <./figs/kernels.png>]
-<figs/likelihood.png, id=384, 410.53375pt x 403.5075pt>
+<figs/likelihood.png, id=378, 410.53375pt x 403.5075pt>
 File: figs/likelihood.png Graphic file (type png)
 <use figs/likelihood.png>
 Package pdftex.def Info: figs/likelihood.png  used on input line 450.
 (pdftex.def)             Requested size: 199.16501pt x 170.71571pt.
-<figs/loglikelihood.png, id=385, 421.575pt x 397.485pt>
+<figs/loglikelihood.png, id=379, 421.575pt x 397.485pt>
 File: figs/loglikelihood.png Graphic file (type png)
 <use figs/loglikelihood.png>
 Package pdftex.def Info: figs/loglikelihood.png  used on input line 453.
@@ -706,7 +702,7 @@ Chapter 4.
 [16
 
 ]
-<figs/cylinder.png, id=401, 936.49875pt x 679.53876pt>
+<figs/cylinder.png, id=395, 936.49875pt x 679.53876pt>
 File: figs/cylinder.png Graphic file (type png)
 <use figs/cylinder.png>
 Package pdftex.def Info: figs/cylinder.png  used on input line 519.
@@ -717,224 +713,293 @@ Overfull \hbox (4.82649pt too wide) in paragraph at lines 519--520
  []
 
 [17 <./figs/cylinder.png>]
-<figs/normal.png, id=414, 593.21625pt x 531.9875pt>
+<figs/normal.png, id=408, 593.21625pt x 531.9875pt>
 File: figs/normal.png Graphic file (type png)
 <use figs/normal.png>
 Package pdftex.def Info: figs/normal.png  used on input line 575.
 (pdftex.def)             Requested size: 199.16542pt x 170.71028pt.
  [18 <./figs/normal.png>]
-<figs/parameters.png, id=422, 795.97375pt x 696.6025pt>
+<figs/parameters.png, id=416, 795.97375pt x 696.6025pt>
 File: figs/parameters.png Graphic file (type png)
 <use figs/parameters.png>
-Package pdftex.def Info: figs/parameters.png  used on input line 593.
+Package pdftex.def Info: figs/parameters.png  used on input line 595.
 (pdftex.def)             Requested size: 199.16298pt x 170.71693pt.
  [19 <./figs/parameters.png>] [20]
 Chapter 5.
-
-LaTeX Warning: Reference `eq:deviationPos' on page 21 undefined on input line 6
-77.
-
-
-LaTeX Warning: Reference `eq:deviationDir' on page 21 undefined on input line 6
-77.
-
-<figs/px2-17p2vs17p2.png, id=443, 698.61pt x 473.77pt>
+<figs/px2-17p2vs17p2.png, id=438, 698.61pt x 473.77pt>
 File: figs/px2-17p2vs17p2.png Graphic file (type png)
 <use figs/px2-17p2vs17p2.png>
-Package pdftex.def Info: figs/px2-17p2vs17p2.png  used on input line 689.
+Package pdftex.def Info: figs/px2-17p2vs17p2.png  used on input line 720.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/pvx2-17p2vs17p2.png, id=444, 698.61pt x 473.77pt>
+<figs/pvx2-17p2vs17p2.png, id=439, 698.61pt x 473.77pt>
 File: figs/pvx2-17p2vs17p2.png Graphic file (type png)
 <use figs/pvx2-17p2vs17p2.png>
-Package pdftex.def Info: figs/pvx2-17p2vs17p2.png  used on input line 689.
+Package pdftex.def Info: figs/pvx2-17p2vs17p2.png  used on input line 720.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaX-17p2vs17p2.png, id=445, 698.61pt x 473.77pt>
+<figs/deltaX-17p2vs17p2.png, id=440, 698.61pt x 473.77pt>
 File: figs/deltaX-17p2vs17p2.png Graphic file (type png)
 <use figs/deltaX-17p2vs17p2.png>
-Package pdftex.def Info: figs/deltaX-17p2vs17p2.png  used on input line 698.
+Package pdftex.def Info: figs/deltaX-17p2vs17p2.png  used on input line 729.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaY-17p2vs17p2.png, id=446, 698.61pt x 473.77pt>
+<figs/deltaY-17p2vs17p2.png, id=441, 698.61pt x 473.77pt>
 File: figs/deltaY-17p2vs17p2.png Graphic file (type png)
 <use figs/deltaY-17p2vs17p2.png>
-Package pdftex.def Info: figs/deltaY-17p2vs17p2.png  used on input line 698.
+Package pdftex.def Info: figs/deltaY-17p2vs17p2.png  used on input line 729.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaThetaX-17p2vs17p2.png, id=447, 698.61pt x 473.77pt>
+<figs/deltaThetaX-17p2vs17p2.png, id=442, 698.61pt x 473.77pt>
 File: figs/deltaThetaX-17p2vs17p2.png Graphic file (type png)
 <use figs/deltaThetaX-17p2vs17p2.png>
-Package pdftex.def Info: figs/deltaThetaX-17p2vs17p2.png  used on input line 70
-7.
+Package pdftex.def Info: figs/deltaThetaX-17p2vs17p2.png  used on input line 73
+8.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaThetaY-17p2vs17p2.png, id=448, 698.61pt x 473.77pt>
+<figs/deltaThetaY-17p2vs17p2.png, id=443, 698.61pt x 473.77pt>
 File: figs/deltaThetaY-17p2vs17p2.png Graphic file (type png)
 <use figs/deltaThetaY-17p2vs17p2.png>
-Package pdftex.def Info: figs/deltaThetaY-17p2vs17p2.png  used on input line 70
-7.
+Package pdftex.def Info: figs/deltaThetaY-17p2vs17p2.png  used on input line 73
+8.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
 [21
 
 ] [22 <./figs/px2-17p2vs17p2.png> <./figs/pvx2-17p2vs17p2.png> <./figs/deltaX-1
 7p2vs17p2.png> <./figs/deltaY-17p2vs17p2.png> <./figs/deltaThetaX-17p2vs17p2.pn
 g> <./figs/deltaThetaY-17p2vs17p2.png>]
-<figs/placeholder.png, id=468, 401.5pt x 401.5pt>
-File: figs/placeholder.png Graphic file (type png)
-<use figs/placeholder.png>
-Package pdftex.def Info: figs/placeholder.png  used on input line 726.
-(pdftex.def)             Requested size: 199.17502pt x 170.71794pt.
-File: figs/placeholder.png Graphic file (type png)
-<use figs/placeholder.png>
-Package pdftex.def Info: figs/placeholder.png  used on input line 729.
-(pdftex.def)             Requested size: 199.17502pt x 170.71794pt.
-<figs/deltaX.png, id=470, 698.61pt x 473.77pt>
+<figs/deltaX.png, id=463, 698.61pt x 473.77pt>
 File: figs/deltaX.png Graphic file (type png)
 <use figs/deltaX.png>
-Package pdftex.def Info: figs/deltaX.png  used on input line 751.
+Package pdftex.def Info: figs/deltaX.png  used on input line 784.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaY.png, id=471, 698.61pt x 473.77pt>
+<figs/deltaY.png, id=464, 698.61pt x 473.77pt>
 File: figs/deltaY.png Graphic file (type png)
 <use figs/deltaY.png>
-Package pdftex.def Info: figs/deltaY.png  used on input line 751.
+Package pdftex.def Info: figs/deltaY.png  used on input line 784.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaThetaX.png, id=472, 698.61pt x 473.77pt>
+<figs/deltaThetaX.png, id=465, 698.61pt x 473.77pt>
 File: figs/deltaThetaX.png Graphic file (type png)
 <use figs/deltaThetaX.png>
-Package pdftex.def Info: figs/deltaThetaX.png  used on input line 760.
+Package pdftex.def Info: figs/deltaThetaX.png  used on input line 793.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
-<figs/deltaThetaY.png, id=473, 698.61pt x 473.77pt>
+<figs/deltaThetaY.png, id=466, 698.61pt x 473.77pt>
 File: figs/deltaThetaY.png Graphic file (type png)
 <use figs/deltaThetaY.png>
-Package pdftex.def Info: figs/deltaThetaY.png  used on input line 760.
+Package pdftex.def Info: figs/deltaThetaY.png  used on input line 793.
 (pdftex.def)             Requested size: 227.62119pt x 170.71611pt.
- [23 <./figs/placeholder.png>]
-[24 <./figs/deltaX.png> <./figs/deltaY.png> <./figs/deltaThetaX.png> <./figs/de
-ltaThetaY.png>]
-<figs/likelihood17p2.png, id=487, 698.61pt x 473.77pt>
+ [23 <./figs/deltaX.png> <./figs/deltaY.png> <./figs/deltaThetaX.png> <./figs/d
+eltaThetaY.png>]
+<figs/placeholder.png, id=476, 401.5pt x 401.5pt>
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 811.
+(pdftex.def)             Requested size: 455.27644pt x 216.24313pt.
+<figs/plot_kernel.png, id=477, 1601.985pt x 774.895pt>
+File: figs/plot_kernel.png Graphic file (type png)
+<use figs/plot_kernel.png>
+Package pdftex.def Info: figs/plot_kernel.png  used on input line 815.
+(pdftex.def)             Requested size: 455.22604pt x 216.23604pt.
+<figs/likelihood17p2.png, id=480, 698.61pt x 473.77pt>
 File: figs/likelihood17p2.png Graphic file (type png)
 <use figs/likelihood17p2.png>
-Package pdftex.def Info: figs/likelihood17p2.png  used on input line 778.
+Package pdftex.def Info: figs/likelihood17p2.png  used on input line 830.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 778--779
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 830--831
 [][] 
  []
 
-<figs/likelihood17p4.png, id=488, 698.61pt x 473.77pt>
+<figs/likelihood17p4.png, id=481, 698.61pt x 473.77pt>
 File: figs/likelihood17p4.png Graphic file (type png)
 <use figs/likelihood17p4.png>
-Package pdftex.def Info: figs/likelihood17p4.png  used on input line 781.
+Package pdftex.def Info: figs/likelihood17p4.png  used on input line 833.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 781--782
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 833--834
 [][] 
  []
 
-<figs/likelihood17p6.png, id=489, 698.61pt x 473.77pt>
+<figs/likelihood17p6.png, id=482, 698.61pt x 473.77pt>
 File: figs/likelihood17p6.png Graphic file (type png)
 <use figs/likelihood17p6.png>
-Package pdftex.def Info: figs/likelihood17p6.png  used on input line 784.
+Package pdftex.def Info: figs/likelihood17p6.png  used on input line 836.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 784--785
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 836--837
 [][] 
  []
 
-<figs/likelihood17p8.png, id=490, 698.61pt x 473.77pt>
+<figs/likelihood17p8.png, id=483, 698.61pt x 473.77pt>
 File: figs/likelihood17p8.png Graphic file (type png)
 <use figs/likelihood17p8.png>
-Package pdftex.def Info: figs/likelihood17p8.png  used on input line 788.
+Package pdftex.def Info: figs/likelihood17p8.png  used on input line 840.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 788--789
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 840--841
 [][] 
  []
 
-<figs/likelihood18p0.png, id=491, 698.61pt x 473.77pt>
+<figs/likelihood18p0.png, id=484, 698.61pt x 473.77pt>
 File: figs/likelihood18p0.png Graphic file (type png)
 <use figs/likelihood18p0.png>
-Package pdftex.def Info: figs/likelihood18p0.png  used on input line 791.
+Package pdftex.def Info: figs/likelihood18p0.png  used on input line 843.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 791--792
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 843--844
 [][] 
  []
 
-<figs/likelihood18p2.png, id=492, 698.61pt x 473.77pt>
+<figs/likelihood18p2.png, id=485, 698.61pt x 473.77pt>
 File: figs/likelihood18p2.png Graphic file (type png)
 <use figs/likelihood18p2.png>
-Package pdftex.def Info: figs/likelihood18p2.png  used on input line 794.
+Package pdftex.def Info: figs/likelihood18p2.png  used on input line 846.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 794--795
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 846--847
 [][] 
  []
 
-<figs/likelihood18p4.png, id=493, 698.61pt x 473.77pt>
+<figs/likelihood18p4.png, id=486, 698.61pt x 473.77pt>
 File: figs/likelihood18p4.png Graphic file (type png)
 <use figs/likelihood18p4.png>
-Package pdftex.def Info: figs/likelihood18p4.png  used on input line 798.
+Package pdftex.def Info: figs/likelihood18p4.png  used on input line 850.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 798--799
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 850--851
 [][] 
  []
 
-<figs/likelihood18p6.png, id=494, 698.61pt x 473.77pt>
+<figs/likelihood18p6.png, id=487, 698.61pt x 473.77pt>
 File: figs/likelihood18p6.png Graphic file (type png)
 <use figs/likelihood18p6.png>
-Package pdftex.def Info: figs/likelihood18p6.png  used on input line 801.
+Package pdftex.def Info: figs/likelihood18p6.png  used on input line 853.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 801--802
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 853--854
 [][] 
  []
 
-<figs/likelihood18p8.png, id=495, 698.61pt x 473.77pt>
+<figs/likelihood18p8.png, id=488, 698.61pt x 473.77pt>
 File: figs/likelihood18p8.png Graphic file (type png)
 <use figs/likelihood18p8.png>
-Package pdftex.def Info: figs/likelihood18p8.png  used on input line 804.
+Package pdftex.def Info: figs/likelihood18p8.png  used on input line 856.
 (pdftex.def)             Requested size: 170.71855pt x 142.26222pt.
 
-Overfull \hbox (15.93202pt too wide) in paragraph at lines 804--805
+Overfull \hbox (15.93202pt too wide) in paragraph at lines 856--857
 [][] 
  []
 
-[25 <./figs/likelihood17p2.png> <./figs/likelihood17p4.png> <./figs/likelihood1
-7p6.png> <./figs/likelihood17p8.png> <./figs/likelihood18p0.png> <./figs/likeli
-hood18p2.png> <./figs/likelihood18p4.png> <./figs/likelihood18p6.png> <./figs/l
-ikelihood18p8.png>]
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 865.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 865--866
+[][] 
+ []
+
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 868.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 868--869
+[][] 
+ []
+
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 871.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 871--872
+[][] 
+ []
+
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 875.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 875--876
+[][] 
+ []
+
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 878.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 878--879
+[][] 
+ []
+
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 881.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 881--882
+[][] 
+ []
+
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 885.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 885--886
+[][] 
+ []
+
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 888.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 888--889
+[][] 
+ []
+
+File: figs/placeholder.png Graphic file (type png)
+<use figs/placeholder.png>
+Package pdftex.def Info: figs/placeholder.png  used on input line 891.
+(pdftex.def)             Requested size: 170.71794pt x 142.26698pt.
+
+Overfull \hbox (15.93141pt too wide) in paragraph at lines 891--892
+[][] 
+ []
+
+[24] [25 <./figs/placeholder.png> <./figs/plot_kernel.png>] [26 <./figs/likelih
+ood17p2.png> <./figs/likelihood17p4.png> <./figs/likelihood17p6.png> <./figs/li
+kelihood17p8.png> <./figs/likelihood18p0.png> <./figs/likelihood18p2.png> <./fi
+gs/likelihood18p4.png> <./figs/likelihood18p6.png> <./figs/likelihood18p8.png>]
+[27]
 Chapter 6.
-[26
+[28
+
+] [29] [30
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 912.
- [27
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 912.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1020.
+ [31]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1020.
  (./muonSystems.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 912.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 912.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1020.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1020.
+
 Package rerunfilecheck Info: File `muonSystems.out' has not changed.
-(rerunfilecheck)             Checksum: C8CDF0426F66DD30AAB70D525B28F187;1976.
+(rerunfilecheck)             Checksum: 28B26463BFBC0A5A988CB441A5BB6829;1903.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 912.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1020.
  ) 
 Here is how much of TeX's memory you used:
- 9872 strings out of 494880
- 148394 string characters out of 6179601
- 255104 words of memory out of 5000000
- 12885 multiletter control sequences out of 15000+600000
+ 9885 strings out of 494880
+ 148596 string characters out of 6179601
+ 256375 words of memory out of 5000000
+ 12889 multiletter control sequences out of 15000+600000
  16695 words of font info for 58 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 36i,10n,43p,969b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,43p,970b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
@@ -954,10 +1019,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti10.pfb>
-Output written on muonSystems.pdf (33 pages, 1971139 bytes).
+Output written on muonSystems.pdf (37 pages, 2038795 bytes).
 PDF statistics:
- 635 PDF objects out of 1000 (max. 8388607)
- 512 compressed objects within 6 object streams
- 121 named destinations out of 1000 (max. 500000)
- 449 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 659 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
+ 129 named destinations out of 1000 (max. 500000)
+ 446 words of extra memory for PDF output out of 10000 (max. 10000000)
 
