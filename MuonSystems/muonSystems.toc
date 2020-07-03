@@ -14,7 +14,7 @@
 \contentsline {chapter}{\numberline {3}Statistical parameters}{10}{chapter.3}
 \contentsline {section}{\numberline {3.1}Probability density functions}{10}{section.3.1}
 \contentsline {section}{\numberline {3.2}Monte-Carlo simulations}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}p-values}{12}{section.3.3}
+\contentsline {section}{\numberline {3.3}Probability values}{12}{section.3.3}
 \contentsline {section}{\numberline {3.4}Kernel density estimations}{13}{section.3.4}
 \contentsline {section}{\numberline {3.5}Likelihood}{14}{section.3.5}
 \contentsline {chapter}{\numberline {4}The algorithm}{16}{chapter.4}
@@ -25,6 +25,7 @@
 \contentsline {subsection}{\numberline {4.1.4}Propagator}{18}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}Likelihood}{19}{subsection.4.1.5}
 \contentsline {section}{\numberline {4.2}Generator}{20}{section.4.2}
+\contentsline {section}{\numberline {4.3}Plotter}{21}{section.4.3}
 \contentsline {chapter}{\numberline {5}Results obtained}{22}{chapter.5}
 \contentsline {section}{\numberline {5.1}Generator validation}{22}{section.5.1}
 \contentsline {section}{\numberline {5.2}General results}{24}{section.5.2}
