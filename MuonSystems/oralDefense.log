@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  7 JUL 2020 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  7 JUL 2020 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1237,12 +1237,12 @@ LaTeX Info: Redefining \selectfont on input line 73.
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 87.
 
-<figs/image_UC.png, id=14, 400.49625pt x 401.5pt>
+<figs/image_UC.png, id=18, 400.49625pt x 401.5pt>
 File: figs/image_UC.png Graphic file (type png)
 <use figs/image_UC.png>
 Package pdftex.def Info: figs/image_UC.png  used on input line 87.
 (pdftex.def)             Requested size: 49.50578pt x 49.62987pt.
-<figs/muonSystems.png, id=16, 200.75pt x 200.75pt>
+<figs/muonSystems.png, id=20, 200.75pt x 200.75pt>
 File: figs/muonSystems.png Graphic file (type png)
 <use figs/muonSystems.png>
 Package pdftex.def Info: figs/muonSystems.png  used on input line 87.
@@ -1269,7 +1269,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [3
 
 ]
-<figs/SMFermions.png, id=106, 328.3467pt x 269.0853pt>
+<figs/SMFermions.png, id=118, 328.3467pt x 269.0853pt>
 File: figs/SMFermions.png Graphic file (type png)
 <use figs/SMFermions.png>
 Package pdftex.def Info: figs/SMFermions.png  used on input line 159.
@@ -1282,21 +1282,40 @@ Overfull \hbox (3.64224pt too wide) in paragraph at lines 159--159
 [4
 
  <./figs/SMFermions.png (PNG copy)>]
-<figs/cosmic.png, id=136, 1927.2pt x 949.5475pt>
+<figs/cosmic.png, id=150, 1927.2pt x 949.5475pt>
 File: figs/cosmic.png Graphic file (type png)
 <use figs/cosmic.png>
 Package pdftex.def Info: figs/cosmic.png  used on input line 177.
 (pdftex.def)             Requested size: 227.60759pt x 113.81038pt.
  [5
 
- <./figs/cosmic.png>] [6
+ <./figs/cosmic.png>]
+Overfull \hbox (4.79938pt too wide) detected at line 201
+[][]\OML/cmm/m/it/8 ^^R[] \OT1/cmss/m/n/8 = [][] [][]
+ []
 
-] [7
+<figs/moliere.png, id=182, 1140.26pt x 512.91624pt>
+File: figs/moliere.png Graphic file (type png)
+<use figs/moliere.png>
+Package pdftex.def Info: figs/moliere.png  used on input line 201.
+(pdftex.def)             Requested size: 179.24391pt x 73.97571pt.
+
+Overfull \hbox (10.91917pt too wide) in paragraph at lines 201--201
+[][]  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--201
+
+ []
+
+[6
+
+ <./figs/moliere.png>] [7
 
 ] [8
 
-]
-[9
+] [9
 
 ] [10
 
@@ -1312,7 +1331,8 @@ Package pdftex.def Info: figs/cosmic.png  used on input line 177.
 
 ] [16
 
-] [17
+]
+[17
 
 ] [18
 
@@ -1326,8 +1346,7 @@ Package pdftex.def Info: figs/cosmic.png  used on input line 177.
 
 ] [23
 
-]
-[24
+] [24
 
 ] [25
 
@@ -1336,9 +1355,28 @@ Package pdftex.def Info: figs/cosmic.png  used on input line 177.
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 313.
+(hyperref)                removing `\translate ' on input line 339.
 
 \c@finalframe=\count172
+[27
+
+]
+<figs/BB.png, id=811, 997.7275pt x 635.37375pt>
+File: figs/BB.png Graphic file (type png)
+<use figs/BB.png>
+Package pdftex.def Info: figs/BB.png  used on input line 366.
+(pdftex.def)             Requested size: 284.52275pt x 170.71942pt.
+ [28
+
+ <./figs/BB.png>]
+<figs/wireChambers.png, id=840, 532.99126pt x 426.59375pt>
+File: figs/wireChambers.png Graphic file (type png)
+<use figs/wireChambers.png>
+Package pdftex.def Info: figs/wireChambers.png  used on input line 385.
+(pdftex.def)             Requested size: 119.49495pt x 99.58559pt.
+ [29
+
+ <./figs/wireChambers.png>]
 \tf@nav=\write6
 \openout6 = `oralDefense.nav'.
 
@@ -1348,35 +1386,36 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 \tf@snm=\write8
 \openout8 = `oralDefense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
-(./oralDefense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 320.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 390.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 390.
+ (./oralDefense.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 390.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 390.
 Package rerunfilecheck Info: File `oralDefense.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: D9694BC855D0C50CCAD6B8D6DEDF7609;41.
  ) 
 Here is how much of TeX's memory you used:
- 17704 strings out of 494880
- 332746 string characters out of 6179601
- 401323 words of memory out of 5000000
- 20558 multiletter control sequences out of 15000+600000
+ 17758 strings out of 494880
+ 333715 string characters out of 6179601
+ 402381 words of memory out of 5000000
+ 20600 multiletter control sequences out of 15000+600000
  13034 words of font info for 48 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  48i,16n,57p,805b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msam7.pfb>
-Output written on oralDefense.pdf (26 pages, 386181 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msam7.pfb>
+Output written on oralDefense.pdf (29 pages, 557139 bytes).
 PDF statistics:
- 763 PDF objects out of 1000 (max. 8388607)
- 704 compressed objects within 8 object streams
- 53 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 919 PDF objects out of 1000 (max. 8388607)
+ 849 compressed objects within 9 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 92 words of extra memory for PDF output out of 10000 (max. 10000000)
 

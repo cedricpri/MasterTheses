@@ -177,11 +177,37 @@ Comic rays are a \textbf{constant flux of high energy particles} reaching the Ea
 \end{frame}
 
 \begin{frame}{Interaction with matter}
+\justifying
+Muons interact with matter through two main processes:
+\begin{exampleblock}{} Ionization \end{exampleblock}
+\textbf{Ionization}, when  the  incident  muon gives some of its energy to the electrons of the absorber, but quite small for MIPs such as cosmic muons. \vfill
 
+\begin{exampleblock}{} Multiple scattering \end{exampleblock}
+\textbf{Multiple Coulomb scattering} inducing a \alert{stochatic deviation} whose central angular deviation can be described by a Gaussian of width $\theta_0$.
+
+\begin{minipage}[c]{.48\textwidth}
+\begin{equation*}
+\label{eq:Moliere}
+\theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x}{X_0 \beta^2} \right ) \right ]
+\end{equation*}
+
+\justifying
+This deviation depends on the number of radiation lengths $X_0$ and therefore on the medium crossed. \\
+\hspace{10pt} $\rightarrow$ Basis of the muography principle.
+\end{minipage} \hfill
+\begin{minipage}[c]{.51\textwidth}
+	\includegraphics[width=6.3cm, height=2.6cm]{figs/moliere.png}
+\end{minipage} \hfill \vfill
 \end{frame}
 
 \begin{frame}{Muon tomography}
+Instead of \textit{calculating} the deviation expected for a cosmic muon, we can \textit{measure} the positional and angular deviation suffered \textbf{to estimate the properties of the medium crossed}. \\
+\hspace{10pt} $\rightarrow$ Main idea behind the principle of \textbf{\alert{muon tomography}}, or \textbf{\alert{muography}}. \vfill
 
+This method prevents several advantages over other imaging techniques:
+\begin{itemize}
+\item Non-destructive
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Experimental setup}
@@ -312,7 +338,51 @@ Comic rays are a \textbf{constant flux of high energy particles} reaching the Ea
 \appendix
 	\backupbegin
 	
+\begin{frame}{Ionization}
+\justifying
+Ionization happens when the  incident muon gives some of its energy to the electrons of the absorber, as described by the Bethe-bloch formula. \vfill
 
+\begin{equation*}
+\label{eq:BB}
+- \Bigl \langle \frac{dE}{dx} \Bigr \rangle = K z^2 \frac{Z}{A} \frac{1}{\beta^2} \left [\frac{1}{2} \ln \left (\frac{2 m_e c^2 \beta^2 \gamma^2 W_{\text{max}}}{I^2} - \beta^2 - \frac{\delta(\beta \gamma)}{2} \right ) \right ]
+\end{equation*} \vfill
+
+The \textbf{mass stopping power} of material depends on:
+\begin{itemize}
+	\item The charge number of incident particle $z$
+	\item The atomic mass and charge of absorber $A$ and $Z$
+	\item The relativistic factors $\beta$ and $\gamma$
+	\item The maximum possible energy transfer to an electron in a single collision $W_{\text{max}}$
+	\item And the mean excitation energy $I$.
+\end{itemize} \vfill
+\end{frame}
+
+\begin{frame}{Ionization}
+\justifying
+Cosmic muons have an energy of the order of the GeV and are therefore referred to as minimum ionizing particles, so ionization is not considered in this work.
+\begin{center}
+	\includegraphics[width=10cm, height=6cm]{figs/BB.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Muon detectors}
+\justifying
+\begin{minipage}[c]{.58\textwidth}
+\justifying
+Multiwire proportional chambers use an array of high-voltage wires, placed within a chamber filled with a gas, in which an electric field is created. \\ \vspace{10pt}
+A muon crosses the detector leaves small electric charges behind, collected by the wires while leaving a signal. The combination of the signals on the different wires give us information regarding the muon.
+\end{minipage} \hfill
+\begin{minipage}[c]{.39\textwidth}
+\includegraphics[width=4.2cm, height=3.5cm]{figs/wireChambers.png}
+\end{minipage} \hfill \vfill
+
+Most important parameters of a muon detector:
+\begin{itemize}
+\item The \textbf{spatial resolution}, ideally as small as possible
+\item The \textbf{acceptance}, related to the size of the detector
+\item And the \textbf{efficiency}, which should be as high as possible to make the measurement reliable and fast.
+\end{itemize}
+\end{frame}
 
 \backupend
 
