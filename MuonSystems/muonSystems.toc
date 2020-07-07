@@ -11,12 +11,13 @@
 \contentsline {subsection}{\numberline {2.5.1}Muon detectors}{7}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Working setup}{8}{subsection.2.5.2}
 \contentsline {subsection}{\numberline {2.5.3}Data flow}{8}{subsection.2.5.3}
-\contentsline {chapter}{\numberline {3}Statistical parameters}{10}{chapter.3}
+\contentsline {chapter}{\numberline {3}Statistical basis of the algorithm}{10}{chapter.3}
 \contentsline {section}{\numberline {3.1}Probability density functions}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Monte-Carlo simulations}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Probability values}{12}{section.3.3}
-\contentsline {section}{\numberline {3.4}Kernel density estimations}{13}{section.3.4}
+\contentsline {section}{\numberline {3.2}Kernel density estimations}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Monte-Carlo simulations}{13}{section.3.3}
+\contentsline {section}{\numberline {3.4}Probability values}{13}{section.3.4}
 \contentsline {section}{\numberline {3.5}Likelihood}{14}{section.3.5}
+\newpage 
 \contentsline {chapter}{\numberline {4}The algorithm}{16}{chapter.4}
 \contentsline {section}{\numberline {4.1}PipeReconstructor}{16}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}MuonState}{16}{subsection.4.1.1}

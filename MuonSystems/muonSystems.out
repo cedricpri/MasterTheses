@@ -10,11 +10,11 @@
 \BOOKMARK [2][-]{subsection.2.5.1}{Muon detectors}{section.2.5}% 10
 \BOOKMARK [2][-]{subsection.2.5.2}{Working setup}{section.2.5}% 11
 \BOOKMARK [2][-]{subsection.2.5.3}{Data flow}{section.2.5}% 12
-\BOOKMARK [0][-]{chapter.3}{Statistical parameters}{}% 13
+\BOOKMARK [0][-]{chapter.3}{Statistical basis of the algorithm}{}% 13
 \BOOKMARK [1][-]{section.3.1}{Probability density functions}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.2}{Monte-Carlo simulations}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.3}{Probability values}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.4}{Kernel density estimations}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Kernel density estimations}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.3}{Monte-Carlo simulations}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Probability values}{chapter.3}% 17
 \BOOKMARK [1][-]{section.3.5}{Likelihood}{chapter.3}% 18
 \BOOKMARK [0][-]{chapter.4}{The algorithm}{}% 19
 \BOOKMARK [1][-]{section.4.1}{PipeReconstructor}{chapter.4}% 20
