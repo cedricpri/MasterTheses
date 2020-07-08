@@ -182,8 +182,8 @@ Comic rays are a \textbf{constant flux of high energy particles} reaching the Ea
 \justifying
 Muons interact with matter through two main processes:
 \begin{exampleblock}{} Ionization \end{exampleblock}
-\textbf{Ionization}, when  the  incident  muon gives some of its energy to the electrons of the absorber, but quite small for MIPs such as cosmic muons. \\
-\hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{absorption muography}}. \vfill
+\textbf{Ionization}, when  the  incident  muon collides and gives some of its energy to the electrons of the absorber, but quite small for MIPs such as cosmic muons. \\
+\hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{absorption muography}}, not covered here. \vfill
 
 \begin{exampleblock}{} Multiple scattering \end{exampleblock}
 \textbf{Multiple Coulomb scattering} inducing a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$.
@@ -350,26 +350,112 @@ The likelihood can be described as an hypersurface whose peak gives the optimal 
 \centering
 	\huge{\textbf{\color{mycolor} Section III}} \newline
 	\LARGE{\textbf{\color{mycolor} The algorithm \color{black}}} \vfill
-Text goes here. \vfill
+A C++/ROOT framework has been developed in order to solve this problem, relying on three main parts: a PipeReconstructor, a Generator and a Plotter, now described. \vfill
 \end{frame}
 
-\begin{frame}{MuonState}
+\begin{frame}{General idea}
+\begin{exampleblock}{} PipeReconstructor \end{exampleblock}
+General class allowing us to:
+\begin{itemize}
+\justifying
+\item Define the geometry of the problem (mainly, the detector and object position and size).
+\item Compute the intersection points between cosmic muons and this geometry
+\item Propagate these muons through the geometry using the multiple scattering
+\item Calculate the likelihood of a given measurement for a given geometry
+\item Finally, find the optimal object parameters from this likelihood.
+\end{itemize}
+To reach all these goals, several classes have been defined as described in the next slides. \vfill
 
+\begin{exampleblock}{} Generator \end{exampleblock}
+Another class allowing us to generate muons by generating Monte-Carlo simulations using some of the functions of the PipeReconstructor and without relying on Geant4. \vfill
+
+\begin{exampleblock}{} Plotter \end{exampleblock}
+Simple set of scripts used in order to plot all the results shown in the next slides. \vfill
 \end{frame}
 
-\begin{frame}{Surfaces and Volumes}
+\begin{frame}{MuonStates, surfaces and volumes}
+\justifying
+\begin{exampleblock}{} MuonStates \end{exampleblock}
+A MuonState is a class defining a muon from two 3D vectors representing its position ($x$, $y$, $z$) and direction ($v_x$, $v_y$, $v_z$), and its momentum value $p$. \\ \vspace{10pt}
+
+Two MuonStates are defined for each experiment: one measured at the top detector ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$), and one at the bottom, with the index 2. \vfill
+
+\begin{minipage}[c]{.65\textwidth}
+\begin{exampleblock}{} Surfaces and volumes \end{exampleblock}
+\justifying
+General virtual classes used to define the geometry of the problem ; in particular, the subclasses Cylinder and Pipe are mostly used in this work. 
+%The z-axis is the vertical axis, while the y-axis is defined as the cylinder axis. 
+\\ \vspace{5pt}
+%The size (1m x 1m) and position of both detectors ($z_1 = 37$cm, $z_2 = -37$cm) are defined as constants for this class.  \\ \vspace{5pt}
+A pipe is therefore defined from 7 parameters: 
+\begin{itemize}
+\item Its central position ($x$, $y$, $z$)
+\item Its inner $r$ and outer radii $R$
+\item Its constant density $\rho$
+\item And its length $L$ along the axis of the cylinder.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[c]{.33\textwidth}
+\includegraphics[width=4.5cm, height=3.2cm]{figs/cylinder.png}
+\end{minipage} \vfill
 
 \end{frame}
 
 \begin{frame}{Propagator}
+\justifying
+The propagator is the object allowing to \textbf{propagate a MuonState through a Volume}, defined as a vector of a fixed number of surfaces: \vfill
 
+\begin{minipage}[c]{.59\textwidth}
+\begin{itemize}
+\justifying
+\item First, the distances between a MuonState and all the surfaces of the Volume are computed and the first intersection point is kept
+\item We then propagate the muon 90\% of the distance to this cut point using the multiple scattering, and this process is repeated several times until being closer to 0.1mm to the first surface
+\item We then manually cross the surface by slightly propagating the MuonState
+\item This process is repeated for all the surfaces of the Volume and then one last time, until reaching the bottom detector, where the MuonState is returned.
+\end{itemize}
+\end{minipage}
+\begin{minipage}[c]{.40\textwidth}
+\includegraphics[width=4.5cm, height=3.2cm]{figs/propagation.png}
+\end{minipage} \vfill
+
+Eventual muons which do not actually cross the pipe or out of the acceptance of any of the detectors are rejected at this stage. \vfill
 \end{frame}
 
 \begin{frame}{Likelihood}
+\justifying
+The Likelihood class takes as input a Volume and a rootfile containing either data or Monte-Carlo simulations, to tell us \textbf{how likely it is that we obtained exactly these measurements for the geometry given}: \begin{itemize}
 
+\begin{minipage}[c]{.58\textwidth}
+\item First, four MuonStates are computed:
+	\begin{itemize}
+	\justifying
+	\item The IncomingMuon and OutgoingMuon, defined as the actual measurements made by the top/bottom detectors
+	\item The IcomingMuonLinearDown, defined as the linear propagation of the IncomingMuon, used as reference
+	\item And the IncomingMuonDown, by propagating the initial state with our Propagator through the Volume
+	\end{itemize}
+\end{minipage}
+\begin{minipage}[c]{.36\textwidth}
+\includegraphics[width=4.3cm, height=3.2cm]{figs/parameters.png}
+\end{minipage}
+
+\justifying
+\item This process is repeated $n_{\text{iter}}$ times for each input event, obtaining each time values for the $\Delta$x, $\Delta \theta_x$, $\Delta$y and $\Delta \theta_y$ parameters, filling 2 bi-dimensional PDFs histograms
+\item The histograms obtained are smoothen using the kernel density estimation method
+\item The actual probability to observe the actual measurement (OutgoingMuon) is computed, and summed over all the events in the file, returning the value:
+
+\begin{equation*}
+\label{eq:totallikelihood}
+\mathcal{L} = \left( \frac{1}{N} \right) \sum_{i = 1}^N -2.0 \left ( \log(\text{value}_{x, i}) + \log(\text{value}_{y, i}) \right)
+\end{equation*}
+\end{itemize} \vfill
 \end{frame}
 
-
+%\begin{frame}{Generator}
+%\justifying
+%The Generator allows us to generate Monte-Carlo experiments in a faster way than using Geant4, which is more complex, relying on a complete description of the detector. \vfill
+%
+%Information from CRY is therefore used in order to simulate thousands of incident muons, read from a rootfile previously created by MuonSystems. Each incident muon is then propagated through a given Volume using the previous functions, therefore simulating thousands of experiments. \vfill 
+%\end{frame}
 
 
 
@@ -385,24 +471,96 @@ Text goes here. \vfill
 \centering
 	\huge{\textbf{\color{mycolor} Section IV}} \newline
 	\LARGE{\textbf{\color{mycolor} Results obtained \color{black}}} \vfill
-Text goes here. \vfill
+First of all, the results obtained by our Generator whill be shown and compared to Geant4, before moving on to the actual results obtained with our algorithm. \vfill
 \end{frame}
 
 \begin{frame}{Generator validation}
+\justifying
+The Generator allows us to generate Monte-Carlo experiments in a faster way than using Geant4, which is more complex, relying on a complete description of the detector. \\ \vspace{10pt}
+The first step was then to validate our Monte-Carlo simulations by comparing measurements simulated by Geant4 and our own Generator. \vfill
+
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}Bottom X position\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/px2-17p2vs17p2.png} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$\Delta_x$ parameter\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/deltaX-17p2vs17p2.png}
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$\Delta \theta_x$ parameter\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/deltaThetaX-17p2vs17p2.png}
+\end{minipage}
 
 \end{frame}
 
 \begin{frame}{Pipes geometries}
+\justifying
+Once validated, 12 different Monte-Carlo files have been generated with our Generator with 10 to 50 thousands events each, for different pipe geometries, having an outer radius of 20cm and inner radii ranging from 16.8 to 19.0cm. \vfill
 
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=6cm, height=4.8cm]{figs/deltaX.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=6cm, height=4.8cm]{figs/deltaThetaX.png}
+\end{minipage}\hfill
+\label{fig:gemComp}
+\end{figure} \vfill
+
+It took 8 seconds to produce 50.000 events with our Generator, \textbf{two orders of magnitude faster} than a complete Geant4 simulation. \vfill
 \end{frame}
 
 \begin{frame}{Kernel density functions}
-
+\justifying
+Since the likelihood needs to be computed for every single event of the input simulation file by performing another computing extensive loop, the $n_{\text{iter}}$ parameter is kept as small as possible using the kernel density estimation method. \vfill
+\includegraphics[width=12cm, height=5.5cm]{figs/plot_kernelx.png} \vfill
 \end{frame}
 
 \begin{frame}{Likelihood curves}
+\justifying
+Finally, we estimated the value of the total likelihood obtained for different pipe geometries, characterized by different inner radii, ranging from 16.6 to 19.0cm, by steps of 0.2cm. \vfill
 
+The idea was to plot the likelihood obtained comparing one by one the generated file with the different geometries available and try to figure out which pipe geometry, in the x-axis, is more likely to give rise to the file considered. \vfill
+
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood17p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 19.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood19p0.pdf} 
+\end{minipage} \vfill
+
+We do observe the minimum exactly where it is supposed to be in those 3 cases. \vfill
 \end{frame}
+
+\begin{frame}{Likelihood curves}
+\justifying
+Finally, we also estimated the impact of the number of simulated events $N_{\text{MC}}$ and the number of likelihood computation iterations $N_{\text{iter}}$ on the likelihood curves, for the $r = 18.0$cm geometry.
+
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}100 iterations \\ 10.000 events\end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}100 iterations \\ 50.000 events\end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}250 iterations \\ 10.000 events\end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p0.pdf} 
+\end{minipage} \vfill
+
+In this case, it does seem that increasing the number of simulated events improve quite a lot the results (note that 10.000 events correspond to 1 minute of data taking only). \vfill
+\end{frame}
+
+
 
 
 
@@ -413,11 +571,30 @@ Text goes here. \vfill
 
 %Conclusions
 \begin{frame}{Conclusions}
+\justifying
+In conclusion, we developed a new framework allowing us to:
+\begin{itemize}
+\justifying
+\item Generate thousands of Monte-Carlo experiments for different pipe geometries without relying on Geant4
+\item Compute the likelihood of a given measurement with respect to different pipe geometries, in order to find a way to estimate the thickness of a steel pipe by studying the deviation of incident cosmic muons
+\item And plot all the results obtained.
+\end{itemize} \vfill
 
+With this framework, we were able to determine the thickness of such pipes with \textbf{a precision of the order of the millimiter} by considering 10.000 events, which is equivalent to 1 minute of data taking only, therefore solving the initial problem solved. \vfill
 \end{frame}
 
 \begin{frame}{Future improvements}
-
+\justifying
+This exercise is only a first approach to the problem, and many different improvements can be considered in the future to \textbf{improve and/or generalize the results obtained}. For example,
+\begin{itemize}
+\justifying
+\item We could consider more general geometries that a simple pipe, or perform the likelihood minimization with respect to additional parameters, not only the thickness of the pipe. Our framework has been designed with this idea in mind. 
+\item The analysis can be repeated using actual data collected by the detector, not only Monte-Carlo simulated experiments.
+\item We could also consider the ionization process suffered by cosmic muons when crossing the pipe to improve these results.
+\item The effect of the interaction between the detector and the cosmic muons could be considered in our Generator to make it more reliable and precise.
+\item A detailed study of the error associated to the determination of the thickness is interesting as well.
+\item Finally, we have been limited computionally in this case, taking a few hours to produce a single plot with few statistics. Accessing to computers with higher computing power will be extremely interesting to improve the results obtained.
+\end{itemize}
 \end{frame}
 
 
@@ -484,7 +661,7 @@ Most important parameters of a muon detector:
 \justifying
 \item The \textbf{spatial resolution}, ideally as small as possible
 \item The \textbf{acceptance}, related to the size of the detector
-\item And the \textbf{efficiency}, which should be as high as possible to make the measurement reliable and fast.
+\item The \textbf{efficiency}, which should be high to make the measurement reliable and fast.
 \end{itemize}
 \end{frame}
 
@@ -493,6 +670,255 @@ Most important parameters of a muon detector:
 \includegraphics[width=7.5cm, height=6cm]{figs/dataFlow.png}
 \end{center}
 \end{frame}
+
+\begin{frame}{Positional and angular deviation parameters}
+\justifying
+Main parameters used throughout this work:
+
+\begin{equation*}
+\label{eq:deviationPos}
+\begin{dcases}
+\Delta \text{x} = x_2 + d (v_{x2} - x_1)  \\
+\Delta \text{y} = y_2 + d (v_{y2} - y_1)
+\end{dcases}
+\end{equation*}
+
+\begin{equation*}
+\label{eq:deviationDir}
+\begin{dcases}
+\Delta \theta_x = \arctan \left ({\frac{v_{x2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{x1}}{v_{z1}}} \right ) \\
+\Delta \theta_y = \arctan \left ({\frac{v_{y2}}{v_{z2}}} \right ) - \arctan \left ({\frac{v_{y1}}{v_{z1}}} \right )
+\end{dcases}
+\end{equation*} \vfill
+
+Bi-dimensional histograms ($\Delta$x vs $\Delta \theta_x$ and $\Delta$y vs $\Delta \theta_y$) are filled with these values, smoothened and used for the computation of the likelihood. \vfill
+\end{frame}
+
+\begin{frame}{Generator validation}
+
+\vspace{-5pt}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}Bottom X position\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/px2-17p2vs17p2.png} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$\Delta_x$ parameter\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/deltaX-17p2vs17p2.png}
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$\Delta \theta_x$ parameter\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/deltaThetaX-17p2vs17p2.png}
+\end{minipage} \vspace{-8pt}
+
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}Bottom Y position\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/py2-17p2vs17p2.png} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$\Delta_y$ parameter\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/deltaY-17p2vs17p2.png}
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$\Delta \theta_y$ parameter\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/deltaThetaY-17p2vs17p2.png}
+\end{minipage} \vfill
+\end{frame}
+
+\begin{frame}{Pipes geometries}
+The same comparison has been performed along the Y-axis. \vfill
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=6cm, height=4.8cm]{figs/deltaY.png}
+\end{minipage}\hfill
+\begin{minipage}[b]{.49\textwidth}
+\includegraphics[width=6cm, height=4.8cm]{figs/deltaThetaY.png}
+\end{minipage}\hfill
+\label{fig:gemComp}
+\end{figure} \vfill
+\end{frame}
+
+\begin{frame}{Likelihood curves (10.000 events, 100 iterations)}
+\justifying
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 16.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood16p8.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood17p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.2$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood17p2.pdf} 
+\end{minipage}
+
+\vspace{-5pt}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.4$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood17p4.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.6$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood17p6.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood17p8.pdf} 
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Likelihood curves (10.000 events, 100 iterations)}
+\justifying
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.2$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p2.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.4$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p4.pdf} 
+\end{minipage}
+
+\vspace{-5pt}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.6$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p6.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p8.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 19.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood19p0.pdf} 
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Likelihood curves (50.000 events, 100 iterations)}
+\justifying
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 16.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood16p8.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood17p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.2$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood17p2.pdf} 
+\end{minipage}
+
+\vspace{-5pt}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.4$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood17p4.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.6$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood17p6.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood17p8.pdf} 
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Likelihood curves (50.000 events, 100 iterations)}
+\justifying
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.2$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p2.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.4$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p4.pdf} 
+\end{minipage}
+
+\vspace{-5pt}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.6$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p6.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p8.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 19.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood19p0.pdf} 
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Likelihood curves (10.000 events, 250 iterations)}
+\justifying
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 16.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood16p8.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood17p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.2$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood17p2.pdf} 
+\end{minipage}
+
+\vspace{-5pt}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.4$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood17p4.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.6$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood17p6.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 17.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood17p8.pdf} 
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Likelihood curves (10.000 events, 250 iterations)}
+\justifying
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.2$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p2.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.4$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p4.pdf} 
+\end{minipage}
+
+\vspace{-5pt}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.6$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p6.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 18.8$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p8.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$r = 19.0$cm\end{center} \end{exampleblock}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood19p0.pdf} 
+\end{minipage}
+\end{frame}
+
 
 \begin{frame}{Additional references}
 [1] "A window into the Earth’s interior", Earthquake Research Institute,2014

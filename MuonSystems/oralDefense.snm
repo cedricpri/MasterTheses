@@ -1,4 +1,9 @@
 \beamer@slide {eq:Moliere}{6}
 \beamer@slide {eq:KDF}{11}
 \beamer@slide {eq:likelihood}{13}
-\beamer@slide {eq:BB}{27}
+\beamer@slide {eq:totallikelihood}{18}
+\beamer@slide {fig:gemComp}{21}
+\beamer@slide {eq:BB}{28}
+\beamer@slide {eq:deviationPos}{32}
+\beamer@slide {eq:deviationDir}{32}
+\beamer@slide {fig:gemComp}{34}

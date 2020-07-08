@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  8 JUL 2020 12:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  8 JUL 2020 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1101,7 +1101,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemespruce.sty))
-(./oralDefense.aux)
+(./oralDefense.aux
+
+LaTeX Warning: Label `fig:gemComp' multiply defined.
+
+)
 \openout1 = `oralDefense.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
@@ -1425,62 +1429,791 @@ Overfull \hbox (2.83336pt too wide) in paragraph at lines 309--309
 
 ] [15
 
-] [16
+]
+<figs/cylinder.png, id=483, 1399.2275pt x 971.63pt>
+File: figs/cylinder.png Graphic file (type png)
+<use figs/cylinder.png>
+Package pdftex.def Info: figs/cylinder.png  used on input line 402.
+(pdftex.def)             Requested size: 128.01738pt x 91.04561pt.
 
-] [17
+Overfull \hbox (19.0996pt too wide) in paragraph at lines 402--402
+[][]  
+ []
 
-] [18
+[16
 
-] [19
+ <./figs/cylinder.png>]
+<figs/propagation.png, id=512, 1214.5375pt x 851.18pt>
+File: figs/propagation.png Graphic file (type png)
+<use figs/propagation.png>
+Package pdftex.def Info: figs/propagation.png  used on input line 422.
+(pdftex.def)             Requested size: 128.0213pt x 91.04549pt.
+ [17
 
-] [20
+ <./figs/propagation.png>]
+<figs/parameters.png, id=541, 1180.41pt x 975.645pt>
+File: figs/parameters.png Graphic file (type png)
+<use figs/parameters.png>
+Package pdftex.def Info: figs/parameters.png  used on input line 451.
+(pdftex.def)             Requested size: 122.33467pt x 91.03476pt.
 
-] [21
+Overfull \hbox (3.51573pt too wide) in paragraph at lines 451--451
+[][]  
+ []
+
+[18
+
+ <./figs/parameters.png>] [19
 
 ]
+<figs/px2-17p2vs17p2.png, id=602, 698.61pt x 473.77pt>
+File: figs/px2-17p2vs17p2.png Graphic file (type png)
+<use figs/px2-17p2vs17p2.png>
+Package pdftex.def Info: figs/px2-17p2vs17p2.png  used on input line 495.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 495--495
+[][]  
+ []
+
+<figs/deltaX-17p2vs17p2.png, id=603, 698.61pt x 473.77pt>
+File: figs/deltaX-17p2vs17p2.png Graphic file (type png)
+<use figs/deltaX-17p2vs17p2.png>
+Package pdftex.def Info: figs/deltaX-17p2vs17p2.png  used on input line 495.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 495--495
+[][]  
+ []
+
+<figs/deltaThetaX-17p2vs17p2.png, id=604, 698.61pt x 473.77pt>
+File: figs/deltaThetaX-17p2vs17p2.png Graphic file (type png)
+<use figs/deltaThetaX-17p2vs17p2.png>
+Package pdftex.def Info: figs/deltaThetaX-17p2vs17p2.png  used on input line 49
+5.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 495--495
+[][]  
+ []
+
+[20
+
+ <./figs/px2-17p2vs17p2.png> <./figs/deltaX-17p2vs17p2.png> <./figs/deltaThetaX
+-17p2vs17p2.png>]
+<figs/deltaX.png, id=633, 698.61pt x 473.77pt>
+File: figs/deltaX.png Graphic file (type png)
+<use figs/deltaX.png>
+Package pdftex.def Info: figs/deltaX.png  used on input line 513.
+(pdftex.def)             Requested size: 170.71855pt x 136.57289pt.
+
+Overfull \hbox (8.99123pt too wide) in paragraph at lines 513--513
+[][]  
+ []
+
+<figs/deltaThetaX.png, id=634, 698.61pt x 473.77pt>
+File: figs/deltaThetaX.png Graphic file (type png)
+<use figs/deltaThetaX.png>
+Package pdftex.def Info: figs/deltaThetaX.png  used on input line 513.
+(pdftex.def)             Requested size: 170.71855pt x 136.57289pt.
+
+Overfull \hbox (8.99123pt too wide) in paragraph at lines 513--513
+[][]  
+ []
+
+[21
+
+ <./figs/deltaX.png> <./figs/deltaThetaX.png>]
+<figs/plot_kernelx.png, id=664, 1601.985pt x 774.895pt>
+File: figs/plot_kernelx.png Graphic file (type png)
+<use figs/plot_kernelx.png>
+Package pdftex.def Info: figs/plot_kernelx.png  used on input line 519.
+(pdftex.def)             Requested size: 341.41342pt x 156.48972pt.
+
+Overfull \hbox (11.36134pt too wide) in paragraph at lines 519--519
+[][] 
+ []
+
 [22
 
-] [23
+ <./figs/plot_kernelx.png>]
+<figs/likelihood100HighStat/likelihood17p0.pdf, id=694, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100HighStat/likelihood17p0.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood17p0.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood17p0.pdf  used on
+ input line 541.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
 
-] [24
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 541--541
+[][]  
+ []
 
-] [25
+<figs/likelihood100HighStat/likelihood18p0.pdf, id=695, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100HighStat/likelihood18p0.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood18p0.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood18p0.pdf  used on
+ input line 541.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 541--541
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood19p0.pdf, id=696, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100HighStat/likelihood19p0.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood19p0.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood19p0.pdf  used on
+ input line 541.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 541--541
+[][]  
+ []
+
+[23
+
+ <./figs/likelihood100HighStat/likelihood17p0.pdf, page is rotated 90 degrees> 
+<./figs/likelihood100HighStat/likelihood18p0.pdf, page is rotated 90 degrees> <
+./figs/likelihood100HighStat/likelihood19p0.pdf, page is rotated 90 degrees>]
+<figs/likelihood100LowStat/likelihood18p0.pdf, id=854, 569.12625pt x 388.45125p
+t>
+File: figs/likelihood100LowStat/likelihood18p0.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood18p0.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood18p0.pdf  used on 
+input line 561.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 561--561
+[][]  
+ []
+
+File: figs/likelihood100HighStat/likelihood18p0.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood18p0.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood18p0.pdf  used on
+ input line 561.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 561--561
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood18p0.pdf, id=855, 569.12625pt x 388.45125p
+t>
+File: figs/likelihood250LowStat/likelihood18p0.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood18p0.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood18p0.pdf  used on 
+input line 561.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 561--561
+[][]  
+ []
+
+[24
+
+ <./figs/likelihood100LowStat/likelihood18p0.pdf, page is rotated 90 degrees> <
+./figs/likelihood250LowStat/likelihood18p0.pdf, page is rotated 90 degrees>] [2
+5
 
 ] [26
+
+] [27
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\translate ' on input line 442.
+(hyperref)                removing `\translate ' on input line 619.
 
 \c@finalframe=\count176
-[27
+[28
 
 ]
-<figs/BB.png, id=823, 997.7275pt x 635.37375pt>
+<figs/BB.png, id=1084, 997.7275pt x 635.37375pt>
 File: figs/BB.png Graphic file (type png)
 <use figs/BB.png>
-Package pdftex.def Info: figs/BB.png  used on input line 469.
+Package pdftex.def Info: figs/BB.png  used on input line 646.
 (pdftex.def)             Requested size: 284.52275pt x 170.71942pt.
- [28
-
- <./figs/BB.png>]
-<figs/wireChambers.png, id=853, 532.99126pt x 426.59375pt>
-File: figs/wireChambers.png Graphic file (type png)
-<use figs/wireChambers.png>
-Package pdftex.def Info: figs/wireChambers.png  used on input line 489.
-(pdftex.def)             Requested size: 119.49495pt x 99.58559pt.
  [29
 
- <./figs/wireChambers.png>]
-<figs/dataFlow.png, id=883, 987.69pt x 658.46pt>
-File: figs/dataFlow.png Graphic file (type png)
-<use figs/dataFlow.png>
-Package pdftex.def Info: figs/dataFlow.png  used on input line 495.
-(pdftex.def)             Requested size: 213.3891pt x 170.71329pt.
+ <./figs/BB.png>]
+<figs/wireChambers.png, id=1114, 532.99126pt x 426.59375pt>
+File: figs/wireChambers.png Graphic file (type png)
+<use figs/wireChambers.png>
+Package pdftex.def Info: figs/wireChambers.png  used on input line 666.
+(pdftex.def)             Requested size: 119.49495pt x 99.58559pt.
  [30
 
- <./figs/dataFlow.png>] [31
+ <./figs/wireChambers.png>]
+<figs/dataFlow.png, id=1145, 987.69pt x 658.46pt>
+File: figs/dataFlow.png Graphic file (type png)
+<use figs/dataFlow.png>
+Package pdftex.def Info: figs/dataFlow.png  used on input line 672.
+(pdftex.def)             Requested size: 213.3891pt x 170.71329pt.
+ [31
+
+ <./figs/dataFlow.png>] [32
+
+]
+File: figs/px2-17p2vs17p2.png Graphic file (type png)
+<use figs/px2-17p2vs17p2.png>
+Package pdftex.def Info: figs/px2-17p2vs17p2.png  used on input line 725.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 725--725
+[][]  
+ []
+
+File: figs/deltaX-17p2vs17p2.png Graphic file (type png)
+<use figs/deltaX-17p2vs17p2.png>
+Package pdftex.def Info: figs/deltaX-17p2vs17p2.png  used on input line 725.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 725--725
+[][]  
+ []
+
+File: figs/deltaThetaX-17p2vs17p2.png Graphic file (type png)
+<use figs/deltaThetaX-17p2vs17p2.png>
+Package pdftex.def Info: figs/deltaThetaX-17p2vs17p2.png  used on input line 72
+5.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 725--725
+[][]  
+ []
+
+<figs/py2-17p2vs17p2.png, id=1206, 698.61pt x 473.77pt>
+File: figs/py2-17p2vs17p2.png Graphic file (type png)
+<use figs/py2-17p2vs17p2.png>
+Package pdftex.def Info: figs/py2-17p2vs17p2.png  used on input line 725.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 725--725
+[][]  
+ []
+
+<figs/deltaY-17p2vs17p2.png, id=1207, 698.61pt x 473.77pt>
+File: figs/deltaY-17p2vs17p2.png Graphic file (type png)
+<use figs/deltaY-17p2vs17p2.png>
+Package pdftex.def Info: figs/deltaY-17p2vs17p2.png  used on input line 725.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 725--725
+[][]  
+ []
+
+<figs/deltaThetaY-17p2vs17p2.png, id=1208, 698.61pt x 473.77pt>
+File: figs/deltaThetaY-17p2vs17p2.png Graphic file (type png)
+<use figs/deltaThetaY-17p2vs17p2.png>
+Package pdftex.def Info: figs/deltaThetaY-17p2vs17p2.png  used on input line 72
+5.
+(pdftex.def)             Requested size: 119.49765pt x 91.04376pt.
+
+Overfull \hbox (13.87857pt too wide) in paragraph at lines 725--725
+[][]  
+ []
+
+[33
+
+ <./figs/py2-17p2vs17p2.png> <./figs/deltaY-17p2vs17p2.png> <./figs/deltaThetaY
+-17p2vs17p2.png>]
+<figs/deltaY.png, id=1237, 698.61pt x 473.77pt>
+File: figs/deltaY.png Graphic file (type png)
+<use figs/deltaY.png>
+Package pdftex.def Info: figs/deltaY.png  used on input line 740.
+(pdftex.def)             Requested size: 170.71855pt x 136.57289pt.
+
+Overfull \hbox (8.99123pt too wide) in paragraph at lines 740--740
+[][]  
+ []
+
+<figs/deltaThetaY.png, id=1238, 698.61pt x 473.77pt>
+File: figs/deltaThetaY.png Graphic file (type png)
+<use figs/deltaThetaY.png>
+Package pdftex.def Info: figs/deltaThetaY.png  used on input line 740.
+(pdftex.def)             Requested size: 170.71855pt x 136.57289pt.
+
+Overfull \hbox (8.99123pt too wide) in paragraph at lines 740--740
+[][]  
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:gemComp})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.740 \end{frame}
+                  [34
+
+ <./figs/deltaY.png> <./figs/deltaThetaY.png>]
+<figs/likelihood100LowStat/likelihood16p8.pdf, id=1268, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood16p8.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood16p8.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood16p8.pdf  used on 
+input line 770.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 770--770
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood17p0.pdf, id=1269, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood17p0.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood17p0.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood17p0.pdf  used on 
+input line 770.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 770--770
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood17p2.pdf, id=1270, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood17p2.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood17p2.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood17p2.pdf  used on 
+input line 770.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 770--770
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood17p4.pdf, id=1271, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood17p4.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood17p4.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood17p4.pdf  used on 
+input line 770.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 770--770
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood17p6.pdf, id=1272, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood17p6.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood17p6.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood17p6.pdf  used on 
+input line 770.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 770--770
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood17p8.pdf, id=1273, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood17p8.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood17p8.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood17p8.pdf  used on 
+input line 770.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 770--770
+[][]  
+ []
+
+[35
+
+ <./figs/likelihood100LowStat/likelihood16p8.pdf, page is rotated 90 degrees> <
+./figs/likelihood100LowStat/likelihood17p0.pdf, page is rotated 90 degrees> <./
+figs/likelihood100LowStat/likelihood17p2.pdf, page is rotated 90 degrees> <./fi
+gs/likelihood100LowStat/likelihood17p4.pdf, page is rotated 90 degrees> <./figs
+/likelihood100LowStat/likelihood17p6.pdf, page is rotated 90 degrees> <./figs/l
+ikelihood100LowStat/likelihood17p8.pdf, page is rotated 90 degrees>]
+File: figs/likelihood100LowStat/likelihood18p0.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood18p0.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood18p0.pdf  used on 
+input line 800.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 800--800
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood18p2.pdf, id=1561, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood18p2.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood18p2.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood18p2.pdf  used on 
+input line 800.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 800--800
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood18p4.pdf, id=1562, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood18p4.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood18p4.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood18p4.pdf  used on 
+input line 800.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 800--800
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood18p6.pdf, id=1563, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood18p6.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood18p6.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood18p6.pdf  used on 
+input line 800.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 800--800
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood18p8.pdf, id=1564, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood18p8.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood18p8.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood18p8.pdf  used on 
+input line 800.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 800--800
+[][]  
+ []
+
+<figs/likelihood100LowStat/likelihood19p0.pdf, id=1565, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood100LowStat/likelihood19p0.pdf Graphic file (type pdf)
+<use figs/likelihood100LowStat/likelihood19p0.pdf>
+Package pdftex.def Info: figs/likelihood100LowStat/likelihood19p0.pdf  used on 
+input line 800.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 800--800
+[][]  
+ []
+
+[36
+
+ <./figs/likelihood100LowStat/likelihood18p2.pdf, page is rotated 90 degrees> <
+./figs/likelihood100LowStat/likelihood18p4.pdf, page is rotated 90 degrees> <./
+figs/likelihood100LowStat/likelihood18p6.pdf, page is rotated 90 degrees> <./fi
+gs/likelihood100LowStat/likelihood18p8.pdf, page is rotated 90 degrees> <./figs
+/likelihood100LowStat/likelihood19p0.pdf, page is rotated 90 degrees>]
+<figs/likelihood100HighStat/likelihood16p8.pdf, id=1810, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood16p8.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood16p8.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood16p8.pdf  used on
+ input line 830.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 830--830
+[][]  
+ []
+
+File: figs/likelihood100HighStat/likelihood17p0.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood17p0.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood17p0.pdf  used on
+ input line 830.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 830--830
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood17p2.pdf, id=1811, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood17p2.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood17p2.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood17p2.pdf  used on
+ input line 830.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 830--830
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood17p4.pdf, id=1812, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood17p4.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood17p4.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood17p4.pdf  used on
+ input line 830.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 830--830
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood17p6.pdf, id=1813, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood17p6.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood17p6.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood17p6.pdf  used on
+ input line 830.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 830--830
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood17p8.pdf, id=1814, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood17p8.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood17p8.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood17p8.pdf  used on
+ input line 830.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 830--830
+[][]  
+ []
+
+[37
+
+ <./figs/likelihood100HighStat/likelihood16p8.pdf, page is rotated 90 degrees> 
+<./figs/likelihood100HighStat/likelihood17p2.pdf, page is rotated 90 degrees> <
+./figs/likelihood100HighStat/likelihood17p4.pdf, page is rotated 90 degrees> <.
+/figs/likelihood100HighStat/likelihood17p6.pdf, page is rotated 90 degrees> <./
+figs/likelihood100HighStat/likelihood17p8.pdf, page is rotated 90 degrees>]
+File: figs/likelihood100HighStat/likelihood18p0.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood18p0.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood18p0.pdf  used on
+ input line 860.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 860--860
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood18p2.pdf, id=2060, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood18p2.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood18p2.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood18p2.pdf  used on
+ input line 860.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 860--860
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood18p4.pdf, id=2061, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood18p4.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood18p4.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood18p4.pdf  used on
+ input line 860.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 860--860
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood18p6.pdf, id=2062, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood18p6.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood18p6.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood18p6.pdf  used on
+ input line 860.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 860--860
+[][]  
+ []
+
+<figs/likelihood100HighStat/likelihood18p8.pdf, id=2063, 569.12625pt x 388.4512
+5pt>
+File: figs/likelihood100HighStat/likelihood18p8.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood18p8.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood18p8.pdf  used on
+ input line 860.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 860--860
+[][]  
+ []
+
+File: figs/likelihood100HighStat/likelihood19p0.pdf Graphic file (type pdf)
+<use figs/likelihood100HighStat/likelihood19p0.pdf>
+Package pdftex.def Info: figs/likelihood100HighStat/likelihood19p0.pdf  used on
+ input line 860.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 860--860
+[][]  
+ []
+
+[38
+
+ <./figs/likelihood100HighStat/likelihood18p2.pdf, page is rotated 90 degrees> 
+<./figs/likelihood100HighStat/likelihood18p4.pdf, page is rotated 90 degrees> <
+./figs/likelihood100HighStat/likelihood18p6.pdf, page is rotated 90 degrees> <.
+/figs/likelihood100HighStat/likelihood18p8.pdf, page is rotated 90 degrees>]
+<figs/likelihood250LowStat/likelihood16p8.pdf, id=2265, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood16p8.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood16p8.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood16p8.pdf  used on 
+input line 890.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 890--890
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood17p0.pdf, id=2266, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood17p0.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood17p0.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood17p0.pdf  used on 
+input line 890.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 890--890
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood17p2.pdf, id=2267, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood17p2.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood17p2.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood17p2.pdf  used on 
+input line 890.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 890--890
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood17p4.pdf, id=2268, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood17p4.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood17p4.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood17p4.pdf  used on 
+input line 890.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 890--890
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood17p6.pdf, id=2269, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood17p6.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood17p6.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood17p6.pdf  used on 
+input line 890.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 890--890
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood17p8.pdf, id=2270, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood17p8.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood17p8.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood17p8.pdf  used on 
+input line 890.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 890--890
+[][]  
+ []
+
+[39
+
+ <./figs/likelihood250LowStat/likelihood16p8.pdf, page is rotated 90 degrees> <
+./figs/likelihood250LowStat/likelihood17p0.pdf, page is rotated 90 degrees> <./
+figs/likelihood250LowStat/likelihood17p2.pdf, page is rotated 90 degrees> <./fi
+gs/likelihood250LowStat/likelihood17p4.pdf, page is rotated 90 degrees> <./figs
+/likelihood250LowStat/likelihood17p6.pdf, page is rotated 90 degrees> <./figs/l
+ikelihood250LowStat/likelihood17p8.pdf, page is rotated 90 degrees>]
+File: figs/likelihood250LowStat/likelihood18p0.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood18p0.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood18p0.pdf  used on 
+input line 920.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 920--920
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood18p2.pdf, id=2559, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood18p2.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood18p2.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood18p2.pdf  used on 
+input line 920.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 920--920
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood18p4.pdf, id=2560, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood18p4.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood18p4.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood18p4.pdf  used on 
+input line 920.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 920--920
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood18p6.pdf, id=2561, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood18p6.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood18p6.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood18p6.pdf  used on 
+input line 920.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 920--920
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood18p8.pdf, id=2562, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood18p8.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood18p8.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood18p8.pdf  used on 
+input line 920.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 920--920
+[][]  
+ []
+
+<figs/likelihood250LowStat/likelihood19p0.pdf, id=2563, 569.12625pt x 388.45125
+pt>
+File: figs/likelihood250LowStat/likelihood19p0.pdf Graphic file (type pdf)
+<use figs/likelihood250LowStat/likelihood19p0.pdf>
+Package pdftex.def Info: figs/likelihood250LowStat/likelihood19p0.pdf  used on 
+input line 920.
+(pdftex.def)             Requested size: 119.50267pt x 91.04895pt.
+
+Overfull \hbox (13.88359pt too wide) in paragraph at lines 920--920
+[][]  
+ []
+
+[40
+
+ <./figs/likelihood250LowStat/likelihood18p2.pdf, page is rotated 90 degrees> <
+./figs/likelihood250LowStat/likelihood18p4.pdf, page is rotated 90 degrees> <./
+figs/likelihood250LowStat/likelihood18p6.pdf, page is rotated 90 degrees> <./fi
+gs/likelihood250LowStat/likelihood18p8.pdf, page is rotated 90 degrees> <./figs
+/likelihood250LowStat/likelihood19p0.pdf, page is rotated 90 degrees>]
+[41
 
 ]
 \tf@nav=\write6
@@ -1492,38 +2225,43 @@ Package pdftex.def Info: figs/dataFlow.png  used on input line 495.
 \tf@snm=\write8
 \openout8 = `oralDefense.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 504.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 504.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 930.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 930.
  (./oralDefense.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 504.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 504.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 930.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 930.
 Package rerunfilecheck Info: File `oralDefense.out' has not changed.
 (rerunfilecheck)             Checksum: D9694BC855D0C50CCAD6B8D6DEDF7609;41.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 18427 strings out of 494880
- 344928 string characters out of 6179601
- 416959 words of memory out of 5000000
- 21231 multiletter control sequences out of 15000+600000
+ 18704 strings out of 494880
+ 355458 string characters out of 6179601
+ 430688 words of memory out of 5000000
+ 21455 multiletter control sequences out of 15000+600000
  16719 words of font info for 60 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  48i,16n,57p,805b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/symbols/msam7.pfb>
-Output written on oralDefense.pdf (31 pages, 878326 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msam7.pfb>
+Output written on oralDefense.pdf (41 pages, 1689809 bytes).
 PDF statistics:
- 998 PDF objects out of 1000 (max. 8388607)
- 913 compressed objects within 10 object streams
- 68 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2901 PDF objects out of 2984 (max. 8388607)
+ 1846 compressed objects within 19 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 
