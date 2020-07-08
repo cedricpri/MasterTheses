@@ -399,7 +399,7 @@ f(x) = \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{1}{2} \left (\frac{x - \mu}{\sigm
 
 These definitions are important because we already know that the multiple scattering process which affects the incident cosmic muons is a stochastic process: this means that two muons having similar incident kinematics can leave the detector with very different output positions and directions, whose actual distribution can be approximated by a Gaussian function for small enough deviation angles (at larger angles, the distribution is behaving like Rutherford scattering, with slightly larger tails), according to the multiple scattering theory. 
 
-The probability density function is an important concept in this work since the multiple scattering process of muons is given by a bi-dimensional Gaussian distribution whose covariance depends on the geometrical parameters of the eventual object put between the two detectors, as shown in Figure~\ref{fig:deviation}. This means that, in first approximation, the thicker the object investigated is, the higher the expected deviation will be and this simple observation will actually be used as the driving process of the statistical study performed in this work.
+The probability density function is an important concept in this work since the multiple scattering process of muons is given by a bi-dimensional Gaussian distribution whose covariance depends on the geometrical parameters of the eventual object put between the two detectors, as shown in Figure~\ref{fig:deviation}. This means that, in first approximation, the thicker and denser the object investigated is, the higher the expected deviation will be and this simple observation will actually be used as the driving process of the statistical study performed in this work.
 
 \begin{figure}[htbp]
 \centering
@@ -440,11 +440,11 @@ A comparison of the different methods so far and different possible is shown in 
 \label{fig:KGR}
 \end{figure}
 
-In summary, this method is used in order to model the distribution of an arbitrary input dataset as a superposition of Gaussian kernels, one for each data point, each contributing 1/N to the total integral of the PDF. This method allows us to construct continuous functions and recover for the eventual low statistics and possible holes in the bi-dimensional histograms for the position and direction of the muons obtained in $x$ and $y$, following the method that will be described in Chapter~\ref{chapter:algorithm}.
+In summary, this method is used in order to model the distribution of an arbitrary input dataset as a superposition of Gaussian kernels, one for each data point, each contributing 1/N to the total integral of the PDF. This method allows us to construct continuous functions and recover for the eventual low statistics and possible gaps in the bi-dimensional histograms for the position and direction of the muons obtained in $x$ and $y$, following the method that will be described in Chapter~\ref{chapter:algorithm}.
 
 \section{Monte-Carlo simulations} \label{sec:MC}
 
-Monte-Carlo simulations are algorithms developed in order to compute approximate numerical values to stochastic problems using random processes and advanced probabilistic techniques. In this particular case, such computation methods apply extremely well since, by being a stochastic process, the actual probability density function associated to a given geometry cannot be computed analytically (and if we were able to do it, a simple gradient descent method would be enough to solve this problem and find the optimal parameters \{$\theta_i$\} of the object). 
+Monte-Carlo simulations are generated from algorithms developed in order to compute approximate numerical values to stochastic problems using random processes and advanced probabilistic techniques. In this particular case, such computation methods apply extremely well since, by being a stochastic process, the actual probability density function associated to a given geometry cannot be computed analytically (and if we were able to do it, a simple gradient descent method would be enough to solve this problem and find the optimal parameters \{$\theta_i$\} of the object). 
 
 The only way available to actually estimate these parameters is by using thousands of Monte-Carlo simulated toys, simulating thousands of different incident muons for different geometries. The principle is simple: for each incident muon measured, a large number $N_{\text{MC}}$ of Monte-Carlo simulations will be performed, propagating the muon using an algorithm described in Chapter~\ref{chapter:algorithm} until reaching the lower detector. Repeating this experiment over and over again always gives different results, giving us the opportunity to build the expected PDF for a given object geometry and for the incident muon that has been measured and that will be used later on.
 
@@ -494,10 +494,10 @@ For each value of $p_H$, the value of the likelihood can then be computed and ul
 \begin{figure}[htbp]
 \centering
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=7.8cm, height=5.4cm]{figs/likelihood.png}
+\includegraphics[width=7.8cm, height=6.8cm]{figs/likelihood.png}
 \end{minipage}\hfill
 \begin{minipage}[b]{.49\textwidth}
-\includegraphics[width=7.8cm, height=5.4cm]{figs/loglikelihood.png}
+\includegraphics[width=7.8cm, height=6.8cm]{figs/loglikelihood.png}
 \end{minipage} \hfill
 \caption{Likelihood (on the left) and log-likelihood (on the right) obtained for our particular example of the fairness of a coin given the observation $HHT$.}
 \label{fig:likelihoodEx}
@@ -976,7 +976,7 @@ The idea is in this sense to compute the value of the likelihood obtained for ea
 \includegraphics[width=6cm, height=4.6cm]{figs/likelihood100HighStat/likelihood18p8.pdf}
 \end{minipage} \hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/placeholder.png}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood100HighStat/likelihood19p0.pdf}
 \end{minipage} \hfill
 \caption{Likelihood curves obtained by considering different pipe geometries, ranging from 16.8 (on the top left) to 19.0cm of inner radius (on the bottom right), obtained for 100 iterations and 50.000 simulated Monte-Carlo events.}
 \label{fig:likelihoods2}
@@ -995,33 +995,33 @@ The idea is in this sense to compute the value of the likelihood obtained for ea
 \end{minipage} \hfill \vspace{10pt}
 
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood17p6.pdf}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood17p4.pdf}
 \end{minipage}\hfill
+\begin{minipage}[b]{.32\textwidth}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood17p6.pdf}
+\end{minipage} \hfill
 \begin{minipage}[b]{.32\textwidth}
 \includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood17p8.pdf}
-\end{minipage} \hfill
-\begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/placeholder.png}
 \end{minipage} \hfill \vspace{10pt}
 
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/placeholder.png}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood18p0.pdf}
 \end{minipage}\hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/placeholder.png}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood18p2.pdf}
 \end{minipage} \hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/placeholder.png}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood18p4.pdf}
 \end{minipage} \hfill \vspace{10pt}
 
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/placeholder.png}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood18p6.pdf}
 \end{minipage}\hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/placeholder.png}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood18p8.pdf}
 \end{minipage} \hfill
 \begin{minipage}[b]{.32\textwidth}
-\includegraphics[width=6cm, height=4.6cm]{figs/placeholder.png}
+\includegraphics[width=6cm, height=4.6cm]{figs/likelihood250LowStat/likelihood19p0.pdf}
 \end{minipage} \hfill
 \caption{Likelihood curves obtained by considering different pipe geometries, ranging from 16.8 (on the top left) to 19.0cm of inner radius (on the bottom right), obtained for 250 computations iterations and 10.000 simulated Monte-Carlo events.}
 \label{fig:likelihoods3}

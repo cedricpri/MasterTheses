@@ -8,6 +8,8 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{color}
+\usepackage{bm}
+\usepackage{mathtools}
 \definecolor{mygray}{gray}{0.7}
 
 \usetheme{EastLansing}
@@ -180,10 +182,11 @@ Comic rays are a \textbf{constant flux of high energy particles} reaching the Ea
 \justifying
 Muons interact with matter through two main processes:
 \begin{exampleblock}{} Ionization \end{exampleblock}
-\textbf{Ionization}, when  the  incident  muon gives some of its energy to the electrons of the absorber, but quite small for MIPs such as cosmic muons. \vfill
+\textbf{Ionization}, when  the  incident  muon gives some of its energy to the electrons of the absorber, but quite small for MIPs such as cosmic muons. \\
+\hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{absorption muography}}. \vfill
 
 \begin{exampleblock}{} Multiple scattering \end{exampleblock}
-\textbf{Multiple Coulomb scattering} inducing a \alert{stochatic deviation} whose central angular deviation can be described by a Gaussian of width $\theta_0$.
+\textbf{Multiple Coulomb scattering} inducing a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$.
 
 \begin{minipage}[c]{.48\textwidth}
 \begin{equation*}
@@ -193,7 +196,7 @@ Muons interact with matter through two main processes:
 
 \justifying
 This deviation depends on the number of radiation lengths $X_0$ and therefore on the medium crossed. \\
-\hspace{10pt} $\rightarrow$ Basis of the muography principle.
+\hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{scattering muography}}.
 \end{minipage} \hfill
 \begin{minipage}[c]{.51\textwidth}
 	\includegraphics[width=6.3cm, height=2.6cm]{figs/moliere.png}
@@ -204,14 +207,43 @@ This deviation depends on the number of radiation lengths $X_0$ and therefore on
 Instead of \textit{calculating} the deviation expected for a cosmic muon, we can \textit{measure} the positional and angular deviation suffered \textbf{to estimate the properties of the medium crossed}. \\
 \hspace{10pt} $\rightarrow$ Main idea behind the principle of \textbf{\alert{muon tomography}}, or \textbf{\alert{muography}}. \vfill
 
+
+\begin{minipage}[c]{.49\textwidth}
+\justifying
 This method prevents several advantages over other imaging techniques:
 \begin{itemize}
-\item Non-destructive
-\end{itemize}
+\justifying
+\item Non-destructive technique
+\item High penetrating capabilities allowing to probe large and dense objects
+\item Completely safe, by using natural cosmic rays for the measurement.
+\end{itemize} \vspace{10pt}
+
+	Muography can be used in many different fields, for example to find hidden rooms in Pyramids or in volcanology to know whether a pocket is empty or full of lava [1].
+\end{minipage} \hfill
+\begin{minipage}[c]{.49\textwidth}
+	\begin{center}
+	\includegraphics[width=6cm, height=4cm]{figs/volcano.jpg}
+	\end{center}
+\end{minipage} \hfill \vfill
 \end{frame}
 
 \begin{frame}{Experimental setup}
+\begin{minipage}[c]{.50\textwidth}
+\includegraphics[width=5.5cm, height=3.7cm]{figs/muonChambers.png}
+\end{minipage} \hfill
+\begin{minipage}[c]{.49\textwidth}
+\justifying
+Quite simple experimental setup:
+\begin{itemize}
+\justifying
+\item Two $1m^2$ detectors placed below and above the object under investigation
+\item Two chambers in each detector, to measure the position and direction of muons along the x and y axes
+\item Each chamber is filled with a mixture of Argon and CO$_2$
+\item More than 200 wires separated by 4mm make up each chamber
+\end{itemize}
+\end{minipage} \hfill  \vfill
 
+The data is collected from a USB stick and goes through a complete \textbf{\alert{reconstruction process}} before being available in a rootfile. \vfill
 \end{frame}
 
 
@@ -222,24 +254,88 @@ This method prevents several advantages over other imaging techniques:
 
 
 %Statistical basis
-\begin{frame}{Statistical basis}
-
+\begin{frame}{}
+\centering
+	\huge{\textbf{\color{mycolor} Section II}} \newline
+	\LARGE{\textbf{\color{mycolor} Statistical basis \color{black}}} \vfill
+The algorithm developed heavily relies on several important statistical concepts that we can now define. \vfill
 \end{frame}
 
 \begin{frame}{Probability density functions}
 
+\begin{minipage}[c]{.50\textwidth}
+\justifying
+PDFs are mathematical expressions defining probability distributions \textbf{which represent the likelihood of any given outcome}. \\ \vspace{10pt}
+The area below the PDF in an interval can be interpreted as the value of the probability of a random variable occurring. 
+\end{minipage}
+\begin{minipage}[c]{.50\textwidth}
+\begin{center}
+\includegraphics[width=5cm, height=2.2cm]{figs/PDF.png}
+\end{center}
+\end{minipage} \vfill
+
+\begin{minipage}[c]{.50\textwidth}
+\includegraphics[width=6cm, height=3.5cm]{figs/pdfs.png}
+\end{minipage}
+\begin{minipage}[c]{.50\textwidth}
+\justifying
+The multiple scattering is a stochastic process, making PDFs extremely important. \\ \vspace{10pt} \hspace{10pt} $\rightarrow$ A thicker and denser object results in a higher expected deviation and a larger standard deviation $\sigma$ of the Gaussian PDF. 
+\end{minipage}
 \end{frame}
 
 \begin{frame}{Kernel density estimation}
+This method allows us to estimate the shape of an unknown PDF $f$ of a random variable $X$ from a set of $N$ observations.
+
+\begin{minipage}[c]{.50\textwidth}
+\includegraphics[width=5.8cm, height=5cm]{figs/kernels.png}
+\end{minipage}
+\begin{minipage}[c]{.50\textwidth}
+\justifying
+The usual way to proceed is to simply put the observations in an histogram, but this results in a non continous function with possible gaps. \\ \vspace{10pt}
+We then define $\hat{f}_h(x)$, an estimator of $f$ defined as the sum of continous functions instead.
+
+\begin{equation*}
+\label{eq:KDF}
+\hat{f}_h(x) = \frac{1}{Nh} \sum_{i=1}^{N} K \left (\frac{x-x_i}{h} \right )
+\end{equation*}
+\end{minipage}
+
+Two important parameters
+\begin{itemize}
+\item The \textbf{\alert{kernel}} $K$, chosen as Gaussian functions in this case
+\item And the \textbf{\alert{bandwidth}} $h$, a smoothing parameter.
+\end{itemize} \vfill
 
 \end{frame}
 
 \begin{frame}{Monte-Carlo simulations}
+\justifying
+Monte-Carlo simulations are obtained from algorithms developed to \textbf{compute approximate numerical values to stochastic problems} using random processes and probabilistic techniques. \vfill
 
+Instead of relying on actual data collected from the experiment, we can:
+\begin{itemize}
+\justifying
+\item Use CRY, a cosmic ray generator to simulate thousands of incident muons
+\item Make these muons go through a complete simulation of the detector done with Geant4
+\item Go through the same post-processing process as actual data, \textbf{simulating thousands of experiments} without the need to perform them
+\item Build the PDF for a given experiment from these simulations
+\end{itemize} \vfill
+
+Simulating an experiment is cheaper and faster than running it and allows to compare results obtained from both channels. In this work, the dependance on Geant4 will be removed as well, to make this process even faster. \vfill
 \end{frame}
 
 \begin{frame}{Maximum likelihood estimation}
+\justifying
+We have a way to simulate experiments, but we still need a method allowing us to reverse this process in order to \textbf{reverse this process and estimate the geometry of the object from a given measurement}. \vfill
 
+The likelihood measures the goodness of a fit with respect to a sample of data for one or several unknown parameters. If $\bm \theta$ are the parameters of the model and $x$ is the measurement of a random variable $X$ defined from a PDF $f$, then:
+\begin{equation*}
+\label{eq:likelihood}
+\mathcal{L}(\bm \theta | x) = f_{\bm \theta}(x) = P(X = x | \bm \theta)
+\end{equation*} \vfill
+
+The likelihood can be described as an hypersurface whose peak gives the optimal set of parameters maximizing the probability of drawing the actual sample measured. \\ \vspace{5pt}
+\hspace{10pt} $\rightarrow$ The objective is then to \textbf{find the set of parameters minimizing the log-likelihood} $l(\bm \theta | x) = -2 \log(\mathcal{L}(\bm \theta | x))$. In this work, the parameter to be optimized will be the thickness of a steel pipe placed between the detectors. \vfill
 \end{frame}
 
 
@@ -250,8 +346,11 @@ This method prevents several advantages over other imaging techniques:
 
 
 %The algorithm
-\begin{frame}{General idea}
-
+\begin{frame}{}
+\centering
+	\huge{\textbf{\color{mycolor} Section III}} \newline
+	\LARGE{\textbf{\color{mycolor} The algorithm \color{black}}} \vfill
+Text goes here. \vfill
 \end{frame}
 
 \begin{frame}{MuonState}
@@ -259,10 +358,6 @@ This method prevents several advantages over other imaging techniques:
 \end{frame}
 
 \begin{frame}{Surfaces and Volumes}
-
-\end{frame}
-
-\begin{frame}{Cylinders and pipes}
 
 \end{frame}
 
@@ -284,7 +379,15 @@ This method prevents several advantages over other imaging techniques:
 
 
 
+
 %Results obtained
+\begin{frame}{}
+\centering
+	\huge{\textbf{\color{mycolor} Section IV}} \newline
+	\LARGE{\textbf{\color{mycolor} Results obtained \color{black}}} \vfill
+Text goes here. \vfill
+\end{frame}
+
 \begin{frame}{Generator validation}
 
 \end{frame}
@@ -309,7 +412,7 @@ This method prevents several advantages over other imaging techniques:
 
 
 %Conclusions
-\begin{frame}{Conclusion}
+\begin{frame}{Conclusions}
 
 \end{frame}
 
@@ -378,10 +481,21 @@ A muon crosses the detector leaves small electric charges behind, collected by t
 
 Most important parameters of a muon detector:
 \begin{itemize}
+\justifying
 \item The \textbf{spatial resolution}, ideally as small as possible
 \item The \textbf{acceptance}, related to the size of the detector
 \item And the \textbf{efficiency}, which should be as high as possible to make the measurement reliable and fast.
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Data flow}
+\begin{center}
+\includegraphics[width=7.5cm, height=6cm]{figs/dataFlow.png}
+\end{center}
+\end{frame}
+
+\begin{frame}{Additional references}
+[1] "A window into the Earth’s interior", Earthquake Research Institute,2014
 \end{frame}
 
 \backupend
