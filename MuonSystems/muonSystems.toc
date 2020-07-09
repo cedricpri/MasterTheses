@@ -1,38 +1,38 @@
 \babel@toc {english}{}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Muons and muography}{2}{chapter.2}
-\contentsline {section}{\numberline {2.1}Particle physics and muons}{2}{section.2.1}
-\contentsline {section}{\numberline {2.2}Cosmic rays}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Muons interaction with matter}{4}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Ionization process}{4}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Multiple scattering process}{5}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Muon tomography}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}Experimental setup}{7}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Muon detectors}{7}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Working setup}{8}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Data flow}{8}{subsection.2.5.3}
-\contentsline {chapter}{\numberline {3}Statistical basis of the algorithm}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Probability density functions}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Kernel density estimations}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Monte-Carlo simulations}{13}{section.3.3}
-\contentsline {section}{\numberline {3.4}Probability values}{13}{section.3.4}
-\contentsline {section}{\numberline {3.5}Likelihood}{14}{section.3.5}
+\contentsline {chapter}{\numberline {2}Muons and muography}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Particle physics and muons}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Cosmic rays}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Muons interaction with matter}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Ionization process}{5}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Multiple scattering process}{6}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Muon tomography}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Experimental setup}{8}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Muon detectors}{8}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Working setup}{9}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Data flow}{9}{subsection.2.5.3}
+\contentsline {chapter}{\numberline {3}Statistical basis of the algorithm}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Probability density functions}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Kernel density estimations}{12}{section.3.2}
+\contentsline {section}{\numberline {3.3}Monte-Carlo simulations}{14}{section.3.3}
+\contentsline {section}{\numberline {3.4}Probability values}{14}{section.3.4}
+\contentsline {section}{\numberline {3.5}Likelihood}{15}{section.3.5}
 \newpage 
-\contentsline {chapter}{\numberline {4}The algorithm}{16}{chapter.4}
-\contentsline {section}{\numberline {4.1}PipeReconstructor}{16}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}MuonState}{16}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Surfaces and volumes}{17}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Cylinders and pipes}{17}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Propagator}{18}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Likelihood}{19}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}Generator}{20}{section.4.2}
-\contentsline {section}{\numberline {4.3}Plotter}{21}{section.4.3}
-\contentsline {chapter}{\numberline {5}Results obtained}{22}{chapter.5}
-\contentsline {section}{\numberline {5.1}Generator validation}{22}{section.5.1}
+\contentsline {chapter}{\numberline {4}Algorithm implementation}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}PipeReconstructor}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}MuonState}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Surfaces and volumes}{18}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Cylinders and pipes}{18}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Propagator}{19}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Likelihood}{20}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Generator}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Plotter}{22}{section.4.3}
+\contentsline {chapter}{\numberline {5}Results obtained}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Generator validation}{23}{section.5.1}
 \contentsline {section}{\numberline {5.2}General results}{24}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Pipe geometries impact}{24}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Kernel density functions}{25}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Likelihoods}{25}{subsection.5.2.3}
-\contentsline {chapter}{\numberline {6}Conclusions}{30}{chapter.6}
-\contentsline {section}{\numberline {6.1}Suggested improvements}{30}{section.6.1}
-\contentsline {chapter}{Bibliography}{31}{section.6.1}
+\contentsline {subsection}{\numberline {5.2.2}Kernel density functions}{24}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Likelihood curves}{24}{subsection.5.2.3}
+\contentsline {chapter}{\numberline {6}Conclusions}{33}{chapter.6}
+\contentsline {section}{\numberline {6.1}Suggested improvements}{33}{section.6.1}
+\contentsline {chapter}{Bibliography}{34}{section.6.1}

@@ -16,7 +16,7 @@
 \BOOKMARK [1][-]{section.3.3}{Monte-Carlo simulations}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.4}{Probability values}{chapter.3}% 17
 \BOOKMARK [1][-]{section.3.5}{Likelihood}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{The algorithm}{}% 19
+\BOOKMARK [0][-]{chapter.4}{Algorithm implementation}{}% 19
 \BOOKMARK [1][-]{section.4.1}{PipeReconstructor}{chapter.4}% 20
 \BOOKMARK [2][-]{subsection.4.1.1}{MuonState}{section.4.1}% 21
 \BOOKMARK [2][-]{subsection.4.1.2}{Surfaces and volumes}{section.4.1}% 22
@@ -30,7 +30,7 @@
 \BOOKMARK [1][-]{section.5.2}{General results}{chapter.5}% 30
 \BOOKMARK [2][-]{subsection.5.2.1}{Pipe geometries impact}{section.5.2}% 31
 \BOOKMARK [2][-]{subsection.5.2.2}{Kernel density functions}{section.5.2}% 32
-\BOOKMARK [2][-]{subsection.5.2.3}{Likelihoods}{section.5.2}% 33
+\BOOKMARK [2][-]{subsection.5.2.3}{Likelihood curves}{section.5.2}% 33
 \BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 34
 \BOOKMARK [1][-]{section.6.1}{Suggested improvements}{chapter.6}% 35
 \BOOKMARK [0][-]{section.6.1}{Bibliography}{}% 36

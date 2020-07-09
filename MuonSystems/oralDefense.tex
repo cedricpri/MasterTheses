@@ -11,6 +11,7 @@
 \usepackage{bm}
 \usepackage{mathtools}
 \definecolor{mygray}{gray}{0.7}
+\renewcommand*{\arraystretch}{1.5}
 
 \usetheme{EastLansing}
 %\usetheme{Pittsburgh}
@@ -77,8 +78,8 @@
 
 \begin{frame}
 \vspace{-15pt} 
-\title{Statistical approach to muography as a non-destructive \\ testing technique for industry problem solving}
-\author{C\'{e}dric Prie\"els \\ \vspace{10pt} \textbf{Director} - Pablo Mart\'inez Ru\'iz del \'Arbol \newline \textbf{Co-director} - Carlos D\'iez \\ \vspace{20pt} \includegraphics[width= 0.15\textwidth]{figs/image_UC.png} \hspace{10pt} \includegraphics[width= 0.16\textwidth]{figs/muonSystems.png} \newline \vspace{20pt} Universidad de Cantabria \newline Muons systems \newline  \begin{center} \large{\textbf{July 17th 2020}} \end{center}}
+\title{Development of a statistical analysis framework \\ in the context of Muography applied to the industry}
+\author{C\'{e}dric Prie\"els \\ \vspace{10pt} \textbf{Director} - Pablo Mart\'inez Ru\'iz del \'Arbol \newline \textbf{Co-director} - Carlos D\'iez \\ \vspace{20pt} \includegraphics[width= 0.15\textwidth]{figs/image_UC.png} \hspace{10pt} \includegraphics[width= 0.16\textwidth]{figs/muonSystems.png} \newline \vspace{20pt} Universidad de Cantabria \newline Muon systems \newline  \begin{center} \large{\textbf{July 17th 2020}} \end{center}}
 
 \date{}
 \vspace{15pt}
@@ -92,8 +93,11 @@
 \begin{frame}{Outline}
 
 	\begin{itemize}
-		\item Introduction \vfill
-		\item Muons and muography \vfill
+		\item Introduction
+		\begin{itemize}
+			\item Muons, cosmic rays and and muography
+			\item Experimental setup
+		\end{itemize} \vfill
 		\item Statistical basis of the algorithm
 		\begin{itemize}
 			\item Probability density functions
@@ -101,8 +105,16 @@
 			\item Monte-Carlo simulations
 			\item Likelihood minimization
 		\end{itemize} \vfill
-		\item The algorithm \vfill
-		\item Results obtained \vfill
+		\item Algorithm implementation
+		\begin{itemize}
+			\item PipeReconstructor, Generator, Plotter
+		\end{itemize} \vfill
+		\item Results obtained
+		\begin{itemize}
+			\item Generator validation
+			\item Pipes geometries
+			\item Likelihood curves
+		\end{itemize} \vfill
 		\item Conclusions \vfill
 	\end{itemize}
 
@@ -119,7 +131,7 @@
 	\huge{\textbf{\color{mycolor} Section I}} \newline
 	\LARGE{\textbf{\color{mycolor} General introduction \color{black}}} \vfill
 	
-	\LARGE{\textbf{\color{black} Main goal of this work \color{black}}}\newline \vspace{10pt} Develop a new framework allowing to perform a muography experiment to characterize the inner properties of physical objects using data science and advanced statistical models. \vfill
+	\LARGE{\textbf{\color{black} \color{black}}}\newline \vspace{10pt} \Large{Develop a new framework allowing to perform a muography experiment to characterize the inner properties of physical objects using data science and advanced statistical models.} \vfill
 \end{frame}
 
 
@@ -168,7 +180,7 @@ Comic rays are a \textbf{constant flux of high energy particles} reaching the Ea
 	\justifying
 	\item Mostly made out of protons and atomic nuclei
 	\item Trigger a decay chain by interacting with the atmosphere, producing muons
-	\item Muons are not stable ($\tau \simeq 2.2\mu$s) but relativity can make them live long enough to reach the ground $\rightarrow$ 10.000 cosmic muons are observed per $m^2$ and per minute at sea level.
+	\item Muons are not stable ($\tau \simeq 2.2\mu$s) but relativity makes them live long enough to reach the ground $\rightarrow$ 10.000 cosmic muons are observed per $m^2$ and per minute at sea level.
 \end{itemize} \vfill
 
 \begin{minipage}[c]{.98\textwidth}
@@ -178,15 +190,15 @@ Comic rays are a \textbf{constant flux of high energy particles} reaching the Ea
 \end{minipage} \hfill \vfill
 \end{frame}
 
-\begin{frame}{Interaction with matter}
+\begin{frame}{Muons interactions with matter}
 \justifying
-Muons interact with matter through two main processes:
+%Muons interact with matter through two main processes:
 \begin{exampleblock}{} Ionization \end{exampleblock}
-\textbf{Ionization}, when  the  incident  muon collides and gives some of its energy to the electrons of the absorber, but quite small for MIPs such as cosmic muons. \\
+When  the  incident  muon collides and gives some of its energy to the electrons of the absorber, but quite small for MIPs such as cosmic muons. \\
 \hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{absorption muography}}, not covered here. \vfill
 
-\begin{exampleblock}{} Multiple scattering \end{exampleblock}
-\textbf{Multiple Coulomb scattering} inducing a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$.
+\begin{exampleblock}{} Multiple Coulomb scattering \end{exampleblock}
+Inducing a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$ under our experimental conditions.
 
 \begin{minipage}[c]{.48\textwidth}
 \begin{equation*}
@@ -195,7 +207,7 @@ Muons interact with matter through two main processes:
 \end{equation*}
 
 \justifying
-This deviation depends on the number of radiation lengths $X_0$ and therefore on the medium crossed. \\
+Deviation depends on the number of radiation lengths $X_0$ and on the medium crossed. \\
 \hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{scattering muography}}.
 \end{minipage} \hfill
 \begin{minipage}[c]{.51\textwidth}
@@ -204,13 +216,10 @@ This deviation depends on the number of radiation lengths $X_0$ and therefore on
 \end{frame}
 
 \begin{frame}{Muon tomography}
-Instead of \textit{calculating} the deviation expected for a cosmic muon, we can \textit{measure} the positional and angular deviation suffered \textbf{to estimate the properties of the medium crossed}. \\
-\hspace{10pt} $\rightarrow$ Main idea behind the principle of \textbf{\alert{muon tomography}}, or \textbf{\alert{muography}}. \vfill
+Instead of \textit{calculating} the deviation expected for a cosmic muon, we can \textit{measure} the positional and angular deviation suffered \textbf{to estimate the properties of the medium crossed}. \vfill
+% \\ \hspace{10pt} $\rightarrow$ Main idea behind the principle of \textbf{\alert{muon tomography}}, or \textbf{\alert{muography}}. \vfill
 
-
-\begin{minipage}[c]{.49\textwidth}
-\justifying
-This method prevents several advantages over other imaging techniques:
+Several advantages over other imaging techniques:
 \begin{itemize}
 \justifying
 \item Non-destructive technique
@@ -218,11 +227,21 @@ This method prevents several advantages over other imaging techniques:
 \item Completely safe, by using natural cosmic rays for the measurement.
 \end{itemize} \vspace{10pt}
 
-	Muography can be used in many different fields, for example to find hidden rooms in Pyramids or in volcanology to know whether a pocket is empty or full of lava [1].
+\begin{minipage}[c]{.54\textwidth}
+\justifying
+
+	Muography can be used in many different fields:
+\begin{itemize}
+	\justifying
+	\item Find hidden rooms in Pyramids
+	\item In volcanology, to know whether a pocket is empty or full of lava [1]
+	\item Nuclear waste/facilities inspection
+\end{itemize}	
+	
 \end{minipage} \hfill
-\begin{minipage}[c]{.49\textwidth}
+\begin{minipage}[c]{.44\textwidth}
 	\begin{center}
-	\includegraphics[width=6cm, height=4cm]{figs/volcano.jpg}
+	\includegraphics[width=5cm, height=3.5cm]{figs/volcano.jpg}
 	\end{center}
 \end{minipage} \hfill \vfill
 \end{frame}
@@ -243,7 +262,7 @@ Quite simple experimental setup:
 \end{itemize}
 \end{minipage} \hfill  \vfill
 
-The data is collected from a USB stick and goes through a complete \textbf{\alert{reconstruction process}} before being available in a rootfile. \vfill
+The data is collected from a USB stick and goes through a complete \textbf{\alert{reconstruction process}} before being available in a rootfile, as detailed in the backup. \vfill
 \end{frame}
 
 
@@ -258,7 +277,7 @@ The data is collected from a USB stick and goes through a complete \textbf{\aler
 \centering
 	\huge{\textbf{\color{mycolor} Section II}} \newline
 	\LARGE{\textbf{\color{mycolor} Statistical basis \color{black}}} \vfill
-The algorithm developed heavily relies on several important statistical concepts that we can now define. \vfill
+\Large{The algorithm developed heavily relies on several important statistical concepts that we can now define.} \vfill
 \end{frame}
 
 \begin{frame}{Probability density functions}
@@ -279,7 +298,10 @@ The area below the PDF in an interval can be interpreted as the value of the pro
 \end{minipage}
 \begin{minipage}[c]{.50\textwidth}
 \justifying
-The multiple scattering is a stochastic process, making PDFs extremely important. \\ \vspace{10pt} \hspace{10pt} $\rightarrow$ A thicker and denser object results in a higher expected deviation and a larger standard deviation $\sigma$ of the Gaussian PDF. 
+The multiple scattering is a stochastic process, making PDFs extremely important. \\ \vspace{2pt} \hspace{10pt} $\rightarrow$ A thicker and denser object results in a higher expected deviation and a larger standard deviation $\sigma$ of the Gaussian PDF.
+
+%\\ \vspace{10pt}
+%The study of the $\sigma$ of the deviation will then allow us to determine the thickness of the pipe placed between the detectors.
 \end{minipage}
 \end{frame}
 
@@ -291,8 +313,8 @@ This method allows us to estimate the shape of an unknown PDF $f$ of a random va
 \end{minipage}
 \begin{minipage}[c]{.50\textwidth}
 \justifying
-The usual way to proceed is to simply put the observations in an histogram, but this results in a non continous function with possible gaps. \\ \vspace{10pt}
-We then define $\hat{f}_h(x)$, an estimator of $f$ defined as the sum of continous functions instead.
+The usual way to proceed is to simply put the observations in an histogram, but this results in a non continuous function with possible gaps. \\ \vspace{10pt}
+We then define $\hat{f}_h(x)$, an estimator of $f$ defined as the sum of continuous functions instead.
 
 \begin{equation*}
 \label{eq:KDF}
@@ -321,12 +343,12 @@ Instead of relying on actual data collected from the experiment, we can:
 \item Build the PDF for a given experiment from these simulations
 \end{itemize} \vfill
 
-Simulating an experiment is cheaper and faster than running it and allows to compare results obtained from both channels. In this work, the dependance on Geant4 will be removed as well, to make this process even faster. \vfill
+Simulating an experiment is cheaper and faster than running it and allows to compare results obtained from both channels. In this work, the dependence on Geant4 will be removed as well, to make this process even faster. \vfill
 \end{frame}
 
 \begin{frame}{Maximum likelihood estimation}
 \justifying
-We have a way to simulate experiments, but we still need a method allowing us to reverse this process in order to \textbf{reverse this process and estimate the geometry of the object from a given measurement}. \vfill
+We still need a method allowing us to \textbf{estimate the geometrical parameters of an object from a given measurement}, such as the thickness of a pipe. \vfill
 
 The likelihood measures the goodness of a fit with respect to a sample of data for one or several unknown parameters. If $\bm \theta$ are the parameters of the model and $x$ is the measurement of a random variable $X$ defined from a PDF $f$, then:
 \begin{equation*}
@@ -349,8 +371,8 @@ The likelihood can be described as an hypersurface whose peak gives the optimal 
 \begin{frame}{}
 \centering
 	\huge{\textbf{\color{mycolor} Section III}} \newline
-	\LARGE{\textbf{\color{mycolor} The algorithm \color{black}}} \vfill
-A C++/ROOT framework has been developed in order to solve this problem, relying on three main parts: a PipeReconstructor, a Generator and a Plotter, now described. \vfill
+	\LARGE{\textbf{\color{mycolor} Algorithm implementation \color{black}}} \vfill
+\Large{A C++ framework has been developed in order to solve this problem, relying on three main parts: a PipeReconstructor, a Generator and a Plotter, now described.} \vfill
 \end{frame}
 
 \begin{frame}{General idea}
@@ -358,7 +380,7 @@ A C++/ROOT framework has been developed in order to solve this problem, relying 
 General class allowing us to:
 \begin{itemize}
 \justifying
-\item Define the geometry of the problem (mainly, the detector and object position and size).
+\item Define the geometry of the problem (mainly, the detector and object position and size)
 \item Compute the intersection points between cosmic muons and this geometry
 \item Propagate these muons through the geometry using the multiple scattering
 \item Calculate the likelihood of a given measurement for a given geometry
@@ -376,18 +398,18 @@ Simple set of scripts used in order to plot all the results shown in the next sl
 \begin{frame}{MuonStates, surfaces and volumes}
 \justifying
 \begin{exampleblock}{} MuonStates \end{exampleblock}
-A MuonState is a class defining a muon from two 3D vectors representing its position ($x$, $y$, $z$) and direction ($v_x$, $v_y$, $v_z$), and its momentum value $p$. \\ \vspace{10pt}
+A MuonState is a class defining a muon from two vectors representing its position ($x$, $y$, $z$) and direction ($v_x$, $v_y$, $v_z$), and its momentum value $p$. \\ \vspace{10pt}
 
 Two MuonStates are defined for each experiment: one measured at the top detector ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$), and one at the bottom, with the index 2. \vfill
 
 \begin{minipage}[c]{.65\textwidth}
-\begin{exampleblock}{} Surfaces and volumes \end{exampleblock}
+\begin{exampleblock}{} Surfaces and Volumes \end{exampleblock}
 \justifying
 General virtual classes used to define the geometry of the problem ; in particular, the subclasses Cylinder and Pipe are mostly used in this work. 
 %The z-axis is the vertical axis, while the y-axis is defined as the cylinder axis. 
 \\ \vspace{5pt}
 %The size (1m x 1m) and position of both detectors ($z_1 = 37$cm, $z_2 = -37$cm) are defined as constants for this class.  \\ \vspace{5pt}
-A pipe is therefore defined from 7 parameters: 
+A Pipe is therefore defined from 7 parameters: 
 \begin{itemize}
 \item Its central position ($x$, $y$, $z$)
 \item Its inner $r$ and outer radii $R$
@@ -403,15 +425,15 @@ A pipe is therefore defined from 7 parameters:
 
 \begin{frame}{Propagator}
 \justifying
-The propagator is the object allowing to \textbf{propagate a MuonState through a Volume}, defined as a vector of a fixed number of surfaces: \vfill
+The propagator is the object allowing to \textbf{propagate a MuonState through a Volume}, defined as a vector of a fixed number of Surfaces: \vfill
 
 \begin{minipage}[c]{.59\textwidth}
 \begin{itemize}
 \justifying
-\item First, the distances between a MuonState and all the surfaces of the Volume are computed and the first intersection point is kept
-\item We then propagate the muon 90\% of the distance to this cut point using the multiple scattering, and this process is repeated several times until being closer to 0.1mm to the first surface
-\item We then manually cross the surface by slightly propagating the MuonState
-\item This process is repeated for all the surfaces of the Volume and then one last time, until reaching the bottom detector, where the MuonState is returned.
+\item First, the distances between a MuonState and all the Surfaces of the Volume are computed and the first intersection point is kept
+\item The muon is propagated 90\% of the distance to this cut point using the multiple scattering, and this process is repeated several times until being closer to 0.1mm to the first surface
+\item The Surface is manually crossed by slightly moving the MuonState along its direction
+\item This process is repeated for all the Surfaces of the Volume and then one last time, until reaching the bottom detector, where the MuonState is returned.
 \end{itemize}
 \end{minipage}
 \begin{minipage}[c]{.40\textwidth}
@@ -430,18 +452,18 @@ The Likelihood class takes as input a Volume and a rootfile containing either da
 	\begin{itemize}
 	\justifying
 	\item The IncomingMuon and OutgoingMuon, defined as the actual measurements made by the top/bottom detectors
-	\item The IcomingMuonLinearDown, defined as the linear propagation of the IncomingMuon, used as reference
+	\item The IncomingMuonLinearDown, defined as the linear propagation of the IncomingMuon, used as reference
 	\item And the IncomingMuonDown, by propagating the initial state with our Propagator through the Volume
 	\end{itemize}
 \end{minipage}
 \begin{minipage}[c]{.36\textwidth}
-\includegraphics[width=4.3cm, height=3.2cm]{figs/parameters.png}
+\includegraphics[width=4.2cm, height=3.3cm]{figs/parameters.png}
 \end{minipage}
 
 \justifying
 \item This process is repeated $n_{\text{iter}}$ times for each input event, obtaining each time values for the $\Delta$x, $\Delta \theta_x$, $\Delta$y and $\Delta \theta_y$ parameters, filling 2 bi-dimensional PDFs histograms
 \item The histograms obtained are smoothen using the kernel density estimation method
-\item The actual probability to observe the actual measurement (OutgoingMuon) is computed, and summed over all the events in the file, returning the value:
+\item The probability to observe the actual measurement (OutgoingMuon) is computed, and summed over all the events in the file, returning the value:
 
 \begin{equation*}
 \label{eq:totallikelihood}
@@ -471,13 +493,13 @@ The Likelihood class takes as input a Volume and a rootfile containing either da
 \centering
 	\huge{\textbf{\color{mycolor} Section IV}} \newline
 	\LARGE{\textbf{\color{mycolor} Results obtained \color{black}}} \vfill
-First of all, the results obtained by our Generator whill be shown and compared to Geant4, before moving on to the actual results obtained with our algorithm. \vfill
+\Large{First of all, the results obtained by our Generator whill be shown and compared to Geant4, before moving on to the actual results obtained with our algorithm.} \vfill
 \end{frame}
 
 \begin{frame}{Generator validation}
 \justifying
 The Generator allows us to generate Monte-Carlo experiments in a faster way than using Geant4, which is more complex, relying on a complete description of the detector. \\ \vspace{10pt}
-The first step was then to validate our Monte-Carlo simulations by comparing measurements simulated by Geant4 and our own Generator. \vfill
+The first step was then to validate our Monte-Carlo simulations by comparing measurements simulated by both Geant4 and our own Generator for a given geometry. \vfill
 
 \begin{minipage}[c]{.32\textwidth}
 \begin{exampleblock}{} \begin{center}Bottom X position\end{center} \end{exampleblock}
@@ -496,7 +518,7 @@ The first step was then to validate our Monte-Carlo simulations by comparing mea
 
 \begin{frame}{Pipes geometries}
 \justifying
-Once validated, 12 different Monte-Carlo files have been generated with our Generator with 10 to 50 thousands events each, for different pipe geometries, having an outer radius of 20cm and inner radii ranging from 16.8 to 19.0cm. \vfill
+Once validated, 12 different Monte-Carlo files have been generated with our Generator with 10 to 50.000 events each, for different pipe geometries, having an outer radius of 20cm and inner radii ranging from 16.8 to 19.0cm. \vfill
 
 \begin{figure}[htbp]
 \centering
@@ -575,7 +597,8 @@ In this case, it does seem that increasing the number of simulated events improv
 In conclusion, we developed a new framework allowing us to:
 \begin{itemize}
 \justifying
-\item Generate thousands of Monte-Carlo experiments for different pipe geometries without relying on Geant4
+\item Quickly generate thousands of Monte-Carlo experiments for different pipe geometries without relying on Geant4
+\item Compare the output measurement distributions expected at the bottom detector after propagating a muon through our Volume, our own Propagator
 \item Compute the likelihood of a given measurement with respect to different pipe geometries, in order to find a way to estimate the thickness of a steel pipe by studying the deviation of incident cosmic muons
 \item And plot all the results obtained.
 \end{itemize} \vfill
@@ -585,15 +608,15 @@ With this framework, we were able to determine the thickness of such pipes with 
 
 \begin{frame}{Future improvements}
 \justifying
-This exercise is only a first approach to the problem, and many different improvements can be considered in the future to \textbf{improve and/or generalize the results obtained}. For example,
+This exercise is only a first approach to the problem, and different improvements can be considered to \textbf{improve and/or generalize the results obtained}:
 \begin{itemize}
 \justifying
-\item We could consider more general geometries that a simple pipe, or perform the likelihood minimization with respect to additional parameters, not only the thickness of the pipe. Our framework has been designed with this idea in mind. 
-\item The analysis can be repeated using actual data collected by the detector, not only Monte-Carlo simulated experiments.
-\item We could also consider the ionization process suffered by cosmic muons when crossing the pipe to improve these results.
-\item The effect of the interaction between the detector and the cosmic muons could be considered in our Generator to make it more reliable and precise.
-\item A detailed study of the error associated to the determination of the thickness is interesting as well.
-\item Finally, we have been limited computionally in this case, taking a few hours to produce a single plot with few statistics. Accessing to computers with higher computing power will be extremely interesting to improve the results obtained.
+\item Consider more general geometries that a pipe, or perform the likelihood minimization with respect to additional parameters, not only the thickness of the pipe
+\item The analysis can be repeated using actual data collected by the detector
+\item We could also consider the ionization process to improve these results
+\item The interaction between the detector and the cosmic muons could be considered in our Generator to make it more reliable and precise
+\item A further analysis estimating the Hessian of the likelihoods and the impact of systematic uncertainties would definitely improve the algorithm
+\item Finally, we have been limited computionally in this case, taking a few hours to produce a single plot with few statistics. Accessing to computers with higher capacities will be extremely interesting to improve the results obtained.
 \end{itemize}
 \end{frame}
 
@@ -611,8 +634,6 @@ This exercise is only a first approach to the problem, and many different improv
 	\centering
 	\huge{\textbf{\color{mycolor} Thank you  \color{black}}} \newline
 	\LARGE{\textbf{\color{mycolor} for your attention! \color{black}}} \vfill
-
-	Any questions? \vfill
 \end{frame}
 
 \appendix
@@ -643,6 +664,22 @@ Cosmic muons have an energy of the order of the GeV and are therefore referred t
 \begin{center}
 	\includegraphics[width=10cm, height=6cm]{figs/BB.png}
 	\end{center}
+\end{frame}
+
+\begin{frame}{Multiple Coulomb scattering}
+\justifying
+\begin{center}
+\includegraphics[width=8cm, height=3.5cm]{figs/moliere.png}
+\end{center} \vfill
+
+Highly correlated deviation parameters ($\rho_{\theta_\text{plane}, y_\text{plane}}=\sqrt{3}/2$). The pairs ($\theta_\text{plane}$, $y_\text{plane}$) are approximately distributed by a bi-dimensional Gaussian distribution with a given covariance:
+
+\begin{equation}
+\text{Cov}(\theta_\text{plane}, y_\text{plane}) = \begin{bmatrix}
+\theta^2_0 & \frac{\theta_0^2x}{2} \\
+\frac{\theta_0^2x}{2} & \frac{\theta_0^2x^2}{3} 
+\end{bmatrix}
+\end{equation} \vfill
 \end{frame}
 
 \begin{frame}{Muon detectors}
@@ -735,7 +772,6 @@ The same comparison has been performed along the Y-axis. \vfill
 \begin{minipage}[b]{.49\textwidth}
 \includegraphics[width=6cm, height=4.8cm]{figs/deltaThetaY.png}
 \end{minipage}\hfill
-\label{fig:gemComp}
 \end{figure} \vfill
 \end{frame}
 
