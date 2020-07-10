@@ -131,7 +131,7 @@
 	\huge{\textbf{\color{mycolor} Section I}} \newline
 	\LARGE{\textbf{\color{mycolor} General introduction \color{black}}} \vfill
 	
-	\LARGE{\textbf{\color{black} \color{black}}}\newline \vspace{10pt} \Large{Develop a new framework allowing to perform a muography experiment to characterize the inner properties of physical objects using data science and advanced statistical models.} \vfill
+	\LARGE{\textbf{\color{black} \color{black}}}\newline \vspace{10pt} \Large{Develop a new framework allowing us to study the results from a muography experiment to characterize the inner properties of physical objects using data science and advanced statistical models.} \vfill
 \end{frame}
 
 
@@ -377,7 +377,7 @@ The likelihood can be described as an hypersurface whose peak gives the optimal 
 
 \begin{frame}{General idea}
 \begin{exampleblock}{} PipeReconstructor \end{exampleblock}
-General class allowing us to:
+General set of classes allowing us to:
 \begin{itemize}
 \justifying
 \item Define the geometry of the problem (mainly, the detector and object position and size)
@@ -389,7 +389,7 @@ General class allowing us to:
 To reach all these goals, several classes have been defined as described in the next slides. \vfill
 
 \begin{exampleblock}{} Generator \end{exampleblock}
-Another class allowing us to generate muons by generating Monte-Carlo simulations using some of the functions of the PipeReconstructor and without relying on Geant4. \vfill
+Another class allowing us to generate muons by performing Monte-Carlo simulations using some of the functions of the PipeReconstructor and without relying on Geant4. \vfill
 
 \begin{exampleblock}{} Plotter \end{exampleblock}
 Simple set of scripts used in order to plot all the results shown in the next slides. \vfill
@@ -531,7 +531,7 @@ Once validated, 12 different Monte-Carlo files have been generated with our Gene
 \label{fig:gemComp}
 \end{figure} \vfill
 
-It took 8 seconds to produce 50.000 events with our Generator, \textbf{two orders of magnitude faster} than a complete Geant4 simulation. \vfill
+It took 8 seconds to produce 50.000 events with our Generator, more than \textbf{two orders of magnitude faster} than a complete Geant4 simulation. \vfill
 \end{frame}
 
 \begin{frame}{Kernel density functions}
@@ -562,26 +562,6 @@ The idea was to plot the likelihood obtained comparing one by one the generated 
 We do observe the minimum exactly where it is supposed to be in those 3 cases. \vfill
 \end{frame}
 
-\begin{frame}{Likelihood curves}
-\justifying
-Finally, we also estimated the impact of the number of simulated events $N_{\text{MC}}$ and the number of likelihood computation iterations $N_{\text{iter}}$ on the likelihood curves, for the $r = 18.0$cm geometry.
-
-\begin{minipage}[c]{.32\textwidth}
-\begin{exampleblock}{} \begin{center}100 iterations \\ 10.000 events\end{center} \end{exampleblock} \vspace{5pt}
-\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p0.pdf} 
-\end{minipage}
-\begin{minipage}[c]{.32\textwidth}
-\begin{exampleblock}{} \begin{center}100 iterations \\ 50.000 events\end{center} \end{exampleblock} \vspace{5pt}
-\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p0.pdf} 
-\end{minipage}
-\begin{minipage}[c]{.32\textwidth}
-\begin{exampleblock}{} \begin{center}250 iterations \\ 10.000 events\end{center} \end{exampleblock} \vspace{5pt}
-\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p0.pdf} 
-\end{minipage} \vfill
-
-In this case, it does seem that increasing the number of simulated events improve quite a lot the results (note that 10.000 events correspond to 1 minute of data taking only). \vfill
-\end{frame}
-
 
 
 
@@ -598,7 +578,7 @@ In conclusion, we developed a new framework allowing us to:
 \begin{itemize}
 \justifying
 \item Quickly generate thousands of Monte-Carlo experiments for different pipe geometries without relying on Geant4
-\item Compare the output measurement distributions expected at the bottom detector after propagating a muon through our Volume, our own Propagator
+\item Compare the output measurement distributions expected at the bottom detector after propagating a muon through our Volume, using 	our own Propagator
 \item Compute the likelihood of a given measurement with respect to different pipe geometries, in order to find a way to estimate the thickness of a steel pipe by studying the deviation of incident cosmic muons
 \item And plot all the results obtained.
 \end{itemize} \vfill
@@ -955,6 +935,25 @@ The same comparison has been performed along the Y-axis. \vfill
 \end{minipage}
 \end{frame}
 
+\begin{frame}{Likelihood curves}
+\justifying
+We also estimated the impact of the number of simulated events $N_{\text{MC}}$ and the number of likelihood computation iterations $N_{\text{iter}}$ on the likelihood curves, for the $r = 18.0$cm geometry.
+
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}100 iterations \\ 10.000 events\end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}100 iterations \\ 50.000 events\end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}250 iterations \\ 10.000 events\end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p0.pdf} 
+\end{minipage} \vfill
+
+In this case, it does seem that increasing the number of simulated events improve quite a lot the results (note that 10.000 events correspond to 1 minute of data taking only). \vfill
+\end{frame}
 
 \begin{frame}{Additional references}
 [1] "A window into the Earth’s interior", Earthquake Research Institute,2014
