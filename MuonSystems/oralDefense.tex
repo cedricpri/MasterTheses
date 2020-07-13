@@ -247,6 +247,7 @@ Several advantages over other imaging techniques:
 \end{frame}
 
 \begin{frame}{Experimental setup}
+\justifying
 \begin{minipage}[c]{.50\textwidth}
 \includegraphics[width=5.5cm, height=3.7cm]{figs/muonChambers.png}
 \end{minipage} \hfill
@@ -262,7 +263,16 @@ Quite simple experimental setup:
 \end{itemize}
 \end{minipage} \hfill  \vfill
 
-The data is collected from a USB stick and goes through a complete \textbf{\alert{reconstruction process}} before being available in a rootfile, as detailed in the backup. \vfill
+\begin{minipage}[c]{.59\textwidth}
+\justifying
+A muon crosses the detector leaves small electric charges behind, collected by the wires while leaving a signal. The combination of the signals on the different wires give us information regarding the muon. \\ \vspace{10pt}
+
+The data is collected from a USB stick and goes through a complete \textbf{\alert{reconstruction process}} before being available in a rootfile, as detailed in the backup.
+\end{minipage}
+\begin{minipage}[c]{.39\textwidth}
+\includegraphics[width=4.2cm, height=3.5cm]{figs/wireChambers.png}
+\end{minipage} \hfill \vfill
+
 \end{frame}
 
 
@@ -397,11 +407,6 @@ Simple set of scripts used in order to plot all the results shown in the next sl
 
 \begin{frame}{MuonStates, surfaces and volumes}
 \justifying
-\begin{exampleblock}{} MuonStates \end{exampleblock}
-A MuonState is a class defining a muon from two vectors representing its position ($x$, $y$, $z$) and direction ($v_x$, $v_y$, $v_z$), and its momentum value $p$. \\ \vspace{10pt}
-
-Two MuonStates are defined for each experiment: one measured at the top detector ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$), and one at the bottom, with the index 2. \vfill
-
 \begin{minipage}[c]{.65\textwidth}
 \begin{exampleblock}{} Surfaces and Volumes \end{exampleblock}
 \justifying
@@ -420,7 +425,10 @@ A Pipe is therefore defined from 7 parameters:
 \begin{minipage}[c]{.33\textwidth}
 \includegraphics[width=4.5cm, height=3.2cm]{figs/cylinder.png}
 \end{minipage} \vfill
+\begin{exampleblock}{} MuonStates \end{exampleblock}
+A MuonState is a class defining a muon from two vectors representing its position ($x$, $y$, $z$) and direction ($v_x$, $v_y$, $v_z$), and its momentum value $p$. \\ \vspace{10pt}
 
+Two MuonStates are defined for each experiment: one measured at the top detector ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$), and one at the bottom, with the index 2. \vfill
 \end{frame}
 
 \begin{frame}{Propagator}
@@ -559,7 +567,7 @@ The idea was to plot the likelihood obtained comparing one by one the generated 
 \includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood19p0.pdf} 
 \end{minipage} \vfill
 
-We do observe the minimum exactly where it is supposed to be in those 3 cases. \vfill
+We do observe the minimum exactly where it is supposed to most of the geometries, as seen in the backup. \vfill
 \end{frame}
 
 
@@ -614,6 +622,7 @@ This exercise is only a first approach to the problem, and different improvement
 	\centering
 	\huge{\textbf{\color{mycolor} Thank you  \color{black}}} \newline
 	\LARGE{\textbf{\color{mycolor} for your attention! \color{black}}} \vfill
+	\LARGE{\textbf{\color{mycolor} Backup slides \color{black}}}
 \end{frame}
 
 \appendix
