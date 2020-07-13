@@ -14,6 +14,7 @@
 \renewcommand*{\arraystretch}{1.5}
 
 \usetheme{EastLansing}
+\setbeamertemplate{headline}{} %Remove section title
 %\usetheme{Pittsburgh}
 %\usetheme[height=30pt]{Rochester}
 %\usecolortheme{lily}
@@ -90,7 +91,7 @@
 \end{frame}
 
 
-\begin{frame}{Outline}
+\begin{frame}{Table of contents}
 
 	\begin{itemize}
 		\item Introduction
@@ -180,14 +181,16 @@ Comic rays are a \textbf{constant flux of high energy particles} reaching the Ea
 	\justifying
 	\item Mostly made out of protons and atomic nuclei
 	\item Trigger a decay chain by interacting with the atmosphere, producing muons
-	\item Muons are not stable ($\tau \simeq 2.2\mu$s) but relativity makes them live long enough to reach the ground $\rightarrow$ 10.000 cosmic muons are observed per $m^2$ and per minute at sea level.
-\end{itemize} \vfill
 
-\begin{minipage}[c]{.98\textwidth}
+	\begin{minipage}[c]{.98\textwidth}
 	\begin{center}
 	\includegraphics[width=8cm, height=4cm]{figs/cosmic.png}
 	\end{center}
-\end{minipage} \hfill \vfill
+\end{minipage} \hfill 
+	
+	\item Muons are not stable ($\tau \simeq 2.2\mu$s) but relativistic effects makes some of them live long enough to reach the ground \\ \hspace{10pt} $\rightarrow$ 10.000 cosmic muons per $m^2$ and per minute are observed at sea level.
+\end{itemize} \vfill
+
 \end{frame}
 
 \begin{frame}{Muons interactions with matter}
@@ -198,16 +201,16 @@ When  the  incident  muon collides and gives some of its energy to the electrons
 \hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{absorption muography}}, not covered here. \vfill
 
 \begin{exampleblock}{} Multiple Coulomb scattering \end{exampleblock}
-Inducing a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$ under our experimental conditions.
+Coulomb interactions induce a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$ under our experimental conditions:
 
 \begin{minipage}[c]{.48\textwidth}
 \begin{equation*}
 \label{eq:Moliere}
-\theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x}{X_0 \beta^2} \right ) \right ]
+\theta_0 \simeq \frac{13.6 \text{ MeV}}{\beta c p} \sqrt{\frac{x}{X_0}}
 \end{equation*}
 
 \justifying
-Deviation depends on the number of radiation lengths $X_0$ and on the medium crossed. \\
+The deviation depends on the number of radiation lengths $X_0$ and on the medium crossed. \\
 \hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{scattering muography}}.
 \end{minipage} \hfill
 \begin{minipage}[c]{.51\textwidth}
@@ -234,8 +237,8 @@ Several advantages over other imaging techniques:
 \begin{itemize}
 	\justifying
 	\item Find hidden rooms in Pyramids
-	\item In volcanology, to know whether a pocket is empty or full of lava [1]
 	\item Nuclear waste/facilities inspection
+	\item In volcanology, to know whether a pocket is empty or full of lava.
 \end{itemize}	
 	
 \end{minipage} \hfill
@@ -244,35 +247,6 @@ Several advantages over other imaging techniques:
 	\includegraphics[width=5cm, height=3.5cm]{figs/volcano.jpg}
 	\end{center}
 \end{minipage} \hfill \vfill
-\end{frame}
-
-\begin{frame}{Experimental setup}
-\justifying
-\begin{minipage}[c]{.50\textwidth}
-\includegraphics[width=5.5cm, height=3.7cm]{figs/muonChambers.png}
-\end{minipage} \hfill
-\begin{minipage}[c]{.49\textwidth}
-\justifying
-Quite simple experimental setup:
-\begin{itemize}
-\justifying
-\item Two $1m^2$ detectors placed below and above the object under investigation
-\item Two chambers in each detector, to measure the position and direction of muons along the x and y axes
-\item Each chamber is filled with a mixture of Argon and CO$_2$
-\item More than 200 wires separated by 4mm make up each chamber
-\end{itemize}
-\end{minipage} \hfill  \vfill
-
-\begin{minipage}[c]{.59\textwidth}
-\justifying
-A muon crosses the detector leaves small electric charges behind, collected by the wires while leaving a signal. The combination of the signals on the different wires give us information regarding the muon. \\ \vspace{10pt}
-
-The data is collected from a USB stick and goes through a complete \textbf{\alert{reconstruction process}} before being available in a rootfile, as detailed in the backup.
-\end{minipage}
-\begin{minipage}[c]{.39\textwidth}
-\includegraphics[width=4.2cm, height=3.5cm]{figs/wireChambers.png}
-\end{minipage} \hfill \vfill
-
 \end{frame}
 
 
@@ -295,7 +269,7 @@ The data is collected from a USB stick and goes through a complete \textbf{\aler
 \begin{minipage}[c]{.50\textwidth}
 \justifying
 PDFs are mathematical expressions defining probability distributions \textbf{which represent the likelihood of any given outcome}. \\ \vspace{10pt}
-The area below the PDF in an interval can be interpreted as the value of the probability of a random variable occurring. 
+The area below the PDF in an interval can be interpreted as the value of the probability of a random variable X occurring. 
 \end{minipage}
 \begin{minipage}[c]{.50\textwidth}
 \begin{center}
@@ -308,7 +282,10 @@ The area below the PDF in an interval can be interpreted as the value of the pro
 \end{minipage}
 \begin{minipage}[c]{.50\textwidth}
 \justifying
-The multiple scattering is a stochastic process, making PDFs extremely important. \\ \vspace{2pt} \hspace{10pt} $\rightarrow$ A thicker and denser object results in a higher expected deviation and a larger standard deviation $\sigma$ of the Gaussian PDF.
+The multiple scattering is a stochastic process, making PDFs extremely important. 
+
+\begin{exampleblock}{}
+\justifying A thicker and denser object results in a statistically higher expected deviation and a larger standard deviation $\sigma$ of the Gaussian PDF. \end{exampleblock}
 
 %\\ \vspace{10pt}
 %The study of the $\sigma$ of the deviation will then allow us to determine the thickness of the pipe placed between the detectors.
@@ -345,29 +322,34 @@ Two important parameters
 Monte-Carlo simulations are obtained from algorithms developed to \textbf{compute approximate numerical values to stochastic problems} using random processes and probabilistic techniques. \vfill
 
 Instead of relying on actual data collected from the experiment, we can:
-\begin{itemize}
+\begin{enumerate}
 \justifying
 \item Use CRY, a cosmic ray generator to simulate thousands of incident muons
 \item Make these muons go through a complete simulation of the detector done with Geant4
-\item Go through the same post-processing process as actual data, \textbf{simulating thousands of experiments} without the need to perform them
+\item Go through the same post-processing process as actual data
 \item Build the PDF for a given experiment from these simulations
-\end{itemize} \vfill
+\item Repeat this experiment $N_\text{MC}$ times, \textbf{simulating thousands of experiments} without the need to perform them.
+\end{enumerate} \vfill
 
 Simulating an experiment is cheaper and faster than running it and allows to compare results obtained from both channels. In this work, the dependence on Geant4 will be removed as well, to make this process even faster. \vfill
 \end{frame}
 
 \begin{frame}{Maximum likelihood estimation}
 \justifying
-We still need a method allowing us to \textbf{estimate the geometrical parameters of an object from a given measurement}, such as the thickness of a pipe. \vfill
+We still need a method allowing us to \textbf{estimate the optimal geometrical parameters of an object from a given set of measurements}, such as the thickness of a pipe. \vfill
 
+\begin{exampleblock}{}
+\justifying 
 The likelihood measures the goodness of a fit with respect to a sample of data for one or several unknown parameters. If $\bm \theta$ are the parameters of the model and $x$ is the measurement of a random variable $X$ defined from a PDF $f$, then:
 \begin{equation*}
 \label{eq:likelihood}
 \mathcal{L}(\bm \theta | x) = f_{\bm \theta}(x) = P(X = x | \bm \theta)
-\end{equation*} \vfill
+\end{equation*}
+ \end{exampleblock} \vfill
 
-The likelihood can be described as an hypersurface whose peak gives the optimal set of parameters maximizing the probability of drawing the actual sample measured. \\ \vspace{5pt}
-\hspace{10pt} $\rightarrow$ The objective is then to \textbf{find the set of parameters minimizing the log-likelihood} $l(\bm \theta | x) = -2 \log(\mathcal{L}(\bm \theta | x))$. In this work, the parameter to be optimized will be the thickness of a steel pipe placed between the detectors. \vfill
+The likelihood can be described as an hypersurface whose peak gives the optimal set of parameters maximizing the probability of drawing the actual sample measured $\rightarrow$ the objective is to \textbf{find the set of parameters minimizing the log-likelihood} $l(\bm \theta | x) = -2 \log(\mathcal{L}(\bm \theta | x))$. \vfill
+
+In this work, the parameter to be optimized will be the thickness of a steel pipe. \vfill
 \end{frame}
 
 
@@ -382,12 +364,13 @@ The likelihood can be described as an hypersurface whose peak gives the optimal 
 \centering
 	\huge{\textbf{\color{mycolor} Section III}} \newline
 	\LARGE{\textbf{\color{mycolor} Algorithm implementation \color{black}}} \vfill
-\Large{A C++ framework has been developed in order to solve this problem, relying on three main parts: a PipeReconstructor, a Generator and a Plotter, now described.} \vfill
+\Large{A C++ framework has been developed in order to solve this problem, relying on two main parts: a PipeReconstructor and a Generator, both described in the next slides.} \vfill
 \end{frame}
 
 \begin{frame}{General idea}
 \begin{exampleblock}{} PipeReconstructor \end{exampleblock}
-General set of classes allowing us to:
+\justifying
+General set of classes defined in the next slides allowing us to:
 \begin{itemize}
 \justifying
 \item Define the geometry of the problem (mainly, the detector and object position and size)
@@ -395,26 +378,24 @@ General set of classes allowing us to:
 \item Propagate these muons through the geometry using the multiple scattering
 \item Calculate the likelihood of a given measurement for a given geometry
 \item Finally, find the optimal object parameters from this likelihood.
-\end{itemize}
-To reach all these goals, several classes have been defined as described in the next slides. \vfill
+\end{itemize} \vfill
 
 \begin{exampleblock}{} Generator \end{exampleblock}
+\justifying
 Another class allowing us to generate muons by performing Monte-Carlo simulations using some of the functions of the PipeReconstructor and without relying on Geant4. \vfill
 
-\begin{exampleblock}{} Plotter \end{exampleblock}
-Simple set of scripts used in order to plot all the results shown in the next slides. \vfill
+%\begin{exampleblock}{} Plotter \end{exampleblock}
+%\justifying
+%Simple set of scripts used in order to plot all the results shown in the next slides. \vfill
 \end{frame}
 
-\begin{frame}{MuonStates, surfaces and volumes}
+\begin{frame}{Surfaces, volumes and MuonStates}
 \justifying
 \begin{minipage}[c]{.65\textwidth}
 \begin{exampleblock}{} Surfaces and Volumes \end{exampleblock}
 \justifying
-General virtual classes used to define the geometry of the problem ; in particular, the subclasses Cylinder and Pipe are mostly used in this work. 
-%The z-axis is the vertical axis, while the y-axis is defined as the cylinder axis. 
-\\ \vspace{5pt}
-%The size (1m x 1m) and position of both detectors ($z_1 = 37$cm, $z_2 = -37$cm) are defined as constants for this class.  \\ \vspace{5pt}
-A Pipe is therefore defined from 7 parameters: 
+General virtual classes defining the geometry of the problem ; a Volume is defined as a vector of a fixed number of Surfaces. \\ \vspace{5pt}
+In particular, the subclasses Cylinder and Pipe are mostly used in this work. A Pipe is defined from 7 parameters: 
 \begin{itemize}
 \item Its central position ($x$, $y$, $z$)
 \item Its inner $r$ and outer radii $R$
@@ -423,26 +404,27 @@ A Pipe is therefore defined from 7 parameters:
 \end{itemize}
 \end{minipage}
 \begin{minipage}[c]{.33\textwidth}
+\vspace{35pt}
 \includegraphics[width=4.5cm, height=3.2cm]{figs/cylinder.png}
 \end{minipage} \vfill
 \begin{exampleblock}{} MuonStates \end{exampleblock}
-A MuonState is a class defining a muon from two vectors representing its position ($x$, $y$, $z$) and direction ($v_x$, $v_y$, $v_z$), and its momentum value $p$. \\ \vspace{10pt}
+A MuonState is a class defining a muon from two vectors representing its position ($x$, $y$, $z$), direction ($v_x$, $v_y$, $v_z$) and momentum value $p$. \\ \vspace{10pt}
 
-Two MuonStates are defined for each experiment: one measured at the top detector ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$), and one at the bottom, with the index 2. \vfill
+%Two MuonStates are defined for each experiment: one measured at the top detector ($x_1$, $y_1$, $z_1$, $v_{x1}$, $v_{y1}$, $v_{z1}$, $p_1$), and one at the bottom, with the index 2. \vfill
 \end{frame}
 
 \begin{frame}{Propagator}
 \justifying
-The propagator is the object allowing to \textbf{propagate a MuonState through a Volume}, defined as a vector of a fixed number of Surfaces: \vfill
+The propagator is the object allowing to \textbf{propagate a MuonState through a Volume}: \vfill
 
 \begin{minipage}[c]{.59\textwidth}
-\begin{itemize}
+\begin{enumerate}
 \justifying
-\item First, the distances between a MuonState and all the Surfaces of the Volume are computed and the first intersection point is kept
-\item The muon is propagated 90\% of the distance to this cut point using the multiple scattering, and this process is repeated several times until being closer to 0.1mm to the first surface
-\item The Surface is manually crossed by slightly moving the MuonState along its direction
-\item This process is repeated for all the Surfaces of the Volume and then one last time, until reaching the bottom detector, where the MuonState is returned.
-\end{itemize}
+\item First, the distances between a MuonState and all the Surfaces of the Volume are computed and the first intersection point is kept \vspace{5pt}
+\item The muon is propagated 90\% of the distance to this cut point using the multiple scattering, and this process is repeated several times until being closer to 0.1mm to the first surface \vspace{5pt}
+\item The Surface is manually crossed by slightly moving the MuonState along its direction \vspace{5pt}
+\item This process is repeated for all the Surfaces of the Volume and then one last time until reaching the bottom detector, where the MuonState is returned.
+\end{enumerate}
 \end{minipage}
 \begin{minipage}[c]{.40\textwidth}
 \includegraphics[width=4.5cm, height=3.2cm]{figs/propagation.png}
@@ -453,31 +435,32 @@ Eventual muons which do not actually cross the pipe or out of the acceptance of 
 
 \begin{frame}{Likelihood}
 \justifying
-The Likelihood class takes as input a Volume and a rootfile containing either data or Monte-Carlo simulations, to tell us \textbf{how likely it is that we obtained exactly these measurements for the geometry given}: \begin{itemize}
+The Likelihood class takes as input a Volume and a data/MC rootfile, to tell us \textbf{how likely it is that we obtained exactly these measurements for the geometry given}: \vspace{5pt}
 
+\begin{enumerate}
 \begin{minipage}[c]{.58\textwidth}
 \item First, four MuonStates are computed:
 	\begin{itemize}
 	\justifying
-	\item The IncomingMuon and OutgoingMuon, defined as the actual measurements made by the top/bottom detectors
-	\item The IncomingMuonLinearDown, defined as the linear propagation of the IncomingMuon, used as reference
+	\item The IncomingMuon and OutgoingMuon, as the actual measurements made by the top/bottom detectors
+	\item The IncomingMuonLinearDown, the linear propagation of the IncomingMuon, used as reference
 	\item And the IncomingMuonDown, by propagating the initial state with our Propagator through the Volume
 	\end{itemize}
 \end{minipage}
 \begin{minipage}[c]{.36\textwidth}
-\includegraphics[width=4.2cm, height=3.3cm]{figs/parameters.png}
-\end{minipage}
+\includegraphics[width=4.2cm, height=3.15cm]{figs/parameters.png}
+\end{minipage} \vspace{5pt}
 
 \justifying
-\item This process is repeated $n_{\text{iter}}$ times for each input event, obtaining each time values for the $\Delta$x, $\Delta \theta_x$, $\Delta$y and $\Delta \theta_y$ parameters, filling 2 bi-dimensional PDFs histograms
-\item The histograms obtained are smoothen using the kernel density estimation method
-\item The probability to observe the actual measurement (OutgoingMuon) is computed, and summed over all the events in the file, returning the value:
+\item This process is repeated $n_{\text{iter}}$ times for each input event, obtaining each time values for the $\Delta$x, $\Delta \theta_x$, $\Delta$y and $\Delta \theta_y$ parameters, filling 2 bi-dimensional PDFs histograms \vspace{5pt}
+\item The histograms obtained are smoothen using the kernel density estimation method \vspace{5pt}
+\item The probability to observe the actual measurement (OutgoingMuon) is computed, and summed over all the ${N_\text{MC}}$ events in the file, returning the value:
 
 \begin{equation*}
 \label{eq:totallikelihood}
-\mathcal{L} = \left( \frac{1}{N} \right) \sum_{i = 1}^N -2.0 \left ( \log(\text{value}_{x, i}) + \log(\text{value}_{y, i}) \right)
+\mathcal{L} = \sum_{i = 1}^{N_\text{MC}} -2.0 \left ( \log(\text{value}_{x, i}) + \log(\text{value}_{y, i}) \right)
 \end{equation*}
-\end{itemize} \vfill
+\end{enumerate} \vfill
 \end{frame}
 
 %\begin{frame}{Generator}
@@ -567,7 +550,27 @@ The idea was to plot the likelihood obtained comparing one by one the generated 
 \includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood19p0.pdf} 
 \end{minipage} \vfill
 
-We do observe the minimum exactly where it is supposed to most of the geometries, as seen in the backup. \vfill
+We do observe the minimum exactly where it is supposed to be for most of the geometries, as seen in the backup. \vfill
+\end{frame}
+
+\begin{frame}{Likelihood curves}
+\justifying
+We also estimated the impact of the number of simulated events $n_{\text{MC}}$ and the number of likelihood computation iterations $n_{\text{iter}}$ on the likelihood curves, for the $r = 18.0$cm geometry. \vfill
+
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$n_\text{iter}$ = 100 \\ $n_\text{MC}$ = 10.000 \end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$n_\text{iter}$ = 100 \\ $n_\text{MC}$ = 50.000\end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p0.pdf} 
+\end{minipage}
+\begin{minipage}[c]{.32\textwidth}
+\begin{exampleblock}{} \begin{center}$n_\text{iter}$ = 250 \\ $n_\text{MC}$ = 10.000 \end{center} \end{exampleblock} \vspace{5pt}
+\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p0.pdf} 
+\end{minipage} \vfill
+
+In this case, it does seem that increasing the number of simulated events improve quite a lot the results (note that 10.000 events correspond to 1 minute of data taking only). \vfill
 \end{frame}
 
 
@@ -591,21 +594,12 @@ In conclusion, we developed a new framework allowing us to:
 \item And plot all the results obtained.
 \end{itemize} \vfill
 
-With this framework, we were able to determine the thickness of such pipes with \textbf{a precision of the order of the millimiter} by considering 10.000 events, which is equivalent to 1 minute of data taking only, therefore solving the initial problem solved. \vfill
-\end{frame}
+\begin{exampleblock}{}
+\justifying
+With this framework, we were able to determine the thickness of such pipes with \textbf{a precision of the order of the millimiter} by considering 10.000 events, which is equivalent to 1 minute of data taking only, therefore solving the initial problem solved. 
+\end{exampleblock} \vfill
 
-\begin{frame}{Future improvements}
-\justifying
-This exercise is only a first approach to the problem, and different improvements can be considered to \textbf{improve and/or generalize the results obtained}:
-\begin{itemize}
-\justifying
-\item Consider more general geometries that a pipe, or perform the likelihood minimization with respect to additional parameters, not only the thickness of the pipe
-\item The analysis can be repeated using actual data collected by the detector
-\item We could also consider the ionization process to improve these results
-\item The interaction between the detector and the cosmic muons could be considered in our Generator to make it more reliable and precise
-\item A further analysis estimating the Hessian of the likelihoods and the impact of systematic uncertainties would definitely improve the algorithm
-\item Finally, we have been limited computionally in this case, taking a few hours to produce a single plot with few statistics. Accessing to computers with higher capacities will be extremely interesting to improve the results obtained.
-\end{itemize}
+This exercise is only a first approach to the problem, and different improvements can be considered to \textbf{improve and/or generalize the results obtained}. \vfill
 \end{frame}
 
 
@@ -657,6 +651,13 @@ Cosmic muons have an energy of the order of the GeV and are therefore referred t
 
 \begin{frame}{Multiple Coulomb scattering}
 \justifying
+Inducing a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$ under our experimental conditions.
+
+\begin{equation*}
+\label{eq:Moliere}
+\theta_0 = \frac{13.6 \text{ MeV}}{\beta c p} z \sqrt{\frac{x}{X_0}} \left [1 + 0.038 \ln \left (\frac{x z^2}{X_0 \beta^2} \right ) \right ]
+\end{equation*}
+
 \begin{center}
 \includegraphics[width=8cm, height=3.5cm]{figs/moliere.png}
 \end{center} \vfill
@@ -691,6 +692,26 @@ Most important parameters of a muon detector:
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Experimental setup}
+\justifying
+\begin{minipage}[c]{.50\textwidth}
+\includegraphics[width=5.5cm, height=3.7cm]{figs/muonChambers.png}
+\end{minipage} \hfill
+\begin{minipage}[c]{.49\textwidth}
+\justifying
+Quite simple experimental setup:
+\begin{itemize}
+\justifying
+\item Two $1m^2$ detectors placed below and above the object under investigation
+\item Two chambers in each detector, to measure the position and direction of muons along the x and y axes
+\item Each chamber is filled with a mixture of Argon and CO$_2$
+\item More than 200 wires separated by 4mm make up each chamber
+\end{itemize}
+\end{minipage} \hfill  \vfill
+
+The data is collected from a USB stick and goes through a complete \textbf{\alert{reconstruction process}} before being available in a rootfile, as detailed in the backup. \vfill
+\end{frame}
+
 \begin{frame}{Data flow}
 \begin{center}
 \includegraphics[width=7.5cm, height=6cm]{figs/dataFlow.png}
@@ -719,6 +740,13 @@ Main parameters used throughout this work:
 
 Bi-dimensional histograms ($\Delta$x vs $\Delta \theta_x$ and $\Delta$y vs $\Delta \theta_y$) are filled with these values, smoothened and used for the computation of the likelihood. \vfill
 \end{frame}
+
+%\begin{frame}{Generator}
+%\justifying
+%The Generator is a C++ set of functions, built in order to generate Monte-Carlo simulations reproducing the actual experiment for a given geometry and to avoid relying too much on Geant4, which is quite slow. \vfill
+%
+%Pre-generated CRY information is then read and simply propagated through the Volume considered, using our PipeReconstructor, in order to simulate such experiments. \vfill
+%\end{frame}
 
 \begin{frame}{Generator validation}
 
@@ -944,28 +972,18 @@ The same comparison has been performed along the Y-axis. \vfill
 \end{minipage}
 \end{frame}
 
-\begin{frame}{Likelihood curves}
+\begin{frame}{Future improvements}
 \justifying
-We also estimated the impact of the number of simulated events $N_{\text{MC}}$ and the number of likelihood computation iterations $N_{\text{iter}}$ on the likelihood curves, for the $r = 18.0$cm geometry.
-
-\begin{minipage}[c]{.32\textwidth}
-\begin{exampleblock}{} \begin{center}100 iterations \\ 10.000 events\end{center} \end{exampleblock} \vspace{5pt}
-\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100LowStat/likelihood18p0.pdf} 
-\end{minipage}
-\begin{minipage}[c]{.32\textwidth}
-\begin{exampleblock}{} \begin{center}100 iterations \\ 50.000 events\end{center} \end{exampleblock} \vspace{5pt}
-\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood100HighStat/likelihood18p0.pdf} 
-\end{minipage}
-\begin{minipage}[c]{.32\textwidth}
-\begin{exampleblock}{} \begin{center}250 iterations \\ 10.000 events\end{center} \end{exampleblock} \vspace{5pt}
-\includegraphics[width=4.2cm, height=3.2cm]{figs/likelihood250LowStat/likelihood18p0.pdf} 
-\end{minipage} \vfill
-
-In this case, it does seem that increasing the number of simulated events improve quite a lot the results (note that 10.000 events correspond to 1 minute of data taking only). \vfill
-\end{frame}
-
-\begin{frame}{Additional references}
-[1] "A window into the Earth’s interior", Earthquake Research Institute,2014
+This exercise is only a first approach to the problem, and different improvements can be considered to \textbf{improve and/or generalize the results obtained}:
+\begin{itemize}
+\justifying
+\item Consider more general geometries that a pipe, or perform the likelihood minimization with respect to additional parameters, not only the thickness of the pipe
+\item The analysis can be repeated using actual data collected by the detector
+\item We could also consider the ionization process to improve these results
+\item The interaction between the detector and the cosmic muons could be considered in our Generator to make it more reliable and precise
+\item A further analysis estimating the Hessian of the likelihoods and the impact of systematic uncertainties would definitely improve the algorithm
+\item Finally, we have been limited computionally in this case, taking a few hours to produce a single plot with few statistics. Accessing to computers with higher capacities will be extremely interesting to improve the results obtained.
+\end{itemize}
 \end{frame}
 
 \backupend
