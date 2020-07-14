@@ -132,7 +132,9 @@
 	\huge{\textbf{\color{mycolor} Section I}} \newline
 	\LARGE{\textbf{\color{mycolor} General introduction \color{black}}} \vfill
 	
-	\LARGE{\textbf{\color{black} \color{black}}}\newline \vspace{10pt} \Large{Develop a new framework allowing us to study the results from a muography experiment to characterize the inner properties of physical objects using data science and advanced statistical models.} \vfill
+	\LARGE{\textbf{\color{black} \color{black}}}\newline \vspace{10pt} \Large{This work is framed in the context of Muography, an emerging Non-Destructive Testing technique, being used in the industry to perform preventive maintenance of industrial equipment. \\ \vspace{10pt}
+
+The project aims at developing a framework to perform inspection of the inner properties of objects using advanced statistical concepts such as the maximum likelihood estimation method.} \vfill
 \end{frame}
 
 
@@ -168,18 +170,18 @@ The Standard Model \textbf{describes the fundamental particles} existing and the
 \begin{exampleblock}{} Muons \end{exampleblock}
 \begin{itemize}
 	\justifying
-	\item Muons $\mu^-$ are one of the 12 fundamental particles existing
-	\item They have a relatively small interaction cross-section with ordinary matter, allowing them to cross material without being stopped, making them interesting.
+	\item Muons $\mu$ are one of the 12 fundamental particles existing
+	\item They have a relatively small interaction cross-section with ordinary matter, allowing them to cross material without being stopped, making them interesting for applications.
 \end{itemize} \vfill
 \end{frame}
 
 
 \begin{frame}{Cosmic rays}
 \justifying
-Comic rays are a \textbf{constant flux of high energy particles} reaching the Earth:
+Comic rays are \textbf{high energy particles} reaching the Earth from the outer space:
 \begin{itemize}
 	\justifying
-	\item Mostly made out of protons and atomic nuclei
+	\item About 98\% are protons and the rest mostly helium nuclei
 	\item Trigger a decay chain by interacting with the atmosphere, producing muons
 
 	\begin{minipage}[c]{.98\textwidth}
@@ -188,20 +190,45 @@ Comic rays are a \textbf{constant flux of high energy particles} reaching the Ea
 	\end{center}
 \end{minipage} \hfill 
 	
-	\item Muons are not stable ($\tau \simeq 2.2\mu$s) but relativistic effects makes some of them live long enough to reach the ground \\ \hspace{10pt} $\rightarrow$ 10.000 cosmic muons per $m^2$ and per minute are observed at sea level.
+	\item Muons are not stable ($\tau \simeq 2.2\mu$s) and quickly decay into one electron and two neutrinos
+	\item Because of relativistic time dilation, they live long enough to reach the Earth surface
+	\item Rule of thumb: 10.000 cosmic muons per $m^2$ and per minute are observed at sea level.
 \end{itemize} \vfill
 
 \end{frame}
 
-\begin{frame}{Muons interactions with matter}
+\begin{frame}{Muons interactions with matter: Ionization}
 \justifying
-%Muons interact with matter through two main processes:
+Muons interact with matter through two main processes:
 \begin{exampleblock}{} Ionization \end{exampleblock}
-When  the  incident  muon collides and gives some of its energy to the electrons of the absorber, but quite small for MIPs such as cosmic muons. \\
-\hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{absorption muography}}, not covered here. \vfill
+\justifying
+Ionization happens when the  incident muon gives some of its energy to the electrons of the absorber, as described by the Bethe-bloch formula.
+\\
+\hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{absorption muography}}.\vfill
+\begin{equation*}
+\label{eq:BB}
+- \Bigl \langle \frac{dE}{dx} \Bigr \rangle = K z^2 \frac{Z}{A} \frac{1}{\beta^2} \left [\frac{1}{2} \ln \left (\frac{2 m_e c^2 \beta^2 \gamma^2 W_{\text{max}}}{I^2} - \beta^2 - \frac{\delta(\beta \gamma)}{2} \right ) \right ]
+\end{equation*} \vfill
 
+\begin{minipage}[c]{.58\textwidth}
+The \textbf{mass stopping power} of material depends on:
+\begin{itemize}
+	\item The charge number of incident particle $z$
+	\item The atomic mass/charge of absorber $A$/$Z$
+	\item The relativistic factors $\beta$ and $\gamma$
+	\item The maximum possible energy transfer to an electron in a single collision $W_{\text{max}}$
+	\item And the mean excitation energy $I$.
+\end{itemize} \vfill
+\end{minipage}
+\begin{minipage}[c]{.38\textwidth}
+	\includegraphics[width=5cm, height=3.5cm]{figs/BB.png}
+\end{minipage}
+\end{frame}
+
+\begin{frame}{Muons interactions with matter: Multiple scattering}
+\justifying
 \begin{exampleblock}{} Multiple Coulomb scattering \end{exampleblock}
-Coulomb interactions induce a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$ under our experimental conditions:
+Coulomb interactions induce a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by two Gaussians of width $\theta_0$ along the x and y-axes independently:
 
 \begin{minipage}[c]{.48\textwidth}
 \begin{equation*}
@@ -210,16 +237,25 @@ Coulomb interactions induce a \alert{\textbf{stochastic deviation}} whose centra
 \end{equation*}
 
 \justifying
-The deviation depends on the number of radiation lengths $X_0$ and on the medium crossed. \\
+$\theta_0$ depends on the number of radiation lengths $X_0$ and on the medium crossed. \\
 \hspace{10pt} $\rightarrow$ Basis for the \textbf{\alert{scattering muography}}.
 \end{minipage} \hfill
 \begin{minipage}[c]{.51\textwidth}
 	\includegraphics[width=6.3cm, height=2.6cm]{figs/moliere.png}
 \end{minipage} \hfill \vfill
+
+The pairs ($\theta_\text{plane}$, $y_\text{plane}$) are approximately distributed by a bi-dimensional Gaussian distribution with a given covariance:
+
+\begin{equation}
+\text{Cov}(\theta_\text{plane}, y_\text{plane}) = \begin{bmatrix}
+\theta^2_0 & \frac{\theta_0^2x}{2} \\
+\frac{\theta_0^2x}{2} & \frac{\theta_0^2x^2}{3} 
+\end{bmatrix}
+\end{equation} \vfill
 \end{frame}
 
 \begin{frame}{Muon tomography}
-Instead of \textit{calculating} the deviation expected for a cosmic muon, we can \textit{measure} the positional and angular deviation suffered \textbf{to estimate the properties of the medium crossed}. \vfill
+Usage of the attenuation or scattering of cosmic muons to estimate the properties (geometry and density) of the medium they cross. \vfill
 % \\ \hspace{10pt} $\rightarrow$ Main idea behind the principle of \textbf{\alert{muon tomography}}, or \textbf{\alert{muography}}. \vfill
 
 Several advantages over other imaging techniques:
@@ -227,7 +263,7 @@ Several advantages over other imaging techniques:
 \justifying
 \item Non-destructive technique
 \item High penetrating capabilities allowing to probe large and dense objects
-\item Completely safe, by using natural cosmic rays for the measurement.
+\item Completely safe as it uses natural cosmic rays for the measurement.
 \end{itemize} \vspace{10pt}
 
 \begin{minipage}[c]{.54\textwidth}
@@ -236,9 +272,9 @@ Several advantages over other imaging techniques:
 	Muography can be used in many different fields:
 \begin{itemize}
 	\justifying
-	\item Find hidden rooms in Pyramids
+	\item Archeology applications such as hidden chambers finding 
 	\item Nuclear waste/facilities inspection
-	\item In volcanology, to know whether a pocket is empty or full of lava.
+	\item Volcanology, to know whether a pocket is empty or full of lava (Sakurajima volcano)
 \end{itemize}	
 	
 \end{minipage} \hfill
@@ -317,27 +353,8 @@ Two important parameters
 
 \end{frame}
 
-\begin{frame}{Monte-Carlo simulations}
-\justifying
-Monte-Carlo simulations are obtained from algorithms developed to \textbf{compute approximate numerical values to stochastic problems} using random processes and probabilistic techniques. \vfill
-
-Instead of relying on actual data collected from the experiment, we can:
-\begin{enumerate}
-\justifying
-\item Use CRY, a cosmic ray generator to simulate thousands of incident muons
-\item Make these muons go through a complete simulation of the detector done with Geant4
-\item Go through the same post-processing process as actual data
-\item Build the PDF for a given experiment from these simulations
-\item Repeat this experiment $N_\text{MC}$ times, \textbf{simulating thousands of experiments} without the need to perform them.
-\end{enumerate} \vfill
-
-Simulating an experiment is cheaper and faster than running it and allows to compare results obtained from both channels. In this work, the dependence on Geant4 will be removed as well, to make this process even faster. \vfill
-\end{frame}
-
 \begin{frame}{Maximum likelihood estimation}
 \justifying
-We still need a method allowing us to \textbf{estimate the optimal geometrical parameters of an object from a given set of measurements}, such as the thickness of a pipe. \vfill
-
 \begin{exampleblock}{}
 \justifying 
 The likelihood measures the goodness of a fit with respect to a sample of data for one or several unknown parameters. If $\bm \theta$ are the parameters of the model and $x$ is the measurement of a random variable $X$ defined from a PDF $f$, then:
@@ -368,6 +385,7 @@ In this work, the parameter to be optimized will be the thickness of a steel pip
 \end{frame}
 
 \begin{frame}{General idea}
+We developed a framework to study the results from a muography experiment to characterize the inner properties of physical objects such as the thickness of a steel pipe. \vfill
 \begin{exampleblock}{} PipeReconstructor \end{exampleblock}
 \justifying
 General set of classes defined in the next slides allowing us to:
@@ -376,13 +394,13 @@ General set of classes defined in the next slides allowing us to:
 \item Define the geometry of the problem (mainly, the detector and object position and size)
 \item Compute the intersection points between cosmic muons and this geometry
 \item Propagate these muons through the geometry using the multiple scattering
-\item Calculate the likelihood of a given measurement for a given geometry
+\item Calculate the likelihood of a given measurement/simulation for a given geometry
 \item Finally, find the optimal object parameters from this likelihood.
 \end{itemize} \vfill
 
 \begin{exampleblock}{} Generator \end{exampleblock}
 \justifying
-Another class allowing us to generate muons by performing Monte-Carlo simulations using some of the functions of the PipeReconstructor and without relying on Geant4. \vfill
+Another class allowing us to generate muons by performing Monte-Carlo simulations using some of the functions of the PipeReconstructor and without relying on Geant4, a toolkit developed by CERN in order to simulate the passage of particles through matter. \vfill
 
 %\begin{exampleblock}{} Plotter \end{exampleblock}
 %\justifying
@@ -435,14 +453,14 @@ Eventual muons which do not actually cross the pipe or out of the acceptance of 
 
 \begin{frame}{Likelihood}
 \justifying
-The Likelihood class takes as input a Volume and a data/MC rootfile, to tell us \textbf{how likely it is that we obtained exactly these measurements for the geometry given}: \vspace{5pt}
+The Likelihood class takes as input a Volume and a data/MC file, to tell us \textbf{how likely it is that we obtained exactly these measurements/simulations for the geometry given}: \vspace{5pt}
 
 \begin{enumerate}
 \begin{minipage}[c]{.58\textwidth}
 \item First, four MuonStates are computed:
 	\begin{itemize}
 	\justifying
-	\item The IncomingMuon and OutgoingMuon, as the actual measurements made by the top/bottom detectors
+	\item The IncomingMuon and OutgoingMuon, as the actual simulations made at the top/bottom detectors
 	\item The IncomingMuonLinearDown, the linear propagation of the IncomingMuon, used as reference
 	\item And the IncomingMuonDown, by propagating the initial state with our Propagator through the Volume
 	\end{itemize}
@@ -454,7 +472,7 @@ The Likelihood class takes as input a Volume and a data/MC rootfile, to tell us 
 \justifying
 \item This process is repeated $n_{\text{iter}}$ times for each input event, obtaining each time values for the $\Delta$x, $\Delta \theta_x$, $\Delta$y and $\Delta \theta_y$ parameters, filling 2 bi-dimensional PDFs histograms \vspace{5pt}
 \item The histograms obtained are smoothen using the kernel density estimation method \vspace{5pt}
-\item The probability to observe the actual measurement (OutgoingMuon) is computed, and summed over all the ${N_\text{MC}}$ events in the file, returning the value:
+\item The probability to observe the actual value of OutgoingMuon is computed, and summed over all the ${N_\text{MC}}$ events in the file, returning the value:
 
 \begin{equation*}
 \label{eq:totallikelihood}
@@ -463,12 +481,22 @@ The Likelihood class takes as input a Volume and a data/MC rootfile, to tell us 
 \end{enumerate} \vfill
 \end{frame}
 
-%\begin{frame}{Generator}
-%\justifying
-%The Generator allows us to generate Monte-Carlo experiments in a faster way than using Geant4, which is more complex, relying on a complete description of the detector. \vfill
-%
-%Information from CRY is therefore used in order to simulate thousands of incident muons, read from a rootfile previously created by MuonSystems. Each incident muon is then propagated through a given Volume using the previous functions, therefore simulating thousands of experiments. \vfill 
-%\end{frame}
+\begin{frame}{Generator and Monte-Carlo simulations}
+\justifying
+Monte-Carlo simulations are obtained from algorithms developed to \textbf{compute approximate numerical values to stochastic problems} using random processes and probabilistic techniques. \vfill
+
+Instead of relying on actual data collected from the experiment, we can:
+\begin{enumerate}
+\justifying
+\item Use CRY, a cosmic ray generator to simulate thousands of incident muons
+\item Make these muons go through a complete simulation of the detector done with Geant4
+\item Go through the same post-processing process as actual data
+\item Build the PDF for a given experiment from these simulations
+\item Repeat this experiment $N_\text{MC}$ times, \textbf{simulating thousands of experiments} without the need to perform them.
+\end{enumerate} \vfill
+
+Simulating an experiment is cheaper and faster than running it and allows to compare results obtained from both channels. In this work, the dependence on Geant4 will be removed as well, to make this process even faster. \vfill
+\end{frame}
 
 
 
@@ -589,7 +617,7 @@ In conclusion, we developed a new framework allowing us to:
 \begin{itemize}
 \justifying
 \item Quickly generate thousands of Monte-Carlo experiments for different pipe geometries without relying on Geant4
-\item Compare the output measurement distributions expected at the bottom detector after propagating a muon through our Volume, using 	our own Propagator
+\item Compare the output distributions expected at the bottom detector after propagating a muon through our Volume, using our own Propagator
 \item Compute the likelihood of a given measurement with respect to different pipe geometries, in order to find a way to estimate the thickness of a steel pipe by studying the deviation of incident cosmic muons
 \item And plot all the results obtained.
 \end{itemize} \vfill
@@ -651,7 +679,7 @@ Cosmic muons have an energy of the order of the GeV and are therefore referred t
 
 \begin{frame}{Multiple Coulomb scattering}
 \justifying
-Inducing a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by a Gaussian of width $\theta_0$ under our experimental conditions.
+Inducing a \alert{\textbf{stochastic deviation}} whose central angular deviation can be described by two Gaussians of width $\theta_0$ along the x and y-axes under our experimental conditions.
 
 \begin{equation*}
 \label{eq:Moliere}
