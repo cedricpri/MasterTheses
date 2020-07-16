@@ -1,0 +1,1799 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  16 JUL 2020 14:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**darkMatter.tex
+(./darkMatter.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 5 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen113
+\lightrulewidth=\dimen114
+\cmidrulewidth=\dimen115
+\belowrulesep=\dimen116
+\belowbottomsep=\dimen117
+\aboverulesep=\dimen118
+\abovetopsep=\dimen119
+\cmidrulesep=\dimen120
+\cmidrulekern=\dimen121
+\defaultaddspace=\dimen122
+\@cmidla=\count91
+\@cmidlb=\count92
+\@aboverulesep=\dimen123
+\@belowrulesep=\dimen124
+\@thisruleclass=\count93
+\@lastruleclass=\count94
+\@thisrulewidth=\dimen125
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/02/14 3.18 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/02/14 3.18 Babel common definitions
+\babel@savecnt=\count95
+\U@D=\dimen126
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count96
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen127
+\Hy@linkcounter=\count97
+\Hy@pagecounter=\count98
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count99
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+\c@Hy@tempcnt=\count100
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen128
+\Fld@menulength=\count101
+\Field@Width=\dimen129
+\Fld@charsize=\dimen130
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count102
+\c@Item=\count103
+\c@Hfootnote=\count104
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count105
+\c@bookmark@seq@number=\count106
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip43
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 15.
+
+(/usr/share/texlive/texmf-dist/tex/latex/mdwtools/mathenv.sty
+Package: mathenv 1998/04/28 1.9 Various maths environments
+
+(/usr/share/texlive/texmf-dist/tex/latex/mdwtools/mdwtab.sty
+Package: mdwtab 1998/04/28 1.9 Table typesetting with style
+\tab@state=\count107
+\tab@columns=\count108
+\tab@preamble=\toks18
+\tab@shortline=\toks19
+\extrarowheight=\dimen131
+\tabextrasep=\dimen132
+\arrayextrasep=\dimen133
+\smarraycolsep=\dimen134
+\smarrayextrasep=\dimen135
+\tab@width=\dimen136
+\col@sep=\dimen137
+\tab@endheight=\dimen138
+\tab@leftskip=\skip44
+\tab@rightskip=\skip45
+\fn@notes=\box26
+\fn@width=\dimen139
+)
+\eqaopenskip=\skip46
+\eqacloseskip=\skip47
+\eqacolskip=\skip48
+\eqainskip=\skip49
+\splitleft=\skip50
+\splitright=\skip51
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen140
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen141
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count109
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count110
+\leftroot@=\count111
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count112
+\DOTSCASE@=\count113
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen142
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
+\dotsspace@=\muskip11
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
+\tag@help=\toks21
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
+\andhelp@=\toks22
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
+\@envbody=\toks23
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen149
+\captionmargin@=\dimen150
+\captionwidth=\dimen151
+\caption@tempdima=\dimen152
+\caption@indent=\dimen153
+\caption@parindent=\dimen154
+\caption@hangindent=\dimen155
+)
+\c@ContinuedFloat=\count121
+Package caption Info: hyperref package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks25
+\footnotemargin=\dimen156
+\c@pp@next@reset=\count122
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip55
+\multirow@cntb=\count123
+\multirow@dima=\skip56
+\bigstrutjot=\dimen157
+)
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count124
+\c@@ppsavesec=\count125
+\c@@ppsaveapp=\count126
+)
+(./darkMatter.aux)
+\openout1 = `darkMatter.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 725.54538pt, 48.36958pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=725.54538pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=103.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count127
+\scratchdimen=\dimen158
+\scratchbox=\box29
+\nofMPsegments=\count128
+\nofMParguments=\count129
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count130
+\MPscratchDim=\dimen159
+\MPnumerator=\count131
+\makeMPintoPDFobject=\count132
+\everyMPtoPDFconversion=\toks27
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring ON on input line 28.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count133
+)
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+LaTeX Info: Redefining \nameref on input line 28.
+
+(./darkMatter.out) (./darkMatter.out)
+\@outlinefile=\write3
+\openout3 = `darkMatter.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+<figs/image_UC.png, id=160, 400.49625pt x 401.5pt>
+File: figs/image_UC.png Graphic file (type png)
+<use figs/image_UC.png>
+Package pdftex.def Info: figs/image_UC.png  used on input line 36.
+(pdftex.def)             Requested size: 72.55157pt x 72.73248pt.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 52.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figs/image_UC.png>]
+[2
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.105 \newpage
+               [1]
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.129 \newpage
+               [2] (./darkMatter.toc [3
+
+])
+\tf@toc=\write4
+\openout4 = `darkMatter.toc'.
+
+ [4]
+Chapter 1.
+<figs/SM.png, id=251, 1204.5pt x 1152.305pt>
+File: figs/SM.png Graphic file (type png)
+<use figs/SM.png>
+Package pdftex.def Info: figs/SM.png  used on input line 151.
+(pdftex.def)             Requested size: 227.60759pt x 199.15964pt.
+[1
+
+] [2 <./figs/SM.png>]
+Chapter 2.
+<figs/RotationCurve2.jpeg, id=282, 661.47125pt x 522.95375pt>
+File: figs/RotationCurve2.jpeg Graphic file (type jpg)
+<use figs/RotationCurve2.jpeg>
+Package pdftex.def Info: figs/RotationCurve2.jpeg  used on input line 177.
+(pdftex.def)             Requested size: 227.61232pt x 170.71602pt.
+[3
+
+] [4 <./figs/RotationCurve2.jpeg>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 199.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 199.
+
+<figs/feynman2.jpg, id=311, 853.1875pt x 580.1675pt>
+File: figs/feynman2.jpg Graphic file (type jpg)
+<use figs/feynman2.jpg>
+Package pdftex.def Info: figs/feynman2.jpg  used on input line 205.
+(pdftex.def)             Requested size: 170.71259pt x 108.11719pt.
+[5 <./figs/feynman2.jpg>]
+<figs/previous_scalar.pdf, id=327, 569.12625pt x 408.52625pt>
+File: figs/previous_scalar.pdf Graphic file (type pdf)
+<use figs/previous_scalar.pdf>
+Package pdftex.def Info: figs/previous_scalar.pdf  used on input line 223.
+(pdftex.def)             Requested size: 200.00479pt x 180.00145pt.
+<figs/previous_pseudoscalar.pdf, id=328, 569.12625pt x 408.52625pt>
+File: figs/previous_pseudoscalar.pdf Graphic file (type pdf)
+<use figs/previous_pseudoscalar.pdf>
+Package pdftex.def Info: figs/previous_pseudoscalar.pdf  used on input line 228
+.
+(pdftex.def)             Requested size: 200.00479pt x 180.00145pt.
+
+
+Package caption Warning: \captionsetup{type*=...} or \captionof
+(caption)                outside box or environment on input line 231.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 231.
+See the caption package documentation for explanation.
+
+[6 <./figs/previous_scalar.pdf, page is rotated 90 degrees> <./figs/previous_ps
+eudoscalar.pdf, page is rotated 90 degrees>]
+Chapter 3.
+<figs/LHC.jpg, id=428, 334.851pt x 270.2898pt>
+File: figs/LHC.jpg Graphic file (type jpg)
+<use figs/LHC.jpg>
+Package pdftex.def Info: figs/LHC.jpg  used on input line 244.
+(pdftex.def)             Requested size: 284.53271pt x 170.72064pt.
+
+Underfull \vbox (badness 5133) has occurred while \output is active []
+
+ [7
+
+ <./figs/LHC.jpg>]
+<figs/CMS.png, id=443, 3189.9175pt x 2253.41875pt>
+File: figs/CMS.png Graphic file (type png)
+<use figs/CMS.png>
+Package pdftex.def Info: figs/CMS.png  used on input line 258.
+(pdftex.def)             Requested size: 284.50046pt x 199.15419pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
+
+ []
+
+<figs/CMS_inside.png, id=446, 995.72pt x 507.8975pt>
+File: figs/CMS_inside.png Graphic file (type png)
+<use figs/CMS_inside.png>
+Package pdftex.def Info: figs/CMS_inside.png  used on input line 270.
+(pdftex.def)             Requested size: 284.52763pt x 170.7144pt.
+[8 <./figs/CMS.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 278--279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
+ []
+
+[9 <./figs/CMS_inside.png>] [10
+
+]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+[11]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 310.
+See the caption package documentation for explanation.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 319.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 319.
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 393.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 412.
+See the caption package documentation for explanation.
+
+[13] [14]
+<figs/tt1.jpg, id=533, 531.9875pt x 327.2225pt>
+File: figs/tt1.jpg Graphic file (type jpg)
+<use figs/tt1.jpg>
+Package pdftex.def Info: figs/tt1.jpg  used on input line 469.
+(pdftex.def)             Requested size: 79.99762pt x 69.99695pt.
+<figs/tt2.jpg, id=534, 491.8375pt x 317.185pt>
+File: figs/tt2.jpg Graphic file (type jpg)
+<use figs/tt2.jpg>
+Package pdftex.def Info: figs/tt2.jpg  used on input line 474.
+(pdftex.def)             Requested size: 79.99393pt x 69.9987pt.
+<figs/tt3.jpg, id=535, 515.9275pt x 319.1925pt>
+File: figs/tt3.jpg Graphic file (type jpg)
+<use figs/tt3.jpg>
+Package pdftex.def Info: figs/tt3.jpg  used on input line 479.
+(pdftex.def)             Requested size: 79.99942pt x 69.99852pt.
+<figs/tt4.jpg, id=536, 503.8825pt x 317.185pt>
+File: figs/tt4.jpg Graphic file (type jpg)
+<use figs/tt4.jpg>
+Package pdftex.def Info: figs/tt4.jpg  used on input line 484.
+(pdftex.def)             Requested size: 80.00006pt x 69.9987pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 488.
+See the caption package documentation for explanation.
+
+<figs/ttv-0-2.png, id=544, 548.0475pt x 574.145pt>
+File: figs/ttv-0-2.png Graphic file (type png)
+<use figs/ttv-0-2.png>
+Package pdftex.def Info: figs/ttv-0-2.png  used on input line 499.
+(pdftex.def)             Requested size: 199.17015pt x 199.16656pt.
+<figs/ttv-80-2.png, id=545, 548.0475pt x 574.145pt>
+File: figs/ttv-80-2.png Graphic file (type png)
+<use figs/ttv-80-2.png>
+Package pdftex.def Info: figs/ttv-80-2.png  used on input line 504.
+(pdftex.def)             Requested size: 199.17015pt x 199.16656pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 507.
+See the caption package documentation for explanation.
+
+[15 <./figs/tt1.jpg> <./figs/tt2.jpg> <./figs/tt3.jpg> <./figs/tt4.jpg> <./figs
+/ttv-0-2.png> <./figs/ttv-80-2.png>] [16]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
+
+ []
+
+[17
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 556--558
+
+ []
+
+
+Underfull \hbox (badness 6016) in paragraph at lines 565--567
+\OT1/cmr/m/n/10.95 ...because we con-sider the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--567
+
+ []
+
+
+Underfull \hbox (badness 5985) in paragraph at lines 575--577
+\OT1/cmr/m/n/10.95 ...because we as-sume that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--581
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 584--585
+
+ []
+
+<figs/ellipse.jpg, id=591, 1222.5675pt x 722.7pt>
+File: figs/ellipse.jpg Graphic file (type jpg)
+<use figs/ellipse.jpg>
+Package pdftex.def Info: figs/ellipse.jpg  used on input line 590.
+(pdftex.def)             Requested size: 312.97247pt x 156.49124pt.
+<figs/descent1.jpg, id=595, 1214.5375pt x 1110.1475pt>
+File: figs/descent1.jpg Graphic file (type jpg)
+<use figs/descent1.jpg>
+Package pdftex.def Info: figs/descent1.jpg  used on input line 610.
+(pdftex.def)             Requested size: 199.98233pt x 159.99324pt.
+<figs/descent2.jpg, id=596, 1216.545pt x 1098.1025pt>
+File: figs/descent2.jpg Graphic file (type jpg)
+<use figs/descent2.jpg>
+Package pdftex.def Info: figs/descent2.jpg  used on input line 615.
+(pdftex.def)             Requested size: 199.9973pt x 159.99992pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 618.
+See the caption package documentation for explanation.
+
+[19 <./figs/ellipse.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+
+ []
+
+<figs/metPfType1.png, id=608, 548.0475pt x 694.595pt>
+File: figs/metPfType1.png Graphic file (type png)
+<use figs/metPfType1.png>
+Package pdftex.def Info: figs/metPfType1.png  used on input line 631.
+(pdftex.def)             Requested size: 199.99803pt x 179.99692pt.
+<figs/metPfType1_log.png, id=609, 548.0475pt x 694.595pt>
+File: figs/metPfType1_log.png Graphic file (type png)
+<use figs/metPfType1_log.png>
+Package pdftex.def Info: figs/metPfType1_log.png  used on input line 636.
+(pdftex.def)             Requested size: 199.99803pt x 179.99692pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 639.
+See the caption package documentation for explanation.
+
+[20 <./figs/descent1.jpg> <./figs/descent2.jpg> <./figs/metPfType1.png> <./figs
+/metPfType1_log.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 644--645
+
+ []
+
+<figs/deltaphi_mine.jpg, id=620, 682.55pt x 652.4375pt>
+File: figs/deltaphi_mine.jpg Graphic file (type jpg)
+<use figs/deltaphi_mine.jpg>
+Package pdftex.def Info: figs/deltaphi_mine.jpg  used on input line 648.
+(pdftex.def)             Requested size: 139.99655pt x 140.00253pt.
+<figs/deltaphi_low_mine.jpg, id=621, 682.55pt x 652.4375pt>
+File: figs/deltaphi_low_mine.jpg Graphic file (type jpg)
+<use figs/deltaphi_low_mine.jpg>
+Package pdftex.def Info: figs/deltaphi_low_mine.jpg  used on input line 653.
+(pdftex.def)             Requested size: 139.99655pt x 140.00253pt.
+<figs/deltaphi_high_mine.jpg, id=622, 682.55pt x 652.4375pt>
+File: figs/deltaphi_high_mine.jpg Graphic file (type jpg)
+<use figs/deltaphi_high_mine.jpg>
+Package pdftex.def Info: figs/deltaphi_high_mine.jpg  used on input line 658.
+(pdftex.def)             Requested size: 139.99655pt x 140.00253pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 661.
+See the caption package documentation for explanation.
+
+<figs/dphillmet.png, id=623, 548.0475pt x 694.595pt>
+File: figs/dphillmet.png Graphic file (type png)
+<use figs/dphillmet.png>
+Package pdftex.def Info: figs/dphillmet.png  used on input line 666.
+(pdftex.def)             Requested size: 199.99803pt x 179.99692pt.
+<figs/dphillmet_log.png, id=624, 548.0475pt x 694.595pt>
+File: figs/dphillmet_log.png Graphic file (type png)
+<use figs/dphillmet_log.png>
+Package pdftex.def Info: figs/dphillmet_log.png  used on input line 671.
+(pdftex.def)             Requested size: 199.99803pt x 179.99692pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 674.
+See the caption package documentation for explanation.
+
+[21 <./figs/deltaphi_mine.jpg> <./figs/deltaphi_low_mine.jpg> <./figs/deltaphi_
+high_mine.jpg> <./figs/dphillmet.png> <./figs/dphillmet_log.png>]
+<figs/mt2ll.png, id=643, 548.0475pt x 694.595pt>
+File: figs/mt2ll.png Graphic file (type png)
+<use figs/mt2ll.png>
+Package pdftex.def Info: figs/mt2ll.png  used on input line 702.
+(pdftex.def)             Requested size: 199.99803pt x 179.99692pt.
+<figs/mt2ll_log.png, id=644, 548.0475pt x 694.595pt>
+File: figs/mt2ll_log.png Graphic file (type png)
+<use figs/mt2ll_log.png>
+Package pdftex.def Info: figs/mt2ll_log.png  used on input line 707.
+(pdftex.def)             Requested size: 199.99803pt x 179.99692pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 710.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
+
+ []
+
+<figs/darkpt.png, id=648, 548.0475pt x 694.595pt>
+File: figs/darkpt.png Graphic file (type png)
+<use figs/darkpt.png>
+Package pdftex.def Info: figs/darkpt.png  used on input line 717.
+(pdftex.def)             Requested size: 199.99803pt x 179.99692pt.
+<figs/darkpt_log.png, id=649, 548.0475pt x 694.595pt>
+File: figs/darkpt_log.png Graphic file (type png)
+<use figs/darkpt_log.png>
+Package pdftex.def Info: figs/darkpt_log.png  used on input line 722.
+(pdftex.def)             Requested size: 199.99803pt x 179.99692pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 725.
+See the caption package documentation for explanation.
+
+[22 <./figs/mt2ll.png> <./figs/mt2ll_log.png> <./figs/darkpt.png> <./figs/darkp
+t_log.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 730--731
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
+
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 766.
+See the caption package documentation for explanation.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 804.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 804.
+
+[23]
+<figs/ttSF-running_short.png, id=668, 698.61pt x 473.77pt>
+File: figs/ttSF-running_short.png Graphic file (type png)
+<use figs/ttSF-running_short.png>
+Package pdftex.def Info: figs/ttSF-running_short.png  used on input line 817.
+(pdftex.def)             Requested size: 227.62119pt x 199.17pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 823--824
+
+ []
+
+<figs/metPfType1_ttCR.png, id=674, 548.0475pt x 694.595pt>
+File: figs/metPfType1_ttCR.png Graphic file (type png)
+<use figs/metPfType1_ttCR.png>
+Package pdftex.def Info: figs/metPfType1_ttCR.png  used on input line 827.
+(pdftex.def)             Requested size: 149.99852pt x 157.99411pt.
+<figs/dphillmet_ttCR.png, id=675, 548.0475pt x 694.595pt>
+File: figs/dphillmet_ttCR.png Graphic file (type png)
+<use figs/dphillmet_ttCR.png>
+Package pdftex.def Info: figs/dphillmet_ttCR.png  used on input line 832.
+(pdftex.def)             Requested size: 149.99852pt x 157.99411pt.
+<figs/mt2ll_ttCR.png, id=676, 548.0475pt x 694.595pt>
+File: figs/mt2ll_ttCR.png Graphic file (type png)
+<use figs/mt2ll_ttCR.png>
+Package pdftex.def Info: figs/mt2ll_ttCR.png  used on input line 837.
+(pdftex.def)             Requested size: 149.99852pt x 157.99411pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 840.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./figs/ttSF-running_short.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 845--846
+
+ []
+
+<figs/metPfType1_ttVCRv2.png, id=686, 548.0475pt x 694.595pt>
+File: figs/metPfType1_ttVCRv2.png Graphic file (type png)
+<use figs/metPfType1_ttVCRv2.png>
+Package pdftex.def Info: figs/metPfType1_ttVCRv2.png  used on input line 851.
+(pdftex.def)             Requested size: 149.99852pt x 157.99411pt.
+<figs/dphillmet_ttVCRv2.png, id=687, 548.0475pt x 694.595pt>
+File: figs/dphillmet_ttVCRv2.png Graphic file (type png)
+<use figs/dphillmet_ttVCRv2.png>
+Package pdftex.def Info: figs/dphillmet_ttVCRv2.png  used on input line 856.
+(pdftex.def)             Requested size: 149.99852pt x 157.99411pt.
+<figs/mt2ll_ttVCRv2.png, id=688, 548.0475pt x 694.595pt>
+File: figs/mt2ll_ttVCRv2.png Graphic file (type png)
+<use figs/mt2ll_ttVCRv2.png>
+Package pdftex.def Info: figs/mt2ll_ttVCRv2.png  used on input line 861.
+(pdftex.def)             Requested size: 149.99852pt x 157.99411pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 864.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 877--878
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 879--880
+
+ []
+
+[25 <./figs/metPfType1_ttCR.png> <./figs/dphillmet_ttCR.png> <./figs/mt2ll_ttCR
+.png> <./figs/metPfType1_ttVCRv2.png> <./figs/dphillmet_ttVCRv2.png> <./figs/mt
+2ll_ttVCRv2.png>] [26]
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 906--907
+
+ []
+
+<figs/MVA_schema.jpg, id=713, 1511.6475pt x 1057.9525pt>
+File: figs/MVA_schema.jpg Graphic file (type jpg)
+<use figs/MVA_schema.jpg>
+Package pdftex.def Info: figs/MVA_schema.jpg  used on input line 910.
+(pdftex.def)             Requested size: 227.61385pt x 142.25241pt.
+[27
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 933--934
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 941--942
+
+ []
+
+<figs/newMVA/input_10GeV.pdf, id=731, 569.12625pt x 546.04pt>
+File: figs/newMVA/input_10GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/input_10GeV.pdf>
+Package pdftex.def Info: figs/newMVA/input_10GeV.pdf  used on input line 945.
+(pdftex.def)             Requested size: 200.00479pt x 192.00005pt.
+<figs/newMVA/input_500GeV.pdf, id=732, 569.12625pt x 546.04pt>
+File: figs/newMVA/input_500GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/input_500GeV.pdf>
+Package pdftex.def Info: figs/newMVA/input_500GeV.pdf  used on input line 950.
+(pdftex.def)             Requested size: 200.00479pt x 192.00005pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 953.
+See the caption package documentation for explanation.
+
+[28 <./figs/MVA_schema.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 956--957
+
+ []
+
+<figs/newMVA/correlation_background_10GeV.pdf, id=741, 569.12625pt x 546.04pt>
+File: figs/newMVA/correlation_background_10GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/correlation_background_10GeV.pdf>
+Package pdftex.def Info: figs/newMVA/correlation_background_10GeV.pdf  used on 
+input line 960.
+(pdftex.def)             Requested size: 170.00104pt x 166.99603pt.
+<figs/newMVA/correlation_signal_10GeV.pdf, id=742, 569.12625pt x 546.04pt>
+File: figs/newMVA/correlation_signal_10GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/correlation_signal_10GeV.pdf>
+Package pdftex.def Info: figs/newMVA/correlation_signal_10GeV.pdf  used on inpu
+t line 965.
+(pdftex.def)             Requested size: 170.00104pt x 166.99603pt.
+<figs/newMVA/correlation_background_500GeV.pdf, id=743, 569.12625pt x 546.04pt>
+
+File: figs/newMVA/correlation_background_500GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/correlation_background_500GeV.pdf>
+Package pdftex.def Info: figs/newMVA/correlation_background_500GeV.pdf  used on
+ input line 973.
+(pdftex.def)             Requested size: 170.00104pt x 166.99603pt.
+<figs/newMVA/correlation_signal_500GeV.pdf, id=744, 569.12625pt x 546.04pt>
+File: figs/newMVA/correlation_signal_500GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/correlation_signal_500GeV.pdf>
+Package pdftex.def Info: figs/newMVA/correlation_signal_500GeV.pdf  used on inp
+ut line 978.
+(pdftex.def)             Requested size: 170.00104pt x 166.99603pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 981.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29 <./figs/newMVA/input_10GeV.pdf, page is rotated 90 degrees> <./figs/newMVA
+/input_500GeV.pdf, page is rotated 90 degrees> <./figs/newMVA/correlation_backg
+round_10GeV.pdf, page is rotated 90 degrees> <./figs/newMVA/correlation_signal_
+10GeV.pdf, page is rotated 90 degrees> <./figs/newMVA/correlation_background_50
+0GeV.pdf, page is rotated 90 degrees> <./figs/newMVA/correlation_signal_500GeV.
+pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 988--989
+
+ []
+
+<figs/newMVA/sigmoid_architecture.pdf, id=1010, 569.12625pt x 355.3275pt>
+File: figs/newMVA/sigmoid_architecture.pdf Graphic file (type pdf)
+<use figs/newMVA/sigmoid_architecture.pdf>
+Package pdftex.def Info: figs/newMVA/sigmoid_architecture.pdf  used on input li
+ne 992.
+(pdftex.def)             Requested size: 200.00479pt x 140.0031pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 995.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
+
+ []
+
+[30 <./figs/newMVA/sigmoid_architecture.pdf, page is rotated 90 degrees>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1027.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
+
+ []
+
+<figs/newMVA/convergence_sigmoid_10GeV.pdf, id=1065, 569.12625pt x 416.55624pt>
+
+File: figs/newMVA/convergence_sigmoid_10GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/convergence_sigmoid_10GeV.pdf>
+Package pdftex.def Info: figs/newMVA/convergence_sigmoid_10GeV.pdf  used on inp
+ut line 1036.
+(pdftex.def)             Requested size: 190.00064pt x 170.00099pt.
+<figs/newMVA/convergence_tanh_10GeV.pdf, id=1066, 569.12625pt x 416.55624pt>
+File: figs/newMVA/convergence_tanh_10GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/convergence_tanh_10GeV.pdf>
+Package pdftex.def Info: figs/newMVA/convergence_tanh_10GeV.pdf  used on input 
+line 1041.
+(pdftex.def)             Requested size: 190.00064pt x 170.00099pt.
+<figs/newMVA/convergence_sigmoid_500GeV.pdf, id=1067, 569.12625pt x 416.55624pt
+>
+File: figs/newMVA/convergence_sigmoid_500GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/convergence_sigmoid_500GeV.pdf>
+Package pdftex.def Info: figs/newMVA/convergence_sigmoid_500GeV.pdf  used on in
+put line 1049.
+(pdftex.def)             Requested size: 190.00064pt x 170.00099pt.
+<figs/newMVA/convergence_tanh_500GeV.pdf, id=1068, 569.12625pt x 416.55624pt>
+File: figs/newMVA/convergence_tanh_500GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/convergence_tanh_500GeV.pdf>
+Package pdftex.def Info: figs/newMVA/convergence_tanh_500GeV.pdf  used on input
+ line 1054.
+(pdftex.def)             Requested size: 190.00064pt x 170.00099pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1057.
+See the caption package documentation for explanation.
+
+[31 <./figs/newMVA/convergence_sigmoid_10GeV.pdf, page is rotated 90 degrees> <
+./figs/newMVA/convergence_tanh_10GeV.pdf, page is rotated 90 degrees> <./figs/n
+ewMVA/convergence_sigmoid_500GeV.pdf, page is rotated 90 degrees> <./figs/newMV
+A/convergence_tanh_500GeV.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
+
+ []
+
+<figs/newMVA/response_sigmoid_10GeV.pdf, id=1249, 569.12625pt x 420.57124pt>
+File: figs/newMVA/response_sigmoid_10GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/response_sigmoid_10GeV.pdf>
+Package pdftex.def Info: figs/newMVA/response_sigmoid_10GeV.pdf  used on input 
+line 1066.
+(pdftex.def)             Requested size: 190.00064pt x 169.99672pt.
+<figs/newMVA/response_tanh_10GeV.pdf, id=1250, 569.12625pt x 420.57124pt>
+File: figs/newMVA/response_tanh_10GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/response_tanh_10GeV.pdf>
+Package pdftex.def Info: figs/newMVA/response_tanh_10GeV.pdf  used on input lin
+e 1071.
+(pdftex.def)             Requested size: 190.00064pt x 169.99672pt.
+<figs/newMVA/response_sigmoid_500GeV.pdf, id=1251, 569.12625pt x 420.57124pt>
+File: figs/newMVA/response_sigmoid_500GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/response_sigmoid_500GeV.pdf>
+Package pdftex.def Info: figs/newMVA/response_sigmoid_500GeV.pdf  used on input
+ line 1079.
+(pdftex.def)             Requested size: 190.00064pt x 169.99672pt.
+<figs/newMVA/response_tanh_500GeV.pdf, id=1252, 569.12625pt x 420.57124pt>
+File: figs/newMVA/response_tanh_500GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/response_tanh_500GeV.pdf>
+Package pdftex.def Info: figs/newMVA/response_tanh_500GeV.pdf  used on input li
+ne 1084.
+(pdftex.def)             Requested size: 190.00064pt x 169.99672pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1087.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1090--1091
+
+ []
+
+<figs/newMVA/ROC_10GeV.pdf, id=1254, 569.12625pt x 416.55624pt>
+File: figs/newMVA/ROC_10GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/ROC_10GeV.pdf>
+Package pdftex.def Info: figs/newMVA/ROC_10GeV.pdf  used on input line 1094.
+(pdftex.def)             Requested size: 190.00064pt x 167.99883pt.
+<figs/newMVA/ROC_500GeV.pdf, id=1255, 569.12625pt x 416.55624pt>
+File: figs/newMVA/ROC_500GeV.pdf Graphic file (type pdf)
+<use figs/newMVA/ROC_500GeV.pdf>
+Package pdftex.def Info: figs/newMVA/ROC_500GeV.pdf  used on input line 1099.
+(pdftex.def)             Requested size: 190.00064pt x 167.99883pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1102.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 <./figs/newMVA/response_sigmoid_10GeV.pdf, page is rotated 90 degrees> <./
+figs/newMVA/response_tanh_10GeV.pdf, page is rotated 90 degrees> <./figs/newMVA
+/response_sigmoid_500GeV.pdf, page is rotated 90 degrees> <./figs/newMVA/respon
+se_tanh_500GeV.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1106
+
+ []
+
+<figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00010_significance.png, id=1437
+, 548.0475pt x 574.145pt>
+File: figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00010_significance.png Gra
+phic file (type png)
+<use figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00010_significance.png>
+Package pdftex.def Info: figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00010_s
+ignificance.png  used on input line 1109.
+(pdftex.def)             Requested size: 180.00325pt x 161.99477pt.
+<figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_significance.png, id=1438
+, 548.0475pt x 574.145pt>
+File: figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_significance.png Gra
+phic file (type png)
+<use figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_significance.png>
+Package pdftex.def Info: figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_s
+ignificance.png  used on input line 1114.
+(pdftex.def)             Requested size: 180.00325pt x 161.99477pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1117.
+See the caption package documentation for explanation.
+
+<figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00010_log.png, id=1439, 548.047
+5pt x 694.595pt>
+File: figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00010_log.png Graphic file
+ (type png)
+<use figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00010_log.png>
+Package pdftex.def Info: figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00010_l
+og.png  used on input line 1122.
+(pdftex.def)             Requested size: 180.00325pt x 162.0004pt.
+<figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_log.png, id=1440, 548.047
+5pt x 694.595pt>
+File: figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_log.png Graphic file
+ (type png)
+<use figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_log.png>
+Package pdftex.def Info: figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_l
+og.png  used on input line 1127.
+(pdftex.def)             Requested size: 180.00325pt x 162.0004pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1130.
+See the caption package documentation for explanation.
+
+[33 <./figs/newMVA/ROC_10GeV.pdf, page is rotated 90 degrees> <./figs/newMVA/RO
+C_500GeV.pdf, page is rotated 90 degrees> <./figs/ANN_sigm_mt2ll80_Cedrictest_t
+tDM0001scalar00010_significance.png> <./figs/ANN_sigm_mt2ll80_Cedrictest_ttDM00
+01scalar00500_significance.png> <./figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001sca
+lar00010_log.png> <./figs/ANN_sigm_mt2ll80_Cedrictest_ttDM0001scalar00500_log.p
+ng>] [34
+
+]
+Chapter 7.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1176.
+See the caption package documentation for explanation.
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 1182--1183
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1184--1185
+
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1210.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1237.
+See the caption package documentation for explanation.
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1243
+
+ []
+
+<figs/limits_scalar.pdf, id=1558, 569.12625pt x 459.7175pt>
+File: figs/limits_scalar.pdf Graphic file (type pdf)
+<use figs/limits_scalar.pdf>
+Package pdftex.def Info: figs/limits_scalar.pdf  used on input line 1246.
+(pdftex.def)             Requested size: 210.00026pt x 200.00356pt.
+<figs/limits_pseudo.pdf, id=1559, 569.12625pt x 459.7175pt>
+File: figs/limits_pseudo.pdf Graphic file (type pdf)
+<use figs/limits_pseudo.pdf>
+Package pdftex.def Info: figs/limits_pseudo.pdf  used on input line 1252.
+(pdftex.def)             Requested size: 210.00026pt x 200.00356pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1256.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1260
+
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1300.
+See the caption package documentation for explanation.
+
+[37 <./figs/limits_scalar.pdf, page is rotated 90 degrees> <./figs/limits_pseud
+o.pdf, page is rotated 90 degrees>]
+<figs/lep1pt_log-final.png, id=1654, 548.0475pt x 694.595pt>
+File: figs/lep1pt_log-final.png Graphic file (type png)
+<use figs/lep1pt_log-final.png>
+Package pdftex.def Info: figs/lep1pt_log-final.png  used on input line 1309.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1309--1311
+ [][] 
+ []
+
+<figs/lep1eta_log-final.png, id=1655, 548.0475pt x 694.595pt>
+File: figs/lep1eta_log-final.png Graphic file (type png)
+<use figs/lep1eta_log-final.png>
+Package pdftex.def Info: figs/lep1eta_log-final.png  used on input line 1314.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1314--1316
+ [][] 
+ []
+
+<figs/m2l_log-final.png, id=1656, 548.0475pt x 694.595pt>
+File: figs/m2l_log-final.png Graphic file (type png)
+<use figs/m2l_log-final.png>
+Package pdftex.def Info: figs/m2l_log-final.png  used on input line 1319.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1319--1321
+ [][] 
+ []
+
+<figs/lep2pt_log-final.png, id=1657, 548.0475pt x 694.595pt>
+File: figs/lep2pt_log-final.png Graphic file (type png)
+<use figs/lep2pt_log-final.png>
+Package pdftex.def Info: figs/lep2pt_log-final.png  used on input line 1325.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1325--1327
+ [][] 
+ []
+
+<figs/lep2eta_log-final.png, id=1658, 548.0475pt x 694.595pt>
+File: figs/lep2eta_log-final.png Graphic file (type png)
+<use figs/lep2eta_log-final.png>
+Package pdftex.def Info: figs/lep2eta_log-final.png  used on input line 1330.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1330--1332
+ [][] 
+ []
+
+<figs/mt2ll_log-final.png, id=1659, 548.0475pt x 694.595pt>
+File: figs/mt2ll_log-final.png Graphic file (type png)
+<use figs/mt2ll_log-final.png>
+Package pdftex.def Info: figs/mt2ll_log-final.png  used on input line 1335.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1335--1337
+ [][] 
+ []
+
+<figs/darkpt_log-final.png, id=1660, 548.0475pt x 694.595pt>
+File: figs/darkpt_log-final.png Graphic file (type png)
+<use figs/darkpt_log-final.png>
+Package pdftex.def Info: figs/darkpt_log-final.png  used on input line 1341.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1341--1343
+ [][] 
+ []
+
+<figs/dphillmet_log-final.png, id=1661, 548.0475pt x 694.595pt>
+File: figs/dphillmet_log-final.png Graphic file (type png)
+<use figs/dphillmet_log-final.png>
+Package pdftex.def Info: figs/dphillmet_log-final.png  used on input line 1346.
+
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1346--1348
+ [][] 
+ []
+
+<figs/metPfType1_log-final.png, id=1662, 548.0475pt x 694.595pt>
+File: figs/metPfType1_log-final.png Graphic file (type png)
+<use figs/metPfType1_log-final.png>
+Package pdftex.def Info: figs/metPfType1_log-final.png  used on input line 1351
+.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1351--1353
+ [][] 
+ []
+
+<figs/njet_log-final.png, id=1663, 548.0475pt x 694.595pt>
+File: figs/njet_log-final.png Graphic file (type png)
+<use figs/njet_log-final.png>
+Package pdftex.def Info: figs/njet_log-final.png  used on input line 1357.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1357--1359
+ [][] 
+ []
+
+<figs/nbjet30csvv2m_log-final.png, id=1664, 548.0475pt x 694.595pt>
+File: figs/nbjet30csvv2m_log-final.png Graphic file (type png)
+<use figs/nbjet30csvv2m_log-final.png>
+Package pdftex.def Info: figs/nbjet30csvv2m_log-final.png  used on input line 1
+362.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1362--1364
+ [][] 
+ []
+
+<figs/ht_log-final.png, id=1665, 548.0475pt x 694.595pt>
+File: figs/ht_log-final.png Graphic file (type png)
+<use figs/ht_log-final.png>
+Package pdftex.def Info: figs/ht_log-final.png  used on input line 1367.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1367--1369
+ [][] 
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1371.
+See the caption package documentation for explanation.
+
+[38 <./figs/lep1pt_log-final.png> <./figs/lep1eta_log-final.png> <./figs/m2l_lo
+g-final.png> <./figs/lep2pt_log-final.png> <./figs/lep2eta_log-final.png> <./fi
+gs/mt2ll_log-final.png> <./figs/darkpt_log-final.png> <./figs/dphillmet_log-fin
+al.png> <./figs/metPfType1_log-final.png> <./figs/njet_log-final.png> <./figs/n
+bjet30csvv2m_log-final.png> <./figs/ht_log-final.png>]
+<figs/lep1pt_log-final_pseudo.png, id=1670, 548.0475pt x 694.595pt>
+File: figs/lep1pt_log-final_pseudo.png Graphic file (type png)
+<use figs/lep1pt_log-final_pseudo.png>
+Package pdftex.def Info: figs/lep1pt_log-final_pseudo.png  used on input line 1
+378.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1378--1380
+ [][] 
+ []
+
+<figs/lep1eta_log-final_pseudo.png, id=1671, 548.0475pt x 694.595pt>
+File: figs/lep1eta_log-final_pseudo.png Graphic file (type png)
+<use figs/lep1eta_log-final_pseudo.png>
+Package pdftex.def Info: figs/lep1eta_log-final_pseudo.png  used on input line 
+1383.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1383--1385
+ [][] 
+ []
+
+<figs/m2l_log-final_pseudo.png, id=1672, 548.0475pt x 694.595pt>
+File: figs/m2l_log-final_pseudo.png Graphic file (type png)
+<use figs/m2l_log-final_pseudo.png>
+Package pdftex.def Info: figs/m2l_log-final_pseudo.png  used on input line 1388
+.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1388--1390
+ [][] 
+ []
+
+<figs/lep2pt_log-final_pseudo.png, id=1673, 548.0475pt x 694.595pt>
+File: figs/lep2pt_log-final_pseudo.png Graphic file (type png)
+<use figs/lep2pt_log-final_pseudo.png>
+Package pdftex.def Info: figs/lep2pt_log-final_pseudo.png  used on input line 1
+394.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1394--1396
+ [][] 
+ []
+
+<figs/lep2eta_log-final_pseudo.png, id=1674, 548.0475pt x 694.595pt>
+File: figs/lep2eta_log-final_pseudo.png Graphic file (type png)
+<use figs/lep2eta_log-final_pseudo.png>
+Package pdftex.def Info: figs/lep2eta_log-final_pseudo.png  used on input line 
+1399.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1399--1401
+ [][] 
+ []
+
+<figs/mt2ll_log-final_pseudo.png, id=1675, 548.0475pt x 694.595pt>
+File: figs/mt2ll_log-final_pseudo.png Graphic file (type png)
+<use figs/mt2ll_log-final_pseudo.png>
+Package pdftex.def Info: figs/mt2ll_log-final_pseudo.png  used on input line 14
+04.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1404--1406
+ [][] 
+ []
+
+<figs/darkpt_log-final_pseudo.png, id=1676, 548.0475pt x 694.595pt>
+File: figs/darkpt_log-final_pseudo.png Graphic file (type png)
+<use figs/darkpt_log-final_pseudo.png>
+Package pdftex.def Info: figs/darkpt_log-final_pseudo.png  used on input line 1
+410.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1410--1412
+ [][] 
+ []
+
+<figs/dphillmet_log-final_pseudo.png, id=1677, 548.0475pt x 694.595pt>
+File: figs/dphillmet_log-final_pseudo.png Graphic file (type png)
+<use figs/dphillmet_log-final_pseudo.png>
+Package pdftex.def Info: figs/dphillmet_log-final_pseudo.png  used on input lin
+e 1415.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1415--1417
+ [][] 
+ []
+
+<figs/metPfType1_log-final_pseudo.png, id=1678, 548.0475pt x 694.595pt>
+File: figs/metPfType1_log-final_pseudo.png Graphic file (type png)
+<use figs/metPfType1_log-final_pseudo.png>
+Package pdftex.def Info: figs/metPfType1_log-final_pseudo.png  used on input li
+ne 1420.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1420--1422
+ [][] 
+ []
+
+<figs/njet_log-final_pseudo.png, id=1679, 548.0475pt x 694.595pt>
+File: figs/njet_log-final_pseudo.png Graphic file (type png)
+<use figs/njet_log-final_pseudo.png>
+Package pdftex.def Info: figs/njet_log-final_pseudo.png  used on input line 142
+6.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1426--1428
+ [][] 
+ []
+
+<figs/nbjet30csvv2m_log-final_pseudo.png, id=1680, 548.0475pt x 694.595pt>
+File: figs/nbjet30csvv2m_log-final_pseudo.png Graphic file (type png)
+<use figs/nbjet30csvv2m_log-final_pseudo.png>
+Package pdftex.def Info: figs/nbjet30csvv2m_log-final_pseudo.png  used on input
+ line 1431.
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1431--1433
+ [][] 
+ []
+
+<figs/ht_log-final_pseudo.png, id=1681, 548.0475pt x 694.595pt>
+File: figs/ht_log-final_pseudo.png Graphic file (type png)
+<use figs/ht_log-final_pseudo.png>
+Package pdftex.def Info: figs/ht_log-final_pseudo.png  used on input line 1436.
+
+(pdftex.def)             Requested size: 160.0001pt x 150.00273pt.
+
+Overfull \hbox (5.21358pt too wide) in paragraph at lines 1436--1438
+ [][] 
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1440.
+See the caption package documentation for explanation.
+
+[39 <./figs/lep1pt_log-final_pseudo.png> <./figs/lep1eta_log-final_pseudo.png> 
+<./figs/m2l_log-final_pseudo.png> <./figs/lep2pt_log-final_pseudo.png> <./figs/
+lep2eta_log-final_pseudo.png> <./figs/mt2ll_log-final_pseudo.png> <./figs/darkp
+t_log-final_pseudo.png> <./figs/dphillmet_log-final_pseudo.png> <./figs/metPfTy
+pe1_log-final_pseudo.png> <./figs/njet_log-final_pseudo.png> <./figs/nbjet30csv
+v2m_log-final_pseudo.png> <./figs/ht_log-final_pseudo.png>] [40
+
+]
+Chapter 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1449--1452
+
+ []
+
+[41] [42
+
+] [43
+
+] [44]
+Appendix A.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1497--1498
+
+ []
+
+[45
+
+]
+<figs/dy_scale_mt2ll.png, id=1722, 548.0475pt x 574.145pt>
+File: figs/dy_scale_mt2ll.png Graphic file (type png)
+<use figs/dy_scale_mt2ll.png>
+Package pdftex.def Info: figs/dy_scale_mt2ll.png  used on input line 1507.
+(pdftex.def)             Requested size: 199.99803pt x 199.99884pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1511.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1516--1517
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1518--1519
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1520--1521
+
+ []
+
+[46 <./figs/dy_scale_mt2ll.png>]
+<figs/Ele_FR_pt_35GeV.png, id=1730, 447.6725pt x 523.9575pt>
+File: figs/Ele_FR_pt_35GeV.png Graphic file (type png)
+<use figs/Ele_FR_pt_35GeV.png>
+Package pdftex.def Info: figs/Ele_FR_pt_35GeV.png  used on input line 1524.
+(pdftex.def)             Requested size: 200.0026pt x 174.99318pt.
+<figs/Ele_FR_eta_35GeV.png, id=1731, 447.6725pt x 523.9575pt>
+File: figs/Ele_FR_eta_35GeV.png Graphic file (type png)
+<use figs/Ele_FR_eta_35GeV.png>
+Package pdftex.def Info: figs/Ele_FR_eta_35GeV.png  used on input line 1529.
+(pdftex.def)             Requested size: 200.0026pt x 174.99318pt.
+<figs/Muon_FR_pt_25GeV.png, id=1732, 447.6725pt x 523.9575pt>
+File: figs/Muon_FR_pt_25GeV.png Graphic file (type png)
+<use figs/Muon_FR_pt_25GeV.png>
+Package pdftex.def Info: figs/Muon_FR_pt_25GeV.png  used on input line 1535.
+(pdftex.def)             Requested size: 200.0026pt x 174.99318pt.
+<figs/Muon_FR_eta_25GeV.png, id=1733, 447.6725pt x 523.9575pt>
+File: figs/Muon_FR_eta_25GeV.png Graphic file (type png)
+<use figs/Muon_FR_eta_25GeV.png>
+Package pdftex.def Info: figs/Muon_FR_eta_25GeV.png  used on input line 1540.
+(pdftex.def)             Requested size: 200.0026pt x 174.99318pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1543.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1546--1547
+
+ []
+
+<figs/Ele_PR_pt.png, id=1735, 447.6725pt x 523.9575pt>
+File: figs/Ele_PR_pt.png Graphic file (type png)
+<use figs/Ele_PR_pt.png>
+Package pdftex.def Info: figs/Ele_PR_pt.png  used on input line 1552.
+(pdftex.def)             Requested size: 200.0026pt x 174.99318pt.
+<figs/Ele_PR_eta.png, id=1736, 447.6725pt x 523.9575pt>
+File: figs/Ele_PR_eta.png Graphic file (type png)
+<use figs/Ele_PR_eta.png>
+Package pdftex.def Info: figs/Ele_PR_eta.png  used on input line 1557.
+(pdftex.def)             Requested size: 200.0026pt x 174.99318pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47 <./figs/Ele_FR_pt_35GeV.png> <./figs/Ele_FR_eta_35GeV.png> <./figs/Muon_FR
+_pt_25GeV.png> <./figs/Muon_FR_eta_25GeV.png>]
+<figs/Muon_PR_pt.png, id=1742, 447.6725pt x 523.9575pt>
+File: figs/Muon_PR_pt.png Graphic file (type png)
+<use figs/Muon_PR_pt.png>
+Package pdftex.def Info: figs/Muon_PR_pt.png  used on input line 1563.
+(pdftex.def)             Requested size: 200.0026pt x 174.99318pt.
+<figs/Muon_PR_eta.png, id=1743, 447.6725pt x 523.9575pt>
+File: figs/Muon_PR_eta.png Graphic file (type png)
+<use figs/Muon_PR_eta.png>
+Package pdftex.def Info: figs/Muon_PR_eta.png  used on input line 1568.
+(pdftex.def)             Requested size: 200.0026pt x 174.99318pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 1571.
+See the caption package documentation for explanation.
+
+[48 <./figs/Ele_PR_pt.png> <./figs/Ele_PR_eta.png> <./figs/Muon_PR_pt.png> <./f
+igs/Muon_PR_eta.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1636--1638
+[][]$\OT1/cmtt/m/n/10.95 http : / / articles . adsabs . harvard . edu / cgi-[]b
+in / nph-[]iarticle _ query ? 1933AcHPh . . . 6 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1636--1638
+\OT1/cmtt/m/n/10.95 .110Z & amp ; data _ type = PDF _ HIGH & amp ; whole _ pape
+r = YES & amp ; type = PRINTER & amp ; filetype =
+ []
+
+[49
+
+]
+Overfull \hbox (258.92245pt too wide) in paragraph at lines 1658--1659
+[][]$\OT1/cmtt/m/n/10.95 http : / / www . physicsmatt . com / blog / 2017 / 1 /
+ 21 / paper-[]explainer-[]two-[]is-[]not-[]always-[]better-[]than-[]one-[]singl
+e-[]top-[]quarks-[]and-[]dark-[]matter$[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1670--1671
+[][]$\OT1/cmtt/m/n/10.95 https : / / lhc-[]commissioning . web . cern . ch / lh
+c-[]commissioning / schedule / LHC % 20schedule %
+ []
+
+[50]
+Underfull \hbox (badness 2334) in paragraph at lines 1702--1703
+[][]$\OT1/cmtt/m/n/10.95 https : / / twiki . cern . ch / twiki / bin / viewauth
+ / CMS / SummaryTable1G25ns # TTbar$[][]\OT1/cmr/m/n/10.95 , as seen in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1715--1716
+[][]$\OT1/cmtt/m/n/10.95 https : / / twiki . cern . ch / twiki / bin / view / C
+MSPublic / WorkBookMetAnalysis # Type _ I _
+ []
+
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1730
+[][]$\OT1/cmtt/m/n/10.95 https : / / indico . cern . ch / event / 5007 / contri
+butions / 1177811 / attachments / 962648 /
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1741.
+[52]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1741.
+ (./darkMatter.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1741.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1741.
+
+Package rerunfilecheck Info: File `darkMatter.out' has not changed.
+(rerunfilecheck)             Checksum: EB9FC27347813EAC59ED3C8581A5C28F;2572.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1741.
+ ) 
+Here is how much of TeX's memory you used:
+ 9271 strings out of 494880
+ 143667 string characters out of 6179601
+ 254742 words of memory out of 5000000
+ 12163 multiletter control sequences out of 15000+600000
+ 17492 words of font info for 62 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 36i,15n,43p,2460b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfo
+nt/line10.pfb>
+Output written on darkMatter.pdf (58 pages, 5402105 bytes).
+PDF statistics:
+ 1954 PDF objects out of 2073 (max. 8388607)
+ 1220 compressed objects within 13 object streams
+ 219 named destinations out of 1000 (max. 500000)
+ 778 words of extra memory for PDF output out of 10000 (max. 10000000)
+

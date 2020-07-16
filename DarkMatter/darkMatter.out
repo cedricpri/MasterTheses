@@ -1,0 +1,39 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Theoretical introduction}{}% 2
+\BOOKMARK [1][-]{section.2.1}{At the origins of dark matter}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Dark matter production at the LHC}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{The t \040+ DM dilepton channel}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Previous results}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{The experimental device}{}% 7
+\BOOKMARK [1][-]{section.3.1}{The LHC collider}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{The CMS detector}{chapter.3}% 9
+\BOOKMARK [0][-]{chapter.4}{Objects, datasets, triggers and samples}{}% 10
+\BOOKMARK [1][-]{section.4.1}{Objects and datasets}{chapter.4}% 11
+\BOOKMARK [1][-]{section.4.2}{Triggers}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.3}{Monte Carlo samples}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.4}{Dark matter signal}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.5}{Major Standard Model backgrounds}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.5}{Event reconstruction and selection}{}% 16
+\BOOKMARK [1][-]{section.5.1}{Event reconstruction}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{Top reconstruction}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.3}{Discriminating variables studies}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.4}{Event selection}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.5}{Control regions}{chapter.5}% 21
+\BOOKMARK [2][-]{subsection.5.5.1}{t \040scale factor and control region}{section.5.5}% 22
+\BOOKMARK [2][-]{subsection.5.5.2}{ttZ control region}{section.5.5}% 23
+\BOOKMARK [1][-]{section.5.6}{Uncertainties of the analysis}{chapter.5}% 24
+\BOOKMARK [0][-]{chapter.6}{Neural network}{}% 25
+\BOOKMARK [1][-]{section.6.1}{Multi-Variate Analysis}{chapter.6}% 26
+\BOOKMARK [1][-]{section.6.2}{Artificial Neural Network}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.3}{Characterization of the neural networks}{chapter.6}% 28
+\BOOKMARK [2][-]{subsection.6.3.1}{Input variables}{section.6.3}% 29
+\BOOKMARK [2][-]{subsection.6.3.2}{Architecture}{section.6.3}% 30
+\BOOKMARK [2][-]{subsection.6.3.3}{Training}{section.6.3}% 31
+\BOOKMARK [1][-]{section.6.4}{Results}{chapter.6}% 32
+\BOOKMARK [0][-]{chapter.7}{Results}{}% 33
+\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 34
+\BOOKMARK [0][-]{section*.20}{Appendices}{}% 35
+\BOOKMARK [0][-]{Appendix.1.A}{Data-driven methods}{}% 36
+\BOOKMARK [1][-]{section.1.A.1}{Rin-out method for the Drell-Yan process}{Appendix.1.A}% 37
+\BOOKMARK [1][-]{section.1.A.2}{Fake and prompt rates}{Appendix.1.A}% 38
+\BOOKMARK [0][-]{figure.1.A.3}{Bibliography}{}% 39
