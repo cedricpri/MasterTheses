@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  9 JUL 2020 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.6.21)  16 JUL 2020 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1790,7 +1790,7 @@ lic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfo
 nt/line10.pfb>
-Output written on TFM_prieels.pdf (58 pages, 5402117 bytes).
+Output written on TFM_prieels.pdf (58 pages, 5402105 bytes).
 PDF statistics:
  1954 PDF objects out of 2073 (max. 8388607)
  1220 compressed objects within 13 object streams
