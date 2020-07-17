@@ -506,23 +506,6 @@ The Likelihood class takes as input a Volume and a data/MC file, to tell us \tex
 All the results shown here are based on Monte-Carlo simulations, relying on CRY, a cosmic ray generator.} \vfill
 \end{frame}
 
-\begin{frame}{Generator and Monte-Carlo simulations}
-\justifying
-Monte-Carlo simulations are obtained from algorithms developed to \textbf{compute approximate numerical values to stochastic problems} using random processes and probabilistic techniques. \vfill
-
-Instead of relying on actual data collected from the experiment, we can:
-\begin{enumerate}
-\justifying
-\item Use CRY, a cosmic ray generator to simulate thousands of incident muons
-\item Make these muons go through a complete simulation of the detector done with Geant4
-\item Go through the same post-processing process as actual data
-\item Build the PDF for a given experiment from these simulations
-\item Repeat this experiment $N_\text{MC}$ times, \textbf{simulating thousands of experiments} without the need to perform them.
-\end{enumerate} \vfill
-
-Simulating an experiment is cheaper and faster than running it and allows to compare results obtained from both channels. In this work, the dependence on Geant4 will be removed as well, to make this process even faster. \vfill
-\end{frame}
-
 \begin{frame}{Generator validation}
 \justifying
 The Generator allows us to generate Monte-Carlo experiments in a faster way than using Geant4, which is more complex, relying on a complete description of the detector. \\ \vspace{10pt}
@@ -774,12 +757,23 @@ Main parameters used throughout this work:
 Bi-dimensional histograms ($\Delta$x vs $\Delta \theta_x$ and $\Delta$y vs $\Delta \theta_y$) are filled with these values, smoothened and used for the computation of the likelihood. \vfill
 \end{frame}
 
-%\begin{frame}{Generator}
-%\justifying
-%The Generator is a C++ set of functions, built in order to generate Monte-Carlo simulations reproducing the actual experiment for a given geometry and to avoid relying too much on Geant4, which is quite slow. \vfill
-%
-%Pre-generated CRY information is then read and simply propagated through the Volume considered, using our PipeReconstructor, in order to simulate such experiments. \vfill
-%\end{frame}
+\begin{frame}{Generator and Monte-Carlo simulations}
+\justifying
+Monte-Carlo simulations are obtained from algorithms developed to \textbf{compute approximate numerical values to stochastic problems} using random processes and probabilistic techniques. \vfill
+
+Instead of relying on actual data collected from the experiment, we can:
+\begin{enumerate}
+\justifying
+\item Use CRY, a cosmic ray generator to simulate thousands of incident muons
+\item Make these muons go through a complete simulation of the detector done with Geant4
+\item Go through the same post-processing process as actual data
+\item Build the PDF for a given experiment from these simulations
+\item Repeat this experiment $N_\text{MC}$ times, \textbf{simulating thousands of experiments} without the need to perform them.
+\end{enumerate} \vfill
+
+Simulating an experiment is cheaper and faster than running it and allows to compare results obtained from both channels. In this work, the dependence on Geant4 will be removed as well, to make this process even faster. \vfill
+\end{frame}
+
 
 \begin{frame}{Generator validation}
 
